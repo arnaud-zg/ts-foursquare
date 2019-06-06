@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tsFoursquare should have a list of method 1`] = `
+Object {
+  "getLife": [Function],
+}
+`;

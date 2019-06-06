@@ -12,6 +12,7 @@
     "build": "tsdx build",
     "lint": "tslint -p tsconfig.json",
     "start": "tsdx watch",
+    "test:coverage": "tsdx test --coverage",
     "test": "tsdx test"
   },
   "peerDependencies": {},
