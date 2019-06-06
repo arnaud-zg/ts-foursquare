@@ -1,0 +1,30 @@
+language: node_js
+
+node_js:
+  - 10
+  - 8
+
+before_script:
+  - echo "Start CI"
+
+install:
+  - yarn install --check-files
+
+script:
+  - yarn run format
+  - yarn run lint
+  - yarn run build
+  - yarn run test:coverage
+  - yarn run test:codacy-coverage -- --username $CODACY_USERNAME --projectName $CODACY_PROJECT_NAME
+
+before_deploy:
+  - yarn run build
+
+deploy:
+  provider: npm
+  email: $NPM_AUTHOR_EMAIL
+  api_key: $NPM_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+    node: 10

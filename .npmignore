@@ -1,0 +1,16 @@
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
+node_modules
+src
+test
+.editorconfig
+.gitignore
+.huskyrc.json
+.npmignore
+.nvmrc
+.prettierignore
+.prettierrc
+.travis.yml
+tsconfig.json
+yarn.lock
