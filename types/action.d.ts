@@ -11,7 +11,7 @@ export declare namespace NAction {
 
   interface IAction {
     meta?: IActionMeta
-    payload: IActionPayload
+    payload: IActionPayload | undefined
     type: string
   }
 }

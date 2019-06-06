@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Life should return life state 1`] = `
+Object {
+  "LOCATION_SEARCH_SEPARATOR": "?",
+  "QUERY_STRING_SEPARATOR": "&",
+}
+`;
