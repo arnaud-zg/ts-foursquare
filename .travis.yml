@@ -15,10 +15,11 @@ script:
   - yarn run lint
   - yarn run build
   - yarn run test:coverage
-  - yarn run test:codacy-coverage -- --username $CODACY_USERNAME --projectName $CODACY_PROJECT_NAME
+  - yarn run test:coverage:report -- --username $CODACY_USERNAME --projectName $CODACY_PROJECT_NAME
 
 before_deploy:
-  - yarn run build
+  # - yarn run build
+  - if [ ! -d dist ]; then yarn run build ; fi
 
 deploy:
   provider: npm

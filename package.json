@@ -2,22 +2,24 @@
   "name": "ts-foursquare",
   "version": "0.0.0",
   "main": "dist/index.js",
-  "umd:main": "dist/index.umd.production.js",
-  "module": "dist/index.es.production.js",
+  "module": "dist/ts-foursquare.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsdx build",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "start": "tsdx watch",
+    "test:coverage:report": "npm run test:coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:coverage": "tsdx test --coverage",
     "test": "tsdx test"
   },
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.15",
+    "codacy-coverage": "3.4.0",
     "husky": "2.4.0",
     "prettier": "1.17.1",
     "pretty-quick": "1.11.0",
