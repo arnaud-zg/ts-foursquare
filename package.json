@@ -23,7 +23,7 @@
     "husky": "2.4.0",
     "prettier": "1.17.1",
     "pretty-quick": "1.11.1",
-    "tsdx": "0.7.1",
+    "tsdx": "0.7.2",
     "tslib": "1.10.0",
     "tslint": "5.17.0",
     "tslint-config-prettier": "1.18.0",

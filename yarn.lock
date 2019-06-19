@@ -5155,9 +5155,9 @@ ts-jest@^24.0.2:
     semver "^5.5"
     yargs-parser "10.x"
 
-tsdx@0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/tsdx/-/tsdx-0.7.1.tgz#5db87bcff22c9b24ee5afa1b727a32f28c9e0c7b"
+tsdx@0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/tsdx/-/tsdx-0.7.2.tgz#45bde74caf252a67140abb48d4a4bbf1f17a4535"
   dependencies:
     "@babel/core" "^7.4.4"
     "@babel/plugin-proposal-class-properties" "^7.4.4"
