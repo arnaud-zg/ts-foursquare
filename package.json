@@ -22,7 +22,7 @@
     "codacy-coverage": "3.4.0",
     "husky": "2.4.0",
     "prettier": "1.17.1",
-    "pretty-quick": "1.11.0",
+    "pretty-quick": "1.11.1",
     "tsdx": "0.7.1",
     "tslib": "1.10.0",
     "tslint": "5.17.0",
