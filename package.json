@@ -5,7 +5,8 @@
   "module": "dist/ts-foursquare.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "build": "tsdx build",
