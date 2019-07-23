@@ -1,5 +1,5 @@
 import { NLife } from '../../types/life'
-import { lifeReducer } from '../reducers/life'
+import { lifeReducer } from 'reducers/life'
 
 export enum EActionRequest {
   GET_LIFE = 'GET_LIFE',

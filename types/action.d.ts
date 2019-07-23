@@ -1,4 +1,4 @@
-import { EActionRequest } from '../src/actions/life'
+import { EActionRequest } from 'actions/life'
 
 export declare namespace NAction {
   interface IActionMeta {

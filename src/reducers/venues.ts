@@ -1,6 +1,6 @@
 import { NAction } from '../../types/action'
 import { NVenues } from '../../types/venues'
-import { EActionRequest } from '../actions/venues'
+import { EActionRequest } from 'actions/venues'
 
 export const initialState: NVenues.IVenues = {}
 

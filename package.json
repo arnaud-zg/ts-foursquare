@@ -6,8 +6,7 @@
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
-    "types",
-    "src/actions"
+    "types"
   ],
   "scripts": {
     "build": "tsdx build",
