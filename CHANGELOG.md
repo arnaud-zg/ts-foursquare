@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.2...v0.1.3) (2019-07-23)
+
+### Bug Fixes
+
+- **package:** use path mapping for actions ([0070cb9](https://github.com/arnaud-zg/ts-foursquare/commit/0070cb9))
+
 ### [0.1.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.1...v0.1.2) (2019-07-23)
 
 ### Bug Fixes
