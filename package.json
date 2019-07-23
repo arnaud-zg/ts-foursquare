@@ -11,6 +11,7 @@
     "build": "tsdx build",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
+    "release": "standard-version",
     "start": "tsdx watch",
     "test:coverage:report": "npm run test:coverage && cat ./coverage/lcov.info | codacy-coverage",
     "test:coverage": "tsdx test --coverage",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "isomorphic-fetch": "2.2.1",
-    "rxjs": "6.5.2"
+    "rxjs": "6.5.2",
+    "standard-version": "6.0.1"
   }
 }
