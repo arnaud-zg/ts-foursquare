@@ -14,4 +14,6 @@ export declare namespace NAction {
     payload: IActionPayload | undefined
     type: string
   }
+
+  interface IActionResult {}
 }

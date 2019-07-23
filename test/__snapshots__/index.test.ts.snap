@@ -3,5 +3,6 @@
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
   "getLife": [Function],
+  "getVenuesSearch": [Function],
 }
 `;
