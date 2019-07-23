@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getVenuesSearch get data from venues search endpoint 1`] = `
+Object {
+  "error": true,
+  "message": "Error 400",
+}
+`;
