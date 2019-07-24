@@ -1,6 +1,6 @@
 import { NAction } from '../../types/action'
 import { NLife } from '../../types/life'
-import { EActionRequest } from 'actions/life'
+import { EActionRequest } from '../actions/life'
 
 export const initialState: NLife.ILife = {
   life: false,

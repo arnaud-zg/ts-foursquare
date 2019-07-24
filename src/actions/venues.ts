@@ -1,7 +1,7 @@
 import { NAction } from '../../types/action'
 import { NVenues } from '../../types/venues'
-import { venuesReducer } from 'reducers/venues'
-import { getObservableVenuesSearch } from 'services/venues'
+import { venuesReducer } from '../reducers/venues'
+import { getObservableVenuesSearch } from '../services/venues'
 
 export enum EActionRequest {
   GET_VENUES_SEARCH = 'GET_VENUES_SEARCH',
