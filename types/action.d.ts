@@ -1,5 +1,3 @@
-import { EActionRequest } from 'actions/life'
-
 export declare namespace NAction {
   interface IActionMeta {
     [key: string]: any
