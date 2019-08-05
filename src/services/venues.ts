@@ -2,11 +2,8 @@ import { Observable, of } from 'rxjs'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action'
-import {
-  CLIENT_ID,
-  CLIENT_SECRET,
-  EApiDefaultParameters,
-} from '../constants/api'
+import { EApiDefaultParameters } from '../constants/api'
+import { getCredentials } from '../utils/storage'
 
 export const processFetchResponse = (
   response: Response
@@ -36,9 +33,10 @@ export const getObservableVenuesSearch = ({
   actionPayload: NAction.IActionPayload
 }): Observable<Response> => {
   const { name } = actionPayload
+  const { clientId, clientSecret } = getCredentials()
 
   return fromFetch(
-    `https://api.foursquare.com/v2/venues/search?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=${EApiDefaultParameters.VERSION}&ll=40.7099,-73.9622&name=${name}&intent=match`
+    `https://api.foursquare.com/v2/venues/search?client_id=${clientId}&client_secret=${clientSecret}&v=${EApiDefaultParameters.VERSION}&ll=40.7099,-73.9622&name=${name}&intent=match`
   ).pipe(
     switchMap(processFetchResponse),
     catchError(processFetchError)
