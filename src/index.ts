@@ -1,4 +1,8 @@
 require('isomorphic-fetch')
 
-export { getLife } from './actions/life'
-export { getVenuesSearch } from './actions/venues'
+// Actions
+export * from './actions/life'
+export * from './actions/venues'
+
+// Utils
+export * from './utils/storage'

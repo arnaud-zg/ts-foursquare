@@ -12,11 +12,11 @@ describe('getVenuesSearch', () => {
     // expect(typeof state.response).toEqual('object')
   })
 
-  // it('should return life state', () => {
-  //   expect(
-  //     getVenuesSearch({
-  //       name: 'peter luger steakhouse',
-  //     }) instanceof Promise
-  //   ).toBeTruthy()
-  // })
+  it('should return life state', () => {
+    expect(
+      getVenuesSearch({
+        name: 'peter luger steakhouse',
+      }) instanceof Promise
+    ).toBeTruthy()
+  })
 })

@@ -3,7 +3,7 @@ import { NVenues } from '../../types/venues'
 import { venuesReducer } from '../reducers/venues'
 import { getObservableVenuesSearch } from '../services/venues'
 
-export enum EActionRequest {
+export enum EVenuesActionRequest {
   GET_VENUES_SEARCH = 'GET_VENUES_SEARCH',
 }
 
@@ -16,7 +16,7 @@ export const getVenuesSearch = async (
     const data = await service$.toPromise()
 
     return venuesReducer({
-      type: EActionRequest.GET_VENUES_SEARCH,
+      type: EVenuesActionRequest.GET_VENUES_SEARCH,
       payload: {
         ...data,
       },

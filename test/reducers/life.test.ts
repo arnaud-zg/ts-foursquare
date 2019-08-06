@@ -1,4 +1,4 @@
-import { EActionRequest } from '../../src/actions/life'
+import { ELifeActionRequest } from '../../src/actions/life'
 import { lifeReducer } from '../../src/reducers/life'
 
 describe('lifeReducer', () => {
@@ -17,7 +17,7 @@ describe('lifeReducer', () => {
         payload: {
           life: true,
         },
-        type: EActionRequest.GET_LIFE,
+        type: ELifeActionRequest.GET_LIFE,
       })
     ).toEqual({ life: true })
   })
