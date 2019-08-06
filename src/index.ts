@@ -5,4 +5,5 @@ export * from './actions/life'
 export * from './actions/venues'
 
 // Utils
+export * from './utils/icon'
 export * from './utils/storage'
