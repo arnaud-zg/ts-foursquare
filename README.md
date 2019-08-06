@@ -10,7 +10,7 @@ These instructions will let you know how to use the library.
 
 Things you need to install before using this library.
 
-```
+```shell
 node: 10.16.0
 nvm: 0.33.6
 ```
@@ -19,13 +19,13 @@ nvm: 0.33.6
 
 Using npm:
 
-```
+```shell
 npm i --save ts-foursquare
 ```
 
 Using yarn:
 
-```
+```shell
 yarn add --dev ts-foursquare
 ```
 
@@ -33,7 +33,7 @@ yarn add --dev ts-foursquare
 
 Look at the documentation
 
-* [Usage](./doc/usage.md)
+  * [Usage](./doc/usage.md)
 
 ## Running the tests
 
@@ -43,13 +43,13 @@ Tests are written with jest
 
 Using jest:
 
-```
+```shell
 yarn run test
 ```
 
 ## Built With
 
-* [TSDX](https://github.com/palmerhq/tsdx) - TSDX
+  * [TSDX](https://github.com/palmerhq/tsdx) - TSDX
 
 ## Contributing
 
@@ -61,7 +61,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Arnaud Zheng** - *Initial work* - [arnaud-zg](https://github.com/arnaud-zg)
+  * **Arnaud Zheng** - *Initial work* - [arnaud-zg](https://github.com/arnaud-zg)
 
 See also the list of [contributors](https://github.com/arnaud-zg/ts-foursquare/graphs/contributors) who participated in this project.
 
