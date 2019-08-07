@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getIconUrlList should get a list of icon url 1`] = `
+Object {
+  "L": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_64.png",
+  "M": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_44.png",
+  "S": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_32.png",
+  "XL": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_88.png",
+}
+`;
