@@ -9,6 +9,7 @@ Object {
     "GET_VENUES_SEARCH": "GET_VENUES_SEARCH",
   },
   "getCredentials": [Function],
+  "getIconUrlList": [Function],
   "getLife": [Function],
   "getVenuesSearch": [Function],
   "removeCredentials": [Function],
