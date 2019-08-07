@@ -2,8 +2,9 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
-  "ELifeActionRequest": Object {
-    "GET_LIFE": "GET_LIFE",
+  "ELifeActionRequest": Object {},
+  "ELifeActionResolve": Object {
+    "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
   },
   "EVenuesActionRequest": Object {
     "GET_VENUES_SEARCH": "GET_VENUES_SEARCH",

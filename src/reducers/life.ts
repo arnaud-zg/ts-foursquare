@@ -1,22 +1,17 @@
-import { NAction } from '../../types/action'
+import { createReducer } from 'typesafe-actions'
 import { NLife } from '../../types/life'
-import { ELifeActionRequest } from '../actions/life'
+import { ELifeActionResolve, TLifeActions } from '../actions/life'
 
-export const initialState: NLife.ILife = {
+export const initialState: NLife.ILifeState = {
   life: false,
 }
 
-export const lifeReducer = (action: NAction.IAction) => {
-  switch (action.type) {
-    case ELifeActionRequest.GET_LIFE:
-      return {
-        ...initialState,
-        ...action.payload,
-      }
-
-    default:
-      return {
-        ...initialState,
-      }
+export const lifeReducer = createReducer<NLife.ILifeState, TLifeActions>(
+  initialState,
+  {
+    [ELifeActionResolve.RESOLVE_GET_LIFE]: (state, action) => ({
+      ...state,
+      ...action.payload,
+    }),
   }
-}
+)

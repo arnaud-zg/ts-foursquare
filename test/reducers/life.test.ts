@@ -1,24 +1,11 @@
-import { ELifeActionRequest } from '../../src/actions/life'
+import { ELifeActionResolve } from '../../src/actions/life'
 import { lifeReducer } from '../../src/reducers/life'
 
-describe('lifeReducer', () => {
-  it('should return default life state', () => {
-    expect(
-      lifeReducer({
-        payload: undefined,
-        type: 'UNKNOWN',
-      })
-    ).toEqual({ life: false })
-  })
-
-  it('should return processed life state', () => {
-    expect(
-      lifeReducer({
-        payload: {
-          life: true,
-        },
-        type: ELifeActionRequest.GET_LIFE,
-      })
-    ).toEqual({ life: true })
+describe('reducers/life', () => {
+  test.each`
+    scenario                            | state              | action                                                                    | expected
+    ${'should get state after $action'} | ${{ life: false }} | ${{ type: ELifeActionResolve.RESOLVE_GET_LIFE, payload: { life: true } }} | ${{ life: true }}
+  `('$scenario with action: $action', ({ state, action }) => {
+    expect(lifeReducer(state, action)).toMatchSnapshot()
   })
 })

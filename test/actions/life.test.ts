@@ -1,11 +1,7 @@
-import { getLife } from '../../src/actions/life'
+import { getLife, ELifeActionResolve } from '../../src/actions/life'
 
 describe('Life', () => {
-  it('should return life state', () => {
-    expect(getLife() instanceof Promise).toBeTruthy()
-
-    getLife().then(state => {
-      expect(state).toMatchSnapshot()
-    })
+  it(`should return an action with type ${ELifeActionResolve.RESOLVE_GET_LIFE}`, () => {
+    expect(getLife()).toMatchSnapshot()
   })
 })
