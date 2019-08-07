@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/life should get state after {"payload": [Object], "type": "RESOLVE_GET_LIFE"} with action: $action 1`] = `
+Object {
+  "life": true,
+}
+`;

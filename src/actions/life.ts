@@ -1,18 +1,16 @@
-import { NLife } from '../../types/life'
-import { lifeReducer } from '../reducers/life'
+import { ActionType, action } from 'typesafe-actions'
 
-export enum ELifeActionRequest {
-  GET_LIFE = 'GET_LIFE',
+export enum ELifeActionRequest {}
+
+export enum ELifeActionResolve {
+  RESOLVE_GET_LIFE = 'RESOLVE_GET_LIFE',
 }
 
-export const getLife = (): Promise<NLife.ILife> =>
-  new Promise(resolve => {
-    resolve(
-      lifeReducer({
-        type: ELifeActionRequest.GET_LIFE,
-        payload: {
-          life: true,
-        },
-      })
-    )
-  })
+export const getLife = () =>
+  action(ELifeActionResolve.RESOLVE_GET_LIFE, { life: true })
+
+const actions = {
+  getLife,
+}
+
+export type TLifeActions = ActionType<typeof actions>

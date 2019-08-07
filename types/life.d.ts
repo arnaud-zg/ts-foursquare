@@ -1,5 +1,5 @@
 export declare namespace NLife {
-  interface ILife {
+  interface ILifeState {
     life: boolean
   }
 }
