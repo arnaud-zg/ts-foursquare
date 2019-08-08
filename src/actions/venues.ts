@@ -1,27 +1,19 @@
-import { NAction } from '../../types/action'
-import { NVenues } from '../../types/venues'
-import { venuesReducer } from '../reducers/venues'
-import { getObservableVenuesSearch } from '../services/venues'
+import { ActionType, action } from 'typesafe-actions'
 
-export enum EVenuesActionRequest {
-  GET_VENUES_SEARCH = 'GET_VENUES_SEARCH',
+export enum EVenuesAction {
+  REQUEST_GET_VENUES_SEARCH = 'REQUEST_GET_VENUES_SEARCH',
+  RESOLVE_GET_VENUES_SEARCH = 'RESOLVE_GET_VENUES_SEARCH',
 }
 
-export const getVenuesSearch = async (
-  actionPayload: NAction.IActionPayload
-): Promise<NVenues.IVenues> => {
-  const service$ = getObservableVenuesSearch({ actionPayload })
+export const requestGetVenuesSearch = (actionPayload: any) =>
+  action(EVenuesAction.REQUEST_GET_VENUES_SEARCH, actionPayload)
 
-  try {
-    const data = await service$.toPromise()
+export const resolveGetVenuesSearch = (actionPayload: any) =>
+  action(EVenuesAction.RESOLVE_GET_VENUES_SEARCH, actionPayload)
 
-    return venuesReducer({
-      type: EVenuesActionRequest.GET_VENUES_SEARCH,
-      payload: {
-        ...data,
-      },
-    })
-  } catch (err) {
-    return err
-  }
+export const actions = {
+  requestGetVenuesSearch,
+  resolveGetVenuesSearch,
 }
+
+export type TVenuesAction = ActionType<typeof actions>

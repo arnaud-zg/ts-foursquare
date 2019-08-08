@@ -6,14 +6,20 @@ Object {
   "ELifeActionResolve": Object {
     "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
   },
-  "EVenuesActionRequest": Object {
-    "GET_VENUES_SEARCH": "GET_VENUES_SEARCH",
+  "EVenuesAction": Object {
+    "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",
+    "RESOLVE_GET_VENUES_SEARCH": "RESOLVE_GET_VENUES_SEARCH",
+  },
+  "actions": Object {
+    "requestGetVenuesSearch": [Function],
+    "resolveGetVenuesSearch": [Function],
   },
   "getCredentials": [Function],
   "getIconUrlList": [Function],
   "getLife": [Function],
-  "getVenuesSearch": [Function],
   "removeCredentials": [Function],
+  "requestGetVenuesSearch": [Function],
+  "resolveGetVenuesSearch": [Function],
   "setCredentials": [Function],
 }
 `;
