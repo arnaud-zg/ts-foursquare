@@ -1,5 +1,5 @@
 export declare namespace NVenues {
-  interface IVenues {
+  interface IVenuesState {
     [key: string]: any
   }
 }
