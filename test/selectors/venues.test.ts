@@ -1,4 +1,5 @@
 import {
+  venueLocationSelector,
   venueCategoriesStateSelector,
   venueSelector,
   venuesSelector,
@@ -25,6 +26,12 @@ describe('selectors/venues', () => {
   it('should get categories of a venue', () => {
     expect(venueCategoriesStateSelector(state, venueId)).toEqual(
       state.venues[venueId].categories
+    )
+  })
+
+  it('should get location of a venue', () => {
+    expect(venueLocationSelector(state, venueId)).toEqual(
+      state.venues[venueId].location
     )
   })
 })
