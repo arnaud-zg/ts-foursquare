@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mockingFetch() should get a promise 1`] = `Promise {}`;
+
+exports[`mockingFetch() should get a success Response object 1`] = `
+Object {
+  "json": [Function],
+  "ok": true,
+}
+`;
