@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/url/getLocationHref() should generate a location href url 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
+
+exports[`utils/url/getLocationHref() should generate a location href url 2`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world&limit=20"`;
