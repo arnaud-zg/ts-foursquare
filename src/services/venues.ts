@@ -2,8 +2,9 @@ import { Observable, of } from 'rxjs'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
-import { EApiDefaultParameters } from '../constants/api'
+import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { getCredentials } from '../utils/storage'
+import { getLocationHref } from '../utils/url'
 
 export const processFetchResponse = (
   response: Response
@@ -33,7 +34,18 @@ export const getObservableVenuesSearch = (action: NAction.IAction) => {
   const { clientId, clientSecret } = getCredentials()
 
   return fromFetch(
-    `https://api.foursquare.com/v2/venues/search?client_id=${clientId}&client_secret=${clientSecret}&v=${EApiDefaultParameters.VERSION}&ll=40.7099,-73.9622&name=${name}&intent=match`
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: EApiPathnames.VENUES_SEARCH,
+      param: {
+        client_id: clientId,
+        client_secret: clientSecret,
+        intent: 'match',
+        ll: '40.7099,-73.9622',
+        name: name,
+        v: EApiDefaultParameters.VERSION,
+      },
+    })
   ).pipe(
     switchMap(processFetchResponse),
     catchError(processFetchError)
