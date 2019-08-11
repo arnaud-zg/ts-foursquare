@@ -2,8 +2,8 @@
 
 exports[`reducers/venues should get state after {"payload": [Array], "type": "RESOLVE_GET_VENUES_SEARCH"} with action: $action 1`] = `
 Object {
-  "venues": Array [
-    Object {
+  "venues": Object {
+    "3fd66200f964a5209beb1ee3": Object {
       "categories": Array [
         Object {
           "icon": Object {
@@ -49,6 +49,6 @@ Object {
         "id": "77462637",
       },
     },
-  ],
+  },
 }
 `;
