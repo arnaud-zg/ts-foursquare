@@ -1,5 +1,7 @@
+import { NVenue } from './venue.d'
+
 export declare namespace NVenues {
-  interface IVenuesState {
-    [key: string]: any
+  interface IState {
+    venues: NVenue.IVenue[]
   }
 }

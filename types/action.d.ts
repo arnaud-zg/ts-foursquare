@@ -1,3 +1,5 @@
+import { NPayload } from './payload.d'
+
 export declare namespace NAction {
   interface IActionMeta {
     [key: string]: any
@@ -9,9 +11,7 @@ export declare namespace NAction {
 
   interface IAction {
     meta?: IActionMeta
-    payload: IActionPayload | undefined
+    payload: IActionPayload
     type: string
   }
-
-  interface IActionResult {}
 }

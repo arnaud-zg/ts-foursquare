@@ -10,6 +10,6 @@ describe('actions.venues', () => {
   })
 
   it('should create an action of type RESOLVE_GET_VENUES_SEARCH', () => {
-    expect(resolveGetVenuesSearch({})).toMatchSnapshot()
+    expect(resolveGetVenuesSearch([])).toMatchSnapshot()
   })
 })

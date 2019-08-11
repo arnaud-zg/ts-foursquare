@@ -1,7 +1,7 @@
 import { Observable, of } from 'rxjs'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
-import { NAction } from '../../types/action'
+import { NAction } from '../../types/action.d'
 import { EApiDefaultParameters } from '../constants/api'
 import { getCredentials } from '../utils/storage'
 
@@ -27,12 +27,9 @@ export const processFetchError = (
   message: string
 }> => of({ error: true, message: err.message })
 
-export const getObservableVenuesSearch = ({
-  actionPayload,
-}: {
-  actionPayload: NAction.IActionPayload
-}): Observable<Response> => {
-  const { name } = actionPayload
+export const getObservableVenuesSearch = (action: NAction.IAction) => {
+  const { payload } = action
+  const { name } = payload
   const { clientId, clientSecret } = getCredentials()
 
   return fromFetch(
