@@ -1,8 +1,13 @@
 {
+  "breadcrumbs.enabled": true,
+  "editor.fontFamily": "Fira Code, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
   "editor.tabSize": 2,
   "files.trimTrailingWhitespace": true,
-  "workbench.sideBar.location": "right",
-  "editor.rulers": [80, 120]
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "right"
 }
