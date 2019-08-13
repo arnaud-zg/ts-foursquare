@@ -28,6 +28,28 @@ Object {
   "error": undefined,
   "meta": undefined,
   "payload": Object {
+    "query": "ShopMart",
+  },
+  "type": "REQUEST_GET_VENUES_SEARCH",
+}
+`;
+
+exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 4`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": Object {
+    "near": "Chicago, IL",
+  },
+  "type": "REQUEST_GET_VENUES_SEARCH",
+}
+`;
+
+exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 5`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": Object {
     "intent": "browse",
     "ll": "40.7099,-73.9622",
     "query": "ShopMart",
