@@ -4,7 +4,35 @@ exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARC
 Object {
   "error": undefined,
   "meta": undefined,
-  "payload": Object {},
+  "payload": Object {
+    "ll": "40.7099,-73.9622",
+  },
+  "type": "REQUEST_GET_VENUES_SEARCH",
+}
+`;
+
+exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 2`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": Object {
+    "intent": "match",
+    "ll": "40.7099,-73.9622",
+  },
+  "type": "REQUEST_GET_VENUES_SEARCH",
+}
+`;
+
+exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 3`] = `
+Object {
+  "error": undefined,
+  "meta": undefined,
+  "payload": Object {
+    "intent": "browse",
+    "ll": "40.7099,-73.9622",
+    "query": "ShopMart",
+    "radius": 500,
+  },
   "type": "REQUEST_GET_VENUES_SEARCH",
 }
 `;
