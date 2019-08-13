@@ -14,9 +14,7 @@ describe('epics/venues', () => {
   })
 
   it('call venues api endpoint', done => {
-    const action = requestGetVenuesSearch({
-      name: 'peter luger steakhouse',
-    })
+    const action = requestGetVenuesSearch({ query: 'peter luger steakhouse' })
     const expectedActions = [
       {
         payload: payload.response.venues,

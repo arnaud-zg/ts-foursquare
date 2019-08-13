@@ -1,16 +1,33 @@
 export declare namespace NRequest {
-  interface IVenuesSearchPayloadByName {
-    name: string
+  interface IVenuesSearchPayload {
+    alt?: number
+    altAcc?: number
+    categoryId?: string[]
+    intent?: 'checkin' | 'global' | 'browse' | 'match'
+    limit?: number
+    linkedId?: number
+    llAcc?: number
+    ne?: string
+    providerId?: string
+    radius?: number
+    sw?: string
+    url?: string
   }
 
-  interface IVenuesSearchPayloadByLatLong {
+  interface IVenuesSearchPayloadByQuery extends IVenuesSearchPayload {
+    query: string
+  }
+
+  interface IVenuesSearchPayloadByLocation extends IVenuesSearchPayload {
     ll: string
-    query?: string
-    intent?: 'checkin' | 'global' | 'browse' | 'match'
-    radius?: number
+  }
+
+  interface IVenuesSearchPayloadByGeocode extends IVenuesSearchPayload {
+    near: string
   }
 
   type TVenuesSearchPayload =
-    | IVenuesSearchPayloadByName
-    | IVenuesSearchPayloadByLatLong
+    | IVenuesSearchPayloadByQuery
+    | IVenuesSearchPayloadByLocation
+    | IVenuesSearchPayloadByGeocode
 }

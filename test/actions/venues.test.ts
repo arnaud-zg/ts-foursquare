@@ -10,6 +10,8 @@ describe('actions.venues', () => {
     expect(
       requestGetVenuesSearch({ ll: '40.7099,-73.9622', intent: 'match' })
     ).toMatchSnapshot()
+    expect(requestGetVenuesSearch({ query: 'ShopMart' })).toMatchSnapshot()
+    expect(requestGetVenuesSearch({ near: 'Chicago, IL' })).toMatchSnapshot()
     expect(
       requestGetVenuesSearch({
         ll: '40.7099,-73.9622',
