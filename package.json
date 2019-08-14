@@ -32,12 +32,12 @@
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-eslint-rules": "5.4.0",
-    "typesafe-actions": "4.4.2",
     "typescript": "3.5.3"
   },
   "dependencies": {
     "isomorphic-fetch": "2.2.1",
     "redux-observable": "^1.1.0",
-    "rxjs": "6.5.2"
+    "rxjs": "6.5.2",
+    "typesafe-actions": "4.4.2"
   }
 }
