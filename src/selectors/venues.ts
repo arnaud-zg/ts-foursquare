@@ -1,6 +1,6 @@
 import { TRootState } from '../reducers'
 
-export const venuesSelector = (state: TRootState) => state.venues
+export const venuesSelector = (state: TRootState) => state.venues.entities
 
 export const venueSelector = (state: TRootState, venueId: string) =>
   venuesSelector(state)[venueId]
