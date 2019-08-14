@@ -14,10 +14,36 @@ Object {
     "requestGetVenuesSearch": [Function],
     "resolveGetVenuesSearch": [Function],
   },
+  "adaptGetVenuesSearch": [Function],
+  "credentialsSelector": [Function],
   "getIconUrlList": [Function],
   "getLife": [Function],
+  "getLocationHref": [Function],
+  "getLocationSearch": [Function],
+  "getObservableVenuesSearch": [Function],
+  "getVenuesSearchEpic": [Function],
+  "initialState": Object {
+    "life": Object {
+      "credentials": Object {
+        "clientId": "",
+        "clientSecret": "",
+      },
+      "life": false,
+    },
+    "venues": Object {
+      "entities": Object {},
+    },
+  },
+  "lifeReducer": [Function],
+  "processFetchError": [Function],
+  "processFetchResponse": [Function],
   "putCredentials": [Function],
   "requestGetVenuesSearch": [Function],
   "resolveGetVenuesSearch": [Function],
+  "venueCategoriesStateSelector": [Function],
+  "venueLocationSelector": [Function],
+  "venueSelector": [Function],
+  "venuesReducer": [Function],
+  "venuesSelector": [Function],
 }
 `;
