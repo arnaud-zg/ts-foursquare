@@ -2,9 +2,9 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
-  "ELifeActionRequest": Object {},
-  "ELifeActionResolve": Object {
+  "ELifeAction": Object {
     "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
+    "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",
   },
   "EVenuesAction": Object {
     "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",
@@ -14,12 +14,10 @@ Object {
     "requestGetVenuesSearch": [Function],
     "resolveGetVenuesSearch": [Function],
   },
-  "getCredentials": [Function],
   "getIconUrlList": [Function],
   "getLife": [Function],
-  "removeCredentials": [Function],
+  "putCredentials": [Function],
   "requestGetVenuesSearch": [Function],
   "resolveGetVenuesSearch": [Function],
-  "setCredentials": [Function],
 }
 `;
