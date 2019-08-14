@@ -23,7 +23,7 @@ export const testEpic = (
 ) => {
   const actions = new Subject()
   const actions$ = new ActionsObservable(actions)
-  const store = { getState: () => state }
+  const store = { getState: () => state, value: state }
 
   epic(actions$, store)
     .pipe(

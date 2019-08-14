@@ -3,6 +3,7 @@ require('isomorphic-fetch')
 import { Action } from 'typesafe-actions'
 import { EVenuesAction, requestGetVenuesSearch } from '../../src/actions/venues'
 import { getVenuesSearchEpic } from '../../src/epics/venues'
+import { initialState } from '../../src/reducers'
 import { testEpic, mockingFetch } from '../../src/utils/test'
 import { payload } from './__mocks__/resolveGetVenuesSearch'
 
@@ -32,7 +33,8 @@ describe('epics/venues', () => {
           expect(actualAction).toEqual(expectedActions[index])
         })
         done()
-      }
+      },
+      initialState
     )
   })
 })

@@ -1,7 +1,7 @@
-import { getLife, ELifeActionResolve } from '../../src/actions/life'
+import { getLife, ELifeAction } from '../../src/actions/life'
 
 describe('Life', () => {
-  it(`should return an action with type ${ELifeActionResolve.RESOLVE_GET_LIFE}`, () => {
+  it(`should return an action with type ${ELifeAction.RESOLVE_GET_LIFE}`, () => {
     expect(getLife()).toMatchSnapshot()
   })
 })

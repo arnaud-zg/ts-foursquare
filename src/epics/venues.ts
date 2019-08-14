@@ -14,11 +14,11 @@ export const getVenuesSearchEpic: Epic<
   TVenuesAction,
   TVenuesAction,
   TRootState
-> = action$ =>
+> = (action$, state$) =>
   action$.pipe(
     filter(isOfType(EVenuesAction.REQUEST_GET_VENUES_SEARCH)),
     switchMap(action =>
-      getObservableVenuesSearch(action).pipe(
+      getObservableVenuesSearch(action, state$).pipe(
         map(adaptGetVenuesSearch),
         map(resolveGetVenuesSearch)
       )

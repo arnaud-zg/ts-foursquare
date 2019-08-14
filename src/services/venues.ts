@@ -3,8 +3,10 @@ import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
-import { getCredentials } from '../utils/storage'
 import { getLocationHref } from '../utils/url'
+import { TRootState } from '../reducers'
+import { StateObservable } from 'redux-observable'
+import { credentialsSelector } from '../selectors/life'
 
 export const processFetchResponse = (
   response: Response
@@ -28,10 +30,13 @@ export const processFetchError = (
   message: string
 }> => of({ error: true, message: err.message })
 
-export const getObservableVenuesSearch = (action: NAction.IAction) => {
+export const getObservableVenuesSearch = (
+  action: NAction.IAction,
+  state$: StateObservable<TRootState>
+) => {
   const { payload } = action
   const { name } = payload
-  const { clientId, clientSecret } = getCredentials()
+  const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
     getLocationHref({

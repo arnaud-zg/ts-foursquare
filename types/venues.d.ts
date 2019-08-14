@@ -2,7 +2,7 @@ import { NVenue } from './venue.d'
 
 export declare namespace NVenues {
   interface IState {
-    venues: {
+    entities: {
       [key: string]: NVenue.IVenue
     }
   }
