@@ -12,3 +12,6 @@ export const initialState = {
   life: initialStateLife,
   venues: initialStateVenues,
 }
+
+export * from './life'
+export * from './venues'
