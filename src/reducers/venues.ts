@@ -3,7 +3,7 @@ import { NVenues } from '../../types/venues.d'
 import { EVenuesAction, TVenuesAction } from '../actions/venues'
 
 export const initialState: NVenues.IState = {
-  venues: {},
+  entities: {},
 }
 
 export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
