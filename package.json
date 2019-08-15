@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsdx build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "tsdx lint",
     "release": "standard-version",
     "start": "tsdx watch",
     "test:coverage:report": "npm run test:coverage && cat ./coverage/lcov.info | codacy-coverage",
@@ -29,9 +29,6 @@
     "standard-version": "7.0.0",
     "tsdx": "0.8.0",
     "tslib": "1.10.0",
-    "tslint": "5.18.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-eslint-rules": "5.4.0",
     "typescript": "3.5.3"
   },
   "dependencies": {
