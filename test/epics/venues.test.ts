@@ -16,13 +16,15 @@ describe('epics/venues', () => {
 
   test.each`
     scenario | action | expectedActions
-    ${'should get search for venues by location'} | ${requestGetVenuesSearch({ ll: '40.7099,-73.9622' })} | ${[{
+    ${'should get search for venues by location'} | ${requestGetVenuesSearch({
+  ll: '40.7099,-73.9622',
+})} | ${[{
     payload: payload.response.venues,
     type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
   }]}
     ${'should get search for venues by location with intent match parameter'} | ${requestGetVenuesSearch({
-  ll: '40.7099,-73.9622',
   intent: 'match',
+  ll: '40.7099,-73.9622',
 })} | ${[{
     payload: payload.response.venues,
     type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
@@ -40,11 +42,14 @@ describe('epics/venues', () => {
     type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
   }]}
     ${'should get search for venues'} | ${requestGetVenuesSearch({
+  intent: 'browse',
   ll: '40.7099,-73.9622',
   query: 'ShopMart',
-  intent: 'browse',
   radius: 500,
-})} | ${[{ payload: payload.response.venues, type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH }]}
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
   `('$scenario', ({ action, expectedActions, done }) => {
     testEpic(
       getVenuesSearchEpic,
