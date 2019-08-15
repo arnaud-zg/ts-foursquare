@@ -14,15 +14,43 @@ describe('epics/venues', () => {
     })
   })
 
-  it('call venues api endpoint', done => {
-    const action = requestGetVenuesSearch({ query: 'peter luger steakhouse' })
-    const expectedActions = [
-      {
-        payload: payload.response.venues,
-        type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
-      },
-    ]
-
+  test.each`
+    scenario | action | expectedActions
+    ${'should get search for venues by location'} | ${requestGetVenuesSearch({
+  ll: '40.7099,-73.9622',
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
+    ${'should get search for venues by location with intent match parameter'} | ${requestGetVenuesSearch({
+  intent: 'match',
+  ll: '40.7099,-73.9622',
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
+    ${'should get search for venues by query'} | ${requestGetVenuesSearch({
+  query: 'ShopMart',
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
+    ${'should get search for venues near to a location'} | ${requestGetVenuesSearch({
+  near: 'Chicago, IL',
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
+    ${'should get search for venues'} | ${requestGetVenuesSearch({
+  intent: 'browse',
+  ll: '40.7099,-73.9622',
+  query: 'ShopMart',
+  radius: 500,
+})} | ${[{
+    payload: payload.response.venues,
+    type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
+  }]}
+  `('$scenario', ({ action, expectedActions, done }) => {
     testEpic(
       getVenuesSearchEpic,
       expectedActions.length,
