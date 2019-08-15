@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsdx build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "tsdx lint",
     "release": "standard-version",
     "start": "tsdx watch",
     "test:coverage:report": "npm run test:coverage && cat ./coverage/lcov.info | codacy-coverage",
