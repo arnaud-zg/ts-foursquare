@@ -20,23 +20,18 @@ const state = {
 describe('selectors/venues', () => {
   it('should get venues', () => {
     expect(Object.keys(venuesSelector(state)).length).toEqual(1)
+    expect(venuesSelector(state)).toMatchSnapshot()
   })
 
   it('should get a specific venue', () => {
-    expect(venueSelector(state, venueId)).toEqual(
-      state.venues.entities[venueId]
-    )
+    expect(venueSelector(state, venueId)).toMatchSnapshot()
   })
 
   it('should get categories of a venue', () => {
-    expect(venueCategoriesStateSelector(state, venueId)).toEqual(
-      state.venues.entities[venueId].categories
-    )
+    expect(venueCategoriesStateSelector(state, venueId)).toMatchSnapshot()
   })
 
   it('should get location of a venue', () => {
-    expect(venueLocationSelector(state, venueId)).toEqual(
-      state.venues.entities[venueId].location
-    )
+    expect(venueLocationSelector(state, venueId)).toMatchSnapshot()
   })
 })
