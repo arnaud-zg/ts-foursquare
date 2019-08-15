@@ -46,7 +46,7 @@ For more details, please read [the full `getVenuesSearch` documentation](./docs/
 import { getVenuesSearch } from 'ts-foursquare'
 
 const onSearch = async () => {
-  const state = await getVenuesSearch({ name: 'peter luger steakhouse' })
+  const state = await getVenuesSearch({ query: 'peter luger steakhouse' })
 
   return state
 }

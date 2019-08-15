@@ -1,6 +1,238 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`epics/venues call venues api endpoint 1`] = `
+exports[`epics/venues should get search for venues 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1cc941735",
+            "name": "Steakhouse",
+            "pluralName": "Steakhouses",
+            "primary": true,
+            "shortName": "Steakhouse",
+          },
+        ],
+        "hasPerk": false,
+        "id": "3fd66200f964a5209beb1ee3",
+        "location": Object {
+          "address": "178 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Driggs Ave",
+          "distance": 10,
+          "formattedAddress": Array [
+            "178 Broadway (at Driggs Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.70995790682886,
+              "lng": -73.96229110893742,
+            },
+          ],
+          "lat": 40.70995790682886,
+          "lng": -73.96229110893742,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Peter Luger Steak House",
+        "referralId": "v-1565543515",
+        "venuePage": Object {
+          "id": "77462637",
+        },
+      },
+    ],
+    "type": "RESOLVE_GET_VENUES_SEARCH",
+  },
+]
+`;
+
+exports[`epics/venues should get search for venues by location 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1cc941735",
+            "name": "Steakhouse",
+            "pluralName": "Steakhouses",
+            "primary": true,
+            "shortName": "Steakhouse",
+          },
+        ],
+        "hasPerk": false,
+        "id": "3fd66200f964a5209beb1ee3",
+        "location": Object {
+          "address": "178 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Driggs Ave",
+          "distance": 10,
+          "formattedAddress": Array [
+            "178 Broadway (at Driggs Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.70995790682886,
+              "lng": -73.96229110893742,
+            },
+          ],
+          "lat": 40.70995790682886,
+          "lng": -73.96229110893742,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Peter Luger Steak House",
+        "referralId": "v-1565543515",
+        "venuePage": Object {
+          "id": "77462637",
+        },
+      },
+    ],
+    "type": "RESOLVE_GET_VENUES_SEARCH",
+  },
+]
+`;
+
+exports[`epics/venues should get search for venues by location with intent match parameter 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1cc941735",
+            "name": "Steakhouse",
+            "pluralName": "Steakhouses",
+            "primary": true,
+            "shortName": "Steakhouse",
+          },
+        ],
+        "hasPerk": false,
+        "id": "3fd66200f964a5209beb1ee3",
+        "location": Object {
+          "address": "178 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Driggs Ave",
+          "distance": 10,
+          "formattedAddress": Array [
+            "178 Broadway (at Driggs Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.70995790682886,
+              "lng": -73.96229110893742,
+            },
+          ],
+          "lat": 40.70995790682886,
+          "lng": -73.96229110893742,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Peter Luger Steak House",
+        "referralId": "v-1565543515",
+        "venuePage": Object {
+          "id": "77462637",
+        },
+      },
+    ],
+    "type": "RESOLVE_GET_VENUES_SEARCH",
+  },
+]
+`;
+
+exports[`epics/venues should get search for venues by query 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1cc941735",
+            "name": "Steakhouse",
+            "pluralName": "Steakhouses",
+            "primary": true,
+            "shortName": "Steakhouse",
+          },
+        ],
+        "hasPerk": false,
+        "id": "3fd66200f964a5209beb1ee3",
+        "location": Object {
+          "address": "178 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Driggs Ave",
+          "distance": 10,
+          "formattedAddress": Array [
+            "178 Broadway (at Driggs Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.70995790682886,
+              "lng": -73.96229110893742,
+            },
+          ],
+          "lat": 40.70995790682886,
+          "lng": -73.96229110893742,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Peter Luger Steak House",
+        "referralId": "v-1565543515",
+        "venuePage": Object {
+          "id": "77462637",
+        },
+      },
+    ],
+    "type": "RESOLVE_GET_VENUES_SEARCH",
+  },
+]
+`;
+
+exports[`epics/venues should get search for venues near to a location 1`] = `
 Array [
   Object {
     "error": undefined,
