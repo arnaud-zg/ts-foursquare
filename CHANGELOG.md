@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.5...v0.1.6) (2019-08-17)
+
+### 🐛 Bug Fixes
+
+- **type:** add dependency @types/node ([#59](https://github.com/arnaud-zg/ts-foursquare/issues/59)) ([8718830](https://github.com/arnaud-zg/ts-foursquare/commit/8718830))
+
+### 🔧 Chore
+
+- **config:** add editor rulers ([#60](https://github.com/arnaud-zg/ts-foursquare/issues/60)) ([c1d2aa5](https://github.com/arnaud-zg/ts-foursquare/commit/c1d2aa5))
+- **config:** update ide configuration file ([#61](https://github.com/arnaud-zg/ts-foursquare/issues/61)) ([6b8aa41](https://github.com/arnaud-zg/ts-foursquare/commit/6b8aa41))
+- **deps:** migration due to tsdx upgrade ([#73](https://github.com/arnaud-zg/ts-foursquare/issues/73)) ([ad2ab7b](https://github.com/arnaud-zg/ts-foursquare/commit/ad2ab7b))
+- **deps:** pin dependency @types/node to 12.7.1 ([#62](https://github.com/arnaud-zg/ts-foursquare/issues/62)) ([3ee02c1](https://github.com/arnaud-zg/ts-foursquare/commit/3ee02c1))
+- **deps:** update dependency @types/node to v12.7.2 ([#72](https://github.com/arnaud-zg/ts-foursquare/issues/72)) ([5a8e548](https://github.com/arnaud-zg/ts-foursquare/commit/5a8e548))
+- **deps:** update dependency husky to v3.0.4 ([#77](https://github.com/arnaud-zg/ts-foursquare/issues/77)) ([b1b3d73](https://github.com/arnaud-zg/ts-foursquare/commit/b1b3d73))
+- **deps:** update dependency tsdx to v0.8.0 ([#71](https://github.com/arnaud-zg/ts-foursquare/issues/71)) ([8274cc6](https://github.com/arnaud-zg/ts-foursquare/commit/8274cc6))
+- **deps:** update node.js to v10.16.3 ([#76](https://github.com/arnaud-zg/ts-foursquare/issues/76)) ([bef2ff7](https://github.com/arnaud-zg/ts-foursquare/commit/bef2ff7))
+- **technical-debt:** add configuration for prettier ([#57](https://github.com/arnaud-zg/ts-foursquare/issues/57)) ([1dda3d1](https://github.com/arnaud-zg/ts-foursquare/commit/1dda3d1))
+- **technical-debt:** move typesafe-actioons to dependencies ([#68](https://github.com/arnaud-zg/ts-foursquare/issues/68)) ([053e9e4](https://github.com/arnaud-zg/ts-foursquare/commit/053e9e4))
+- **test:** add unit test for venues epics ([#74](https://github.com/arnaud-zg/ts-foursquare/issues/74)) ([462020d](https://github.com/arnaud-zg/ts-foursquare/commit/462020d))
+- **test:** update test for venues selector ([#75](https://github.com/arnaud-zg/ts-foursquare/issues/75)) ([d982125](https://github.com/arnaud-zg/ts-foursquare/commit/d982125))
+- **version:** add custom configuration file for automating versioning ([#64](https://github.com/arnaud-zg/ts-foursquare/issues/64)) ([4477cba](https://github.com/arnaud-zg/ts-foursquare/commit/4477cba))
+
+### 🖋 Features
+
+- **search:** find a specific place nearby ([#63](https://github.com/arnaud-zg/ts-foursquare/issues/63)) ([2aefc55](https://github.com/arnaud-zg/ts-foursquare/commit/2aefc55))
+- **search:** find a venue with latitude and longitude parameters ([#65](https://github.com/arnaud-zg/ts-foursquare/issues/65)) ([f6e7cab](https://github.com/arnaud-zg/ts-foursquare/commit/f6e7cab))
+- **storage:** remove store from dependencies ([#66](https://github.com/arnaud-zg/ts-foursquare/issues/66)) ([c769368](https://github.com/arnaud-zg/ts-foursquare/commit/c769368))
+
 ### [0.1.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.4...v0.1.5) (2019-08-11)
 
 ### Bug Fixes
