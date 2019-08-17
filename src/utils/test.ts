@@ -21,7 +21,7 @@ export const testEpic = (
   callback: Function,
   state = {}
 ) => {
-  const actions = new Subject()
+  const actions = new Subject<Action>()
   const actions$ = new ActionsObservable(actions)
   const store = { getState: () => state, value: state }
 
