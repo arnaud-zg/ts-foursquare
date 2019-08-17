@@ -1,12 +1,12 @@
+import { StateObservable } from 'redux-observable'
 import { Observable, of } from 'rxjs'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
+import { NRoot } from '../../types/root.d'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
-import { getLocationHref } from '../utils/url'
-import { TRootState } from '../reducers'
-import { StateObservable } from 'redux-observable'
 import { credentialsSelector } from '../selectors/life'
+import { getLocationHref } from '../utils/url'
 
 export const processFetchResponse = (
   response: Response
@@ -32,7 +32,7 @@ export const processFetchError = (
 
 export const getObservableVenuesSearch = (
   action: NAction.IAction,
-  state$: StateObservable<TRootState>
+  state$: StateObservable<NRoot.IState>
 ) => {
   const { payload } = action
   const { name } = payload
