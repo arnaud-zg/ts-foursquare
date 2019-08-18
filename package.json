@@ -32,6 +32,7 @@
     "typescript": "3.5.3"
   },
   "dependencies": {
+    "http-response-status": "0.0.2",
     "isomorphic-fetch": "2.2.1",
     "redux-observable": "^1.1.0",
     "rxjs": "6.5.2",

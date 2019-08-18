@@ -1,4 +1,4 @@
-import { NHttpStatuses } from '../../types/http'
+import { NHttpStatuses } from 'http-response-status'
 import { NPayload } from '../../types/payload.d'
 import { NVenue } from '../../types/venue.d'
 
