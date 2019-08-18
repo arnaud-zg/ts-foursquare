@@ -1,11 +1,11 @@
+import { initialState } from '../../src/reducers/app'
 import {
-  venueLocationSelector,
   venueCategoriesStateSelector,
+  venueLocationSelector,
   venueSelector,
   venuesSelector,
 } from '../../src/selectors/venues'
 import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
-import { initialState } from '../../src/reducers/index'
 
 const venueId = payload.response.venues[0].id
 const state = {

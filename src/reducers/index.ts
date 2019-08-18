@@ -1,17 +1,16 @@
-import { NLife } from '../../types/life'
-import { NVenues } from '../../types/venues'
-import { initialState as initialStateLife } from './life'
-import { initialState as initialStateVenues } from './venues'
+import { createStore, applyMiddleware, compose } from 'redux'
+import { epicMiddleware, rootEpic } from '../middlewares'
+import { appReducer } from './app'
 
-export type TRootState = {
-  life: NLife.IState
-  venues: NVenues.IState
+export { initialState } from './app'
+
+export const configureStore = () => {
+  const store = createStore(
+    appReducer,
+    compose(applyMiddleware(epicMiddleware))
+  )
+
+  epicMiddleware.run(rootEpic)
+
+  return store
 }
-
-export const initialState = {
-  life: initialStateLife,
-  venues: initialStateVenues,
-}
-
-export * from './life'
-export * from './venues'

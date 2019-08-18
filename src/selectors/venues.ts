@@ -1,14 +1,14 @@
-import { TRootState } from '../reducers'
+import { NRoot } from '../../types/root.d'
 
-export const venuesSelector = (state: TRootState) => state.venues.entities
+export const venuesSelector = (state: NRoot.IState) => state.venues.entities
 
-export const venueSelector = (state: TRootState, venueId: string) =>
+export const venueSelector = (state: NRoot.IState, venueId: string) =>
   venuesSelector(state)[venueId]
 
 export const venueCategoriesStateSelector = (
-  state: TRootState,
+  state: NRoot.IState,
   venueId: string
 ) => venuesSelector(state)[venueId].categories
 
-export const venueLocationSelector = (state: TRootState, venueId: string) =>
+export const venueLocationSelector = (state: NRoot.IState, venueId: string) =>
   venuesSelector(state)[venueId].location

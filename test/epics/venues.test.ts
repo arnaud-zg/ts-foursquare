@@ -3,8 +3,8 @@ require('isomorphic-fetch')
 import { Action } from 'typesafe-actions'
 import { EVenuesAction, requestGetVenuesSearch } from '../../src/actions/venues'
 import { getVenuesSearchEpic } from '../../src/epics/venues'
-import { initialState } from '../../src/reducers'
-import { testEpic, mockingFetch } from '../../src/utils/test'
+import { initialState } from '../../src/reducers/app'
+import { mockingFetch, testEpic } from '../../src/utils/test'
 import { payload } from './__mocks__/resolveGetVenuesSearch'
 
 describe('epics/venues', () => {

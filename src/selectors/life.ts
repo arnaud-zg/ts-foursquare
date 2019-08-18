@@ -1,3 +1,4 @@
-import { TRootState } from '../reducers'
+import { NRoot } from '../../types/root.d'
 
-export const credentialsSelector = (state: TRootState) => state.life.credentials
+export const credentialsSelector = (state: NRoot.IState) =>
+  state.life.credentials
