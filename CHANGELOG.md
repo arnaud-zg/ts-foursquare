@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.6...v0.1.7) (2019-08-19)
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/jest to v24.0.18 ([#91](https://github.com/arnaud-zg/ts-foursquare/issues/91)) ([a906259](https://github.com/arnaud-zg/ts-foursquare/commit/a906259))
+- **http:** use enum from http-response-status ([#90](https://github.com/arnaud-zg/ts-foursquare/issues/90)) ([5aeed4e](https://github.com/arnaud-zg/ts-foursquare/commit/5aeed4e))
+
+### 🖋 Features
+
+- **store:** add redux store creator with epics ([#89](https://github.com/arnaud-zg/ts-foursquare/issues/89)) ([05967fd](https://github.com/arnaud-zg/ts-foursquare/commit/05967fd))
+
 ### [0.1.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.5...v0.1.6) (2019-08-17)
 
 ### 🐛 Bug Fixes
