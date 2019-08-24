@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.8...v0.1.9) (2019-08-24)
+
+### 🐛 Bug Fixes
+
+- **venues-search:** set intent default value to checkin ([#96](https://github.com/arnaud-zg/ts-foursquare/issues/96)) ([ce20bc6](https://github.com/arnaud-zg/ts-foursquare/commit/ce20bc6))
+
 ### [0.1.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.7...v0.1.8) (2019-08-24)
 
 ### 🐛 Bug Fixes
