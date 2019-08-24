@@ -45,7 +45,7 @@ export const getObservableVenuesSearch = (
       param: {
         client_id: clientId,
         client_secret: clientSecret,
-        intent: 'match',
+        intent: 'checkin',
         ll: '40.7099,-73.9622',
         name: query,
         v: EApiDefaultParameters.VERSION,
