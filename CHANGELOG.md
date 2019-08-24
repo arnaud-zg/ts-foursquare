@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.7...v0.1.8) (2019-08-24)
+
+### 🐛 Bug Fixes
+
+- **venues-search:** use query instead of name on venues search service ([#95](https://github.com/arnaud-zg/ts-foursquare/issues/95)) ([40a6fc0](https://github.com/arnaud-zg/ts-foursquare/commit/40a6fc0))
+
+### 🔧 Chore
+
+- **docs:** add badge on readme ([#92](https://github.com/arnaud-zg/ts-foursquare/issues/92)) ([6bc5981](https://github.com/arnaud-zg/ts-foursquare/commit/6bc5981))
+
 ### [0.1.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.6...v0.1.7) (2019-08-19)
 
 ### 🔧 Chore
