@@ -2,7 +2,7 @@
 
 exports[`reducers/venues should get state after {"payload": [Array], "type": "RESOLVE_GET_VENUES_SEARCH"} with action: $action 1`] = `
 Object {
-  "venues": Object {
+  "entities": Object {
     "3fd66200f964a5209beb1ee3": Object {
       "categories": Array [
         Object {
