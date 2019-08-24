@@ -14,10 +14,7 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
       action
     ): NVenues.IState => {
       const venues = action.payload.reduce(
-        (acc, cur) => ({
-          ...acc,
-          [cur.id]: cur,
-        }),
+        (acc, cur) => ({ ...acc, [cur.id]: cur }),
         {}
       )
 
