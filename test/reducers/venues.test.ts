@@ -1,5 +1,5 @@
 import { EVenuesAction } from '../../src/actions/venues'
-import { venuesReducer } from '../../src/reducers/venues'
+import { initialState, venuesReducer } from '../../src/reducers/venues'
 import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
 
 const action = {
@@ -9,9 +9,9 @@ const action = {
 
 describe('reducers/venues', () => {
   test.each`
-    scenario                            | state             | action
-    ${'should get state after $action'} | ${{ venues: [] }} | ${action}
-  `('$scenario with action: $action', ({ state, action }) => {
-    expect(venuesReducer(state, action)).toMatchSnapshot()
+    scenario                            | initialState    | action
+    ${'should get state after $action'} | ${initialState} | ${action}
+  `('$scenario with action: $action', ({ initialState, action }) => {
+    expect(venuesReducer(initialState, action)).toMatchSnapshot()
   })
 })
