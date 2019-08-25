@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.10...v0.2.0) (2019-08-25)
+
+### 🔧 Chore
+
+- **release:** add release script ([#99](https://github.com/arnaud-zg/ts-foursquare/issues/99)) ([53f59b8](https://github.com/arnaud-zg/ts-foursquare/commit/53f59b8))
+- **type:** add type for state ([#98](https://github.com/arnaud-zg/ts-foursquare/issues/98)) ([26474a9](https://github.com/arnaud-zg/ts-foursquare/commit/26474a9))
+
 ### [0.1.10](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.9...v0.1.10) (2019-08-24)
 
 ### 🐛 Bug Fixes
