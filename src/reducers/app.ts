@@ -9,6 +9,8 @@ export const initialState = {
   venues: initialStateVenues,
 }
 
+export type TState = typeof initialState
+
 export const appReducer = combineReducers({
   life: lifeReducer,
   venues: venuesReducer,
