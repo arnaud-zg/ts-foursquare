@@ -1,6 +1,6 @@
 import { getLife, ELifeAction } from '../../src/actions/life'
 
-describe('Life', () => {
+describe('actions.life', () => {
   it(`should make a snapshot of ELifeAction`, () => {
     expect(ELifeAction).toMatchSnapshot()
   })
