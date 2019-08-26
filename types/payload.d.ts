@@ -1,10 +1,10 @@
 export declare namespace NPayload {
   interface IPayload<TResponse> {
-    meta: {
+    meta?: {
       code: number
       requestId: string
     }
-    response: {
+    response?: {
       [key: string]: TResponse
     }
   }
