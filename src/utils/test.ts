@@ -1,7 +1,7 @@
-import { Action } from 'typesafe-actions'
 import { ActionsObservable } from 'redux-observable'
-import { Subject } from 'rxjs'
+import { Subject } from 'rxjs/internal/Subject'
 import { take, toArray } from 'rxjs/operators'
+import { Action } from 'typesafe-actions'
 
 export const mockingFetch = ({ response = {} } = {}) => {
   const mockJsonPromise = Promise.resolve(response)
