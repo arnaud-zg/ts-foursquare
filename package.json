@@ -27,7 +27,6 @@
     "husky": "3.0.4",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
-    "redux-devtools-extension": "2.13.8",
     "standard-version": "7.0.0",
     "tsdx": "0.9.0",
     "tslib": "1.10.0",
@@ -37,6 +36,7 @@
     "http-response-status": "0.0.2",
     "isomorphic-fetch": "2.2.1",
     "redux": "4.0.4",
+    "redux-devtools-extension": "2.13.8",
     "redux-observable": "1.1.0",
     "rxjs": "6.5.2",
     "typesafe-actions": "4.4.2"
