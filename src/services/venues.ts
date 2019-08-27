@@ -1,6 +1,7 @@
 import { StateObservable } from 'redux-observable'
-import { Observable, of } from 'rxjs'
 import { fromFetch } from 'rxjs/fetch'
+import { Observable } from 'rxjs/internal/Observable'
+import { of } from 'rxjs/internal/observable/of'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
 import { NRoot } from '../../types/root.d'
