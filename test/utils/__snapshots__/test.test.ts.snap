@@ -8,3 +8,14 @@ Object {
   "ok": true,
 }
 `;
+
+exports[`testEpic() should test successfully an epic 1`] = `
+Array [
+  Object {
+    "error": undefined,
+    "meta": undefined,
+    "payload": Array [],
+    "type": "RESOLVE_GET_VENUES_SEARCH",
+  },
+]
+`;

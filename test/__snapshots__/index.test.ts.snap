@@ -2,6 +2,12 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
+  "EIconSize": Object {
+    "L": "64",
+    "M": "44",
+    "S": "32",
+    "XL": "88",
+  },
   "ELifeAction": Object {
     "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
     "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",

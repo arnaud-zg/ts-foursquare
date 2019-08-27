@@ -1,4 +1,4 @@
-import { getIconUrlList } from '../../src/utils/icon'
+import { EIconSize, getIconUrlList } from '../../src/utils/icon'
 
 describe('getIconUrlList', () => {
   it('should get a list of icon url', () => {
@@ -8,5 +8,11 @@ describe('getIconUrlList', () => {
     }
 
     expect(getIconUrlList(icon)).toMatchSnapshot()
+  })
+})
+
+describe('EIconSize', () => {
+  it('should make a snapshot of EIconSize', () => {
+    expect(EIconSize).toMatchSnapshot()
   })
 })

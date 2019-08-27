@@ -5,6 +5,7 @@ import { NVenue } from '../../types/venue.d'
 export const adaptGetVenuesSearch = (
   payload: NPayload.IPayload<NVenue.IVenue[]>
 ) =>
+  !!payload.meta &&
   payload.meta.code === NHttpStatuses.ESuccess.OK &&
   !!payload.response &&
   !!payload.response.venues &&
