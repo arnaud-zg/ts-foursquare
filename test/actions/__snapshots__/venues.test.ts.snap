@@ -67,3 +67,10 @@ Object {
   "type": "RESOLVE_GET_VENUES_SEARCH",
 }
 `;
+
+exports[`actions.venues should make a snapshot of EVenuesAction 1`] = `
+Object {
+  "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",
+  "RESOLVE_GET_VENUES_SEARCH": "RESOLVE_GET_VENUES_SEARCH",
+}
+`;
