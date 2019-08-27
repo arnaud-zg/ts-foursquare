@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.0...v0.2.1) (2019-08-27)
+
+
+### ⚠️ Tests
+
+* **actions:** add unit test for actions ([#103](https://github.com/arnaud-zg/ts-foursquare/issues/103)) ([c3833e0](https://github.com/arnaud-zg/ts-foursquare/commit/c3833e0))
+* **constants:** add snapshot on constants ([#104](https://github.com/arnaud-zg/ts-foursquare/issues/104)) ([8da01bd](https://github.com/arnaud-zg/ts-foursquare/commit/8da01bd))
+* **utils:** add unit test for utils ([#102](https://github.com/arnaud-zg/ts-foursquare/issues/102)) ([e877477](https://github.com/arnaud-zg/ts-foursquare/commit/e877477))
+
+
+### 🔧 Chore
+
+* **deps:** bump eslint-utils from 1.4.0 to 1.4.2 ([#105](https://github.com/arnaud-zg/ts-foursquare/issues/105)) ([7487064](https://github.com/arnaud-zg/ts-foursquare/commit/7487064))
+* **deps:** update dependency tsdx to v0.9.0 ([#106](https://github.com/arnaud-zg/ts-foursquare/issues/106)) ([3bf18c5](https://github.com/arnaud-zg/ts-foursquare/commit/3bf18c5))
+* **test:** add unit test for reducers ([#108](https://github.com/arnaud-zg/ts-foursquare/issues/108)) ([1854525](https://github.com/arnaud-zg/ts-foursquare/commit/1854525))
+
+
+### 🖋 Features
+
+* **dev-tools:** Support redux devtools extension ([#107](https://github.com/arnaud-zg/ts-foursquare/issues/107)) ([788f43e](https://github.com/arnaud-zg/ts-foursquare/commit/788f43e))
+
 ## [0.2.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.1.10...v0.2.0) (2019-08-25)
 
 ### 🔧 Chore
