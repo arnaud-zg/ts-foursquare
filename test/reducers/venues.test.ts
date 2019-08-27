@@ -1,17 +1,12 @@
-import { EVenuesAction } from '../../src/actions/venues'
+import { resolveGetVenuesSearch } from '../../src/actions/venues'
 import { initialState, venuesReducer } from '../../src/reducers/venues'
 import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
 
-const action = {
-  payload: payload.response.venues,
-  type: EVenuesAction.RESOLVE_GET_VENUES_SEARCH,
-}
-
 describe('reducers/venues', () => {
   test.each`
-    scenario                            | initialState    | action
-    ${'should get state after $action'} | ${initialState} | ${action}
-  `('$scenario with action: $action', ({ initialState, action }) => {
+    scenario                                                    | action
+    ${'should get state after action.resolveGetVenuesSearch()'} | ${resolveGetVenuesSearch(payload.response.venues)}
+  `('$scenario with action: $action', ({ action }) => {
     expect(venuesReducer(initialState, action)).toMatchSnapshot()
   })
 })

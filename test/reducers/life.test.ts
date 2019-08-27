@@ -1,11 +1,12 @@
-import { ELifeAction } from '../../src/actions/life'
-import { lifeReducer } from '../../src/reducers/life'
+import { getLife, putCredentials } from '../../src/actions/life'
+import { lifeReducer, initialState } from '../../src/reducers/life'
 
 describe('reducers/life', () => {
   test.each`
-    scenario                            | state              | action                                                             | expected
-    ${'should get state after $action'} | ${{ life: false }} | ${{ type: ELifeAction.RESOLVE_GET_LIFE, payload: { life: true } }} | ${{ life: true }}
-  `('$scenario with action: $action', ({ state, action, expected }) => {
-    expect(lifeReducer(state, action)).toEqual(expected)
+    scenario                                            | action
+    ${'should get state after action.getLife()'}        | ${getLife()}
+    ${'should get state after action.putCredentials()'} | ${putCredentials({ clientId: '1234', clientSecret: '5678' })}
+  `('$scenario with action: $action', ({ action }) => {
+    expect(lifeReducer(initialState, action)).toMatchSnapshot()
   })
 })

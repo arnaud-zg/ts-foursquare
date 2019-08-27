@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/life should get state after action.getLife() with action: {"error": undefined, "meta": undefined, "payload": [Object], "type": "RESOLVE_GET_LIFE"} 1`] = `
+Object {
+  "credentials": Object {
+    "clientId": "",
+    "clientSecret": "",
+  },
+  "life": true,
+}
+`;
+
+exports[`reducers/life should get state after action.putCredentials() with action: {"error": undefined, "meta": undefined, "payload": [Object], "type": "RESOLVE_PUT_CREDENTIALS"} 1`] = `
+Object {
+  "credentials": Object {
+    "clientId": "1234",
+    "clientSecret": "5678",
+  },
+  "life": false,
+}
+`;
