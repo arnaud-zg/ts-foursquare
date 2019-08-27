@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EApiDefaultParameters should make a snapshot of EApiDefaultParameters 1`] = `
+Object {
+  "ORIGIN": "https://api.foursquare.com",
+  "VERSION": "20190425",
+}
+`;
+
+exports[`EApiDefaultParameters should make a snapshot of EApiPathnames 1`] = `
+Object {
+  "VENUES_SEARCH": "/v2/venues/search",
+}
+`;
