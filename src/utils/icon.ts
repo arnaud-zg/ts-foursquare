@@ -16,9 +16,12 @@ interface IIconUrls {
 
 export const getIconUrlList = ({ prefix, suffix }: IIcon): IIconUrls =>
   Object.keys(EIconSize).reduce(
-    (acc, iconKey: any) => ({
+    (acc, iconKey) => ({
       ...acc,
-      [iconKey]: `${prefix}${EIconSize[iconKey]}${suffix}`,
+      [iconKey]: `${prefix}${
+        // Ugly typescript hack
+        (EIconSize as { [key: string]: any })[iconKey]
+      }${suffix}`,
     }),
     {}
   )
