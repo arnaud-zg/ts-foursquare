@@ -30,7 +30,7 @@
     "standard-version": "7.0.0",
     "tsdx": "0.9.0",
     "tslib": "1.10.0",
-    "typescript": "3.5.3"
+    "typescript": "3.6.2"
   },
   "dependencies": {
     "http-response-status": "0.0.2",
