@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EIconSize should make a snapshot of EIconSize 1`] = `
+exports[`utils/icon/EIconSize should make a snapshot of EIconSize 1`] = `
 Object {
   "L": "64",
   "M": "44",
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`getIconUrlList should get a list of icon url 1`] = `
+exports[`utils/icon/getIconUrlList should get a list of icon url 1`] = `
 Object {
   "L": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_64.png",
   "M": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_44.png",

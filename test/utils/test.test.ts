@@ -9,7 +9,7 @@ const data = {
   text: 'Hello World',
 }
 
-describe('mockingFetch()', () => {
+describe('utils/test/mockingFetch', () => {
   mockingFetch({
     response: {
       ...data,
@@ -36,7 +36,7 @@ describe('mockingFetch()', () => {
   })
 })
 
-describe('testEpic()', () => {
+describe('utils/test/testEpic', () => {
   it('should test successfully an epic', done => {
     const expectedActions = [
       {

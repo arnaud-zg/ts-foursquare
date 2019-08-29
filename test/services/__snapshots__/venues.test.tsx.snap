@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Services.requestGetVenuesSearch() should get an observable instance 1`] = `
+exports[`services/getObservableVenuesSearch should get an observable instance 1`] = `
 Observable {
   "_isScalar": false,
   "operator": CatchOperator {

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions.life should make a snapshot of ELifeAction 1`] = `
+exports[`actions/life should make a snapshot of ELifeAction 1`] = `
 Object {
   "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
   "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",
 }
 `;
 
-exports[`actions.life should return an action with type RESOLVE_GET_LIFE 1`] = `
+exports[`actions/life should return an action with type RESOLVE_GET_LIFE 1`] = `
 Object {
   "error": undefined,
   "meta": undefined,

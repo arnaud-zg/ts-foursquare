@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 1`] = `
+exports[`actions/venues should create an action of type REQUEST_GET_VENUES_SEARCH 1`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -11,7 +11,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 2`] = `
+exports[`actions/venues should create an action of type REQUEST_GET_VENUES_SEARCH 2`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -23,7 +23,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 3`] = `
+exports[`actions/venues should create an action of type REQUEST_GET_VENUES_SEARCH 3`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -34,7 +34,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 4`] = `
+exports[`actions/venues should create an action of type REQUEST_GET_VENUES_SEARCH 4`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -45,7 +45,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should create an action of type REQUEST_GET_VENUES_SEARCH 5`] = `
+exports[`actions/venues should create an action of type REQUEST_GET_VENUES_SEARCH 5`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -59,7 +59,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should create an action of type RESOLVE_GET_VENUES_SEARCH 1`] = `
+exports[`actions/venues should create an action of type RESOLVE_GET_VENUES_SEARCH 1`] = `
 Object {
   "error": undefined,
   "meta": undefined,
@@ -68,7 +68,7 @@ Object {
 }
 `;
 
-exports[`actions.venues should make a snapshot of EVenuesAction 1`] = `
+exports[`actions/venues should make a snapshot of EVenuesAction 1`] = `
 Object {
   "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",
   "RESOLVE_GET_VENUES_SEARCH": "RESOLVE_GET_VENUES_SEARCH",

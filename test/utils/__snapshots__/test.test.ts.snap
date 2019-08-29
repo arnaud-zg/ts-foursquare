@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`mockingFetch() should get a promise 1`] = `Promise {}`;
+exports[`utils/test/mockingFetch should get a promise 1`] = `Promise {}`;
 
-exports[`mockingFetch() should get a success Response object 1`] = `
+exports[`utils/test/mockingFetch should get a success Response object 1`] = `
 Object {
   "json": [Function],
   "ok": true,
 }
 `;
 
-exports[`testEpic() should test successfully an epic 1`] = `
+exports[`utils/test/testEpic should test successfully an epic 1`] = `
 Array [
   Object {
     "error": undefined,
