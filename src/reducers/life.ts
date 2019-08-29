@@ -1,6 +1,6 @@
 import { createReducer } from 'typesafe-actions'
 import { NLife } from '../../types/life'
-import { ELifeAction, TLifeActions } from '../actions/life'
+import { ELifeAction, TLifeAction } from '../actions/life'
 
 export const initialState: NLife.IState = {
   life: false,
@@ -10,7 +10,7 @@ export const initialState: NLife.IState = {
   },
 }
 
-export const lifeReducer = createReducer<NLife.IState, TLifeActions>(
+export const lifeReducer = createReducer<NLife.IState, TLifeAction>(
   initialState,
   {
     [ELifeAction.RESOLVE_GET_LIFE]: (state, action): NLife.IState => ({
