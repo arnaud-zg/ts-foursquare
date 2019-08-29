@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Services.requestGetVenuesSearch() should get an observable instance 1`] = `
+Observable {
+  "_isScalar": false,
+  "operator": CatchOperator {
+    "caught": [Circular],
+    "selector": [Function],
+  },
+  "source": Observable {
+    "_isScalar": false,
+    "operator": SwitchMapOperator {
+      "project": [Function],
+    },
+    "source": Observable {
+      "_isScalar": false,
+      "_subscribe": [Function],
+    },
+  },
+}
+`;

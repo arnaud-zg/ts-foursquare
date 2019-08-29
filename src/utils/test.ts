@@ -1,4 +1,4 @@
-import { ActionsObservable } from 'redux-observable'
+import { ActionsObservable, StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
 import { take, toArray } from 'rxjs/operators'
 import { Action } from 'typesafe-actions'
@@ -19,13 +19,14 @@ export const testEpic = (
   count: number,
   action: Action,
   callback: Function,
-  state = {}
+  initialState = {}
 ) => {
   const actions = new Subject<Action>()
+  const state = new Subject()
   const actions$ = new ActionsObservable(actions)
-  const store = { getState: () => state, value: state }
+  const state$ = new StateObservable(state, initialState)
 
-  epic(actions$, store)
+  epic(actions$, state$)
     .pipe(
       take(count),
       toArray()
