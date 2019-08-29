@@ -1,6 +1,6 @@
 import { EApiDefaultParameters, EApiPathnames } from '../../src/constants/api'
 
-describe('EApiDefaultParameters', () => {
+describe('constants/api/EApiDefaultParameters', () => {
   it('should make a snapshot of EApiDefaultParameters', () => {
     expect(EApiDefaultParameters).toMatchSnapshot()
   })

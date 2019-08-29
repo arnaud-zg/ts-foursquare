@@ -1,6 +1,6 @@
 import { EIconSize, getIconUrlList } from '../../src/utils/icon'
 
-describe('getIconUrlList', () => {
+describe('utils/icon/getIconUrlList', () => {
   it('should get a list of icon url', () => {
     const icon = {
       prefix: 'https://ss3.4sqi.net/img/categories_v2/food/steakhouse_',
@@ -11,7 +11,7 @@ describe('getIconUrlList', () => {
   })
 })
 
-describe('EIconSize', () => {
+describe('utils/icon/EIconSize', () => {
   it('should make a snapshot of EIconSize', () => {
     expect(EIconSize).toMatchSnapshot()
   })

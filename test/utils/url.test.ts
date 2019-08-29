@@ -1,7 +1,7 @@
 import { EApiDefaultParameters, EApiPathnames } from '../../src/constants/api'
 import { getLocationHref, getLocationSearch } from '../../src/utils/url'
 
-describe('utils/url/getLocationSearch()', () => {
+describe('utils/url/getLocationSearch', () => {
   it('should return nothing', () => {
     expect(getLocationSearch()).toEqual(undefined)
     expect(getLocationSearch({ param: {} })).toEqual(undefined)
@@ -20,7 +20,7 @@ describe('utils/url/getLocationSearch()', () => {
   })
 })
 
-describe('utils/url/getLocationHref()', () => {
+describe('utils/url/getLocationHref', () => {
   it('should generate a location href url', () => {
     expect(
       getLocationHref({
