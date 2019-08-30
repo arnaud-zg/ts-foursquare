@@ -9,7 +9,6 @@ Object {
     "XL": "88",
   },
   "ELifeAction": Object {
-    "RESOLVE_GET_LIFE": "RESOLVE_GET_LIFE",
     "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",
   },
   "EVenuesAction": Object {
@@ -24,7 +23,6 @@ Object {
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
-  "getLife": [Function],
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getObservableVenuesSearch": [Function],
