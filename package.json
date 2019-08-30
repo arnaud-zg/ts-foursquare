@@ -21,7 +21,7 @@
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
+    "@types/node": "12.7.3",
     "@types/redux": "3.6.0",
     "codacy-coverage": "3.4.0",
     "husky": "3.0.4",
