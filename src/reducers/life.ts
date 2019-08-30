@@ -15,6 +15,7 @@ export const lifeReducer = createReducer<NLife.IState, TLifeAction>(
   {
     [ELifeAction.RESOLVE_PUT_CREDENTIALS]: (state, action): NLife.IState => ({
       ...state,
+      status: true,
       credentials: {
         ...action.payload,
       },
