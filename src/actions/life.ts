@@ -17,4 +17,4 @@ const actions = {
   putCredentials,
 }
 
-export type TLifeActions = ActionType<typeof actions>
+export type TLifeAction = ActionType<typeof actions>
