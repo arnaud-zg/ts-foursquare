@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.3...v0.2.4) (2019-08-30)
+
+### ⚠️ Tests
+
+- **life:** add life and credentials selector ([#123](https://github.com/arnaud-zg/ts-foursquare/issues/123)) ([9baef55](https://github.com/arnaud-zg/ts-foursquare/commit/9baef55))
+
+### 🐛 Bug Fixes
+
+- **life:** remove useless get life action ([#124](https://github.com/arnaud-zg/ts-foursquare/issues/124)) ([5da5687](https://github.com/arnaud-zg/ts-foursquare/commit/5da5687))
+- **life:** rename life into status ([#125](https://github.com/arnaud-zg/ts-foursquare/issues/125)) ([0cce334](https://github.com/arnaud-zg/ts-foursquare/commit/0cce334))
+- **life:** rename put credentials action ([#127](https://github.com/arnaud-zg/ts-foursquare/issues/127)) ([29bf67c](https://github.com/arnaud-zg/ts-foursquare/commit/29bf67c))
+- **life:** set status to true once put credentials is called ([#126](https://github.com/arnaud-zg/ts-foursquare/issues/126)) ([25961cd](https://github.com/arnaud-zg/ts-foursquare/commit/25961cd))
+
 ### [0.2.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.2...v0.2.3) (2019-08-30)
 
 ### 🐛 Bug Fixes
