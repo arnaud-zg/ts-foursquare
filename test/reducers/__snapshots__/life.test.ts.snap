@@ -6,6 +6,6 @@ Object {
     "clientId": "1234",
     "clientSecret": "5678",
   },
-  "status": false,
+  "status": true,
 }
 `;
