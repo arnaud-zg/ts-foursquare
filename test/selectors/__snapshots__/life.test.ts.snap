@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectors/life should get credentialsSelector 1`] = `
+Object {
+  "clientId": "1234",
+  "clientSecret": "5678",
+}
+`;
+
+exports[`selectors/life should get life status 1`] = `true`;
