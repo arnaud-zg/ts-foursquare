@@ -6,6 +6,6 @@ export declare namespace NLife {
 
   interface IState {
     credentials: ICredentials
-    life: boolean
+    status: boolean
   }
 }

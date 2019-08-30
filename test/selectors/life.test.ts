@@ -4,7 +4,7 @@ import { lifeSelector, credentialsSelector } from '../../src/selectors/life'
 const state = {
   ...initialState,
   life: {
-    life: true,
+    status: true,
     credentials: {
       clientId: '1234',
       clientSecret: '5678',
