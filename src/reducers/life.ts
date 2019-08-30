@@ -13,7 +13,7 @@ export const initialState: NLife.IState = {
 export const lifeReducer = createReducer<NLife.IState, TLifeAction>(
   initialState,
   {
-    [ELifeAction.RESOLVE_PUT_CREDENTIALS]: (state, action): NLife.IState => ({
+    [ELifeAction.PUT_CREDENTIALS]: (state, action): NLife.IState => ({
       ...state,
       status: true,
       credentials: {

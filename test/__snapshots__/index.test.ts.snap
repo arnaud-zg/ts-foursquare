@@ -9,7 +9,7 @@ Object {
     "XL": "88",
   },
   "ELifeAction": Object {
-    "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",
+    "PUT_CREDENTIALS": "PUT_CREDENTIALS",
   },
   "EVenuesAction": Object {
     "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",

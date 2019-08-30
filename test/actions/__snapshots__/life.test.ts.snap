@@ -2,6 +2,6 @@
 
 exports[`actions/life should make a snapshot of ELifeAction 1`] = `
 Object {
-  "RESOLVE_PUT_CREDENTIALS": "RESOLVE_PUT_CREDENTIALS",
+  "PUT_CREDENTIALS": "PUT_CREDENTIALS",
 }
 `;

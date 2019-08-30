@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reducers/life should get state after action: putCredentials with action: {"error": undefined, "meta": undefined, "payload": [Object], "type": "RESOLVE_PUT_CREDENTIALS"} 1`] = `
+exports[`reducers/life should get state after action: putCredentials with action: {"error": undefined, "meta": undefined, "payload": [Object], "type": "PUT_CREDENTIALS"} 1`] = `
 Object {
   "credentials": Object {
     "clientId": "1234",
