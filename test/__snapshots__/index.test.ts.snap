@@ -41,6 +41,7 @@ Object {
       "entities": Object {},
     },
   },
+  "lifeSelector": [Function],
   "processFetchError": [Function],
   "processFetchResponse": [Function],
   "putCredentials": [Function],
