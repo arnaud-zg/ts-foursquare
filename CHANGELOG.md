@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.2...v0.2.3) (2019-08-30)
+
+### 🐛 Bug Fixes
+
+- **deps:** update dependency http-response-status to v0.0.3 ([#118](https://github.com/arnaud-zg/ts-foursquare/issues/118)) ([d37a393](https://github.com/arnaud-zg/ts-foursquare/commit/d37a393))
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/node to v12.7.3 ([#117](https://github.com/arnaud-zg/ts-foursquare/issues/117)) ([5b9582e](https://github.com/arnaud-zg/ts-foursquare/commit/5b9582e))
+- **deps:** update dependency typescript to v3.6.2 ([#112](https://github.com/arnaud-zg/ts-foursquare/issues/112)) ([5ae423d](https://github.com/arnaud-zg/ts-foursquare/commit/5ae423d))
+- **template:** add template for issues and pull requests ([#113](https://github.com/arnaud-zg/ts-foursquare/issues/113)) ([b2fbd15](https://github.com/arnaud-zg/ts-foursquare/commit/b2fbd15))
+- **test:** add unit test for services ([#114](https://github.com/arnaud-zg/ts-foursquare/issues/114)) ([4c42a5b](https://github.com/arnaud-zg/ts-foursquare/commit/4c42a5b))
+- **test:** normalize jest's test name ([#115](https://github.com/arnaud-zg/ts-foursquare/issues/115)) ([7792fee](https://github.com/arnaud-zg/ts-foursquare/commit/7792fee))
+- **type:** rename TAction into TRootAction ([#116](https://github.com/arnaud-zg/ts-foursquare/issues/116)) ([cd6a0a0](https://github.com/arnaud-zg/ts-foursquare/commit/cd6a0a0))
+
 ### [0.2.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.1...v0.2.2) (2019-08-27)
 
 ### 🔧 Chore
