@@ -33,7 +33,7 @@ Object {
         "clientId": "",
         "clientSecret": "",
       },
-      "life": false,
+      "status": false,
     },
     "venues": Object {
       "entities": Object {},

@@ -3,7 +3,7 @@ import { NLife } from '../../types/life'
 import { ELifeAction, TLifeAction } from '../actions/life'
 
 export const initialState: NLife.IState = {
-  life: false,
+  status: false,
   credentials: {
     clientId: '',
     clientSecret: '',
