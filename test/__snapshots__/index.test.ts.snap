@@ -12,10 +12,20 @@ Object {
     "PUT_CREDENTIALS": "PUT_CREDENTIALS",
   },
   "EVenuesAction": Object {
+    "GET_VENUES_SEARCH_CANCEL": "GET_VENUES_SEARCH_CANCEL",
+    "GET_VENUES_SEARCH_FAILURE": "GET_VENUES_SEARCH_FAILURE",
+    "GET_VENUES_SEARCH_REQUEST": "GET_VENUES_SEARCH_REQUEST",
+    "GET_VENUES_SEARCH_SUCCESS": "GET_VENUES_SEARCH_SUCCESS",
     "REQUEST_GET_VENUES_SEARCH": "REQUEST_GET_VENUES_SEARCH",
     "RESOLVE_GET_VENUES_SEARCH": "RESOLVE_GET_VENUES_SEARCH",
   },
   "actions": Object {
+    "getVenuesSearchAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "requestGetVenuesSearch": [Function],
     "resolveGetVenuesSearch": [Function],
   },
@@ -26,6 +36,12 @@ Object {
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getObservableVenuesSearch": [Function],
+  "getVenuesSearchAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesSearchEpic": [Function],
   "initialState": Object {
     "life": Object {
