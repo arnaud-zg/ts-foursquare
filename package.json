@@ -8,6 +8,9 @@
     "dist",
     "types"
   ],
+  "keywords": [
+    "foursquare"
+  ],
   "scripts": {
     "build": "tsdx build",
     "format": "prettier --write \"src/**/*.ts\"",
