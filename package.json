@@ -24,7 +24,7 @@
     "@types/node": "12.7.3",
     "@types/redux": "3.6.0",
     "codacy-coverage": "3.4.0",
-    "husky": "3.0.4",
+    "husky": "3.0.5",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
     "standard-version": "7.0.0",
