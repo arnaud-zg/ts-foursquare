@@ -4,6 +4,10 @@
   "main": "dist/index.js",
   "module": "dist/ts-foursquare.esm.js",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnaud-zg/ts-foursquare.git"
+  },
   "files": [
     "dist",
     "types"
