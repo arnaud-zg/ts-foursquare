@@ -1,6 +1,6 @@
 import { action, ActionType, createAsyncAction } from 'typesafe-actions'
-import { NVenue } from '../../types/venue.d'
 import { NRequest } from '../../types/request.d'
+import { NVenue } from '../../types/venue.d'
 
 export enum EVenuesAction {
   REQUEST_GET_VENUES_SEARCH = 'REQUEST_GET_VENUES_SEARCH',
@@ -17,7 +17,7 @@ export const getVenuesSearchAsync = createAsyncAction(
   'GET_VENUES_SEARCH_SUCCESS',
   'GET_VENUES_SEARCH_FAILURE',
   'GET_VENUES_SEARCH_CANCEL'
-)<string, NVenue.IVenue[], Error, string>()
+)<NRequest.TVenuesSearchPayload, NVenue.IVenue[], Error, string>()
 
 export const requestGetVenuesSearch = (
   payload: NRequest.TVenuesSearchPayload

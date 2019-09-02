@@ -3,8 +3,7 @@
 exports[`epics/venues should get search for venues 1`] = `
 Array [
   Object {
-    "error": undefined,
-    "meta": undefined,
+    "meta": 0,
     "payload": Array [
       Object {
         "categories": Array [
@@ -53,7 +52,7 @@ Array [
         },
       },
     ],
-    "type": "RESOLVE_GET_VENUES_SEARCH",
+    "type": "GET_VENUES_SEARCH_SUCCESS",
   },
 ]
 `;
@@ -61,8 +60,7 @@ Array [
 exports[`epics/venues should get search for venues by location 1`] = `
 Array [
   Object {
-    "error": undefined,
-    "meta": undefined,
+    "meta": 0,
     "payload": Array [
       Object {
         "categories": Array [
@@ -111,7 +109,7 @@ Array [
         },
       },
     ],
-    "type": "RESOLVE_GET_VENUES_SEARCH",
+    "type": "GET_VENUES_SEARCH_SUCCESS",
   },
 ]
 `;
@@ -119,8 +117,7 @@ Array [
 exports[`epics/venues should get search for venues by location with intent match parameter 1`] = `
 Array [
   Object {
-    "error": undefined,
-    "meta": undefined,
+    "meta": 0,
     "payload": Array [
       Object {
         "categories": Array [
@@ -169,7 +166,7 @@ Array [
         },
       },
     ],
-    "type": "RESOLVE_GET_VENUES_SEARCH",
+    "type": "GET_VENUES_SEARCH_SUCCESS",
   },
 ]
 `;
@@ -177,8 +174,7 @@ Array [
 exports[`epics/venues should get search for venues by query 1`] = `
 Array [
   Object {
-    "error": undefined,
-    "meta": undefined,
+    "meta": 0,
     "payload": Array [
       Object {
         "categories": Array [
@@ -227,7 +223,7 @@ Array [
         },
       },
     ],
-    "type": "RESOLVE_GET_VENUES_SEARCH",
+    "type": "GET_VENUES_SEARCH_SUCCESS",
   },
 ]
 `;
@@ -235,8 +231,7 @@ Array [
 exports[`epics/venues should get search for venues near to a location 1`] = `
 Array [
   Object {
-    "error": undefined,
-    "meta": undefined,
+    "meta": 0,
     "payload": Array [
       Object {
         "categories": Array [
@@ -285,7 +280,7 @@ Array [
         },
       },
     ],
-    "type": "RESOLVE_GET_VENUES_SEARCH",
+    "type": "GET_VENUES_SEARCH_SUCCESS",
   },
 ]
 `;
