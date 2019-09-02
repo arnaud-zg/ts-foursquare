@@ -4,7 +4,7 @@ import { adaptGetVenuesSearch } from '../../src/adapter/venues'
 import { getVenuesSearchEpic } from '../../src/epics/venues'
 import { initialState } from '../../src/reducers/app'
 import { mockingFetch, testEpic } from '../../src/utils/test'
-import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
+import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 describe('utils/test/mockingFetch', () => {
   beforeAll(() => {

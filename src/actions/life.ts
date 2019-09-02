@@ -1,4 +1,4 @@
-import { ActionType, action } from 'typesafe-actions'
+import { action, ActionType } from 'typesafe-actions'
 import { NResolve } from '../../types/resolve'
 
 export enum ELifeAction {
