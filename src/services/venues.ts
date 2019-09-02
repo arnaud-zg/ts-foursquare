@@ -1,7 +1,7 @@
 import { StateObservable } from 'redux-observable'
 import { fromFetch } from 'rxjs/fetch'
 import { Observable } from 'rxjs/internal/Observable'
-import { of } from 'rxjs/internal/observable/of'
+import { throwError } from 'rxjs/internal/observable/throwError'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
 import { NRoot } from '../../types/root.d'
@@ -11,25 +11,16 @@ import { getLocationHref } from '../utils/url'
 
 export const processFetchResponse = (
   response: Response
-):
-  | Promise<any>
-  | Observable<{
-      error: boolean
-      message: string
-    }> => {
+): Promise<any> | Observable<Error> => {
   if (response.ok) {
     return response.json()
   }
 
-  return of({ error: true, message: `Error ${response.status}` })
+  return throwError(new Error(`Error ${response.status}`))
 }
 
-export const processFetchError = (
-  err: Error
-): Observable<{
-  error: boolean
-  message: string
-}> => of({ error: true, message: err.message })
+export const processFetchError = (err: Error): Observable<Error> =>
+  throwError(new Error(err.message))
 
 export const getObservableVenuesSearch = (
   action: NAction.IAction,

@@ -1,5 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`epics/venues | error case: no network should get search for venues by location 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: Error 404],
+    "type": "GET_VENUES_SEARCH_FAILURE",
+  },
+]
+`;
+
+exports[`epics/venues | error case: not valid response should get search for venues by location 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: response.json is not a function],
+    "type": "GET_VENUES_SEARCH_FAILURE",
+  },
+]
+`;
+
 exports[`epics/venues should get search for venues 1`] = `
 Array [
   Object {
