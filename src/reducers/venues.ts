@@ -9,7 +9,7 @@ export const initialState: NVenues.IState = {
 export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
   initialState,
   {
-    [EVenuesAction.RESOLVE_GET_VENUES_SEARCH]: (
+    [EVenuesAction.GET_VENUES_SEARCH_SUCCESS]: (
       state,
       action
     ): NVenues.IState => {
