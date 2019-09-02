@@ -7,8 +7,8 @@ describe('reducers/venues', () => {
   const action = getVenuesSearchAsync.success(adaptGetVenuesSearch(payload))
 
   test.each`
-    scenario                                      | action
-    ${`should get state after action: ${action}`} | ${action}
+    scenario                                                      | action
+    ${`should get state after action: ${JSON.stringify(action)}`} | ${action}
   `('$scenario with action: $action', ({ action }) => {
     expect(venuesReducer(initialState, action)).toMatchSnapshot()
   })
