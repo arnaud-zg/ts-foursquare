@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.4...v0.2.5) (2019-09-02)
+
+### 🐛 Bug Fixes
+
+- **deps:** update dependency http-response-status to v0.0.4 ([#128](https://github.com/arnaud-zg/ts-foursquare/issues/128)) ([df99694](https://github.com/arnaud-zg/ts-foursquare/commit/df99694))
+- **package:** add github link in npm.com's sidepanel ([#131](https://github.com/arnaud-zg/ts-foursquare/issues/131)) ([d58645a](https://github.com/arnaud-zg/ts-foursquare/commit/d58645a))
+- **package:** add keywords in npm.com's sidepanel ([#130](https://github.com/arnaud-zg/ts-foursquare/issues/130)) ([a82367d](https://github.com/arnaud-zg/ts-foursquare/commit/a82367d))
+- **venues:** create async action for venues epic ([#132](https://github.com/arnaud-zg/ts-foursquare/issues/132)) ([e3934ca](https://github.com/arnaud-zg/ts-foursquare/commit/e3934ca))
+
+### 🔧 Chore
+
+- **action:** remove old venues actions ([#135](https://github.com/arnaud-zg/ts-foursquare/issues/135)) ([956be06](https://github.com/arnaud-zg/ts-foursquare/commit/956be06))
+- **deps:** update dependency husky to v3.0.5 ([#129](https://github.com/arnaud-zg/ts-foursquare/issues/129)) ([7f79e55](https://github.com/arnaud-zg/ts-foursquare/commit/7f79e55))
+
+### 🖋 Features
+
+- **async-action-reducer:** handle async action and detect return type of each reducer ([#133](https://github.com/arnaud-zg/ts-foursquare/issues/133)) ([b6c09cd](https://github.com/arnaud-zg/ts-foursquare/commit/b6c09cd))
+- **venues:** handle error case on venues epic ([#134](https://github.com/arnaud-zg/ts-foursquare/issues/134)) ([cf68ed3](https://github.com/arnaud-zg/ts-foursquare/commit/cf68ed3))
+
 ### [0.2.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.3...v0.2.4) (2019-08-30)
 
 ### ⚠️ Tests
