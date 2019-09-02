@@ -1,3 +1,4 @@
+import { NHttpStatuses } from 'http-response-status'
 import { ActionsObservable, StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
 import { take, toArray } from 'rxjs/operators'
@@ -8,6 +9,26 @@ export const mockingFetch = ({ response = {} } = {}) => {
   const mockFetchPromise = Promise.resolve({
     json: () => mockJsonPromise,
     ok: true,
+  })
+
+  // @ts-ignore
+  global.fetch = jest.fn().mockImplementation(() => mockFetchPromise)
+}
+
+export const mockingFailingNotValidFetch = () => {
+  const mockFetchPromise = Promise.resolve({
+    ok: true,
+    json: null,
+  })
+
+  // @ts-ignore
+  global.fetch = jest.fn().mockImplementation(() => mockFetchPromise)
+}
+
+export const mockingFailingNotFoundFetch = () => {
+  const mockFetchPromise = Promise.resolve({
+    ok: false,
+    status: NHttpStatuses.ClientError.NOT_FOUND,
   })
 
   // @ts-ignore

@@ -1,5 +1,6 @@
 import { Epic } from 'redux-observable'
-import { filter, map, switchMap } from 'rxjs/operators'
+import { of } from 'rxjs/internal/observable/of'
+import { catchError, filter, map, switchMap, takeUntil } from 'rxjs/operators'
 import { isOfType } from 'typesafe-actions'
 import { NRoot } from '../../types/root.d'
 import { TRootAction } from '../actions'
@@ -17,7 +18,11 @@ export const getVenuesSearchEpic: Epic<
     switchMap(action =>
       getObservableVenuesSearch(action, state$).pipe(
         map(adaptGetVenuesSearch),
-        map(getVenuesSearchAsync.success)
+        map(getVenuesSearchAsync.success),
+        catchError(err => of(getVenuesSearchAsync.failure(err))),
+        takeUntil(
+          action$.pipe(filter(isOfType(EVenuesAction.GET_VENUES_SEARCH_CANCEL)))
+        )
       )
     )
   )

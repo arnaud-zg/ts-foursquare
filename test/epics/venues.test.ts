@@ -5,7 +5,12 @@ import { getVenuesSearchAsync } from '../../src/actions/venues'
 import { adaptGetVenuesSearch } from '../../src/adapter/venues'
 import { getVenuesSearchEpic } from '../../src/epics/venues'
 import { initialState } from '../../src/reducers/app'
-import { mockingFetch, testEpic } from '../../src/utils/test'
+import {
+  mockingFailingNotFoundFetch,
+  mockingFailingNotValidFetch,
+  mockingFetch,
+  testEpic,
+} from '../../src/utils/test'
 import { payload } from './__mocks__/resolveGetVenuesSearch'
 
 describe('epics/venues', () => {
@@ -30,6 +35,50 @@ describe('epics/venues', () => {
         actions.map((actualAction, index) => {
           expect(actualAction).toEqual(expectedActions[index])
         })
+        done()
+      },
+      initialState
+    )
+  })
+})
+
+describe('epics/venues | error case: no network', () => {
+  beforeAll(() => {
+    mockingFailingNotFoundFetch()
+  })
+
+  test.each`
+    scenario                                      | action
+    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}
+  `('$scenario', ({ action, done }) => {
+    testEpic(
+      getVenuesSearchEpic,
+      1,
+      action,
+      (actions: Action[]) => {
+        expect(actions).toMatchSnapshot()
+        done()
+      },
+      initialState
+    )
+  })
+})
+
+describe('epics/venues | error case: not valid response', () => {
+  beforeAll(() => {
+    mockingFailingNotValidFetch()
+  })
+
+  test.each`
+    scenario                                      | action
+    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}
+  `('$scenario', ({ action, done }) => {
+    testEpic(
+      getVenuesSearchEpic,
+      1,
+      action,
+      (actions: Action[]) => {
+        expect(actions).toMatchSnapshot()
         done()
       },
       initialState
