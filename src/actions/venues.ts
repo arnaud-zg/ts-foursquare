@@ -1,4 +1,4 @@
-import { action, ActionType, createAsyncAction } from 'typesafe-actions'
+import { ActionType, createAsyncAction } from 'typesafe-actions'
 import { NRequest } from '../../types/request.d'
 import { NVenue } from '../../types/venue.d'
 
@@ -19,16 +19,7 @@ export const getVenuesSearchAsync = createAsyncAction(
   'GET_VENUES_SEARCH_CANCEL'
 )<NRequest.TVenuesSearchPayload, NVenue.IVenue[], Error, string>()
 
-export const requestGetVenuesSearch = (
-  payload: NRequest.TVenuesSearchPayload
-) => action(EVenuesAction.REQUEST_GET_VENUES_SEARCH, payload)
-
-export const resolveGetVenuesSearch = (payload: NVenue.IVenue[] = []) =>
-  action(EVenuesAction.RESOLVE_GET_VENUES_SEARCH, payload)
-
 export const actions = {
-  requestGetVenuesSearch,
-  resolveGetVenuesSearch,
   getVenuesSearchAsync,
 }
 

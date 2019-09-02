@@ -5,7 +5,7 @@ import {
   venueSelector,
   venuesSelector,
 } from '../../src/selectors/venues'
-import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
+import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 const venueId = payload.response.venues[0].id
 const state = {

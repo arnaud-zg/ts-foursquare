@@ -11,7 +11,7 @@ import {
   mockingFetch,
   testEpic,
 } from '../../src/utils/test'
-import { payload } from './__mocks__/resolveGetVenuesSearch'
+import { payload } from './__mocks__/getVenuesSearchAsync.resolve'
 
 describe('epics/venues', () => {
   beforeAll(() => {

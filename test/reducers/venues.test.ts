@@ -1,7 +1,7 @@
 import { getVenuesSearchAsync } from '../../src/actions/venues'
 import { adaptGetVenuesSearch } from '../../src/adapter/venues'
 import { initialState, venuesReducer } from '../../src/reducers/venues'
-import { payload } from '../epics/__mocks__/resolveGetVenuesSearch'
+import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 describe('reducers/venues', () => {
   const action = getVenuesSearchAsync.success(adaptGetVenuesSearch(payload))
