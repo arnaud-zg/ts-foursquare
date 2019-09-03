@@ -1,5 +1,3 @@
-import { NPayload } from './payload.d'
-
 export declare namespace NAction {
   interface IActionMeta {
     [key: string]: any
