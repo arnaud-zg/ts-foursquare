@@ -56,7 +56,7 @@ describe('utils/test/testEpic', () => {
       action,
       (actions: Action[]) => {
         expect(actions).toMatchSnapshot()
-        actions.map((actualAction, index) => {
+        actions.forEach((actualAction, index) => {
           expect(actualAction).toEqual(expectedActions[index])
         })
         done()

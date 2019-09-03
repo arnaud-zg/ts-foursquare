@@ -1,5 +1,3 @@
-require('isomorphic-fetch')
-
 import { Action } from 'typesafe-actions'
 import { getVenuesSearchAsync } from '../../src/actions/venues'
 import { adaptGetVenuesSearch } from '../../src/adapter/venues'
@@ -12,6 +10,7 @@ import {
   testEpic,
 } from '../../src/utils/test'
 import { payload } from './__mocks__/getVenuesSearchAsync.resolve'
+require('isomorphic-fetch')
 
 describe('epics/venues', () => {
   beforeAll(() => {
@@ -32,7 +31,7 @@ describe('epics/venues', () => {
       action,
       (actions: Action[]) => {
         expect(actions).toMatchSnapshot()
-        actions.map((actualAction, index) => {
+        actions.forEach((actualAction, index) => {
           expect(actualAction).toEqual(expectedActions[index])
         })
         done()
