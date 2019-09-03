@@ -49,6 +49,7 @@ Object {
       },
       "status": false,
     },
+    "status": Object {},
     "venues": Object {
       "entities": Object {},
     },
