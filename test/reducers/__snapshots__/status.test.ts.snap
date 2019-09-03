@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`epics/status should set isLoading property 1`] = `
+Object {
+  "GET_VENUES_SEARCH_REQUEST": Object {
+    "hasError": false,
+    "isLoading": true,
+  },
+}
+`;
+
+exports[`epics/status should set isLoading property 2`] = `
+Object {
+  "GET_VENUES_SEARCH_FAILURE": Object {
+    "hasError": true,
+    "isLoading": false,
+  },
+}
+`;
+
+exports[`epics/status should set isLoading property 3`] = `
+Object {
+  "GET_VENUES_SEARCH_CANCEL": Object {
+    "hasError": false,
+    "isLoading": false,
+  },
+}
+`;
+
+exports[`epics/status should set isLoading property 4`] = `
+Object {
+  "GET_VENUES_SEARCH_SUCCESS": Object {
+    "hasError": false,
+    "isLoading": false,
+  },
+}
+`;
