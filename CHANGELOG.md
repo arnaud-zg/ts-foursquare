@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.5...v0.2.6) (2019-09-03)
+
+### 🐛 Bug Fixes
+
+- **action:** add root action type ([#141](https://github.com/arnaud-zg/ts-foursquare/issues/141)) ([0268592](https://github.com/arnaud-zg/ts-foursquare/commit/0268592))
+- **deps:** update dependency rxjs to v6.5.3 ([#138](https://github.com/arnaud-zg/ts-foursquare/issues/138)) ([566cdc8](https://github.com/arnaud-zg/ts-foursquare/commit/566cdc8))
+- **status:** define status type ([#139](https://github.com/arnaud-zg/ts-foursquare/issues/139)) ([511bf7f](https://github.com/arnaud-zg/ts-foursquare/commit/511bf7f))
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/node to v12.7.4 ([#137](https://github.com/arnaud-zg/ts-foursquare/issues/137)) ([f1571ad](https://github.com/arnaud-zg/ts-foursquare/commit/f1571ad))
+- **deps:** update dependency tsdx to v0.9.1 ([#136](https://github.com/arnaud-zg/ts-foursquare/issues/136)) ([f00976c](https://github.com/arnaud-zg/ts-foursquare/commit/f00976c))
+
+### 🖋 Features
+
+- **status:** add reducer for status module ([#142](https://github.com/arnaud-zg/ts-foursquare/issues/142)) ([6dd8a4a](https://github.com/arnaud-zg/ts-foursquare/commit/6dd8a4a))
+- **status:** add selector for status module ([#143](https://github.com/arnaud-zg/ts-foursquare/issues/143)) ([43228e4](https://github.com/arnaud-zg/ts-foursquare/commit/43228e4))
+
 ### [0.2.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.4...v0.2.5) (2019-09-02)
 
 ### 🐛 Bug Fixes
