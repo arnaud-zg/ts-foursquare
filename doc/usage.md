@@ -34,7 +34,7 @@ setCredentials({ clientId, clientSecret })
 
 ## Actions
 
-### `getVenuesSearch`
+### `getVenuesSearch` [Deprecated]
 
 Service methods return `Promise<NVenues.IVenues>`.
 
