@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectors/status should get module state 1`] = `
+Object {
+  "hasError": false,
+  "isLoading": false,
+}
+`;
+
+exports[`selectors/status should get module state 2`] = `
+Object {
+  "hasError": false,
+  "isLoading": false,
+}
+`;
+
+exports[`selectors/status should get status 1`] = `
+Object {
+  "GET_VENUES_SEARCH_REQUEST": Object {
+    "hasError": false,
+    "isLoading": false,
+  },
+}
+`;

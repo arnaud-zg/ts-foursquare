@@ -1,7 +1,8 @@
 import { initialState } from '../../src/reducers/app'
-import { lifeSelector, credentialsSelector } from '../../src/selectors/life'
+import { credentialsSelector, lifeSelector } from '../../src/selectors/life'
+import { NRoot } from '../../types/root'
 
-const state = {
+const state: NRoot.IState = {
   ...initialState,
   life: {
     status: true,
