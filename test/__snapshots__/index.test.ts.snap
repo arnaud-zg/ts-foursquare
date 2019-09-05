@@ -2,6 +2,12 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
+  "ASYNC_ACTION_NAME_MAPPING": Object {
+    "GET_VENUES_SEARCH_CANCEL": "getVenuesSearchAsync",
+    "GET_VENUES_SEARCH_FAILURE": "getVenuesSearchAsync",
+    "GET_VENUES_SEARCH_REQUEST": "getVenuesSearchAsync",
+    "GET_VENUES_SEARCH_SUCCESS": "getVenuesSearchAsync",
+  },
   "EIconSize": Object {
     "L": "64",
     "M": "44",

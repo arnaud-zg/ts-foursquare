@@ -2,7 +2,7 @@
 
 exports[`epics/status should set isLoading property 1`] = `
 Object {
-  "GET_VENUES_SEARCH_REQUEST": Object {
+  "getVenuesSearchAsync": Object {
     "hasError": false,
     "isLoading": true,
   },
@@ -11,7 +11,7 @@ Object {
 
 exports[`epics/status should set isLoading property 2`] = `
 Object {
-  "GET_VENUES_SEARCH_FAILURE": Object {
+  "getVenuesSearchAsync": Object {
     "hasError": true,
     "isLoading": false,
   },
@@ -20,7 +20,7 @@ Object {
 
 exports[`epics/status should set isLoading property 3`] = `
 Object {
-  "GET_VENUES_SEARCH_CANCEL": Object {
+  "getVenuesSearchAsync": Object {
     "hasError": false,
     "isLoading": false,
   },
@@ -29,7 +29,7 @@ Object {
 
 exports[`epics/status should set isLoading property 4`] = `
 Object {
-  "GET_VENUES_SEARCH_SUCCESS": Object {
+  "getVenuesSearchAsync": Object {
     "hasError": false,
     "isLoading": false,
   },
