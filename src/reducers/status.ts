@@ -1,6 +1,10 @@
 import { createReducer } from 'typesafe-actions'
 import { NStatus } from '../../types/status'
-import { TRootAction, EVenuesAction } from '../actions'
+import {
+  ASYNC_ACTION_NAME_MAPPING,
+  EVenuesAction,
+  TRootAction,
+} from '../actions'
 
 export const initialState: NStatus.IState = {}
 
@@ -11,7 +15,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
     [EVenuesAction.GET_VENUES_SEARCH_REQUEST],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
-      [action.type]: {
+      [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
         hasError: false,
         isLoading: true,
@@ -22,7 +26,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
     [EVenuesAction.GET_VENUES_SEARCH_FAILURE],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
-      [action.type]: {
+      [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
         hasError: true,
         isLoading: false,
@@ -36,7 +40,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
     ],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
-      [action.type]: {
+      [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
         hasError: false,
         isLoading: false,
