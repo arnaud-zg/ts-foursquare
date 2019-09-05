@@ -13,7 +13,7 @@ script:
   - yarn run format
   - yarn run lint
   - yarn run build
-  - yarn run test:coverage:report -- --username $CODACY_USERNAME --projectName $CODACY_PROJECT_NAME
+  - yarn run test:coverage:report
 
 before_deploy:
   - if [ ! -d dist ]; then yarn run build ; fi
