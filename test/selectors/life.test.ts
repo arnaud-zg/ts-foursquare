@@ -1,5 +1,8 @@
 import { initialState } from '../../src/reducers/app'
-import { credentialsSelector, lifeSelector } from '../../src/selectors/life'
+import {
+  credentialsSelector,
+  lifeStatusSelector,
+} from '../../src/selectors/life'
 import { NRoot } from '../../types/root'
 
 const state: NRoot.IState = {
@@ -15,7 +18,7 @@ const state: NRoot.IState = {
 
 describe('selectors/life', () => {
   it('should get life status', () => {
-    expect(lifeSelector(state)).toMatchSnapshot()
+    expect(lifeStatusSelector(state)).toMatchSnapshot()
   })
 
   it('should get credentialsSelector', () => {

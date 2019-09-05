@@ -54,7 +54,7 @@ Object {
       "entities": Object {},
     },
   },
-  "lifeSelector": [Function],
+  "lifeStatusSelector": [Function],
   "moduleStateSelector": [Function],
   "processFetchError": [Function],
   "processFetchResponse": [Function],
