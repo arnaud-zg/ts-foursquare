@@ -14,7 +14,7 @@ const state: NRoot.IState = {
 }
 
 describe('selectors/life', () => {
-  it('should get life status', () => {
+  it('should get life state', () => {
     expect(lifeSelector(state)).toMatchSnapshot()
   })
 

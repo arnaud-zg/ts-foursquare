@@ -7,4 +7,12 @@ Object {
 }
 `;
 
-exports[`selectors/life should get life status 1`] = `true`;
+exports[`selectors/life should get life state 1`] = `
+Object {
+  "credentials": Object {
+    "clientId": "1234",
+    "clientSecret": "5678",
+  },
+  "status": true,
+}
+`;
