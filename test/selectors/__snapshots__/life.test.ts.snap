@@ -16,3 +16,5 @@ Object {
   "status": true,
 }
 `;
+
+exports[`selectors/life should get life status 1`] = `true`;
