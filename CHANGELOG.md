@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.6...v0.2.7) (2019-09-05)
+
+### ⚠️ Tests
+
+- **coverage:** report code coverage on ci to codecov ([#150](https://github.com/arnaud-zg/ts-foursquare/issues/150)) ([dd05c96](https://github.com/arnaud-zg/ts-foursquare/commit/dd05c96))
+
+### 🐛 Bug Fixes
+
+- **action:** remove old get venues search action ([#145](https://github.com/arnaud-zg/ts-foursquare/issues/145)) ([29b7269](https://github.com/arnaud-zg/ts-foursquare/commit/29b7269))
+- **selector:** get life state on method lifeSelector ([#148](https://github.com/arnaud-zg/ts-foursquare/issues/148)) ([0c45fcc](https://github.com/arnaud-zg/ts-foursquare/commit/0c45fcc))
+- **selector:** get life state on method lifeStatusSelector ([#149](https://github.com/arnaud-zg/ts-foursquare/issues/149)) ([cc259a1](https://github.com/arnaud-zg/ts-foursquare/commit/cc259a1))
+
+### 🖋 Features
+
+- **async:** handle async action on status module ([#151](https://github.com/arnaud-zg/ts-foursquare/issues/151)) ([a42e32b](https://github.com/arnaud-zg/ts-foursquare/commit/a42e32b))
+
 ### [0.2.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.5...v0.2.6) (2019-09-03)
 
 ### 🐛 Bug Fixes
