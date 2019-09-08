@@ -22,12 +22,12 @@ export declare namespace NRequest {
     ll: string
   }
 
-  interface IVenuesSearchPayloadByGeocode extends IVenuesSearchPayload {
+  interface IVenuesSearchPayloadByPlace extends IVenuesSearchPayload {
     near: string
   }
 
   type TVenuesSearchPayload =
     | IVenuesSearchPayloadByQuery
     | IVenuesSearchPayloadByLocation
-    | IVenuesSearchPayloadByGeocode
+    | IVenuesSearchPayloadByPlace
 }
