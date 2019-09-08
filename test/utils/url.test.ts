@@ -5,9 +5,13 @@ describe('utils/url/getLocationSearch', () => {
   it('should return nothing', () => {
     expect(getLocationSearch()).toEqual(undefined)
     expect(getLocationSearch({ param: {} })).toEqual(undefined)
+    expect(getLocationSearch({ param: { name: undefined } })).toEqual(undefined)
   })
 
   it('should generate a location search string', () => {
+    expect(
+      getLocationSearch({ param: { search: 'hello-world', name: undefined } })
+    ).toEqual('?search=hello-world')
     expect(getLocationSearch({ param: { search: 'hello-world' } })).toEqual(
       '?search=hello-world'
     )
