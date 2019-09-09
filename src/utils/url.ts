@@ -1,13 +1,17 @@
+type TLocationSearchParam = string | number | boolean
+
 interface ILocationSearchParam {
-  [key: string]: string | number
+  [key: string]: TLocationSearchParam | undefined
 }
 
 export const getLocationSearch = (
   { param = {} }: { param: ILocationSearchParam } = { param: {} }
 ) => {
   const locationSearch = Object.keys(param)
-    .filter(key => !!param[key])
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(param[key])}`)
+    .filter(key => !(param[key] === undefined))
+    .map(
+      key => `${encodeURIComponent(key)}=${encodeURIComponent(`${param[key]}`)}`
+    )
     .join('&')
 
   return locationSearch ? `?${locationSearch}` : undefined
