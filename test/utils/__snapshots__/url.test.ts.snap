@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`utils/url/getLocationHref should generate a location href url 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
+exports[`utils/url/getLocationHref should generate a location href url with {"city": "Séoul", "search": "한국식 바베큐"} 1`] = `"https://api.foursquare.com/v2/venues/search?city=S%C3%A9oul&search=%ED%95%9C%EA%B5%AD%EC%8B%9D%20%EB%B0%94%EB%B2%A0%ED%81%90"`;
 
-exports[`utils/url/getLocationHref should generate a location href url 2`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world&limit=20"`;
+exports[`utils/url/getLocationHref should generate a location href url with {"limit": 20, "search": "hello world"} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello%20world&limit=20"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"limit": 20, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?limit=20&search=hello-world"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"name": undefined, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"page": 20, "search": "hello world !"} 1`] = `"https://api.foursquare.com/v2/venues/search?page=20&search=hello%20world%20!"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"page": 42, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?page=42&search=hello-world"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"search": "hello-world", "withOptionA": false} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world&withOptionA=false"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"search": "hello-world", "withOptionA": true} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world&withOptionA=true"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with undefined 1`] = `"https://api.foursquare.com/v2/venues/search"`;
