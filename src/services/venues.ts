@@ -26,8 +26,6 @@ export const getObservableVenuesSearch = (
   action: NAction.IAction,
   state$: StateObservable<NRoot.IState>
 ) => {
-  const { payload } = action
-  const { query } = payload
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
@@ -35,11 +33,9 @@ export const getObservableVenuesSearch = (
       origin: EApiDefaultParameters.ORIGIN,
       pathname: EApiPathnames.VENUES_SEARCH,
       param: {
+        ...action.payload,
         client_id: clientId,
         client_secret: clientSecret,
-        intent: 'checkin',
-        ll: '40.7099,-73.9622',
-        name: query,
         v: EApiDefaultParameters.VERSION,
       },
     })
