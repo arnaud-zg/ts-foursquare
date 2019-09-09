@@ -12,14 +12,14 @@ describe('utils/test/mockingFetch', () => {
       text: 'Hello World',
     }
 
-    mockingFetch({
-      response: { ...data },
-    })
+    mockingFetch({ response: { ...data } })
   })
 
   const fetchResult = () => fetch('https://api.tld.com/v2/randomEndpoint')
 
   it('should get a promise', () => {
+    expect(fetchResult()).toMatchSnapshot()
+    mockingFetch()
     expect(fetchResult()).toMatchSnapshot()
   })
 
@@ -47,21 +47,25 @@ describe('utils/test/testEpic', () => {
   ]
 
   test.each`
-    scenario                                      | action    | expectedActions
-    ${'should get search for venues by location'} | ${action} | ${expectedActions}
-  `('$scenario', ({ action, expectedActions, done }) => {
-    testEpic(
-      getVenuesSearchEpic,
-      expectedActions.length,
-      action,
-      (actions: Action[]) => {
-        expect(actions).toMatchSnapshot()
-        actions.forEach((actualAction, index) => {
-          expect(actualAction).toEqual(expectedActions[index])
-        })
-        done()
-      },
-      initialState
-    )
-  })
+    action    | state           | expectedActions
+    ${action} | ${initialState} | ${expectedActions}
+    ${action} | ${undefined}    | ${expectedActions}
+  `(
+    'should get search for venues by location with state: $state',
+    ({ action, expectedActions, state, done }) => {
+      testEpic(
+        getVenuesSearchEpic,
+        expectedActions.length,
+        action,
+        (actions: Action[]) => {
+          expect(actions).toMatchSnapshot()
+          actions.forEach((actualAction, index) => {
+            expect(actualAction).toEqual(expectedActions[index])
+          })
+          done()
+        },
+        state
+      )
+    }
+  )
 })
