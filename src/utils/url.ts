@@ -12,7 +12,7 @@ export const getLocationSearch = (
     )
     .join('&')
 
-  return locationSearch ? `?${locationSearch}` : undefined
+  return (!!locationSearch && `?${locationSearch}`) || ''
 }
 
 export const getLocationHref = ({
