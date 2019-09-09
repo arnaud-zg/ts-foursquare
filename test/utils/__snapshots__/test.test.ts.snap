@@ -2,6 +2,8 @@
 
 exports[`utils/test/mockingFetch should get a promise 1`] = `Promise {}`;
 
+exports[`utils/test/mockingFetch should get a promise 2`] = `Promise {}`;
+
 exports[`utils/test/mockingFetch should get a success Response object 1`] = `
 Object {
   "json": [Function],
@@ -9,7 +11,7 @@ Object {
 }
 `;
 
-exports[`utils/test/testEpic should get search for venues by location 1`] = `
+exports[`utils/test/testEpic should get search for venues by location with state: {"life": [Object], "status": [Object], "venues": [Object]} 1`] = `
 Array [
   Object {
     "meta": 0,
