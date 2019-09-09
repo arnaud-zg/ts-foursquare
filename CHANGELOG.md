@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.8...v0.2.9) (2019-09-09)
+
+### ⚠️ Tests
+
+- **reducers:** add snapshot of configureStore method ([#163](https://github.com/arnaud-zg/ts-foursquare/issues/163)) ([b087de2](https://github.com/arnaud-zg/ts-foursquare/commit/b087de2))
+- **url:** add unit test on getLocationSearch method ([#164](https://github.com/arnaud-zg/ts-foursquare/issues/164)) ([72e0e61](https://github.com/arnaud-zg/ts-foursquare/commit/72e0e61))
+
+### 🐛 Bug Fixes
+
+- **url:** handle url search parameter with undefined value ([#153](https://github.com/arnaud-zg/ts-foursquare/issues/153)) ([24b9be9](https://github.com/arnaud-zg/ts-foursquare/commit/24b9be9))
+
+### 🔧 Chore
+
+- **deps:** update dependency tsdx to v0.9.2 ([#161](https://github.com/arnaud-zg/ts-foursquare/issues/161)) ([37d4dde](https://github.com/arnaud-zg/ts-foursquare/commit/37d4dde))
+
+### 🖋 Features
+
+- **venues:** call get venues search with custom variable ([#162](https://github.com/arnaud-zg/ts-foursquare/issues/162)) ([146621c](https://github.com/arnaud-zg/ts-foursquare/commit/146621c))
+
 ### [0.2.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.7...v0.2.8) (2019-09-08)
 
 ### 🐛 Bug Fixes
