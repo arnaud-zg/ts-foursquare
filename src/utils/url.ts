@@ -1,7 +1,5 @@
-type TLocationSearchParam = string | number | boolean
-
 interface ILocationSearchParam {
-  [key: string]: TLocationSearchParam | undefined
+  [key: string]: string | number | boolean | undefined
 }
 
 export const getLocationSearch = (
