@@ -45,4 +45,8 @@ export declare namespace NVenue {
       id: string
     }
   }
+
+  interface IApiResponse {
+    venues: IVenue[]
+  }
 }

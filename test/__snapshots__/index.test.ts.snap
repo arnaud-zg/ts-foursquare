@@ -3,6 +3,10 @@
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
   "ASYNC_ACTION_NAME_MAPPING": Object {
+    "GET_VENUES_EXPLORE_CANCEL": "getVenueExploreAsync",
+    "GET_VENUES_EXPLORE_FAILURE": "getVenueExploreAsync",
+    "GET_VENUES_EXPLORE_REQUEST": "getVenueExploreAsync",
+    "GET_VENUES_EXPLORE_SUCCESS": "getVenueExploreAsync",
     "GET_VENUES_SEARCH_CANCEL": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_FAILURE": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_REQUEST": "getVenuesSearchAsync",
@@ -18,12 +22,22 @@ Object {
     "PUT_CREDENTIALS": "PUT_CREDENTIALS",
   },
   "EVenuesAction": Object {
+    "GET_VENUES_EXPLORE_CANCEL": "GET_VENUES_EXPLORE_CANCEL",
+    "GET_VENUES_EXPLORE_FAILURE": "GET_VENUES_EXPLORE_FAILURE",
+    "GET_VENUES_EXPLORE_REQUEST": "GET_VENUES_EXPLORE_REQUEST",
+    "GET_VENUES_EXPLORE_SUCCESS": "GET_VENUES_EXPLORE_SUCCESS",
     "GET_VENUES_SEARCH_CANCEL": "GET_VENUES_SEARCH_CANCEL",
     "GET_VENUES_SEARCH_FAILURE": "GET_VENUES_SEARCH_FAILURE",
     "GET_VENUES_SEARCH_REQUEST": "GET_VENUES_SEARCH_REQUEST",
     "GET_VENUES_SEARCH_SUCCESS": "GET_VENUES_SEARCH_SUCCESS",
   },
   "actions": Object {
+    "getVenueExploreAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "getVenuesSearchAsync": Object {
       "cancel": [Function],
       "failure": [Function],
@@ -38,6 +52,12 @@ Object {
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getObservableVenuesSearch": [Function],
+  "getVenueExploreAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesSearchAsync": Object {
     "cancel": [Function],
     "failure": [Function],
