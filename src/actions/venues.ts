@@ -43,12 +43,7 @@ export const getVenueExploreAsync = createAsyncAction(
   EVenuesAction.GET_VENUES_EXPLORE_SUCCESS,
   EVenuesAction.GET_VENUES_EXPLORE_FAILURE,
   EVenuesAction.GET_VENUES_EXPLORE_CANCEL
-)<
-  NRequest.TVenuesExplorePayload,
-  NRecommendedPlaces.IRecommendedPlaces,
-  Error,
-  string
->()
+)<NRequest.TVenuesExplorePayload, NRecommendedPlaces.IGroup, Error, string>()
 
 export const actions = {
   getVenuesSearchAsync,
