@@ -1,9 +1,17 @@
 export declare namespace NVenue {
-  interface IIcon {
-    prefix: string
-    suffix: string
+  interface IResponse {
+    venues: IVenue[]
   }
 
+  interface IVenue {
+    categories: ICategory[]
+    hasPerk: boolean
+    id: string
+    location: ILocation
+    name: string
+    referralId: string
+    venuePage: IVenuePage
+  }
   interface ICategory {
     icon: IIcon
     id: string
@@ -13,10 +21,9 @@ export declare namespace NVenue {
     shortName: string
   }
 
-  interface ILabeledLatLngs {
-    label: string
-    lat: number
-    lng: number
+  interface IIcon {
+    prefix: string
+    suffix: string
   }
 
   interface ILocation {
@@ -33,20 +40,13 @@ export declare namespace NVenue {
     postalCode: string
     state: string
   }
-
-  interface IVenue {
-    categories: ICategory[]
-    hasPerk: boolean
-    id: string
-    location: ILocation
-    name: string
-    referralId: string
-    venuePage: {
-      id: string
-    }
+  interface ILabeledLatLngs {
+    label: string
+    lat: number
+    lng: number
   }
 
-  interface IApiResponse {
-    venues: IVenue[]
+  interface IVenuePage {
+    id: string
   }
 }

@@ -1,51 +1,52 @@
 import { NVenue } from './venue'
 
 export declare namespace NRecommendedPlaces {
-  interface IRecommendedPlace {
-    reasons: {
-      count: number
-      items: {
-        summary: string
-        type: string
-        reasonName: string
-      }[]
-    }
-    venue: NVenue.IVenue[]
-  }
-
-  interface IRecommendedPlaces {
-    type: 'Recommended Places'
-    name: 'recommended'
-    items: IRecommendedPlace[]
-  }
-
-  interface IApiResponse {
-    warning: {
-      text: string
-    }
+  interface IResponse {
+    warning: IWarning
     suggestedRadius: number
     headerLocation: string
     headerFullLocation: string
     headerLocationGranularity: string
     totalResults: number
-    suggestedBounds: {
-      ne: {
-        lat: number
-        lng: number
-      }
-      nw: {
-        lat: number
-        lng: number
-      }
-      se: {
-        lat: number
-        lng: number
-      }
-      sw: {
-        lat: number
-        lng: number
-      }
-    }
-    groups: IRecommendedPlace[]
+    suggestedBounds: ISuggestedBounds
+    groups: IGroup[]
+  }
+
+  interface IGroup {
+    type: string
+    name: string
+    items: IGroupItem[]
+  }
+
+  interface IGroupItem {
+    reasons: IReasons
+    venue: NVenue.IVenue
+  }
+
+  interface IReasons {
+    count: number
+    items: IReasonsItem[]
+  }
+
+  interface IReasonsItem {
+    summary: string
+    type: string
+    reasonName: string
+  }
+
+  interface ISuggestedBounds {
+    ne: IBoundsLocation
+    nw: IBoundsLocation
+    se: IBoundsLocation
+    sw: IBoundsLocation
+  }
+
+  interface IBoundsLocation {
+    lat: number
+    lng: number
+  }
+
+  interface IWarning {
+    text: string
   }
 }
