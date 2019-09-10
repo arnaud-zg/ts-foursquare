@@ -1,4 +1,14 @@
 export declare namespace NRequest {
+  interface IVenuesExplorePayload {}
+
+  interface IVenuesExplorePayloadByPlace extends IVenuesExplorePayload {}
+
+  interface IVenuesExplorePayloadByLocation extends IVenuesExplorePayload {}
+
+  type TVenuesExplorePayload =
+    | IVenuesExplorePayloadByPlace
+    | IVenuesExplorePayloadByLocation
+
   interface IVenuesSearchPayload {
     alt?: number
     altAcc?: number

@@ -4,8 +4,6 @@ export declare namespace NPayload {
       code: number
       requestId: string
     }
-    response?: {
-      [key: string]: TResponse
-    }
+    response?: TResponse
   }
 }
