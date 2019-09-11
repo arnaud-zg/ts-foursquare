@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.5...v0.2.10) (2019-09-11)
+
+### ⚠️ Tests
+
+- **coverage:** report code coverage on ci to codecov ([#150](https://github.com/arnaud-zg/ts-foursquare/issues/150)) ([dd05c96](https://github.com/arnaud-zg/ts-foursquare/commit/dd05c96))
+- **reducers:** add snapshot of configureStore method ([#163](https://github.com/arnaud-zg/ts-foursquare/issues/163)) ([b087de2](https://github.com/arnaud-zg/ts-foursquare/commit/b087de2))
+- **url:** add unit test on getLocationSearch method ([#164](https://github.com/arnaud-zg/ts-foursquare/issues/164)) ([72e0e61](https://github.com/arnaud-zg/ts-foursquare/commit/72e0e61))
+- **util:** update test on mockingFetch and testEpic ([#165](https://github.com/arnaud-zg/ts-foursquare/issues/165)) ([cabd0c9](https://github.com/arnaud-zg/ts-foursquare/commit/cabd0c9))
+
+### 🐛 Bug Fixes
+
+- **action:** add root action type ([#141](https://github.com/arnaud-zg/ts-foursquare/issues/141)) ([0268592](https://github.com/arnaud-zg/ts-foursquare/commit/0268592))
+- **action:** remove old get venues search action ([#145](https://github.com/arnaud-zg/ts-foursquare/issues/145)) ([29b7269](https://github.com/arnaud-zg/ts-foursquare/commit/29b7269))
+- **deps:** update dependency rxjs to v6.5.3 ([#138](https://github.com/arnaud-zg/ts-foursquare/issues/138)) ([566cdc8](https://github.com/arnaud-zg/ts-foursquare/commit/566cdc8))
+- **selector:** get life state on method lifeSelector ([#148](https://github.com/arnaud-zg/ts-foursquare/issues/148)) ([0c45fcc](https://github.com/arnaud-zg/ts-foursquare/commit/0c45fcc))
+- **selector:** get life state on method lifeStatusSelector ([#149](https://github.com/arnaud-zg/ts-foursquare/issues/149)) ([cc259a1](https://github.com/arnaud-zg/ts-foursquare/commit/cc259a1))
+- **status:** define status type ([#139](https://github.com/arnaud-zg/ts-foursquare/issues/139)) ([511bf7f](https://github.com/arnaud-zg/ts-foursquare/commit/511bf7f))
+- **type:** update request type definition file ([#152](https://github.com/arnaud-zg/ts-foursquare/issues/152)) ([5799b52](https://github.com/arnaud-zg/ts-foursquare/commit/5799b52))
+- **url:** handle url search parameter with undefined value ([#153](https://github.com/arnaud-zg/ts-foursquare/issues/153)) ([24b9be9](https://github.com/arnaud-zg/ts-foursquare/commit/24b9be9))
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/node to v12.7.4 ([#137](https://github.com/arnaud-zg/ts-foursquare/issues/137)) ([f1571ad](https://github.com/arnaud-zg/ts-foursquare/commit/f1571ad))
+- **deps:** update dependency @types/node to v12.7.5 ([#169](https://github.com/arnaud-zg/ts-foursquare/issues/169)) ([06fc4bd](https://github.com/arnaud-zg/ts-foursquare/commit/06fc4bd))
+- **deps:** update dependency tsdx to v0.9.1 ([#136](https://github.com/arnaud-zg/ts-foursquare/issues/136)) ([f00976c](https://github.com/arnaud-zg/ts-foursquare/commit/f00976c))
+- **deps:** update dependency tsdx to v0.9.2 ([#161](https://github.com/arnaud-zg/ts-foursquare/issues/161)) ([37d4dde](https://github.com/arnaud-zg/ts-foursquare/commit/37d4dde))
+- **deps:** update dependency typescript to v3.6.3 ([#168](https://github.com/arnaud-zg/ts-foursquare/issues/168)) ([7df2778](https://github.com/arnaud-zg/ts-foursquare/commit/7df2778))
+- **release:** 0.2.6 ([069b0f4](https://github.com/arnaud-zg/ts-foursquare/commit/069b0f4))
+- **release:** 0.2.7 ([7f3ba59](https://github.com/arnaud-zg/ts-foursquare/commit/7f3ba59))
+- **release:** 0.2.8 ([4fec65b](https://github.com/arnaud-zg/ts-foursquare/commit/4fec65b))
+- **release:** 0.2.9 ([0b5f55e](https://github.com/arnaud-zg/ts-foursquare/commit/0b5f55e))
+- **type:** reorder and clean type for payload, venue and recommended places ([#167](https://github.com/arnaud-zg/ts-foursquare/issues/167)) ([097e01f](https://github.com/arnaud-zg/ts-foursquare/commit/097e01f))
+
+### 🖋 Features
+
+- **async:** handle async action on status module ([#151](https://github.com/arnaud-zg/ts-foursquare/issues/151)) ([a42e32b](https://github.com/arnaud-zg/ts-foursquare/commit/a42e32b))
+- **status:** add reducer for status module ([#142](https://github.com/arnaud-zg/ts-foursquare/issues/142)) ([6dd8a4a](https://github.com/arnaud-zg/ts-foursquare/commit/6dd8a4a))
+- **status:** add selector for status module ([#143](https://github.com/arnaud-zg/ts-foursquare/issues/143)) ([43228e4](https://github.com/arnaud-zg/ts-foursquare/commit/43228e4))
+- **venue-explore:** add an action for get venue explore ([#166](https://github.com/arnaud-zg/ts-foursquare/issues/166)) ([1471cd7](https://github.com/arnaud-zg/ts-foursquare/commit/1471cd7))
+- **venues:** call get venues search with custom variable ([#162](https://github.com/arnaud-zg/ts-foursquare/issues/162)) ([146621c](https://github.com/arnaud-zg/ts-foursquare/commit/146621c))
+
 ### [0.2.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.8...v0.2.9) (2019-09-09)
 
 ### ⚠️ Tests
