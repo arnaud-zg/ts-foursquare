@@ -5,11 +5,11 @@ export declare namespace NVenue {
 
   interface IVenue {
     categories: ICategory[]
-    hasPerk: boolean
+    hasPerk?: boolean
     id: string
     location: ILocation
     name: string
-    referralId: string
+    referralId?: string
     venuePage: IVenuePage
   }
   interface ICategory {
