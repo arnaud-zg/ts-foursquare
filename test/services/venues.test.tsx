@@ -1,9 +1,9 @@
 import { StateObservable } from 'redux-observable'
-import { getVenuesSearchAsync } from '../../src/actions'
-import { getObservableVenuesSearch } from '../../src/services'
-import { initialState } from '../../src/reducers'
-import { NRoot } from '../../types/root'
 import { Subject } from 'rxjs/internal/Subject'
+import { getVenuesSearchAsync } from '../../src/actions'
+import { initialState } from '../../src/reducers'
+import { getObservableVenuesSearch } from '../../src/services'
+import { NRoot } from '../../types/root'
 
 describe('services/getObservableVenuesSearch', () => {
   it('should get an observable instance', () => {

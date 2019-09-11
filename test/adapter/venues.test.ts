@@ -1,9 +1,9 @@
 import {
-  adaptGetVenuesSearch,
   adaptGetVenuesExplore,
+  adaptGetVenuesSearch,
 } from '../../src/adapter/venues'
-import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
+import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 describe('adapter/venues/adaptGetVenuesSearch', () => {
   it('should get an empty list', () => {
