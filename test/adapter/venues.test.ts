@@ -7,19 +7,19 @@ import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenues
 
 describe('adapter/venues/adaptGetVenuesSearch', () => {
   it('should get an empty list', () => {
-    adaptGetVenuesSearch({
-      ...payloadGetVenuesSearch,
-      meta: {
-        code: 400,
-        requestId: payloadGetVenuesSearch.meta.requestId,
-      },
-    })
+    expect(
+      adaptGetVenuesSearch({
+        ...payloadGetVenuesSearch,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesSearch.meta.requestId,
+        },
+      })
+    ).toEqual([])
   })
 
   it('should get a list of venues', () => {
-    expect(adaptGetVenuesSearch(payloadGetVenuesSearch).length).toEqual(
-      payloadGetVenuesSearch.response.venues.length
-    )
+    expect(adaptGetVenuesSearch(payloadGetVenuesSearch)).toMatchSnapshot()
   })
 })
 
