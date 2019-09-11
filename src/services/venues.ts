@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
 import { catchError, switchMap } from 'rxjs/operators'
 import { NAction } from '../../types/action.d'
-import { NRoot } from '../../types/root.d'
+import { NStore } from '../../types/store'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { credentialsSelector } from '../selectors/life'
 import { getLocationHref } from '../utils/url'
@@ -24,7 +24,7 @@ export const processFetchError = (err: Error): Observable<Error> =>
 
 export const getObservableVenuesSearch = (
   action: NAction.IAction,
-  state$: StateObservable<NRoot.IState>
+  state$: StateObservable<NStore.IState>
 ) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 

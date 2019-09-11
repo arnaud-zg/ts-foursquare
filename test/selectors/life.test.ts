@@ -4,9 +4,9 @@ import {
   lifeSelector,
   lifeStatusSelector,
 } from '../../src/selectors/life'
-import { NRoot } from '../../types/root'
+import { NStore } from '../../types/store'
 
-const state: NRoot.IState = {
+const state: NStore.IState = {
   ...initialState,
   life: {
     status: true,
