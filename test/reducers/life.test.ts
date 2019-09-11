@@ -1,5 +1,5 @@
 import { putCredentials } from '../../src/actions/life'
-import { lifeReducer, initialState } from '../../src/reducers/life'
+import { initialState, lifeReducer } from '../../src/reducers/life'
 
 describe('reducers/life', () => {
   test.each`
