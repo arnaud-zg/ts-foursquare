@@ -1,7 +1,7 @@
 import { ActionType, createAsyncAction } from 'typesafe-actions'
+import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NRequest } from '../../types/request.d'
 import { NVenue } from '../../types/venue.d'
-import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 
 interface IAsyncActionNameMapping {
   [actionType: string]: string
