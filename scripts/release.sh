@@ -15,6 +15,7 @@ ask_confirm_and_release () {
       case $yn in
           [Yy]* )
               sleep 5
+              git fetch origin
               git checkout develop
               git pull origin develop
               yarn
