@@ -1,20 +1,42 @@
-import { adaptGetVenuesSearch } from '../../src/adapter/venues'
-import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
+import {
+  adaptGetVenuesSearch,
+  adaptGetVenuesExplore,
+} from '../../src/adapter/venues'
+import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
+import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 
 describe('adapter/venues/adaptGetVenuesSearch', () => {
   it('should get an empty list', () => {
     expect(
       adaptGetVenuesSearch({
-        ...payload,
+        ...payloadGetVenuesSearch,
         meta: {
           code: 400,
-          requestId: payload.meta.requestId,
+          requestId: payloadGetVenuesSearch.meta.requestId,
         },
       })
     ).toEqual([])
   })
 
   it('should get a list of venues', () => {
-    expect(adaptGetVenuesSearch(payload)).toMatchSnapshot()
+    expect(adaptGetVenuesSearch(payloadGetVenuesSearch)).toMatchSnapshot()
+  })
+})
+
+describe('adapter/venues/adaptGetVenuesExplore', () => {
+  it('should return null', () => {
+    expect(
+      adaptGetVenuesExplore({
+        ...payloadGetVenuesExplore,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesSearch.meta.requestId,
+        },
+      })
+    ).toEqual([])
+  })
+
+  it('should get result', () => {
+    expect(adaptGetVenuesExplore(payloadGetVenuesExplore)).toMatchSnapshot()
   })
 })

@@ -35,10 +35,10 @@ export declare namespace NRecommendedPlaces {
   }
 
   interface ISuggestedBounds {
-    ne: IBoundsLocation
-    nw: IBoundsLocation
-    se: IBoundsLocation
-    sw: IBoundsLocation
+    ne?: IBoundsLocation
+    nw?: IBoundsLocation
+    se?: IBoundsLocation
+    sw?: IBoundsLocation
   }
 
   interface IBoundsLocation {

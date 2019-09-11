@@ -45,6 +45,7 @@ Object {
       "success": [Function],
     },
   },
+  "adaptGetVenuesExplore": [Function],
   "adaptGetVenuesSearch": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
