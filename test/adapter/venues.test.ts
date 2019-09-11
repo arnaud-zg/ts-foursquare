@@ -3,18 +3,18 @@ import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 describe('adapter/venues/adaptGetVenuesSearch', () => {
   it('should get an empty list', () => {
-    adaptGetVenuesSearch({
-      ...payload,
-      meta: {
-        code: 400,
-        requestId: payload.meta.requestId,
-      },
-    })
+    expect(
+      adaptGetVenuesSearch({
+        ...payload,
+        meta: {
+          code: 400,
+          requestId: payload.meta.requestId,
+        },
+      })
+    ).toEqual([])
   })
 
   it('should get a list of venues', () => {
-    expect(adaptGetVenuesSearch(payload).length).toEqual(
-      payload.response.venues.length
-    )
+    expect(adaptGetVenuesSearch(payload)).toMatchSnapshot()
   })
 })
