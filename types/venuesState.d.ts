@@ -1,4 +1,4 @@
-import { NVenue } from './venue.d'
+import { NVenue } from './venue'
 
 export declare namespace NVenues {
   interface IState {

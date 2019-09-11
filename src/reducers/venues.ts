@@ -1,5 +1,5 @@
 import { createReducer } from 'typesafe-actions'
-import { NVenues } from '../../types/venues.d'
+import { NVenues } from '../../types/venuesState'
 import { EVenuesAction, TVenuesAction } from '../actions/venues'
 
 export const initialState: NVenues.IState = {

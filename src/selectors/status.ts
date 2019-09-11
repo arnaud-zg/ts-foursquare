@@ -1,5 +1,5 @@
 import { NStore } from '../../types/store'
-import { NStatus } from '../../types/status'
+import { NStatus } from '../../types/statusState'
 import { TRootActionType } from '../actions'
 
 export const statusSelector = (state: NStore.IState) => state.status
