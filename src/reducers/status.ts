@@ -1,5 +1,5 @@
 import { createReducer } from 'typesafe-actions'
-import { NStatus } from '../../types/status'
+import { NStatus } from '../../types/statusState'
 import {
   ASYNC_ACTION_NAME_MAPPING,
   EVenuesAction,
