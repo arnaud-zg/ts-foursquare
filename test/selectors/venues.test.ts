@@ -5,11 +5,11 @@ import {
   venueSelector,
   venuesSelector,
 } from '../../src/selectors/venues'
-import { NRoot } from '../../types/root'
+import { NStore } from '../../types/root'
 import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 
 const venueId = payload.response.venues[0].id
-const state: NRoot.IState = {
+const state: NStore.IState = {
   ...initialState,
   venues: {
     entities: {

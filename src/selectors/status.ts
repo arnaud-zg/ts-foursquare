@@ -1,11 +1,11 @@
-import { NRoot } from '../../types/root.d'
+import { NStore } from '../../types/store'
 import { NStatus } from '../../types/status'
 import { TRootActionType } from '../actions'
 
-export const statusSelector = (state: NRoot.IState) => state.status
+export const statusSelector = (state: NStore.IState) => state.status
 
 export const moduleStateSelector = (
-  state: NRoot.IState,
+  state: NStore.IState,
   moduleKey: TRootActionType
 ): NStatus.IModuleState =>
   state.status[moduleKey] || {

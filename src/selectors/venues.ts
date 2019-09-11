@@ -1,14 +1,14 @@
-import { NRoot } from '../../types/root.d'
+import { NStore } from '../../types/store'
 
-export const venuesSelector = (state: NRoot.IState) => state.venues.entities
+export const venuesSelector = (state: NStore.IState) => state.venues.entities
 
-export const venueSelector = (state: NRoot.IState, venueId: string) =>
+export const venueSelector = (state: NStore.IState, venueId: string) =>
   venuesSelector(state)[venueId]
 
 export const venueCategoriesStateSelector = (
-  state: NRoot.IState,
+  state: NStore.IState,
   venueId: string
 ) => venuesSelector(state)[venueId].categories
 
-export const venueLocationSelector = (state: NRoot.IState, venueId: string) =>
+export const venueLocationSelector = (state: NStore.IState, venueId: string) =>
   venuesSelector(state)[venueId].location
