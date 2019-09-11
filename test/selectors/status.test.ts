@@ -1,7 +1,7 @@
 import { EVenuesAction } from '../../src/actions'
 import { initialState } from '../../src/reducers/app'
 import { moduleStateSelector, statusSelector } from '../../src/selectors/status'
-import { NStore } from '../../types/root'
+import { NStore } from '../../types/store'
 
 const state: NStore.IState = {
   ...initialState,

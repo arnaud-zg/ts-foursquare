@@ -4,7 +4,7 @@ import {
   lifeSelector,
   lifeStatusSelector,
 } from '../../src/selectors/life'
-import { NStore } from '../../types/root'
+import { NStore } from '../../types/store'
 
 const state: NStore.IState = {
   ...initialState,
