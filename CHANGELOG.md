@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.11](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.9...v0.2.11) (2019-09-11)
+
+### ⚠️ Tests
+
+- **adapter:** update unit test for get venues search action ([#171](https://github.com/arnaud-zg/ts-foursquare/issues/171)) ([7d85004](https://github.com/arnaud-zg/ts-foursquare/commit/7d85004))
+- **util:** update test on mockingFetch and testEpic ([#165](https://github.com/arnaud-zg/ts-foursquare/issues/165)) ([cabd0c9](https://github.com/arnaud-zg/ts-foursquare/commit/cabd0c9))
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/node to v12.7.5 ([#169](https://github.com/arnaud-zg/ts-foursquare/issues/169)) ([06fc4bd](https://github.com/arnaud-zg/ts-foursquare/commit/06fc4bd))
+- **deps:** update dependency typescript to v3.6.3 ([#168](https://github.com/arnaud-zg/ts-foursquare/issues/168)) ([7df2778](https://github.com/arnaud-zg/ts-foursquare/commit/7df2778))
+- **import:** reorder import ([#172](https://github.com/arnaud-zg/ts-foursquare/issues/172)) ([bc979de](https://github.com/arnaud-zg/ts-foursquare/commit/bc979de))
+- **release:** 0.2.10 ([30c948a](https://github.com/arnaud-zg/ts-foursquare/commit/30c948a))
+- **type:** rename files for state typing ([#174](https://github.com/arnaud-zg/ts-foursquare/issues/174)) ([f1e26f7](https://github.com/arnaud-zg/ts-foursquare/commit/f1e26f7))
+- **type:** rename NRoot into NStore ([#173](https://github.com/arnaud-zg/ts-foursquare/issues/173)) ([55b411e](https://github.com/arnaud-zg/ts-foursquare/commit/55b411e))
+- **type:** reorder and clean type for payload, venue and recommended places ([#167](https://github.com/arnaud-zg/ts-foursquare/issues/167)) ([097e01f](https://github.com/arnaud-zg/ts-foursquare/commit/097e01f))
+
+### 🖋 Features
+
+- **venue-explore:** add an action for get venue explore ([#166](https://github.com/arnaud-zg/ts-foursquare/issues/166)) ([1471cd7](https://github.com/arnaud-zg/ts-foursquare/commit/1471cd7))
+- **venue-explore:** add an adapter for venue explore ([#170](https://github.com/arnaud-zg/ts-foursquare/issues/170)) ([8b784e4](https://github.com/arnaud-zg/ts-foursquare/commit/8b784e4))
+
 ### [0.2.10](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.5...v0.2.10) (2019-09-11)
 
 ### ⚠️ Tests
