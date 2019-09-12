@@ -45,14 +45,11 @@ Object {
       "success": [Function],
     },
   },
-  "adaptGetVenuesExplore": [Function],
-  "adaptGetVenuesSearch": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
-  "getObservableVenuesSearch": [Function],
   "getVenueExploreAsync": Object {
     "cancel": [Function],
     "failure": [Function],
@@ -65,7 +62,6 @@ Object {
     "request": [Function],
     "success": [Function],
   },
-  "getVenuesSearchEpic": [Function],
   "initialState": Object {
     "life": Object {
       "credentials": Object {
@@ -82,8 +78,6 @@ Object {
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
   "moduleStateSelector": [Function],
-  "processFetchError": [Function],
-  "processFetchResponse": [Function],
   "putCredentials": [Function],
   "statusSelector": [Function],
   "venueCategoriesStateSelector": [Function],
