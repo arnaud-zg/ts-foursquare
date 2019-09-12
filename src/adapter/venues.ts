@@ -16,11 +16,13 @@ export const adaptGetVenuesSearch = (
 
 export const adaptGetVenuesExplore = (
   payload: NPayload.IPayload<NRecommendedPlaces.IResponse>
-): NRecommendedPlaces.IGroup[] =>
+): NRecommendedPlaces.IGroupItem[] =>
   !!payload.meta &&
   payload.meta.code === NHttpStatuses.ESuccess.OK &&
   !!payload.response &&
   !!payload.response.groups &&
-  !!payload.response.groups.length
-    ? payload.response.groups
+  !!payload.response.groups.length &&
+  !!payload.response.groups[0].items &&
+  !!payload.response.groups[0].items.length
+    ? payload.response.groups[0].items
     : []
