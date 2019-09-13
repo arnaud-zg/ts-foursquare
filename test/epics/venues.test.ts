@@ -7,7 +7,10 @@ import {
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
 } from '../../src/adapter/venues'
-import { getVenuesSearchEpic } from '../../src/epics/venues'
+import {
+  getVenuesExploreEpic,
+  getVenuesSearchEpic,
+} from '../../src/epics/venues'
 import { initialState } from '../../src/reducers/app'
 import {
   mockingFailingNotFoundFetch,
@@ -21,17 +24,17 @@ require('isomorphic-fetch')
 
 describe('epics/venues', () => {
   test.each`
-    scenario                                                                  | action                                                                                                        | payload                    | expectedActions
-    ${'should get search for venues by location'}                             | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}                                                   | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}
-    ${'should get search for venues by location with intent match parameter'} | ${getVenuesSearchAsync.request({ intent: 'match', ll: '40.7099,-73.9622' })}                                  | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}
-    ${'should get search for venues by query'}                                | ${getVenuesSearchAsync.request({ query: 'ShopMart' })}                                                        | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}
-    ${'should get search for venues near to a location'}                      | ${getVenuesSearchAsync.request({ near: 'Chicago, IL' })}                                                      | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}
-    ${'should get search for venues'}                                         | ${getVenuesSearchAsync.request({ intent: 'browse', ll: '40.7099,-73.9622', query: 'ShopMart', radius: 500 })} | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}
-    ${'should get recommended places'}                                        | ${getVenueExploreAsync.request({})}                                                                           | ${payloadGetVenuesExplore} | ${[getVenueExploreAsync.success(adaptGetVenuesExplore(payloadGetVenuesExplore))]}
-  `('$scenario', ({ action, expectedActions, payload, done }) => {
+    scenario                                                                  | action                                                                                                        | payload                    | expectedActions                                                                   | epic
+    ${'should get search for venues by location'}                             | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}                                                   | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}   | ${getVenuesSearchEpic}
+    ${'should get search for venues by location with intent match parameter'} | ${getVenuesSearchAsync.request({ intent: 'match', ll: '40.7099,-73.9622' })}                                  | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}   | ${getVenuesSearchEpic}
+    ${'should get search for venues by query'}                                | ${getVenuesSearchAsync.request({ query: 'ShopMart' })}                                                        | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}   | ${getVenuesSearchEpic}
+    ${'should get search for venues near to a location'}                      | ${getVenuesSearchAsync.request({ near: 'Chicago, IL' })}                                                      | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}   | ${getVenuesSearchEpic}
+    ${'should get search for venues'}                                         | ${getVenuesSearchAsync.request({ intent: 'browse', ll: '40.7099,-73.9622', query: 'ShopMart', radius: 500 })} | ${payloadGetVenuesSearch}  | ${[getVenuesSearchAsync.success(adaptGetVenuesSearch(payloadGetVenuesSearch))]}   | ${getVenuesSearchEpic}
+    ${'should get recommended places'}                                        | ${getVenueExploreAsync.request({})}                                                                           | ${payloadGetVenuesExplore} | ${[getVenueExploreAsync.success(adaptGetVenuesExplore(payloadGetVenuesExplore))]} | ${getVenuesExploreEpic}
+  `('$scenario', ({ action, expectedActions, epic, payload, done }) => {
     mockingFetch({ response: { ...payload } })
     testEpic(
-      getVenuesSearchEpic,
+      epic,
       expectedActions.length,
       action,
       (actions: Action[]) => {
@@ -52,12 +55,12 @@ describe('epics/venues | error case: no network', () => {
   })
 
   test.each`
-    scenario                                      | action
-    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}
-    ${'should get search for venues by location'} | ${getVenueExploreAsync.request({})}
-  `('$scenario', ({ action, done }) => {
+    scenario                                      | action                                                      | epic
+    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })} | ${getVenuesSearchEpic}
+    ${'should get search for venues by location'} | ${getVenueExploreAsync.request({})}                         | ${getVenuesExploreEpic}
+  `('$scenario', ({ action, epic, done }) => {
     testEpic(
-      getVenuesSearchEpic,
+      epic,
       1,
       action,
       (actions: Action[]) => {
@@ -75,12 +78,12 @@ describe('epics/venues | error case: not valid response', () => {
   })
 
   test.each`
-    scenario                                      | action
-    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}
-    ${'should get search for venues by location'} | ${getVenueExploreAsync.request({})}
-  `('$scenario', ({ action, done }) => {
+    scenario                                      | action                                                      | epic
+    ${'should get search for venues by location'} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })} | ${getVenuesSearchEpic}
+    ${'should get search for venues by location'} | ${getVenueExploreAsync.request({})}                         | ${getVenuesSearchEpic}
+  `('$scenario', ({ action, epic, done }) => {
     testEpic(
-      getVenuesSearchEpic,
+      epic,
       1,
       action,
       (actions: Action[]) => {
