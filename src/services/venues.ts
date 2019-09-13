@@ -44,3 +44,26 @@ export const getObservableVenuesSearch = (
     catchError(processFetchError)
   )
 }
+
+export const getObservableVenuesExplore = (
+  action: NAction.IAction,
+  state$: StateObservable<NStore.IState>
+) => {
+  const { clientId, clientSecret } = credentialsSelector(state$.value)
+
+  return fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: EApiPathnames.VENUES_EXPLORE,
+      param: {
+        ...action.payload,
+        client_id: clientId,
+        client_secret: clientSecret,
+        v: EApiDefaultParameters.VERSION,
+      },
+    })
+  ).pipe(
+    switchMap(processFetchResponse),
+    catchError(processFetchError)
+  )
+}
