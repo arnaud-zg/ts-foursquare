@@ -38,8 +38,9 @@ export declare namespace NVenue {
 
   export interface IIcon {
     prefix: string
+    suffix: string
     sizes?: number[]
-    name: string
+    name?: string
   }
 
   export interface IEvents {
