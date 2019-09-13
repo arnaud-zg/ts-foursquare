@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.12...v0.2.13) (2019-09-13)
+
+### 🐛 Bug Fixes
+
+- **naming:** rename getVenueExploreAsync into getVenuesExploreAsync ([#182](https://github.com/arnaud-zg/ts-foursquare/issues/182)) ([c08d752](https://github.com/arnaud-zg/ts-foursquare/commit/c08d752))
+- **venue-explore:** update recommended places type definition ([#184](https://github.com/arnaud-zg/ts-foursquare/issues/184)) ([45a690b](https://github.com/arnaud-zg/ts-foursquare/commit/45a690b))
+- **venue-explore:** update request type definition ([#185](https://github.com/arnaud-zg/ts-foursquare/issues/185)) ([0ac4f5b](https://github.com/arnaud-zg/ts-foursquare/commit/0ac4f5b))
+- **venue-explore:** update venue type definition ([#183](https://github.com/arnaud-zg/ts-foursquare/issues/183)) ([13633c2](https://github.com/arnaud-zg/ts-foursquare/commit/13633c2))
+
+### 🖋 Features
+
+- **venue-explore:** create a service venue explore ([#180](https://github.com/arnaud-zg/ts-foursquare/issues/180)) ([f3358a6](https://github.com/arnaud-zg/ts-foursquare/commit/f3358a6))
+- **venue-explore:** create an epic venue explore ([#181](https://github.com/arnaud-zg/ts-foursquare/issues/181)) ([096205a](https://github.com/arnaud-zg/ts-foursquare/commit/096205a))
+
 ### [0.2.12](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.11...v0.2.12) (2019-09-13)
 
 ### 🐛 Bug Fixes
