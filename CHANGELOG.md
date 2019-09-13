@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.12](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.11...v0.2.12) (2019-09-13)
+
+### 🐛 Bug Fixes
+
+- **adapter:** get a list of group item on get venues explore ([#177](https://github.com/arnaud-zg/ts-foursquare/issues/177)) ([f4cf401](https://github.com/arnaud-zg/ts-foursquare/commit/f4cf401))
+
+### 🔧 Chore
+
+- **changelog:** update changelog ([#175](https://github.com/arnaud-zg/ts-foursquare/issues/175)) ([b4c1e1e](https://github.com/arnaud-zg/ts-foursquare/commit/b4c1e1e))
+- **package:** remove adapter, epics and services from package ([#178](https://github.com/arnaud-zg/ts-foursquare/issues/178)) ([2fdbe08](https://github.com/arnaud-zg/ts-foursquare/commit/2fdbe08))
+- **release:** update release script ([#176](https://github.com/arnaud-zg/ts-foursquare/issues/176)) ([793c9c1](https://github.com/arnaud-zg/ts-foursquare/commit/793c9c1))
+
+### 🖋 Features
+
+- **venue-explore:** put data into reducer ([#179](https://github.com/arnaud-zg/ts-foursquare/issues/179)) ([15227c9](https://github.com/arnaud-zg/ts-foursquare/commit/15227c9))
+
 ### [0.2.11](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.9...v0.2.11) (2019-09-11)
 
 ### ⚠️ Tests
