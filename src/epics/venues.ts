@@ -6,13 +6,13 @@ import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
 import {
   EVenuesAction,
-  getVenuesSearchAsync,
   getVenueExploreAsync,
+  getVenuesSearchAsync,
 } from '../actions/venues'
-import { adaptGetVenuesSearch, adaptGetVenuesExplore } from '../adapter/venues'
+import { adaptGetVenuesExplore, adaptGetVenuesSearch } from '../adapter/venues'
 import {
-  getObservableVenuesSearch,
   getObservableVenuesExplore,
+  getObservableVenuesSearch,
 } from '../services/venues'
 
 export const getVenuesSearchEpic: Epic<
