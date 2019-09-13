@@ -73,6 +73,7 @@ Object {
     "status": Object {},
     "venues": Object {
       "entities": Object {},
+      "recommendedPlaces": Array [],
     },
   },
   "lifeSelector": [Function],

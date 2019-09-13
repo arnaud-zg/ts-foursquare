@@ -1,3 +1,4 @@
+import { NRecommendedPlaces } from './recommendedPlaces'
 import { NVenue } from './venue'
 
 export declare namespace NVenues {
@@ -5,5 +6,6 @@ export declare namespace NVenues {
     entities: {
       [key: string]: NVenue.IVenue
     }
+    recommendedPlaces: NRecommendedPlaces.IGroupItem[]
   }
 }
