@@ -2,14 +2,43 @@ import { NVenue } from './venue'
 
 export declare namespace NRecommendedPlaces {
   interface IResponse {
-    warning: IWarning
-    suggestedRadius: number
+    warning?: IWarning
+    suggestedRadius?: number
     headerLocation: string
     headerFullLocation: string
     headerLocationGranularity: string
     totalResults: number
     suggestedBounds: ISuggestedBounds
     groups: IGroup[]
+    suggestedFilters?: ISuggestedFilters
+    geocode?: IGeocode
+  }
+
+  interface IGeocode {
+    what: string
+    where: string
+    center: ICenter
+    displayString: string
+    cc: string
+    geometry: IGeometry
+    slug: string
+    longId: string
+  }
+
+  interface ICenter {
+    lat: number
+    lng: number
+  }
+
+  interface IGeometry {
+    bounds: IBounds
+  }
+
+  interface IBounds {
+    ne?: IBoundsLocation
+    nw?: IBoundsLocation
+    se?: IBoundsLocation
+    sw?: IBoundsLocation
   }
 
   interface IGroup {
@@ -21,6 +50,7 @@ export declare namespace NRecommendedPlaces {
   interface IGroupItem {
     reasons: IReasons
     venue: NVenue.IVenue
+    referralId?: string
   }
 
   interface IReasons {
@@ -44,6 +74,16 @@ export declare namespace NRecommendedPlaces {
   interface IBoundsLocation {
     lat: number
     lng: number
+  }
+
+  interface ISuggestedFilters {
+    header: string
+    filters: IFilter[]
+  }
+
+  interface IFilter {
+    name: string
+    key: string
   }
 
   interface IWarning {
