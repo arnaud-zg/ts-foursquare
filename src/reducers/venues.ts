@@ -4,6 +4,7 @@ import { EVenuesAction, TVenuesAction } from '../actions/venues'
 
 export const initialState: NVenues.IState = {
   entities: {},
+  recommendedPlaces: [],
 }
 
 export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
@@ -23,6 +24,16 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
         entities: {
           ...venues,
         },
+      }
+    },
+    [EVenuesAction.GET_VENUES_EXPLORE_SUCCESS]: (
+      state,
+      action
+    ): NVenues.IState => {
+      const recommendedPlaces = action.payload
+      return {
+        ...state,
+        recommendedPlaces,
       }
     },
   }

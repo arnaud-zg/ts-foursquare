@@ -15,6 +15,7 @@ const state: NStore.IState = {
     entities: {
       [venueId]: payload.response.venues[0],
     },
+    recommendedPlaces: [],
   },
 }
 
