@@ -1,5 +1,5 @@
 import {
-  getVenueExploreAsync,
+  getVenuesExploreAsync,
   getVenuesSearchAsync,
 } from '../../src/actions/venues'
 import {
@@ -24,7 +24,7 @@ describe('reducers/venues/getVenuesSearchAsync', () => {
 })
 
 describe('reducers/venues/payloadGetVenuesExplore', () => {
-  const action = getVenueExploreAsync.success(
+  const action = getVenuesExploreAsync.success(
     adaptGetVenuesExplore(payloadGetVenuesExplore)
   )
 
