@@ -22,7 +22,7 @@ describe('services/getObservableVenuesSearch', () => {
 
 describe('services/getObservableVenuesExplore', () => {
   it('should get an observable instance', () => {
-    const action = getVenuesExploreAsync.request({})
+    const action = getVenuesExploreAsync.request({ ll: '40.7099,-73.9622' })
     const state$: StateObservable<NStore.IState> = new StateObservable(
       new Subject(),
       initialState

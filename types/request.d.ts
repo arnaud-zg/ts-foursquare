@@ -1,9 +1,40 @@
 export declare namespace NRequest {
-  interface IVenuesExplorePayload {}
+  interface IVenuesExplorePayload {
+    alt?: number
+    altAcc?: number
+    date?: string
+    friendVisits?: 'visited' | 'notvisited'
+    lastVenue?: string
+    limit?: number
+    llAcc?: number
+    novelty?: 'new' | 'old'
+    offset?: number
+    openNow?: 0 | 1
+    price?: string
+    query?: string
+    radius?: number
+    saved?: 0 | 1
+    section?:
+      | 'food'
+      | 'drinks'
+      | 'coffee'
+      | 'shops'
+      | 'arts'
+      | 'outdoors'
+      | 'sights'
+      | 'trending'
+      | 'nextVenues'
+    sortByDistance?: 0 | 1
+    time?: string
+  }
 
-  interface IVenuesExplorePayloadByPlace extends IVenuesExplorePayload {}
+  interface IVenuesExplorePayloadByPlace extends IVenuesExplorePayload {
+    near: string
+  }
 
-  interface IVenuesExplorePayloadByLocation extends IVenuesExplorePayload {}
+  interface IVenuesExplorePayloadByLocation extends IVenuesExplorePayload {
+    ll: string
+  }
 
   type TVenuesExplorePayload =
     | IVenuesExplorePayloadByPlace
