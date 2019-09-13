@@ -10,8 +10,12 @@ export declare namespace NVenue {
     location: ILocation
     name: string
     referralId?: string
-    venuePage: IVenuePage
+    venuePage?: IVenuePage
+    photos?: IPhotos
+    delivery?: IDelivery
+    events?: IEvents
   }
+
   interface ICategory {
     icon: IIcon
     id: string
@@ -21,9 +25,26 @@ export declare namespace NVenue {
     shortName: string
   }
 
-  interface IIcon {
+  export interface IDelivery {
+    id: string
+    url: string
+    provider: IProvider
+  }
+
+  export interface IProvider {
+    name: string
+    icon: IIcon
+  }
+
+  export interface IIcon {
     prefix: string
-    suffix: string
+    sizes?: number[]
+    name: string
+  }
+
+  export interface IEvents {
+    count: number
+    summary: string
   }
 
   interface ILocation {
@@ -44,6 +65,11 @@ export declare namespace NVenue {
     label: string
     lat: number
     lng: number
+  }
+
+  interface IPhotos {
+    count: number
+    groups: any[]
   }
 
   interface IVenuePage {
