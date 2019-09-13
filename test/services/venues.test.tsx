@@ -1,6 +1,6 @@
 import { StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
-import { getVenuesSearchAsync, getVenueExploreAsync } from '../../src/actions'
+import { getVenuesSearchAsync, getVenuesExploreAsync } from '../../src/actions'
 import { initialState } from '../../src/reducers'
 import {
   getObservableVenuesSearch,
@@ -22,7 +22,7 @@ describe('services/getObservableVenuesSearch', () => {
 
 describe('services/getObservableVenuesExplore', () => {
   it('should get an observable instance', () => {
-    const action = getVenueExploreAsync.request({})
+    const action = getVenuesExploreAsync.request({})
     const state$: StateObservable<NStore.IState> = new StateObservable(
       new Subject(),
       initialState

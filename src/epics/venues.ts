@@ -6,7 +6,7 @@ import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
 import {
   EVenuesAction,
-  getVenueExploreAsync,
+  getVenuesExploreAsync,
   getVenuesSearchAsync,
 } from '../actions/venues'
 import { adaptGetVenuesExplore, adaptGetVenuesSearch } from '../adapter/venues'
@@ -44,7 +44,7 @@ export const getVenuesExploreEpic: Epic<
     switchMap(action =>
       getObservableVenuesExplore(action, state$).pipe(
         map(adaptGetVenuesExplore),
-        map(getVenueExploreAsync.success),
+        map(getVenuesExploreAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
         takeUntil(
           action$.pipe(

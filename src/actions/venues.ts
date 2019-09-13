@@ -13,7 +13,7 @@ export enum EVenuesAction {
   GET_VENUES_SEARCH_SUCCESS = 'GET_VENUES_SEARCH_SUCCESS',
   GET_VENUES_SEARCH_FAILURE = 'GET_VENUES_SEARCH_FAILURE',
   GET_VENUES_SEARCH_CANCEL = 'GET_VENUES_SEARCH_CANCEL',
-  // getVenueExploreAsync
+  // getVenuesExploreAsync
   GET_VENUES_EXPLORE_REQUEST = 'GET_VENUES_EXPLORE_REQUEST',
   GET_VENUES_EXPLORE_SUCCESS = 'GET_VENUES_EXPLORE_SUCCESS',
   GET_VENUES_EXPLORE_FAILURE = 'GET_VENUES_EXPLORE_FAILURE',
@@ -25,10 +25,10 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [EVenuesAction.GET_VENUES_SEARCH_SUCCESS]: 'getVenuesSearchAsync',
   [EVenuesAction.GET_VENUES_SEARCH_FAILURE]: 'getVenuesSearchAsync',
   [EVenuesAction.GET_VENUES_SEARCH_CANCEL]: 'getVenuesSearchAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_REQUEST]: 'getVenueExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_SUCCESS]: 'getVenueExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_FAILURE]: 'getVenueExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_CANCEL]: 'getVenueExploreAsync',
+  [EVenuesAction.GET_VENUES_EXPLORE_REQUEST]: 'getVenuesExploreAsync',
+  [EVenuesAction.GET_VENUES_EXPLORE_SUCCESS]: 'getVenuesExploreAsync',
+  [EVenuesAction.GET_VENUES_EXPLORE_FAILURE]: 'getVenuesExploreAsync',
+  [EVenuesAction.GET_VENUES_EXPLORE_CANCEL]: 'getVenuesExploreAsync',
 }
 
 export const getVenuesSearchAsync = createAsyncAction(
@@ -38,7 +38,7 @@ export const getVenuesSearchAsync = createAsyncAction(
   EVenuesAction.GET_VENUES_SEARCH_CANCEL
 )<NRequest.TVenuesSearchPayload, NVenue.IVenue[], Error, string>()
 
-export const getVenueExploreAsync = createAsyncAction(
+export const getVenuesExploreAsync = createAsyncAction(
   EVenuesAction.GET_VENUES_EXPLORE_REQUEST,
   EVenuesAction.GET_VENUES_EXPLORE_SUCCESS,
   EVenuesAction.GET_VENUES_EXPLORE_FAILURE,
@@ -52,7 +52,7 @@ export const getVenueExploreAsync = createAsyncAction(
 
 export const actions = {
   getVenuesSearchAsync,
-  getVenueExploreAsync,
+  getVenuesExploreAsync,
 }
 
 export type TVenuesAction = ActionType<typeof actions>
