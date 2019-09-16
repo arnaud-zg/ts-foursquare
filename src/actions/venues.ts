@@ -18,6 +18,11 @@ export enum EVenuesAction {
   GET_VENUES_EXPLORE_SUCCESS = 'GET_VENUES_EXPLORE_SUCCESS',
   GET_VENUES_EXPLORE_FAILURE = 'GET_VENUES_EXPLORE_FAILURE',
   GET_VENUES_EXPLORE_CANCEL = 'GET_VENUES_EXPLORE_CANCEL',
+  // getVenuesTrendingAsync
+  GET_VENUES_TRENDING_REQUEST = 'GET_VENUES_TRENDING_REQUEST',
+  GET_VENUES_TRENDING_SUCCESS = 'GET_VENUES_TRENDING_SUCCESS',
+  GET_VENUES_TRENDING_FAILURE = 'GET_VENUES_TRENDING_FAILURE',
+  GET_VENUES_TRENDING_CANCEL = 'GET_VENUES_TRENDING_CANCEL',
 }
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
@@ -50,9 +55,17 @@ export const getVenuesExploreAsync = createAsyncAction(
   string
 >()
 
+export const getVenuesTrendingAsync = createAsyncAction(
+  EVenuesAction.GET_VENUES_TRENDING_REQUEST,
+  EVenuesAction.GET_VENUES_TRENDING_SUCCESS,
+  EVenuesAction.GET_VENUES_TRENDING_FAILURE,
+  EVenuesAction.GET_VENUES_TRENDING_CANCEL
+)<NRequest.TVenuesTrendingPayload, NVenue.IVenue[], Error, string>()
+
 export const actions = {
   getVenuesSearchAsync,
   getVenuesExploreAsync,
+  getVenuesTrendingAsync,
 }
 
 export type TVenuesAction = ActionType<typeof actions>

@@ -2,7 +2,7 @@ export declare namespace NRequest {
   interface IVenuesExplorePayload {
     alt?: number
     altAcc?: number
-    date?: string
+    day?: string
     friendVisits?: 'visited' | 'notvisited'
     lastVenue?: string
     limit?: number
@@ -39,6 +39,23 @@ export declare namespace NRequest {
   type TVenuesExplorePayload =
     | IVenuesExplorePayloadByPlace
     | IVenuesExplorePayloadByLocation
+
+  interface IVenuesTrending {
+    limit?: number
+    radius?: number
+  }
+
+  interface IVenuesTrendingByPlace extends IVenuesTrending {
+    near: string
+  }
+
+  interface IVenuesTrendingByLocation extends IVenuesTrending {
+    ll: string
+  }
+
+  type TVenuesTrendingPayload =
+    | IVenuesTrendingByPlace
+    | IVenuesTrendingByLocation
 
   interface IVenuesSearchPayload {
     alt?: number

@@ -30,6 +30,10 @@ Object {
     "GET_VENUES_SEARCH_FAILURE": "GET_VENUES_SEARCH_FAILURE",
     "GET_VENUES_SEARCH_REQUEST": "GET_VENUES_SEARCH_REQUEST",
     "GET_VENUES_SEARCH_SUCCESS": "GET_VENUES_SEARCH_SUCCESS",
+    "GET_VENUES_TRENDING_CANCEL": "GET_VENUES_TRENDING_CANCEL",
+    "GET_VENUES_TRENDING_FAILURE": "GET_VENUES_TRENDING_FAILURE",
+    "GET_VENUES_TRENDING_REQUEST": "GET_VENUES_TRENDING_REQUEST",
+    "GET_VENUES_TRENDING_SUCCESS": "GET_VENUES_TRENDING_SUCCESS",
   },
   "actions": Object {
     "getVenuesExploreAsync": Object {
@@ -39,6 +43,12 @@ Object {
       "success": [Function],
     },
     "getVenuesSearchAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesTrendingAsync": Object {
       "cancel": [Function],
       "failure": [Function],
       "request": [Function],
@@ -57,6 +67,12 @@ Object {
     "success": [Function],
   },
   "getVenuesSearchAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesTrendingAsync": Object {
     "cancel": [Function],
     "failure": [Function],
     "request": [Function],
