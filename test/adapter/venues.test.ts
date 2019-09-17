@@ -1,9 +1,11 @@
 import {
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
+  adaptGetVenuesTrending,
 } from '../../src/adapter/venues'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
+import { payload as payloadGetVenuesTrending } from '../epics/__mocks__/getVenuesTrendingAsync.resolve'
 
 describe('adapter/venues/adaptGetVenuesSearch', () => {
   it('should get an empty list', () => {
@@ -38,5 +40,23 @@ describe('adapter/venues/adaptGetVenuesExplore', () => {
 
   it('should get result', () => {
     expect(adaptGetVenuesExplore(payloadGetVenuesExplore)).toMatchSnapshot()
+  })
+})
+
+describe('adapter/venues/adaptGetVenuesTrending', () => {
+  it('should get an empty list', () => {
+    expect(
+      adaptGetVenuesTrending({
+        ...payloadGetVenuesTrending,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesTrending.meta.requestId,
+        },
+      })
+    ).toEqual([])
+  })
+
+  it('should get a list of venues', () => {
+    expect(adaptGetVenuesTrending(payloadGetVenuesTrending)).toMatchSnapshot()
   })
 })

@@ -26,3 +26,7 @@ export const adaptGetVenuesExplore = (
   !!payload.response.groups[0].items.length
     ? payload.response.groups[0].items
     : []
+
+export const adaptGetVenuesTrending = (
+  payload: NPayload.IPayload<NVenue.IResponse>
+): NVenue.IVenue[] => adaptGetVenuesSearch(payload)
