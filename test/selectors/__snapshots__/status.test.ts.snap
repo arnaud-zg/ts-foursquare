@@ -10,6 +10,7 @@ Object {
 exports[`selectors/status should get module state 2`] = `
 Object {
   "hasError": false,
+  "isCancelled": false,
   "isLoading": false,
 }
 `;
@@ -18,6 +19,7 @@ exports[`selectors/status should get status 1`] = `
 Object {
   "GET_VENUES_SEARCH_REQUEST": Object {
     "hasError": false,
+    "isCancelled": false,
     "isLoading": false,
   },
 }
