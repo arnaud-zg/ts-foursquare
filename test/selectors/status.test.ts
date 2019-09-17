@@ -8,6 +8,7 @@ const state: NStore.IState = {
   status: {
     [EVenuesAction.GET_VENUES_SEARCH_REQUEST]: {
       hasError: false,
+      isCancelled: false,
       isLoading: false,
     },
   },
