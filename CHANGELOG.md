@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.14](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.13...v0.2.14) (2019-09-17)
+
+### 🔧 Chore
+
+- **deps:** pin dependency codecov to 3.5.0 ([#197](https://github.com/arnaud-zg/ts-foursquare/issues/197)) ([849cada](https://github.com/arnaud-zg/ts-foursquare/commit/849cada))
+
+### 🖋 Features
+
+- **venue-trending:** create a service for venue trending ([#195](https://github.com/arnaud-zg/ts-foursquare/issues/195)) ([5ff4f6e](https://github.com/arnaud-zg/ts-foursquare/commit/5ff4f6e))
+- **venue-trending:** create an epic venue trending ([#196](https://github.com/arnaud-zg/ts-foursquare/issues/196)) ([8797178](https://github.com/arnaud-zg/ts-foursquare/commit/8797178))
+- **venue-trending:** update async action name mapping ([#198](https://github.com/arnaud-zg/ts-foursquare/issues/198)) ([a36600b](https://github.com/arnaud-zg/ts-foursquare/commit/a36600b))
+- **venues-trending:** add an action for get venues trending ([#194](https://github.com/arnaud-zg/ts-foursquare/issues/194)) ([9fe3711](https://github.com/arnaud-zg/ts-foursquare/commit/9fe3711))
+
 ### [0.2.13](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.12...v0.2.13) (2019-09-13)
 
 ### 🐛 Bug Fixes
