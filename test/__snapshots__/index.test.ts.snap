@@ -11,6 +11,10 @@ Object {
     "GET_VENUES_SEARCH_FAILURE": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_REQUEST": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_SUCCESS": "getVenuesSearchAsync",
+    "GET_VENUES_TRENDING_CANCEL": "getVenuesTrendingAsync",
+    "GET_VENUES_TRENDING_FAILURE": "getVenuesTrendingAsync",
+    "GET_VENUES_TRENDING_REQUEST": "getVenuesTrendingAsync",
+    "GET_VENUES_TRENDING_SUCCESS": "getVenuesTrendingAsync",
   },
   "EIconSize": Object {
     "L": "64",

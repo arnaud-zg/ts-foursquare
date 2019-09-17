@@ -26,14 +26,21 @@ export enum EVenuesAction {
 }
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
+  // getVenuesSearchAsync
   [EVenuesAction.GET_VENUES_SEARCH_REQUEST]: 'getVenuesSearchAsync',
   [EVenuesAction.GET_VENUES_SEARCH_SUCCESS]: 'getVenuesSearchAsync',
   [EVenuesAction.GET_VENUES_SEARCH_FAILURE]: 'getVenuesSearchAsync',
   [EVenuesAction.GET_VENUES_SEARCH_CANCEL]: 'getVenuesSearchAsync',
+  // getVenuesExploreAsync
   [EVenuesAction.GET_VENUES_EXPLORE_REQUEST]: 'getVenuesExploreAsync',
   [EVenuesAction.GET_VENUES_EXPLORE_SUCCESS]: 'getVenuesExploreAsync',
   [EVenuesAction.GET_VENUES_EXPLORE_FAILURE]: 'getVenuesExploreAsync',
   [EVenuesAction.GET_VENUES_EXPLORE_CANCEL]: 'getVenuesExploreAsync',
+  // getVenuesTrendingAsync
+  [EVenuesAction.GET_VENUES_TRENDING_REQUEST]: 'getVenuesTrendingAsync',
+  [EVenuesAction.GET_VENUES_TRENDING_SUCCESS]: 'getVenuesTrendingAsync',
+  [EVenuesAction.GET_VENUES_TRENDING_FAILURE]: 'getVenuesTrendingAsync',
+  [EVenuesAction.GET_VENUES_TRENDING_CANCEL]: 'getVenuesTrendingAsync',
 }
 
 export const getVenuesSearchAsync = createAsyncAction(
