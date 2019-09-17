@@ -4,6 +4,7 @@ export enum EApiDefaultParameters {
 }
 
 export enum EApiPathnames {
-  VENUES_SEARCH = '/v2/venues/search',
   VENUES_EXPLORE = '/v2/venues/explore',
+  VENUES_SEARCH = '/v2/venues/search',
+  VENUES_TRENDING = '/v2/venues/trending',
 }
