@@ -1,10 +1,15 @@
 import { StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
-import { getVenuesSearchAsync, getVenuesExploreAsync } from '../../src/actions'
+import {
+  getVenuesSearchAsync,
+  getVenuesExploreAsync,
+  getVenuesTrendingAsync,
+} from '../../src/actions'
 import { initialState } from '../../src/reducers'
 import {
   getObservableVenuesSearch,
   getObservableVenuesExplore,
+  getObservableVenuesTrending,
 } from '../../src/services'
 import { NStore } from '../../types/store'
 
@@ -29,5 +34,17 @@ describe('services/getObservableVenuesExplore', () => {
     )
 
     expect(getObservableVenuesExplore(action, state$)).toMatchSnapshot()
+  })
+})
+
+describe('services/getObservableVenuesTrending', () => {
+  it('should get an observable instance', () => {
+    const action = getVenuesTrendingAsync.request({ ll: '40.7099,-73.9622' })
+    const state$: StateObservable<NStore.IState> = new StateObservable(
+      new Subject(),
+      initialState
+    )
+
+    expect(getObservableVenuesTrending(action, state$)).toMatchSnapshot()
   })
 })
