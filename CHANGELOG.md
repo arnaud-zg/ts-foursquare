@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.15](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.14...v0.2.15) (2019-09-18)
+
+### 🐛 Bug Fixes
+
+- **deps:** update dependency redux-observable to v1.2.0 ([#200](https://github.com/arnaud-zg/ts-foursquare/issues/200)) ([7371399](https://github.com/arnaud-zg/ts-foursquare/commit/7371399))
+- **epic:** use action helper instead of action string constant ([#202](https://github.com/arnaud-zg/ts-foursquare/issues/202)) ([778b1e0](https://github.com/arnaud-zg/ts-foursquare/commit/778b1e0))
+- **selector:** use action helper instead of action string constant ([#203](https://github.com/arnaud-zg/ts-foursquare/issues/203)) ([6e1b52e](https://github.com/arnaud-zg/ts-foursquare/commit/6e1b52e))
+
+### 🖋 Features
+
+- **standalone:** use package in standalone mode ([#201](https://github.com/arnaud-zg/ts-foursquare/issues/201)) ([b0a6eef](https://github.com/arnaud-zg/ts-foursquare/commit/b0a6eef))
+- **status-reducer:** handle get venues explore / trending on status reducer ([#199](https://github.com/arnaud-zg/ts-foursquare/issues/199)) ([1a9a99d](https://github.com/arnaud-zg/ts-foursquare/commit/1a9a99d))
+
 ### [0.2.14](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.13...v0.2.14) (2019-09-17)
 
 ### 🔧 Chore
