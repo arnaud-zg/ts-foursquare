@@ -1,11 +1,10 @@
 import { Epic } from 'redux-observable'
 import { of } from 'rxjs/internal/observable/of'
 import { catchError, filter, map, switchMap, takeUntil } from 'rxjs/operators'
-import { isOfType } from 'typesafe-actions'
+import { isActionOf } from 'typesafe-actions'
 import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
 import {
-  EVenuesAction,
   getVenuesExploreAsync,
   getVenuesSearchAsync,
   getVenuesTrendingAsync,
@@ -27,15 +26,13 @@ export const getVenuesSearchEpic: Epic<
   NStore.IState
 > = (action$, state$) =>
   action$.pipe(
-    filter(isOfType(EVenuesAction.GET_VENUES_SEARCH_REQUEST)),
+    filter(isActionOf(getVenuesSearchAsync.request)),
     switchMap(action =>
       getObservableVenuesSearch(action, state$).pipe(
         map(adaptGetVenuesSearch),
         map(getVenuesSearchAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
-        takeUntil(
-          action$.pipe(filter(isOfType(EVenuesAction.GET_VENUES_SEARCH_CANCEL)))
-        )
+        takeUntil(action$.pipe(filter(isActionOf(getVenuesSearchAsync.cancel))))
       )
     )
   )
@@ -46,16 +43,14 @@ export const getVenuesExploreEpic: Epic<
   NStore.IState
 > = (action$, state$) =>
   action$.pipe(
-    filter(isOfType(EVenuesAction.GET_VENUES_EXPLORE_REQUEST)),
+    filter(isActionOf(getVenuesExploreAsync.request)),
     switchMap(action =>
       getObservableVenuesExplore(action, state$).pipe(
         map(adaptGetVenuesExplore),
         map(getVenuesExploreAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
         takeUntil(
-          action$.pipe(
-            filter(isOfType(EVenuesAction.GET_VENUES_EXPLORE_CANCEL))
-          )
+          action$.pipe(filter(isActionOf(getVenuesExploreAsync.cancel)))
         )
       )
     )
@@ -67,16 +62,14 @@ export const getVenuesTrendingEpic: Epic<
   NStore.IState
 > = (action$, state$) =>
   action$.pipe(
-    filter(isOfType(EVenuesAction.GET_VENUES_TRENDING_REQUEST)),
+    filter(isActionOf(getVenuesTrendingAsync.request)),
     switchMap(action =>
       getObservableVenuesTrending(action, state$).pipe(
         map(adaptGetVenuesTrending),
         map(getVenuesTrendingAsync.success),
         catchError(err => of(getVenuesTrendingAsync.failure(err))),
         takeUntil(
-          action$.pipe(
-            filter(isOfType(EVenuesAction.GET_VENUES_TRENDING_CANCEL))
-          )
+          action$.pipe(filter(isActionOf(getVenuesTrendingAsync.cancel)))
         )
       )
     )
