@@ -12,16 +12,12 @@ export class StandaloneStore {
     this.listeners = []
     this.store = store
 
-    if (this.store.subscribe) {
-      this.store.subscribe(this.storeUpdate)
-    }
+    this.store.subscribe(this.storeUpdate)
   }
 
   dispatchAction = (action: AnyAction) => {
-    if (this.store.dispatch) {
-      this.lastAction = action
-      this.store.dispatch(action)
-    }
+    this.lastAction = action
+    this.store.dispatch(action)
   }
 
   storeUpdate = () => {
@@ -36,9 +32,5 @@ export class StandaloneStore {
 
   subscribe(listener: Listener) {
     this.listeners.push(listener)
-
-    return () => {
-      this.listeners.splice(this.listeners.indexOf(listener), 1)
-    }
   }
 }
