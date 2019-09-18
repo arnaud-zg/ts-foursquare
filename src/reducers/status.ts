@@ -1,8 +1,10 @@
-import { createReducer } from 'typesafe-actions'
+import { createReducer, getType } from 'typesafe-actions'
 import { NStatus } from '../../types/statusState'
 import {
   ASYNC_ACTION_NAME_MAPPING,
-  EVenuesAction,
+  getVenuesExploreAsync,
+  getVenuesSearchAsync,
+  getVenuesTrendingAsync,
   TRootAction,
 } from '../actions'
 
@@ -13,9 +15,9 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
 )
   .handleAction(
     [
-      EVenuesAction.GET_VENUES_EXPLORE_REQUEST,
-      EVenuesAction.GET_VENUES_SEARCH_REQUEST,
-      EVenuesAction.GET_VENUES_TRENDING_REQUEST,
+      getType(getVenuesExploreAsync.request),
+      getType(getVenuesSearchAsync.request),
+      getType(getVenuesTrendingAsync.request),
     ],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
@@ -29,9 +31,9 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   )
   .handleAction(
     [
-      EVenuesAction.GET_VENUES_EXPLORE_FAILURE,
-      EVenuesAction.GET_VENUES_SEARCH_FAILURE,
-      EVenuesAction.GET_VENUES_TRENDING_FAILURE,
+      getType(getVenuesExploreAsync.failure),
+      getType(getVenuesSearchAsync.failure),
+      getType(getVenuesTrendingAsync.failure),
     ],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
@@ -45,9 +47,9 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   )
   .handleAction(
     [
-      EVenuesAction.GET_VENUES_EXPLORE_CANCEL,
-      EVenuesAction.GET_VENUES_SEARCH_CANCEL,
-      EVenuesAction.GET_VENUES_TRENDING_CANCEL,
+      getType(getVenuesExploreAsync.cancel),
+      getType(getVenuesSearchAsync.cancel),
+      getType(getVenuesTrendingAsync.cancel),
     ],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
@@ -61,9 +63,9 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   )
   .handleAction(
     [
-      EVenuesAction.GET_VENUES_EXPLORE_SUCCESS,
-      EVenuesAction.GET_VENUES_SEARCH_SUCCESS,
-      EVenuesAction.GET_VENUES_TRENDING_SUCCESS,
+      getType(getVenuesExploreAsync.success),
+      getType(getVenuesSearchAsync.success),
+      getType(getVenuesTrendingAsync.success),
     ],
     (state, action: TRootAction): NStatus.IState => ({
       ...state,
