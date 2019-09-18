@@ -3,8 +3,8 @@ import { configureStore } from '../../src/reducers'
 import { putCredentials, ELifeAction } from '../../src/actions/life'
 
 describe('helpers/StandaloneStore', () => {
+  const store = configureStore()
   it(`should work without any listener`, () => {
-    const store = configureStore()
     const standaloneStore = new StandaloneStore({ store })
 
     standaloneStore.dispatchAction(
@@ -16,7 +16,6 @@ describe('helpers/StandaloneStore', () => {
   })
 
   it(`should make a snapshot of store after of action: ELifeAction.PUT_CREDENTIALS`, done => {
-    const store = configureStore()
     const standaloneStore = new StandaloneStore({ store })
 
     standaloneStore.subscribe((action, state) => {
