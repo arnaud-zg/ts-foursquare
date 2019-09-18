@@ -39,6 +39,7 @@ Object {
     "GET_VENUES_TRENDING_REQUEST": "GET_VENUES_TRENDING_REQUEST",
     "GET_VENUES_TRENDING_SUCCESS": "GET_VENUES_TRENDING_SUCCESS",
   },
+  "StandaloneStore": [Function],
   "actions": Object {
     "getVenuesExploreAsync": Object {
       "cancel": [Function],

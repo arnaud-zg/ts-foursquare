@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`helpers/StandaloneStore should make a snapshot of store after of action: 1`] = `
+Object {
+  "life": Object {
+    "credentials": Object {
+      "clientId": "123",
+      "clientSecret": "123",
+    },
+    "status": true,
+  },
+  "status": Object {},
+  "venues": Object {
+    "entities": Object {},
+    "recommendedPlaces": Array [],
+  },
+}
+`;
