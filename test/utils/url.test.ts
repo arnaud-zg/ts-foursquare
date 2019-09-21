@@ -10,8 +10,10 @@ describe('utils/url/getLocationSearch', () => {
 
   test.each`
     param                                            | locationSearch
+    ${{ search: '' }}                                | ${''}
     ${{ search: 'hello-world' }}                     | ${'?search=hello-world'}
     ${{ search: 'hello world' }}                     | ${'?search=hello%20world'}
+    ${{ name: '', search: 'hello-world' }}           | ${'?search=hello-world'}
     ${{ name: undefined, search: 'hello-world' }}    | ${'?search=hello-world'}
     ${{ search: 'hello-world', withOptionA: true }}  | ${'?search=hello-world&withOptionA=true'}
     ${{ search: 'hello-world', withOptionA: false }} | ${'?search=hello-world&withOptionA=false'}
@@ -31,8 +33,10 @@ describe('utils/url/getLocationHref', () => {
   test.each`
     param
     ${undefined}
+    ${{ search: '' }}
     ${{ search: 'hello-world' }}
     ${{ search: 'hello world', limit: 20 }}
+    ${{ name: '', search: 'hello-world' }}
     ${{ name: undefined, search: 'hello-world' }}
     ${{ search: 'hello-world', withOptionA: true }}
     ${{ search: 'hello-world', withOptionA: false }}

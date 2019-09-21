@@ -6,11 +6,15 @@ exports[`utils/url/getLocationHref should generate a location href url with {"li
 
 exports[`utils/url/getLocationHref should generate a location href url with {"limit": 20, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?limit=20&search=hello-world"`;
 
+exports[`utils/url/getLocationHref should generate a location href url with {"name": "", "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
+
 exports[`utils/url/getLocationHref should generate a location href url with {"name": undefined, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world"`;
 
 exports[`utils/url/getLocationHref should generate a location href url with {"page": 20, "search": "hello world !"} 1`] = `"https://api.foursquare.com/v2/venues/search?page=20&search=hello%20world%20!"`;
 
 exports[`utils/url/getLocationHref should generate a location href url with {"page": 42, "search": "hello-world"} 1`] = `"https://api.foursquare.com/v2/venues/search?page=42&search=hello-world"`;
+
+exports[`utils/url/getLocationHref should generate a location href url with {"search": ""} 1`] = `"https://api.foursquare.com/v2/venues/search"`;
 
 exports[`utils/url/getLocationHref should generate a location href url with {"search": "hello-world", "withOptionA": false} 1`] = `"https://api.foursquare.com/v2/venues/search?search=hello-world&withOptionA=false"`;
 

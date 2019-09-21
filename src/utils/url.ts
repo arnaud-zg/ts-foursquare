@@ -6,7 +6,7 @@ export const getLocationSearch = (
   { param = {} }: { param: ILocationSearchParam } = { param: {} }
 ) => {
   const locationSearch = Object.keys(param)
-    .filter(key => !(param[key] === undefined))
+    .filter(key => param[key] !== undefined && param[key] !== '')
     .map(
       key => `${encodeURIComponent(key)}=${encodeURIComponent(`${param[key]}`)}`
     )
