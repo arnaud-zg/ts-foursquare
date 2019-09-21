@@ -8,7 +8,7 @@ export const moduleStateSelector = (
   state: NStore.IState,
   moduleKey: TRootActionType
 ): NStatus.IModuleState =>
-  state.status[moduleKey] || {
+  statusSelector(state)[moduleKey] || {
     hasError: false,
     isLoading: false,
   }
