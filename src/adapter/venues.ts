@@ -1,31 +1,31 @@
-import { NHttpStatuses } from 'http-response-status'
 import { NPayload } from '../../types/payload.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NVenue } from '../../types/venue.d'
+import { adaptPayload } from './payload'
 
 export const adaptGetVenuesSearch = (
   payload: NPayload.IPayload<NVenue.IResponse>
-): NVenue.IVenue[] =>
-  !!payload.meta &&
-  payload.meta.code === NHttpStatuses.ESuccess.OK &&
-  !!payload.response &&
-  !!payload.response.venues &&
-  !!payload.response.venues.length
-    ? payload.response.venues
+): NVenue.IVenue[] => {
+  const response = adaptPayload<NVenue.IResponse>(payload)
+
+  return !!response && !!response.venues && !!response.venues.length
+    ? response.venues
     : []
+}
 
 export const adaptGetVenuesExplore = (
   payload: NPayload.IPayload<NRecommendedPlaces.IResponse>
-): NRecommendedPlaces.IGroupItem[] =>
-  !!payload.meta &&
-  payload.meta.code === NHttpStatuses.ESuccess.OK &&
-  !!payload.response &&
-  !!payload.response.groups &&
-  !!payload.response.groups.length &&
-  !!payload.response.groups[0].items &&
-  !!payload.response.groups[0].items.length
-    ? payload.response.groups[0].items
+): NRecommendedPlaces.IGroupItem[] => {
+  const response = adaptPayload<NRecommendedPlaces.IResponse>(payload)
+
+  return response &&
+    !!response.groups &&
+    !!response.groups.length &&
+    !!response.groups[0].items &&
+    !!response.groups[0].items.length
+    ? response.groups[0].items
     : []
+}
 
 export const adaptGetVenuesTrending = (
   payload: NPayload.IPayload<NVenue.IResponse>
