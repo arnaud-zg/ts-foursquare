@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.16](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.15...v0.2.16) (2019-09-21)
+
+### 🐛 Bug Fixes
+
+- **deps:** update dependency http-response-status to v0.0.5 ([#205](https://github.com/arnaud-zg/ts-foursquare/issues/205)) ([e9c5f7c](https://github.com/arnaud-zg/ts-foursquare/commit/e9c5f7c))
+- **selectors:** reuse lifeSelector and statusSelector ([#208](https://github.com/arnaud-zg/ts-foursquare/issues/208)) ([4ca97d6](https://github.com/arnaud-zg/ts-foursquare/commit/4ca97d6))
+- **url:** ignore empty value on get location search ([#207](https://github.com/arnaud-zg/ts-foursquare/issues/207)) ([d00343d](https://github.com/arnaud-zg/ts-foursquare/commit/d00343d))
+
+### 🔧 Chore
+
+- **deps:** update dependency codecov to v3.6.0 ([#204](https://github.com/arnaud-zg/ts-foursquare/issues/204)) ([8f3ee78](https://github.com/arnaud-zg/ts-foursquare/commit/8f3ee78))
+- **deps:** update dependency codecov to v3.6.1 ([#206](https://github.com/arnaud-zg/ts-foursquare/issues/206)) ([107f184](https://github.com/arnaud-zg/ts-foursquare/commit/107f184))
+
 ### [0.2.15](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.14...v0.2.15) (2019-09-18)
 
 ### 🐛 Bug Fixes
