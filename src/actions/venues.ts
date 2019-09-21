@@ -1,4 +1,4 @@
-import { ActionType, createAsyncAction } from 'typesafe-actions'
+import { ActionType, createAsyncAction, getType } from 'typesafe-actions'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NRequest } from '../../types/request.d'
 import { NVenue } from '../../types/venue.d'
@@ -23,24 +23,6 @@ export enum EVenuesAction {
   GET_VENUES_TRENDING_SUCCESS = 'GET_VENUES_TRENDING_SUCCESS',
   GET_VENUES_TRENDING_FAILURE = 'GET_VENUES_TRENDING_FAILURE',
   GET_VENUES_TRENDING_CANCEL = 'GET_VENUES_TRENDING_CANCEL',
-}
-
-export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
-  // getVenuesSearchAsync
-  [EVenuesAction.GET_VENUES_SEARCH_REQUEST]: 'getVenuesSearchAsync',
-  [EVenuesAction.GET_VENUES_SEARCH_SUCCESS]: 'getVenuesSearchAsync',
-  [EVenuesAction.GET_VENUES_SEARCH_FAILURE]: 'getVenuesSearchAsync',
-  [EVenuesAction.GET_VENUES_SEARCH_CANCEL]: 'getVenuesSearchAsync',
-  // getVenuesExploreAsync
-  [EVenuesAction.GET_VENUES_EXPLORE_REQUEST]: 'getVenuesExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_SUCCESS]: 'getVenuesExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_FAILURE]: 'getVenuesExploreAsync',
-  [EVenuesAction.GET_VENUES_EXPLORE_CANCEL]: 'getVenuesExploreAsync',
-  // getVenuesTrendingAsync
-  [EVenuesAction.GET_VENUES_TRENDING_REQUEST]: 'getVenuesTrendingAsync',
-  [EVenuesAction.GET_VENUES_TRENDING_SUCCESS]: 'getVenuesTrendingAsync',
-  [EVenuesAction.GET_VENUES_TRENDING_FAILURE]: 'getVenuesTrendingAsync',
-  [EVenuesAction.GET_VENUES_TRENDING_CANCEL]: 'getVenuesTrendingAsync',
 }
 
 export const getVenuesSearchAsync = createAsyncAction(
@@ -68,6 +50,24 @@ export const getVenuesTrendingAsync = createAsyncAction(
   EVenuesAction.GET_VENUES_TRENDING_FAILURE,
   EVenuesAction.GET_VENUES_TRENDING_CANCEL
 )<NRequest.TVenuesTrendingPayload, NVenue.IVenue[], Error, string>()
+
+export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
+  // getVenuesSearchAsync
+  [getType(getVenuesSearchAsync.request)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.success)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.failure)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.cancel)]: 'getVenuesSearchAsync',
+  // getVenuesExploreAsync
+  [getType(getVenuesExploreAsync.request)]: 'getVenuesExploreAsync',
+  [getType(getVenuesExploreAsync.success)]: 'getVenuesExploreAsync',
+  [getType(getVenuesExploreAsync.failure)]: 'getVenuesExploreAsync',
+  [getType(getVenuesExploreAsync.cancel)]: 'getVenuesExploreAsync',
+  // getVenuesTrendingAsync
+  [getType(getVenuesTrendingAsync.request)]: 'getVenuesTrendingAsync',
+  [getType(getVenuesTrendingAsync.success)]: 'getVenuesTrendingAsync',
+  [getType(getVenuesTrendingAsync.failure)]: 'getVenuesTrendingAsync',
+  [getType(getVenuesTrendingAsync.cancel)]: 'getVenuesTrendingAsync',
+}
 
 export const actions = {
   getVenuesSearchAsync,
