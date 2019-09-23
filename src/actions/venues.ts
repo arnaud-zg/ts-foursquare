@@ -1,4 +1,5 @@
 import { ActionType, createAsyncAction, getType } from 'typesafe-actions'
+import { NMiniVenue } from '../../types/miniVenue.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NRequest } from '../../types/request.d'
 import { NVenue } from '../../types/venue.d'
@@ -23,6 +24,11 @@ export enum EVenuesAction {
   GET_VENUES_TRENDING_SUCCESS = 'GET_VENUES_TRENDING_SUCCESS',
   GET_VENUES_TRENDING_FAILURE = 'GET_VENUES_TRENDING_FAILURE',
   GET_VENUES_TRENDING_CANCEL = 'GET_VENUES_TRENDING_CANCEL',
+  // getVenuesSuggestCompletion
+  GET_VENUES_SUGGEST_COMPLETION_REQUEST = 'GET_VENUES_SUGGEST_COMPLETION_REQUEST',
+  GET_VENUES_SUGGEST_COMPLETION_SUCCESS = 'GET_VENUES_SUGGEST_COMPLETION_SUCCESS',
+  GET_VENUES_SUGGEST_COMPLETION_FAILURE = 'GET_VENUES_SUGGEST_COMPLETION_FAILURE',
+  GET_VENUES_SUGGEST_COMPLETION_CANCEL = 'GET_VENUES_SUGGEST_COMPLETION_CANCEL',
 }
 
 export const getVenuesSearchAsync = createAsyncAction(
@@ -51,6 +57,18 @@ export const getVenuesTrendingAsync = createAsyncAction(
   EVenuesAction.GET_VENUES_TRENDING_CANCEL
 )<NRequest.TVenuesTrendingPayload, NVenue.IVenue[], Error, string>()
 
+export const getVenuesSuggestCompletionAsync = createAsyncAction(
+  EVenuesAction.GET_VENUES_SUGGEST_COMPLETION_REQUEST,
+  EVenuesAction.GET_VENUES_SUGGEST_COMPLETION_SUCCESS,
+  EVenuesAction.GET_VENUES_SUGGEST_COMPLETION_FAILURE,
+  EVenuesAction.GET_VENUES_SUGGEST_COMPLETION_CANCEL
+)<
+  NRequest.TVenuesSuggestCompletionPayload,
+  NMiniVenue.IMiniVenue[],
+  Error,
+  string
+>()
+
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   // getVenuesSearchAsync
   [getType(getVenuesSearchAsync.request)]: 'getVenuesSearchAsync',
@@ -70,8 +88,9 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
 }
 
 export const actions = {
-  getVenuesSearchAsync,
   getVenuesExploreAsync,
+  getVenuesSearchAsync,
+  getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 }
 
