@@ -1,3 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions/venues should make a snapshot of EVenuesAction 1`] = `undefined`;
+exports[`actions/venues should make a snapshot of venuesActions 1`] = `
+Object {
+  "getVenuesExploreAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesSearchAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesSuggestCompletionAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesTrendingAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+}
+`;

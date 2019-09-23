@@ -26,32 +26,6 @@ Object {
     "PUT_CREDENTIALS": "PUT_CREDENTIALS",
   },
   "StandaloneStore": [Function],
-  "actions": Object {
-    "getVenuesExploreAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesSearchAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesSuggestCompletionAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesTrendingAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-  },
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
@@ -96,6 +70,9 @@ Object {
       "trendingEntities": Object {},
     },
   },
+  "lifeActions": Object {
+    "putCredentials": [Function],
+  },
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
   "moduleStateSelector": [Function],
@@ -104,6 +81,32 @@ Object {
   "venueCategoriesStateSelector": [Function],
   "venueLocationSelector": [Function],
   "venueSelector": [Function],
+  "venuesActions": Object {
+    "getVenuesExploreAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesSearchAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesSuggestCompletionAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesTrendingAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+  },
   "venuesSelector": [Function],
 }
 `;
