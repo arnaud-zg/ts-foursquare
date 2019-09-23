@@ -6,7 +6,7 @@ export const putCredentials = createAction(
   action => (payload: NResolve.ICredentialsPayload) => action(payload)
 )
 
-const actions = {
+export const actions = {
   putCredentials,
 }
 

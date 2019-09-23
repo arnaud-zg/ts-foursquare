@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions/life should make a snapshot of ELifeAction 1`] = `undefined`;
+exports[`actions/life should make a snapshot of actions 1`] = `
+Object {
+  "putCredentials": [Function],
+}
+`;
