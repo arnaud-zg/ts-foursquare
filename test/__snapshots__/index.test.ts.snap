@@ -39,6 +39,12 @@ Object {
       "request": [Function],
       "success": [Function],
     },
+    "getVenuesSuggestCompletionAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "getVenuesTrendingAsync": Object {
       "cancel": [Function],
       "failure": [Function],
@@ -58,6 +64,12 @@ Object {
     "success": [Function],
   },
   "getVenuesSearchAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesSuggestCompletionAsync": Object {
     "cancel": [Function],
     "failure": [Function],
     "request": [Function],
