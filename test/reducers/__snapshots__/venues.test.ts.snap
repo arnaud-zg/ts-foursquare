@@ -51,6 +51,7 @@ Object {
     },
   },
   "recommendedPlaces": Array [],
+  "trendingEntities": Object {},
 }
 `;
 
@@ -115,5 +116,6 @@ Object {
       },
     },
   ],
+  "trendingEntities": Object {},
 }
 `;
