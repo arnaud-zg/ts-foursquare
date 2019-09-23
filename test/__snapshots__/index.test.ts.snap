@@ -25,51 +25,7 @@ Object {
   "ELifeAction": Object {
     "PUT_CREDENTIALS": "PUT_CREDENTIALS",
   },
-  "EVenuesAction": Object {
-    "GET_VENUES_EXPLORE_CANCEL": "GET_VENUES_EXPLORE_CANCEL",
-    "GET_VENUES_EXPLORE_FAILURE": "GET_VENUES_EXPLORE_FAILURE",
-    "GET_VENUES_EXPLORE_REQUEST": "GET_VENUES_EXPLORE_REQUEST",
-    "GET_VENUES_EXPLORE_SUCCESS": "GET_VENUES_EXPLORE_SUCCESS",
-    "GET_VENUES_SEARCH_CANCEL": "GET_VENUES_SEARCH_CANCEL",
-    "GET_VENUES_SEARCH_FAILURE": "GET_VENUES_SEARCH_FAILURE",
-    "GET_VENUES_SEARCH_REQUEST": "GET_VENUES_SEARCH_REQUEST",
-    "GET_VENUES_SEARCH_SUCCESS": "GET_VENUES_SEARCH_SUCCESS",
-    "GET_VENUES_SUGGEST_COMPLETION_CANCEL": "GET_VENUES_SUGGEST_COMPLETION_CANCEL",
-    "GET_VENUES_SUGGEST_COMPLETION_FAILURE": "GET_VENUES_SUGGEST_COMPLETION_FAILURE",
-    "GET_VENUES_SUGGEST_COMPLETION_REQUEST": "GET_VENUES_SUGGEST_COMPLETION_REQUEST",
-    "GET_VENUES_SUGGEST_COMPLETION_SUCCESS": "GET_VENUES_SUGGEST_COMPLETION_SUCCESS",
-    "GET_VENUES_TRENDING_CANCEL": "GET_VENUES_TRENDING_CANCEL",
-    "GET_VENUES_TRENDING_FAILURE": "GET_VENUES_TRENDING_FAILURE",
-    "GET_VENUES_TRENDING_REQUEST": "GET_VENUES_TRENDING_REQUEST",
-    "GET_VENUES_TRENDING_SUCCESS": "GET_VENUES_TRENDING_SUCCESS",
-  },
   "StandaloneStore": [Function],
-  "actions": Object {
-    "getVenuesExploreAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesSearchAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesSuggestCompletionAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "getVenuesTrendingAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-  },
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
@@ -111,7 +67,11 @@ Object {
     "venues": Object {
       "entities": Object {},
       "recommendedPlaces": Array [],
+      "trendingEntities": Object {},
     },
+  },
+  "lifeActions": Object {
+    "putCredentials": [Function],
   },
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
@@ -121,6 +81,32 @@ Object {
   "venueCategoriesStateSelector": [Function],
   "venueLocationSelector": [Function],
   "venueSelector": [Function],
+  "venuesActions": Object {
+    "getVenuesExploreAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesSearchAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesSuggestCompletionAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesTrendingAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+  },
   "venuesSelector": [Function],
 }
 `;

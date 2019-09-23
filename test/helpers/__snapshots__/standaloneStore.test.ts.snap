@@ -13,6 +13,7 @@ Object {
   "venues": Object {
     "entities": Object {},
     "recommendedPlaces": Array [],
+    "trendingEntities": Object {},
   },
 }
 `;

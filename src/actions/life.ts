@@ -8,8 +8,8 @@ export enum ELifeAction {
 export const putCredentials = (payload: NResolve.ICredentialsPayload) =>
   action(ELifeAction.PUT_CREDENTIALS, payload)
 
-const actions = {
+export const lifeActions = {
   putCredentials,
 }
 
-export type TLifeAction = ActionType<typeof actions>
+export type TLifeAction = ActionType<typeof lifeActions>
