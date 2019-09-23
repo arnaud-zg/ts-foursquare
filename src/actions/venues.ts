@@ -87,7 +87,7 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesTrendingAsync.cancel)]: 'getVenuesTrendingAsync',
 }
 
-export const actions = {
+const actions = {
   getVenuesExploreAsync,
   getVenuesSearchAsync,
   getVenuesSuggestCompletionAsync,

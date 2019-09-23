@@ -1,7 +1,7 @@
-import { actions } from '../../src/actions/life'
+import { putCredentials } from '../../src/actions/life'
 
 describe('actions/life', () => {
-  it(`should make a snapshot of actions`, () => {
-    expect(actions).toMatchSnapshot()
+  it(`should make a snapshot of putCredentials`, () => {
+    expect(putCredentials).toMatchSnapshot()
   })
 })

@@ -41,9 +41,6 @@ Object {
     "GET_VENUES_TRENDING_SUCCESS": "GET_VENUES_TRENDING_SUCCESS",
   },
   "StandaloneStore": [Function],
-  "actions": Object {
-    "putCredentials": [Function],
-  },
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
