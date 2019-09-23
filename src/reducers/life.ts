@@ -1,6 +1,6 @@
-import { createReducer } from 'typesafe-actions'
+import { createReducer, getType } from 'typesafe-actions'
 import { NLife } from '../../types/lifeState'
-import { ELifeAction, TLifeAction } from '../actions/life'
+import { TLifeAction, putCredentials } from '../actions/life'
 
 export const initialState: NLife.IState = {
   status: false,
@@ -11,14 +11,14 @@ export const initialState: NLife.IState = {
 }
 
 export const lifeReducer = createReducer<NLife.IState, TLifeAction>(
-  initialState,
-  {
-    [ELifeAction.PUT_CREDENTIALS]: (state, action): NLife.IState => ({
-      ...state,
-      status: true,
-      credentials: {
-        ...action.payload,
-      },
-    }),
-  }
+  initialState
+).handleAction(
+  getType(putCredentials),
+  (state, action): NLife.IState => ({
+    ...state,
+    status: true,
+    credentials: {
+      ...action.payload,
+    },
+  })
 )

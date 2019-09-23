@@ -1,6 +1,7 @@
+import { getType } from 'typesafe-actions'
 import { StandaloneStore } from '../../src/helpers/standaloneStore'
 import { configureStore } from '../../src/reducers'
-import { putCredentials, ELifeAction } from '../../src/actions/life'
+import { putCredentials } from '../../src/actions/life'
 
 describe('helpers/StandaloneStore', () => {
   const store = configureStore()
@@ -15,13 +16,13 @@ describe('helpers/StandaloneStore', () => {
     )
   })
 
-  it(`should make a snapshot of store after of action: ELifeAction.PUT_CREDENTIALS`, done => {
+  it(`should make a snapshot of store after of action: putCredentials`, done => {
     const standaloneStore = new StandaloneStore({ store })
 
     standaloneStore.subscribe((action, state) => {
       expect(state).toMatchSnapshot()
 
-      if (action && action.type === ELifeAction.PUT_CREDENTIALS) {
+      if (action && action.type === getType(putCredentials)) {
         done()
       }
     })

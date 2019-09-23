@@ -1,7 +1,7 @@
-import { ELifeAction } from '../../src/actions/life'
+import { putCredentials } from '../../src/actions/life'
 
 describe('actions/life', () => {
-  it(`should make a snapshot of ELifeAction`, () => {
-    expect(ELifeAction).toMatchSnapshot()
+  it(`should make a snapshot of putCredentials`, () => {
+    expect(putCredentials).toMatchSnapshot()
   })
 })

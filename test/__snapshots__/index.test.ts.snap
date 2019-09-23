@@ -22,9 +22,6 @@ Object {
     "S": "32",
     "XL": "88",
   },
-  "ELifeAction": Object {
-    "PUT_CREDENTIALS": "PUT_CREDENTIALS",
-  },
   "StandaloneStore": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
