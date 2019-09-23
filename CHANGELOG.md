@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.17](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.16...v0.2.17) (2019-09-23)
+
+### 🔧 Chore
+
+- **async-action-mapper:** use action helper instead of action string constant ([#210](https://github.com/arnaud-zg/ts-foursquare/issues/210)) ([92cfa80](https://github.com/arnaud-zg/ts-foursquare/commit/92cfa80))
+
+### 🖋 Features
+
+- **adapter:** use payload adapter ([#209](https://github.com/arnaud-zg/ts-foursquare/issues/209)) ([1321f57](https://github.com/arnaud-zg/ts-foursquare/commit/1321f57))
+- **venues-suggestcompletion:** add an action for get venues suggest completion ([#219](https://github.com/arnaud-zg/ts-foursquare/issues/219)) ([116e8d7](https://github.com/arnaud-zg/ts-foursquare/commit/116e8d7))
+
+### 🚧 Refactor
+
+- **services:** move process fetch helpers into a separated file ([#218](https://github.com/arnaud-zg/ts-foursquare/issues/218)) ([a0d22b5](https://github.com/arnaud-zg/ts-foursquare/commit/a0d22b5))
+- **venue-action:** avoid use venue action string constant ([#221](https://github.com/arnaud-zg/ts-foursquare/issues/221)) ([9a4623d](https://github.com/arnaud-zg/ts-foursquare/commit/9a4623d))
+
 ### [0.2.16](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.15...v0.2.16) (2019-09-21)
 
 ### 🐛 Bug Fixes
