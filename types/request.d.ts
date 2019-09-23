@@ -88,4 +88,30 @@ export declare namespace NRequest {
     | IVenuesSearchPayloadByQuery
     | IVenuesSearchPayloadByLocation
     | IVenuesSearchPayloadByPlace
+
+  interface IVenuesSuggestCompletionPayload {
+    alt?: number
+    altAcc?: number
+    limit?: number
+    llAcc?: number
+    ne?: string
+    radius?: number
+    sw?: string
+  }
+
+  interface IVenuesSuggestCompletionByLocation
+    extends IVenuesSuggestCompletionPayload {
+    ll: string
+    query: string
+  }
+
+  interface IVenuesSuggestCompletionByPlace
+    extends IVenuesSuggestCompletionPayload {
+    near: string
+    query: string
+  }
+
+  type TVenuesSuggestCompletionPayload =
+    | IVenuesSuggestCompletionByLocation
+    | IVenuesSuggestCompletionByPlace
 }
