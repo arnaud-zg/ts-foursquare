@@ -16,6 +16,7 @@ const state: NStore.IState = {
       [venueId]: payload.response.venues[0],
     },
     recommendedPlaces: [],
+    trendingEntities: {},
   },
 }
 
