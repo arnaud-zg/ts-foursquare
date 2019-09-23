@@ -1,7 +1,9 @@
-import { TLifeAction } from './life'
-import { TVenuesAction } from './venues'
+import { TLifeAction, lifeActions } from './life'
+import { TVenuesAction, venuesActions } from './venues'
 
-export type TRootActionType = TVenuesAction | TLifeAction
+export type TRootActionType =
+  | keyof typeof venuesActions
+  | keyof typeof lifeActions
 
 export type TRootAction = TVenuesAction | TLifeAction
 

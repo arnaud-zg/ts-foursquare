@@ -64,11 +64,11 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesTrendingAsync.cancel)]: 'getVenuesTrendingAsync',
 }
 
-export const actions = {
+export const venuesActions = {
   getVenuesExploreAsync,
   getVenuesSearchAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 }
 
-export type TVenuesAction = ActionType<typeof actions>
+export type TVenuesAction = ActionType<typeof venuesActions>
