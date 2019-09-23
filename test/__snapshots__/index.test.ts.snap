@@ -22,9 +22,6 @@ Object {
     "S": "32",
     "XL": "88",
   },
-  "ELifeAction": Object {
-    "PUT_CREDENTIALS": "PUT_CREDENTIALS",
-  },
   "EVenuesAction": Object {
     "GET_VENUES_EXPLORE_CANCEL": "GET_VENUES_EXPLORE_CANCEL",
     "GET_VENUES_EXPLORE_FAILURE": "GET_VENUES_EXPLORE_FAILURE",

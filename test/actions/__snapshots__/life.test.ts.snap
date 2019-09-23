@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`actions/life should make a snapshot of ELifeAction 1`] = `
-Object {
-  "PUT_CREDENTIALS": "PUT_CREDENTIALS",
-}
-`;
+exports[`actions/life should make a snapshot of ELifeAction 1`] = `undefined`;
