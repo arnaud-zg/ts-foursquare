@@ -112,6 +112,241 @@ Array [
 ]
 `;
 
+exports[`adapter/venues/adaptGetVenuesSuggestCompletion should get a list of minivenues 1`] = `
+Array [
+  Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1ca941735",
+        "name": "Pizza Place",
+        "pluralName": "Pizza Places",
+        "shortName": "Pizza",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06374d81259",
+        "name": "Food",
+        "pluralName": "Food",
+        "shortName": "Food",
+      },
+    ],
+    "hasPerk": false,
+    "id": "4f045eeb00399761c77301e3",
+    "location": Object {
+      "address": "27 Prince St",
+      "city": "New York",
+      "country": "US",
+      "crossStreet": "btwn Mott & Elizabeth St",
+      "distance": 343,
+      "lat": 40.722905825704764,
+      "lng": -73.99466690110555,
+      "postalCode": "10012",
+      "state": "NY",
+    },
+    "name": "Prince Street Pizza",
+  },
+  Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1ca941735",
+        "name": "Pizza Place",
+        "pluralName": "Pizza Places",
+        "shortName": "Pizza",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06374d81259",
+        "name": "Food",
+        "pluralName": "Food",
+        "shortName": "Food",
+      },
+    ],
+    "hasPerk": false,
+    "id": "45ebc982f964a52091431fe3",
+    "location": Object {
+      "address": "7 Carmine St",
+      "city": "New York",
+      "country": "US",
+      "crossStreet": "at 6th Ave",
+      "distance": 728,
+      "lat": 40.730491197306435,
+      "lng": -74.00188088169593,
+      "postalCode": "10014",
+      "state": "NY",
+    },
+    "name": "Joe's Pizza",
+  },
+  Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1ca941735",
+        "name": "Pizza Place",
+        "pluralName": "Pizza Places",
+        "shortName": "Pizza",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06374d81259",
+        "name": "Food",
+        "pluralName": "Food",
+        "shortName": "Food",
+      },
+    ],
+    "hasPerk": false,
+    "id": "3fd66200f964a52062e61ee3",
+    "location": Object {
+      "address": "32 Spring St",
+      "city": "New York",
+      "country": "US",
+      "crossStreet": "at Mott St",
+      "distance": 480,
+      "lat": 40.72156708733683,
+      "lng": -73.99559138323225,
+      "postalCode": "10012",
+      "state": "NY",
+    },
+    "name": "Lombardi's Coal Oven Pizza",
+  },
+  Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1ca941735",
+        "name": "Pizza Place",
+        "pluralName": "Pizza Places",
+        "shortName": "Pizza",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06374d81259",
+        "name": "Food",
+        "pluralName": "Food",
+        "shortName": "Food",
+      },
+    ],
+    "hasPerk": false,
+    "id": "51351c3fe4b0c58b63965114",
+    "location": Object {
+      "address": "150 E 14th St",
+      "city": "New York",
+      "country": "US",
+      "crossStreet": "3rd Ave.",
+      "distance": 1097,
+      "lat": 40.733386570577345,
+      "lng": -73.98731060842591,
+      "postalCode": "10003",
+      "state": "NY",
+    },
+    "name": "Joe's Pizza",
+  },
+  Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/pizza_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1ca941735",
+        "name": "Pizza Place",
+        "pluralName": "Pizza Places",
+        "shortName": "Pizza",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/winery_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d123941735",
+        "name": "Wine Bar",
+        "pluralName": "Wine Bars",
+        "shortName": "Wine Bar",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/italian_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d110941735",
+        "name": "Italian Restaurant",
+        "pluralName": "Italian Restaurants",
+        "shortName": "Italian",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06374d81259",
+        "name": "Food",
+        "pluralName": "Food",
+        "shortName": "Food",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/default_",
+          "suffix": ".png",
+        },
+        "id": "4d4b7105d754a06376d81259",
+        "name": "Nightlife Spot",
+        "pluralName": "Nightlife Spots",
+        "shortName": "Nightlife",
+      },
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d116941735",
+        "name": "Bar",
+        "pluralName": "Bars",
+        "shortName": "Bar",
+      },
+    ],
+    "hasPerk": false,
+    "id": "3fd66200f964a520c7f11ee3",
+    "location": Object {
+      "address": "1 5th Ave",
+      "city": "New York",
+      "country": "US",
+      "crossStreet": "at E 8th St",
+      "distance": 681,
+      "lat": 40.731990997794966,
+      "lng": -73.99622300550848,
+      "postalCode": "10003",
+      "state": "NY",
+    },
+    "name": "Otto Enoteca Pizzeria",
+  },
+]
+`;
+
 exports[`adapter/venues/adaptGetVenuesTrending should get a list of venues 1`] = `
 Array [
   Object {

@@ -1,13 +1,33 @@
 import { NVenue } from './venue.d'
 
 export declare namespace NMiniVenue {
-  interface Response {
-    minivenues: TMiniVenue[]
+  interface IResponse {
+    minivenues: IMiniVenue[]
   }
 
   type TMiniVenue = Pick<NVenue.IVenue, TMiniVenueKeys>
 
-  type TMiniVenueKeys = 'id' | 'name' | 'location' | 'categories' | 'hasPerk'
+  type TMiniVenueKeys = 'id' | 'name' | 'hasPerk'
 
-  interface IMiniVenue extends TMiniVenue {}
+  type TMiniCategory = Pick<NVenue.ICategory, TMiniCategoryKeys>
+
+  type TMiniCategoryKeys = 'icon' | 'id' | 'name' | 'pluralName' | 'shortName'
+
+  type TMiniLocation = Pick<NVenue.ILocation, TMiniLocationKeys>
+
+  type TMiniLocationKeys =
+    | 'address'
+    | 'city'
+    | 'country'
+    | 'crossStreet'
+    | 'distance'
+    | 'lat'
+    | 'lng'
+    | 'postalCode'
+    | 'state'
+
+  interface IMiniVenue extends TMiniVenue {
+    categories: TMiniCategory[]
+    location: TMiniLocation
+  }
 }

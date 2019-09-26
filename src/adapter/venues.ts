@@ -1,3 +1,4 @@
+import { NMiniVenue } from '../../types/miniVenue'
 import { NPayload } from '../../types/payload.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NVenue } from '../../types/venue.d'
@@ -30,3 +31,13 @@ export const adaptGetVenuesExplore = (
 export const adaptGetVenuesTrending = (
   payload: NPayload.IPayload<NVenue.IResponse>
 ): NVenue.IVenue[] => adaptGetVenuesSearch(payload)
+
+export const adaptGetVenuesSuggestCompletion = (
+  payload: NPayload.IPayload<NMiniVenue.IResponse>
+): NMiniVenue.IMiniVenue[] => {
+  const response = adaptPayload(payload)
+
+  return response && response.minivenues && response.minivenues.length
+    ? response.minivenues
+    : []
+}
