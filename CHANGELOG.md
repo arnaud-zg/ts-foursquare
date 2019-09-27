@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.18](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.17...v0.2.18) (2019-09-27)
+
+### 🔧 Chore
+
+- **deps:** update dependency @types/node to v12.7.8 ([#222](https://github.com/arnaud-zg/ts-foursquare/issues/222)) ([77481a4](https://github.com/arnaud-zg/ts-foursquare/commit/77481a4))
+
+### 🖋 Features
+
+- **venue-suggest-completion:** add an adapter for venue suggest completion ([#223](https://github.com/arnaud-zg/ts-foursquare/issues/223)) ([b9354f5](https://github.com/arnaud-zg/ts-foursquare/commit/b9354f5))
+- **venue-suggest-completion:** create a service for venue suggest completion ([#224](https://github.com/arnaud-zg/ts-foursquare/issues/224)) ([b2452cf](https://github.com/arnaud-zg/ts-foursquare/commit/b2452cf))
+- **venue-suggest-completion:** create an epic venue suggest completion ([#225](https://github.com/arnaud-zg/ts-foursquare/issues/225)) ([9bcede1](https://github.com/arnaud-zg/ts-foursquare/commit/9bcede1))
+
+### 🚧 Refactor
+
+- **life-action:** avoid use life action string constant ([#220](https://github.com/arnaud-zg/ts-foursquare/issues/220)) ([8e2b513](https://github.com/arnaud-zg/ts-foursquare/commit/8e2b513))
+
 ### [0.2.17](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.16...v0.2.17) (2019-09-23)
 
 ### 🔧 Chore
