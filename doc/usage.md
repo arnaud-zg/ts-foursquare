@@ -1,53 +1,194 @@
 # ts-foursquare
 
-A JS client for working with [Foursquare APIs](https://developer.foursquare.com/docs/api).
+A JS client for working with <a href="https://developer.foursquare.com/docs/api" target="_blank">Foursquare APIs</a>
 
-Works in Node, any browser that support javascript.
+Works in Node and with any browser that support javascript.
 
 ## Table of contents
 
 - [Usage](#usage)
-  - [Set credentials](#set-credentials)
 - [Overview](#overview)
 - [Actions](#actions)
+  - [Life action](#life-action)
+    - [putCredentials](#putCredentials)
+  - [Venues action](#venues-action)
+    - [getVenuesSearchAsync](#getVenuesSearchAsync)
+    - [getVenuesExploreAsync](#getVenuesExploreAsync)
+    - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
+    - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
+- [Helpers](#helpers)
+  - [Standalone Store](#standalone-store)
+- [Reducers](#reducers)
+  - [Life reducer](#life-reducer)
+  - [Venues reducer](#venues-reducer)
+- [Selectors](#selectors)
+  - [Life selectors](#life-selectors)
+  - [Venues selectors](#venues-selectors)
+- [Utils](##utils)
+  - [Icon](#icon)
+  - [Test](#test)
+  - [url](#url)
 
 ## Usage
 
-### Set credentials
-
-To **set credentials**, import credentials function from `'ts-foursquare'` and provide it with your access token.
-
-The service client exposes methods that create requests.
-
-```js
-import { setCredentials } from 'ts-foursquare'
-
-const clientId = ''
-const clientSecret = ''
-
-setCredentials({ clientId, clientSecret })
-```
+// @to-do
 
 ## Overview
 
-**For more details, please read [the full classes documentation](./classes.md).**
+// @to-do
 
 ## Actions
 
-### `getVenuesSearch` [Deprecated]
+### Life action
 
-Service methods return `Promise<NVenues.IVenues>`.
+### putCredentials
 
-Typically, you'll create a `NAction.IActionPayload` then it returns a `Promise` that resolves with a [`NVenues.IVenues`] or rejects with a [`Error`].
+> Put credentials into store, you'll only need to call this method only one time.
 
-For more details, please read [the full `getVenuesSearch` documentation](./docs/classes.md#getvenuessearch).
+`putCredentials` create an enhanced action-creator with unlimited number of arguments.
+
+- Resulting action-creator will preserve semantic names of their arguments (id, title, amount, etc...).
+
+- Returned action object have predefined properties `({ type, payload, meta })`
+
+##### Redux context
 
 ```js
-import { getVenuesSearch } from 'ts-foursquare'
+const onInit = async () => {
+  const { putCredentials } = this.props
 
-const onSearch = async () => {
-  const state = await getVenuesSearch({ query: 'peter luger steakhouse' })
-
-  return state
+  putCredentials({
+    clientId: CLIENT_ID,
+    clientSecret: CLIENT_SECRET,
+  })
 }
 ```
+
+### Venues action
+
+#### getVenuesSearchAsync
+
+> Returns a list of venues near the current location, optionally matching a search term.
+>
+> To ensure the best possible results, pay attention to the intent parameter below.
+>
+> Note that most of the fields returned inside a venue can be optional. The user may create a venue that has no address, city, or state (the venue is created instead at the lat/long specified). Your client should handle these conditions safely. For more robust venue information (photos/tips/etc.), please see our venue details endpoint.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/search" target="_blank">https://developer.foursquare.com/docs/api/venues/search</a></cite>
+
+`getVenuesSearchAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onSearch = async () => {
+  const { getVenuesSearchAsync } = this.props
+
+  getVenuesSearchAsync.request({
+    query: 'peter steakhouse',
+  })
+}
+```
+
+#### getVenuesExploreAsync
+
+> Returns a list of recommended venues near the current location. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
+>
+> ~~If authenticated, the method will personalize the ranking based on you and your friends.~~ // @to-do
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/explore" target="_blank">https://developer.foursquare.com/docs/api/venues/explore</a></cite>
+
+`getVenuesExploreAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onExplore = async () => {
+  const { getVenuesExploreAsync } = this.props
+
+  getVenuesExploreAsync.request({
+    ll: '40.7099,-73.9622',
+  })
+}
+```
+
+#### getVenuesTrendingAsync
+
+> Returns a list of venues near the current location with the most people currently checked in. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/trending" target="_blank">https://developer.foursquare.com/docs/api/venues/trending</a></cite>
+
+`getVenuesTrendingAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onSubmit = async () => {
+  const { getVenuesTrendingAsync } = this.props
+
+  getVenuesTrendingAsync.request({
+    ll: '40.7099,-73.9622',
+  })
+}
+```
+
+#### getVenuesSuggestCompletionAsync
+
+> Returns a list of mini-venues partially matching the search term, near the location.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/suggestcompletion" target="_blank">https://developer.foursquare.com/docs/api/venues/suggestcompletion</a></cite>
+
+`getVenuesSuggestCompletionAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onSuggestCompletion = async () => {
+  const { getVenuesSuggestCompletionAsync } = this.props
+
+  getVenuesSuggestCompletionAsync.request({
+    ll: '40.7099,-73.9622',
+    query: 'burger',
+  })
+}
+```
+
+## Helpers
+
+### Standalone Store
+
+// @to-do
+
+## Reducers
+
+### Life reducer
+
+// @to-do
+
+### Venues reducer
+
+// @to-do
+
+## Selectors
+
+### Life selectors
+
+// @to-do
+
+### Venues selectors
+
+// @to-do
+
+## Utils
+
+### Icon
+
+// @to-do
+
+### Test
+
+// @to-do
+
+### Url
+
+// @to-do
