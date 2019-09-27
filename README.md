@@ -21,7 +21,7 @@ These instructions will let you know how to use the library.
 Things you need to install before using this library.
 
 ```shell
-node: 10.16.0
+node: 10.15.0
 nvm: 0.33.6
 ```
 
