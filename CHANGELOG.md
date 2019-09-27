@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.19](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.18...v0.2.19) (2019-09-27)
+
+### 📖 Documentations
+
+- **project:** remove not relevant async keyword ([#228](https://github.com/arnaud-zg/ts-foursquare/issues/228)) ([816c9c8](https://github.com/arnaud-zg/ts-foursquare/commit/816c9c8))
+- **project:** update prerequisite node version ([#230](https://github.com/arnaud-zg/ts-foursquare/issues/230)) ([64834ea](https://github.com/arnaud-zg/ts-foursquare/commit/64834ea))
+- **project:** update usage doc for life, venues action ([#226](https://github.com/arnaud-zg/ts-foursquare/issues/226)) ([db4700b](https://github.com/arnaud-zg/ts-foursquare/commit/db4700b))
+- **project:** update usage doc for url utils ([#227](https://github.com/arnaud-zg/ts-foursquare/issues/227)) ([1325f57](https://github.com/arnaud-zg/ts-foursquare/commit/1325f57))
+- **project:** update usage section order ([#229](https://github.com/arnaud-zg/ts-foursquare/issues/229)) ([dd966df](https://github.com/arnaud-zg/ts-foursquare/commit/dd966df)), closes [#228](https://github.com/arnaud-zg/ts-foursquare/issues/228)
+
 ### [0.2.18](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.17...v0.2.18) (2019-09-27)
 
 ### 🔧 Chore
