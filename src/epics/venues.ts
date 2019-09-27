@@ -7,16 +7,19 @@ import { TRootAction } from '../actions'
 import {
   getVenuesExploreAsync,
   getVenuesSearchAsync,
+  getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../actions/venues'
 import {
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
+  adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../adapter/venues'
 import {
   getObservableVenuesExplore,
   getObservableVenuesSearch,
+  getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../services/venues'
 
@@ -51,6 +54,27 @@ export const getVenuesExploreEpic: Epic<
         catchError(err => of(getVenuesSearchAsync.failure(err))),
         takeUntil(
           action$.pipe(filter(isActionOf(getVenuesExploreAsync.cancel)))
+        )
+      )
+    )
+  )
+
+export const getVenuesSuggestCompletionEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesSuggestCompletionAsync.request)),
+    switchMap(action =>
+      getObservableVenuesSuggestCompletion(action, state$).pipe(
+        map(adaptGetVenuesSuggestCompletion),
+        map(getVenuesSuggestCompletionAsync.success),
+        catchError(err => of(getVenuesSuggestCompletionAsync.failure(err))),
+        takeUntil(
+          action$.pipe(
+            filter(isActionOf(getVenuesSuggestCompletionAsync.cancel))
+          )
         )
       )
     )
