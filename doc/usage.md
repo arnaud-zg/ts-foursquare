@@ -56,7 +56,7 @@ Works in Node and with any browser that support javascript.
 ##### Redux context
 
 ```js
-const onInit = async () => {
+const onInit = () => {
   const { putCredentials } = this.props
 
   putCredentials({
@@ -83,7 +83,7 @@ const onInit = async () => {
 ##### Redux context
 
 ```js
-const onSearch = async () => {
+const onSearch = () => {
   const { getVenuesSearchAsync } = this.props
 
   getVenuesSearchAsync.request({
@@ -105,7 +105,7 @@ const onSearch = async () => {
 ##### Redux context
 
 ```js
-const onExplore = async () => {
+const onExplore = () => {
   const { getVenuesExploreAsync } = this.props
 
   getVenuesExploreAsync.request({
@@ -125,7 +125,7 @@ const onExplore = async () => {
 ##### Redux context
 
 ```js
-const onSubmit = async () => {
+const onSubmit = () => {
   const { getVenuesTrendingAsync } = this.props
 
   getVenuesTrendingAsync.request({
@@ -145,7 +145,7 @@ const onSubmit = async () => {
 ##### Redux context
 
 ```js
-const onSuggestCompletion = async () => {
+const onSuggestCompletion = () => {
   const { getVenuesSuggestCompletionAsync } = this.props
 
   getVenuesSuggestCompletionAsync.request({
