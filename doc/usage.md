@@ -12,10 +12,10 @@ Works in Node and with any browser that support javascript.
   - [Life action](#life-action)
     - [putCredentials](#putCredentials)
   - [Venues action](#venues-action)
-    - [getVenuesSearchAsync](#getVenuesSearchAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
-    - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
+    - [getVenuesSearchAsync](#getVenuesSearchAsync)
     - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
+    - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
 - [Helpers](#helpers)
   - [Standalone Store](#standalone-store)
 - [Reducers](#reducers)
@@ -68,7 +68,27 @@ const onInit = () => {
 
 ### Venues action
 
-#### getVenuesSearchAsync
+#### getVenuesExploreAsync
+
+> Returns a list of recommended venues near the current location. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
+>
+> ~~If authenticated, the method will personalize the ranking based on you and your friends.~~ // @to-do
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/explore" target="_blank">https://developer.foursquare.com/docs/api/venues/explore</a></cite>
+
+`getVenuesExploreAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+````js
+const onExplore = async () => {
+  const { getVenuesExploreAsync } = this.props
+
+  getVenuesExploreAsync.request({
+    ll: '40.7099,-73.9622',
+  })
+}
+```#### getVenuesSearchAsync
 
 > Returns a list of venues near the current location, optionally matching a search term.
 >
@@ -90,26 +110,25 @@ const onSearch = () => {
     query: 'peter steakhouse',
   })
 }
-```
+````
 
-#### getVenuesExploreAsync
+#### getVenuesSuggestCompletionAsync
 
-> Returns a list of recommended venues near the current location. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
+> Returns a list of mini-venues partially matching the search term, near the location.
 >
-> ~~If authenticated, the method will personalize the ranking based on you and your friends.~~ // @to-do
->
-> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/explore" target="_blank">https://developer.foursquare.com/docs/api/venues/explore</a></cite>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/suggestcompletion" target="_blank">https://developer.foursquare.com/docs/api/venues/suggestcompletion</a></cite>
 
-`getVenuesExploreAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesSuggestCompletionAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
 
 ##### Redux context
 
 ```js
-const onExplore = () => {
-  const { getVenuesExploreAsync } = this.props
+const onSuggestCompletion = async () => {
+  const { getVenuesSuggestCompletionAsync } = this.props
 
-  getVenuesExploreAsync.request({
+  getVenuesSuggestCompletionAsync.request({
     ll: '40.7099,-73.9622',
+    query: 'burger',
   })
 }
 ```
@@ -130,27 +149,6 @@ const onSubmit = () => {
 
   getVenuesTrendingAsync.request({
     ll: '40.7099,-73.9622',
-  })
-}
-```
-
-#### getVenuesSuggestCompletionAsync
-
-> Returns a list of mini-venues partially matching the search term, near the location.
->
-> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/suggestcompletion" target="_blank">https://developer.foursquare.com/docs/api/venues/suggestcompletion</a></cite>
-
-`getVenuesSuggestCompletionAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
-
-##### Redux context
-
-```js
-const onSuggestCompletion = () => {
-  const { getVenuesSuggestCompletionAsync } = this.props
-
-  getVenuesSuggestCompletionAsync.request({
-    ll: '40.7099,-73.9622',
-    query: 'burger',
   })
 }
 ```
