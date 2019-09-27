@@ -54,6 +54,29 @@ export const getObservableVenuesExplore = (
   )
 }
 
+export const getObservableVenuesSuggestCompletion = (
+  action: NAction.IAction,
+  state$: StateObservable<NStore.IState>
+) => {
+  const { clientId, clientSecret } = credentialsSelector(state$.value)
+
+  return fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: EApiPathnames.VENUES_SUGGEST_COMPLETION,
+      param: {
+        ...action.payload,
+        client_id: clientId,
+        client_secret: clientSecret,
+        v: EApiDefaultParameters.VERSION,
+      },
+    })
+  ).pipe(
+    switchMap(processFetchResponse),
+    catchError(processFetchError)
+  )
+}
+
 export const getObservableVenuesTrending = (
   action: NAction.IAction,
   state$: StateObservable<NStore.IState>
