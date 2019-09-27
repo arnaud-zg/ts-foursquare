@@ -28,6 +28,8 @@ Works in Node and with any browser that support javascript.
   - [Icon](#icon)
   - [Test](#test)
   - [url](#url)
+    - [getLocationHref](#getLocationHref)
+    - [getLocationSearch](#getLocationSearch)
 
 ## Usage
 
@@ -191,4 +193,22 @@ const onSuggestCompletion = async () => {
 
 ### Url
 
-// @to-do
+#### getLocationSearch
+
+Take a look at [getLocationHref](#getLocationHref)
+
+#### getLocationHref
+
+> The Location interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively.
+>
+> -- <cite>MDN web docs - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Location" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Location</a></cite>
+
+```js
+import { getLocationHref, getLocationSearch } from 'ts-foursquare'
+
+const onFetch = async () => {
+  return await fetch(
+    getLocationHref({ origin, pathname, { query: 'burger' } })
+  )
+}
+```
