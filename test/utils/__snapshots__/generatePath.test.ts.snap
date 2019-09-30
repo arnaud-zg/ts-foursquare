@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils/icon/generatePath should get default url pathname 1`] = `"/"`;
+
+exports[`utils/icon/generatePath should get url pathname 1`] = `"/v2/venues/explore"`;
+
+exports[`utils/icon/generatePath should get url pathname 2`] = `"/v2/venues/explore"`;
+
+exports[`utils/icon/generatePath should get url pathname with given parameters 1`] = `"/v2/venues/3fd66200f964a5209beb1ee3/likes"`;
