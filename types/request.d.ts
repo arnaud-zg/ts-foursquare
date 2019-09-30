@@ -114,4 +114,8 @@ export declare namespace NRequest {
   type TVenuesSuggestCompletionPayload =
     | IVenuesSuggestCompletionByLocation
     | IVenuesSuggestCompletionByPlace
+
+  interface IVenuesLikesPayload {
+    venueId: string
+  }
 }

@@ -7,6 +7,10 @@ Object {
     "GET_VENUES_EXPLORE_FAILURE": "getVenuesExploreAsync",
     "GET_VENUES_EXPLORE_REQUEST": "getVenuesExploreAsync",
     "GET_VENUES_EXPLORE_SUCCESS": "getVenuesExploreAsync",
+    "GET_VENUES_LIKES_CANCEL": "getVenuesLikesAsync",
+    "GET_VENUES_LIKES_FAILURE": "getVenuesLikesAsync",
+    "GET_VENUES_LIKES_REQUEST": "getVenuesLikesAsync",
+    "GET_VENUES_LIKES_SUCCESS": "getVenuesLikesAsync",
     "GET_VENUES_SEARCH_CANCEL": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_FAILURE": "getVenuesSearchAsync",
     "GET_VENUES_SEARCH_REQUEST": "getVenuesSearchAsync",
@@ -29,6 +33,12 @@ Object {
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getVenuesExploreAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
+  "getVenuesLikesAsync": Object {
     "cancel": [Function],
     "failure": [Function],
     "request": [Function],
@@ -80,6 +90,12 @@ Object {
   "venueSelector": [Function],
   "venuesActions": Object {
     "getVenuesExploreAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesLikesAsync": Object {
       "cancel": [Function],
       "failure": [Function],
       "request": [Function],
