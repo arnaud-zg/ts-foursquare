@@ -1,4 +1,5 @@
 import { ActionType, createAsyncAction, getType } from 'typesafe-actions'
+import { NLikes } from '../../types/likes.d'
 import { NMiniVenue } from '../../types/miniVenue.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NRequest } from '../../types/request.d'
@@ -7,13 +8,6 @@ import { NVenue } from '../../types/venue.d'
 interface IAsyncActionNameMapping {
   [actionType: string]: string
 }
-
-export const getVenuesSearchAsync = createAsyncAction(
-  'GET_VENUES_SEARCH_REQUEST',
-  'GET_VENUES_SEARCH_SUCCESS',
-  'GET_VENUES_SEARCH_FAILURE',
-  'GET_VENUES_SEARCH_CANCEL'
-)<NRequest.TVenuesSearchPayload, NVenue.IVenue[], Error, string>()
 
 export const getVenuesExploreAsync = createAsyncAction(
   'GET_VENUES_EXPLORE_REQUEST',
@@ -26,6 +20,20 @@ export const getVenuesExploreAsync = createAsyncAction(
   Error,
   string
 >()
+
+export const getVenuesLikesAsync = createAsyncAction(
+  'GET_VENUES_LIKES_REQUEST',
+  'GET_VENUES_LIKES_SUCCESS',
+  'GET_VENUES_LIKES_FAILURE',
+  'GET_VENUES_LIKES_CANCEL'
+)<NRequest.IVenuesLikesPayload, NLikes.ILikes, Error, string>()
+
+export const getVenuesSearchAsync = createAsyncAction(
+  'GET_VENUES_SEARCH_REQUEST',
+  'GET_VENUES_SEARCH_SUCCESS',
+  'GET_VENUES_SEARCH_FAILURE',
+  'GET_VENUES_SEARCH_CANCEL'
+)<NRequest.TVenuesSearchPayload, NVenue.IVenue[], Error, string>()
 
 export const getVenuesTrendingAsync = createAsyncAction(
   'GET_VENUES_TRENDING_REQUEST',
@@ -47,16 +55,21 @@ export const getVenuesSuggestCompletionAsync = createAsyncAction(
 >()
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
-  // getVenuesSearchAsync
-  [getType(getVenuesSearchAsync.request)]: 'getVenuesSearchAsync',
-  [getType(getVenuesSearchAsync.success)]: 'getVenuesSearchAsync',
-  [getType(getVenuesSearchAsync.failure)]: 'getVenuesSearchAsync',
-  [getType(getVenuesSearchAsync.cancel)]: 'getVenuesSearchAsync',
   // getVenuesExploreAsync
   [getType(getVenuesExploreAsync.request)]: 'getVenuesExploreAsync',
   [getType(getVenuesExploreAsync.success)]: 'getVenuesExploreAsync',
   [getType(getVenuesExploreAsync.failure)]: 'getVenuesExploreAsync',
   [getType(getVenuesExploreAsync.cancel)]: 'getVenuesExploreAsync',
+  // getVenuesLikesAsync
+  [getType(getVenuesLikesAsync.request)]: 'getVenuesLikesAsync',
+  [getType(getVenuesLikesAsync.success)]: 'getVenuesLikesAsync',
+  [getType(getVenuesLikesAsync.failure)]: 'getVenuesLikesAsync',
+  [getType(getVenuesLikesAsync.cancel)]: 'getVenuesLikesAsync',
+  // getVenuesSearchAsync
+  [getType(getVenuesSearchAsync.request)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.success)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.failure)]: 'getVenuesSearchAsync',
+  [getType(getVenuesSearchAsync.cancel)]: 'getVenuesSearchAsync',
   // getVenuesTrendingAsync
   [getType(getVenuesTrendingAsync.request)]: 'getVenuesTrendingAsync',
   [getType(getVenuesTrendingAsync.success)]: 'getVenuesTrendingAsync',
@@ -66,6 +79,7 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
 
 export const venuesActions = {
   getVenuesExploreAsync,
+  getVenuesLikesAsync,
   getVenuesSearchAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
