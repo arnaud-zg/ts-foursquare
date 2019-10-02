@@ -1,29 +1,33 @@
 import {
+  adapterGetVenuesLikes,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../../src/adapter/venues'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
+import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetSuggestCompletion } from '../epics/__mocks__/getVenuesSuggestCompletionAsync.resolve'
 import { payload as payloadGetVenuesTrending } from '../epics/__mocks__/getVenuesTrendingAsync.resolve'
 
-describe('adapter/venues/adaptGetVenuesSearch', () => {
+describe('adapter/venues/adaptGetVenuesSuggestCompletion', () => {
   it('should get an empty list', () => {
     expect(
-      adaptGetVenuesSearch({
-        ...payloadGetVenuesSearch,
+      adaptGetVenuesSuggestCompletion({
+        ...payloadGetSuggestCompletion,
         meta: {
           code: 400,
-          requestId: payloadGetVenuesSearch.meta.requestId,
+          requestId: payloadGetSuggestCompletion.meta.requestId,
         },
       })
     ).toEqual([])
   })
 
-  it('should get a list of venues', () => {
-    expect(adaptGetVenuesSearch(payloadGetVenuesSearch)).toMatchSnapshot()
+  it('should get a list of minivenues', () => {
+    expect(
+      adaptGetVenuesSuggestCompletion(payloadGetSuggestCompletion)
+    ).toMatchSnapshot()
   })
 })
 
@@ -45,6 +49,42 @@ describe('adapter/venues/adaptGetVenuesExplore', () => {
   })
 })
 
+describe('adapter/venues/adapterGetVenuesLikes', () => {
+  it('should get an empty list', () => {
+    expect(
+      adapterGetVenuesLikes({
+        ...payloadGetVenuesLikes,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesLikes.meta.requestId,
+        },
+      })
+    ).toEqual({ count: 0, items: [], summary: '0 Likes' })
+  })
+
+  it('should get a list of venues likes', () => {
+    expect(adapterGetVenuesLikes(payloadGetVenuesLikes)).toMatchSnapshot()
+  })
+})
+
+describe('adapter/venues/adaptGetVenuesSearch', () => {
+  it('should get an empty list', () => {
+    expect(
+      adaptGetVenuesSearch({
+        ...payloadGetVenuesSearch,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesSearch.meta.requestId,
+        },
+      })
+    ).toEqual([])
+  })
+
+  it('should get a list of venues', () => {
+    expect(adaptGetVenuesSearch(payloadGetVenuesSearch)).toMatchSnapshot()
+  })
+})
+
 describe('adapter/venues/adaptGetVenuesTrending', () => {
   it('should get an empty list', () => {
     expect(
@@ -60,25 +100,5 @@ describe('adapter/venues/adaptGetVenuesTrending', () => {
 
   it('should get a list of venues', () => {
     expect(adaptGetVenuesTrending(payloadGetVenuesTrending)).toMatchSnapshot()
-  })
-})
-
-describe('adapter/venues/adaptGetVenuesSuggestCompletion', () => {
-  it('should get an empty list', () => {
-    expect(
-      adaptGetVenuesSuggestCompletion({
-        ...payloadGetSuggestCompletion,
-        meta: {
-          code: 400,
-          requestId: payloadGetSuggestCompletion.meta.requestId,
-        },
-      })
-    ).toEqual([])
-  })
-
-  it('should get a list of minivenues', () => {
-    expect(
-      adaptGetVenuesSuggestCompletion(payloadGetSuggestCompletion)
-    ).toMatchSnapshot()
   })
 })

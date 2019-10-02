@@ -397,3 +397,42 @@ Array [
   },
 ]
 `;
+
+exports[`adapter/venues/adapterGetVenuesLikes should get a list of venues likes 1`] = `
+Object {
+  "count": 24,
+  "items": Array [
+    Object {
+      "firstName": "Joe",
+      "gender": "male",
+      "id": "66019143",
+      "lastName": "Benz",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/66019143_U7cpUhMp_MBPhsA_er-CfMmMiFXj2KsurXDZxMKR9KSiqf8vDKNtm8CuETX01F_RUzfyzjpa6.jpg",
+      },
+    },
+    Object {
+      "firstName": "Tyler",
+      "gender": "male",
+      "id": "275151",
+      "lastName": "Elliott",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/275151-4G0WJJPRVXOCJBAS.jpg",
+      },
+    },
+    Object {
+      "firstName": "Miraculous",
+      "gender": "none",
+      "id": "29109434",
+      "lastName": "Assembly",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/29109434_EKGvTLjo_d3wFukA0xdHXaFwxCMmxzb3BoI_6W1JQVeXLs3rgbsD3tGOPhAZoY8-wnUghn_LP",
+      },
+    },
+  ],
+  "summary": "24 Likes",
+}
+`;
