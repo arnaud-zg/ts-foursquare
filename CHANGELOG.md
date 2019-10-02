@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.0...v0.3.1) (2019-10-02)
+
+### 🔧 Chore
+
+- **deps:** pin dependency path-to-regexp to 3.1.0 ([#240](https://github.com/arnaud-zg/ts-foursquare/issues/240)) ([87375fc](https://github.com/arnaud-zg/ts-foursquare/commit/87375fc))
+- **deps:** update dependency @types/node to v12.7.9 ([#241](https://github.com/arnaud-zg/ts-foursquare/issues/241)) ([0926613](https://github.com/arnaud-zg/ts-foursquare/commit/0926613))
+- **deps:** update dependency tsdx to v0.9.3 ([#238](https://github.com/arnaud-zg/ts-foursquare/issues/238)) ([f50f1b5](https://github.com/arnaud-zg/ts-foursquare/commit/f50f1b5))
+
+### 🖋 Features
+
+- **venue-likes:** create a service for venue likes ([#239](https://github.com/arnaud-zg/ts-foursquare/issues/239)) ([67a6e8e](https://github.com/arnaud-zg/ts-foursquare/commit/67a6e8e))
+- **venues-likes:** add an action for get venues likes ([#237](https://github.com/arnaud-zg/ts-foursquare/issues/237)) ([662d0db](https://github.com/arnaud-zg/ts-foursquare/commit/662d0db))
+
 ## [0.3.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.2.19...v0.3.0) (2019-09-29)
 
 ### 🔧 Chore
