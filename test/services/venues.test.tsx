@@ -1,7 +1,6 @@
 import { StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
 import {
-  getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,
@@ -21,13 +20,12 @@ import { NStore } from '../../types/store'
 
 describe('services/getObservableVenuesCategories', () => {
   it('should get an observable instance', () => {
-    const action = getVenuesCategoriesAsync.request({})
     const state$: StateObservable<NStore.IState> = new StateObservable(
       new Subject(),
       initialState
     )
 
-    expect(getObservableVenuesCategories(action, state$)).toMatchSnapshot()
+    expect(getObservableVenuesCategories({ state$ })).toMatchSnapshot()
   })
 })
 
@@ -39,7 +37,7 @@ describe('services/getObservableVenuesExplore', () => {
       initialState
     )
 
-    expect(getObservableVenuesExplore(action, state$)).toMatchSnapshot()
+    expect(getObservableVenuesExplore({ action, state$ })).toMatchSnapshot()
   })
 })
 
@@ -53,7 +51,7 @@ describe('services/getObservableVenuesLikes', () => {
       initialState
     )
 
-    expect(getObservableVenuesLikes(action, state$)).toMatchSnapshot()
+    expect(getObservableVenuesLikes({ action, state$ })).toMatchSnapshot()
   })
 })
 
@@ -65,7 +63,7 @@ describe('services/getObservableVenuesSearch', () => {
       initialState
     )
 
-    expect(getObservableVenuesSearch(action, state$)).toMatchSnapshot()
+    expect(getObservableVenuesSearch({ action, state$ })).toMatchSnapshot()
   })
 })
 
@@ -77,7 +75,7 @@ describe('services/getObservableVenuesTrending', () => {
       initialState
     )
 
-    expect(getObservableVenuesTrending(action, state$)).toMatchSnapshot()
+    expect(getObservableVenuesTrending({ action, state$ })).toMatchSnapshot()
   })
 })
 
@@ -93,7 +91,7 @@ describe('services/getObservableVenuesSuggestCompletion', () => {
     )
 
     expect(
-      getObservableVenuesSuggestCompletion(action, state$)
+      getObservableVenuesSuggestCompletion({ action, state$ })
     ).toMatchSnapshot()
   })
 })
