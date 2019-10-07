@@ -1,20 +1,11 @@
-export enum EIconSize {
-  S = '32',
-  M = '44',
-  L = '64',
-  XL = '88',
-}
-
-interface IIcon {
-  prefix: string
-  suffix: string
-}
+import { NIcon } from '../../types/icon.d'
+import { EIconSize } from '../constants/icon'
 
 interface IIconUrls {
-  [EIconSize: string]: string
+  [iconSize: string]: string
 }
 
-export const getIconUrlList = ({ prefix, suffix }: IIcon): IIconUrls =>
+export const getIconUrlList = ({ prefix, suffix }: NIcon.IIcon): IIconUrls =>
   Object.keys(EIconSize).reduce(
     (acc, iconKey) => ({
       ...acc,

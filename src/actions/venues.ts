@@ -4,10 +4,18 @@ import { NMiniVenue } from '../../types/miniVenue.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NRequest } from '../../types/request.d'
 import { NVenue } from '../../types/venue.d'
+import { NVenuesCategories } from '../../types/venuesCategories'
 
 interface IAsyncActionNameMapping {
   [actionType: string]: string
 }
+
+export const getVenuesCategoriesAsync = createAsyncAction(
+  'GET_VENUES_CATEGORIES_REQUEST',
+  'GET_VENUES_CATEGORIES_SUCCESS',
+  'GET_VENUES_CATEGORIES_FAILURE',
+  'GET_VENUES_CATEGORIES_CANCEL'
+)<{}, NVenuesCategories.ICategory[], Error, string>()
 
 export const getVenuesExploreAsync = createAsyncAction(
   'GET_VENUES_EXPLORE_REQUEST',
@@ -55,6 +63,11 @@ export const getVenuesSuggestCompletionAsync = createAsyncAction(
 >()
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
+  // getVenuesCategoriesAsync
+  [getType(getVenuesCategoriesAsync.request)]: 'getVenuesCategoriesAsync',
+  [getType(getVenuesCategoriesAsync.success)]: 'getVenuesCategoriesAsync',
+  [getType(getVenuesCategoriesAsync.failure)]: 'getVenuesCategoriesAsync',
+  [getType(getVenuesCategoriesAsync.cancel)]: 'getVenuesCategoriesAsync',
   // getVenuesExploreAsync
   [getType(getVenuesExploreAsync.request)]: 'getVenuesExploreAsync',
   [getType(getVenuesExploreAsync.success)]: 'getVenuesExploreAsync',
@@ -78,6 +91,7 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
 }
 
 export const venuesActions = {
+  getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,

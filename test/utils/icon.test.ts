@@ -1,4 +1,5 @@
-import { EIconSize, getIconUrlList } from '../../src/utils/icon'
+import { EIconSize } from '../../src/constants/icon'
+import { getIconUrlList } from '../../src/utils/icon'
 
 describe('utils/icon/getIconUrlList', () => {
   it('should get a list of icon url', () => {

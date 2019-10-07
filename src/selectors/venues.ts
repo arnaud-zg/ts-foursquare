@@ -9,6 +9,9 @@ export const venuesRecommendedPlacesSelector = (state: NStore.IState) => {
   return venuesSelector(state).recommendedPlaces || []
 }
 
+export const venuesCategoriesSelector = (state: NStore.IState) =>
+  venuesSelector(state).categories || []
+
 export const venueSelector = (state: NStore.IState, venueId: string) =>
   venuesEntitiesSelector(state)[venueId]
 

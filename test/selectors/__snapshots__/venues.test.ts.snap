@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`selectors/venues should get a list a of categories 1`] = `Array []`;
+
 exports[`selectors/venues should get a list of recommended places 1`] = `
 Array [
   Object {
@@ -155,6 +157,7 @@ Object {
 
 exports[`selectors/venues should get venues 1`] = `
 Object {
+  "categories": Array [],
   "entities": Object {
     "3fd66200f964a5209beb1ee3": Object {
       "categories": Array [

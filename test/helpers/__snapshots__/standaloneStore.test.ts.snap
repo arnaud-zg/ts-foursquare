@@ -11,6 +11,7 @@ Object {
   },
   "status": Object {},
   "venues": Object {
+    "categories": Array [],
     "entities": Object {},
     "recommendedPlaces": Array [],
     "trendingEntities": Object {},
