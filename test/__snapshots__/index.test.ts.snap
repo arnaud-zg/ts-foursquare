@@ -132,6 +132,8 @@ Object {
     },
   },
   "venuesCategoriesSelector": [Function],
+  "venuesEntitiesSelector": [Function],
+  "venuesRecommendedPlacesSelector": [Function],
   "venuesSelector": [Function],
 }
 `;
