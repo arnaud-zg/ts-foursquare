@@ -2,6 +2,7 @@ import { initialState } from '../../src/reducers/app'
 import {
   venueCategoriesStateSelector,
   venueLocationSelector,
+  venuesCategoriesSelector,
   venueSelector,
   venuesSelector,
 } from '../../src/selectors/venues'
@@ -12,11 +13,10 @@ const venueId = payload.response.venues[0].id
 const state: NStore.IState = {
   ...initialState,
   venues: {
+    ...initialState.venues,
     entities: {
       [venueId]: payload.response.venues[0],
     },
-    recommendedPlaces: [],
-    trendingEntities: {},
   },
 }
 
@@ -24,6 +24,10 @@ describe('selectors/venues', () => {
   it('should get venues', () => {
     expect(Object.keys(venuesSelector(state)).length).toEqual(1)
     expect(venuesSelector(state)).toMatchSnapshot()
+  })
+
+  it('should get a list a of categories', () => {
+    expect(venuesCategoriesSelector(state)).toMatchSnapshot()
   })
 
   it('should get a specific venue', () => {

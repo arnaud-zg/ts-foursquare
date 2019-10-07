@@ -5,7 +5,7 @@ Array [
   Object {
     "meta": undefined,
     "payload": [Error: Error 404],
-    "type": "GET_VENUES_SEARCH_FAILURE",
+    "type": "GET_VENUES_EXPLORE_FAILURE",
   },
 ]
 `;
@@ -45,7 +45,7 @@ Array [
   Object {
     "meta": undefined,
     "payload": [Error: response.json is not a function],
-    "type": "GET_VENUES_SEARCH_FAILURE",
+    "type": "GET_VENUES_EXPLORE_FAILURE",
   },
 ]
 `;

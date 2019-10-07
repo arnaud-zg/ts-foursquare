@@ -3,7 +3,18 @@ import { NMiniVenue } from '../../types/miniVenue'
 import { NPayload } from '../../types/payload.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
 import { NVenue } from '../../types/venue.d'
+import { NVenuesCategories } from '../../types/venuesCategories'
 import { adaptPayload } from './payload'
+
+export const adaptGetVenuesCategories = (
+  payload: NPayload.IPayload<NVenuesCategories.IResponse>
+): NVenuesCategories.ICategory[] => {
+  const response = adaptPayload<NVenuesCategories.IResponse>(payload)
+
+  return response && !!response.categories && !!response.categories.length
+    ? response.categories
+    : []
+}
 
 export const adaptGetVenuesExplore = (
   payload: NPayload.IPayload<NRecommendedPlaces.IResponse>

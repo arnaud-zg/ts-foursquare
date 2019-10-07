@@ -5,6 +5,7 @@ import { isActionOf } from 'typesafe-actions'
 import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
 import {
+  getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,
@@ -13,18 +14,39 @@ import {
 } from '../actions/venues'
 import {
   adapterGetVenuesLikes,
+  adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../adapter/venues'
 import {
+  getObservableVenuesCategories,
   getObservableVenuesExplore,
   getObservableVenuesLikes,
   getObservableVenuesSearch,
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../services/venues'
+
+export const getVenuesCategoriesEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesCategoriesAsync.request)),
+    switchMap(action =>
+      getObservableVenuesCategories(action, state$).pipe(
+        map(adaptGetVenuesCategories),
+        map(getVenuesCategoriesAsync.success),
+        catchError(err => of(getVenuesCategoriesAsync.failure(err))),
+        takeUntil(
+          action$.pipe(filter(isActionOf(getVenuesCategoriesAsync.cancel)))
+        )
+      )
+    )
+  )
 
 export const getVenuesExploreEpic: Epic<
   TRootAction,
@@ -37,7 +59,7 @@ export const getVenuesExploreEpic: Epic<
       getObservableVenuesExplore(action, state$).pipe(
         map(adaptGetVenuesExplore),
         map(getVenuesExploreAsync.success),
-        catchError(err => of(getVenuesSearchAsync.failure(err))),
+        catchError(err => of(getVenuesExploreAsync.failure(err))),
         takeUntil(
           action$.pipe(filter(isActionOf(getVenuesExploreAsync.cancel)))
         )

@@ -1,3 +1,5 @@
+import { NIcon } from './icon.d'
+
 export declare namespace NVenue {
   interface IResponse {
     venues: IVenue[]
@@ -17,7 +19,7 @@ export declare namespace NVenue {
   }
 
   interface ICategory {
-    icon: IIcon
+    icon: NIcon.IIcon
     id: string
     name: string
     pluralName: string
@@ -33,14 +35,7 @@ export declare namespace NVenue {
 
   export interface IProvider {
     name: string
-    icon: IIcon
-  }
-
-  export interface IIcon {
-    prefix: string
-    suffix: string
-    sizes?: number[]
-    name?: string
+    icon: NIcon.IIcon
   }
 
   export interface IEvents {
