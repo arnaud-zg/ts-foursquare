@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`selectors/venues should get a list of recommended places 1`] = `
+Array [
+  Object {
+    "reasons": Object {
+      "count": 0,
+      "items": Array [
+        Object {
+          "reasonName": "globalInteractionReason",
+          "summary": "This spot is popular",
+          "type": "general",
+        },
+      ],
+    },
+    "venue": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d1f5941735",
+          "name": "Gourmet Shop",
+          "pluralName": "Gourmet Shops",
+          "primary": true,
+          "shortName": "Gourmet",
+        },
+      ],
+      "id": "49b6e8d2f964a52016531fe3",
+      "location": Object {
+        "address": "179 E Houston St",
+        "cc": "US",
+        "city": "New York",
+        "country": "United States",
+        "crossStreet": "btwn Allen & Orchard St",
+        "distance": 130,
+        "formattedAddress": Array [
+          "179 E Houston St (btwn Allen & Orchard St)",
+          "New York, NY 10002",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.72286707707289,
+            "lng": -73.98829148466851,
+          },
+        ],
+        "lat": 40.72286707707289,
+        "lng": -73.98829148466851,
+        "postalCode": "10002",
+        "state": "NY",
+      },
+      "name": "Russ & Daughters",
+      "venuePage": Object {
+        "id": "77298563",
+      },
+    },
+  },
+]
+`;
+
 exports[`selectors/venues should get a specific venue 1`] = `
 Object {
   "categories": Array [
@@ -93,6 +154,118 @@ Object {
 `;
 
 exports[`selectors/venues should get venues 1`] = `
+Object {
+  "entities": Object {
+    "3fd66200f964a5209beb1ee3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d1cc941735",
+          "name": "Steakhouse",
+          "pluralName": "Steakhouses",
+          "primary": true,
+          "shortName": "Steakhouse",
+        },
+      ],
+      "hasPerk": false,
+      "id": "3fd66200f964a5209beb1ee3",
+      "location": Object {
+        "address": "178 Broadway",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "at Driggs Ave",
+        "distance": 10,
+        "formattedAddress": Array [
+          "178 Broadway (at Driggs Ave)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.70995790682886,
+            "lng": -73.96229110893742,
+          },
+        ],
+        "lat": 40.70995790682886,
+        "lng": -73.96229110893742,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Peter Luger Steak House",
+      "referralId": "v-1565543515",
+      "venuePage": Object {
+        "id": "77462637",
+      },
+    },
+  },
+  "recommendedPlaces": Array [
+    Object {
+      "reasons": Object {
+        "count": 0,
+        "items": Array [
+          Object {
+            "reasonName": "globalInteractionReason",
+            "summary": "This spot is popular",
+            "type": "general",
+          },
+        ],
+      },
+      "venue": Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "id": "49b6e8d2f964a52016531fe3",
+        "location": Object {
+          "address": "179 E Houston St",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "btwn Allen & Orchard St",
+          "distance": 130,
+          "formattedAddress": Array [
+            "179 E Houston St (btwn Allen & Orchard St)",
+            "New York, NY 10002",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.72286707707289,
+              "lng": -73.98829148466851,
+            },
+          ],
+          "lat": 40.72286707707289,
+          "lng": -73.98829148466851,
+          "postalCode": "10002",
+          "state": "NY",
+        },
+        "name": "Russ & Daughters",
+        "venuePage": Object {
+          "id": "77298563",
+        },
+      },
+    },
+  ],
+  "trendingEntities": Object {},
+}
+`;
+
+exports[`selectors/venues should venues entities property 1`] = `
 Object {
   "3fd66200f964a5209beb1ee3": Object {
     "categories": Array [

@@ -120,6 +120,8 @@ Object {
       "success": [Function],
     },
   },
+  "venuesEntitiesSelector": [Function],
+  "venuesRecommendedPlacesSelector": [Function],
   "venuesSelector": [Function],
 }
 `;

@@ -1,14 +1,21 @@
 import { NStore } from '../../types/store'
 
-export const venuesSelector = (state: NStore.IState) => state.venues.entities
+export const venuesSelector = (state: NStore.IState) => state.venues
+
+export const venuesEntitiesSelector = (state: NStore.IState) =>
+  venuesSelector(state).entities
+
+export const venuesRecommendedPlacesSelector = (state: NStore.IState) => {
+  return venuesSelector(state).recommendedPlaces || []
+}
 
 export const venueSelector = (state: NStore.IState, venueId: string) =>
-  venuesSelector(state)[venueId]
+  venuesEntitiesSelector(state)[venueId]
 
 export const venueCategoriesStateSelector = (
   state: NStore.IState,
   venueId: string
-) => venuesSelector(state)[venueId].categories
+) => venuesEntitiesSelector(state)[venueId].categories
 
 export const venueLocationSelector = (state: NStore.IState, venueId: string) =>
-  venuesSelector(state)[venueId].location
+  venuesEntitiesSelector(state)[venueId].location
