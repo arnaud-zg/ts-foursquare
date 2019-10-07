@@ -9,6 +9,29 @@ import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
 import { processFetchError, processFetchResponse } from './fetch'
 
+export const getObservableVenuesCategories = (
+  // @ts-ignore
+  action: NAction.IAction,
+  state$: StateObservable<NStore.IState>
+) => {
+  const { clientId, clientSecret } = credentialsSelector(state$.value)
+
+  return fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: EApiPathnames.VENUES_CATEGORIES,
+      param: {
+        client_id: clientId,
+        client_secret: clientSecret,
+        v: EApiDefaultParameters.VERSION,
+      },
+    })
+  ).pipe(
+    switchMap(processFetchResponse),
+    catchError(processFetchError)
+  )
+}
+
 export const getObservableVenuesExplore = (
   action: NAction.IAction,
   state$: StateObservable<NStore.IState>

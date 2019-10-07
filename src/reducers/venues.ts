@@ -8,6 +8,7 @@ import {
 } from '../actions/venues'
 
 export const initialState: NVenues.IState = {
+  categories: [],
   entities: {},
   recommendedPlaces: [],
   trendingEntities: {},

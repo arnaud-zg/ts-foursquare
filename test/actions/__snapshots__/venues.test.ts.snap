@@ -2,6 +2,12 @@
 
 exports[`actions/venues should make a snapshot of venuesActions 1`] = `
 Object {
+  "getVenuesCategoriesAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesExploreAsync": Object {
     "cancel": [Function],
     "failure": [Function],

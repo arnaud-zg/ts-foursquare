@@ -3,6 +3,10 @@
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
   "ASYNC_ACTION_NAME_MAPPING": Object {
+    "GET_VENUES_CATEGORIES_CANCEL": "getVenuesCategoriesAsync",
+    "GET_VENUES_CATEGORIES_FAILURE": "getVenuesCategoriesAsync",
+    "GET_VENUES_CATEGORIES_REQUEST": "getVenuesCategoriesAsync",
+    "GET_VENUES_CATEGORIES_SUCCESS": "getVenuesCategoriesAsync",
     "GET_VENUES_EXPLORE_CANCEL": "getVenuesExploreAsync",
     "GET_VENUES_EXPLORE_FAILURE": "getVenuesExploreAsync",
     "GET_VENUES_EXPLORE_REQUEST": "getVenuesExploreAsync",
@@ -20,18 +24,18 @@ Object {
     "GET_VENUES_TRENDING_REQUEST": "getVenuesTrendingAsync",
     "GET_VENUES_TRENDING_SUCCESS": "getVenuesTrendingAsync",
   },
-  "EIconSize": Object {
-    "L": "64",
-    "M": "44",
-    "S": "32",
-    "XL": "88",
-  },
   "StandaloneStore": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
+  "getVenuesCategoriesAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesExploreAsync": Object {
     "cancel": [Function],
     "failure": [Function],
@@ -72,6 +76,7 @@ Object {
     },
     "status": Object {},
     "venues": Object {
+      "categories": Array [],
       "entities": Object {},
       "recommendedPlaces": Array [],
       "trendingEntities": Object {},
@@ -89,6 +94,12 @@ Object {
   "venueLocationSelector": [Function],
   "venueSelector": [Function],
   "venuesActions": Object {
+    "getVenuesCategoriesAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "getVenuesExploreAsync": Object {
       "cancel": [Function],
       "failure": [Function],
@@ -120,6 +131,7 @@ Object {
       "success": [Function],
     },
   },
+  "venuesCategoriesSelector": [Function],
   "venuesSelector": [Function],
 }
 `;
