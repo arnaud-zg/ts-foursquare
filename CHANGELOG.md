@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.1...v0.3.2) (2019-10-07)
+
+### 🔧 Chore
+
+- **config:** upgrade api version parameter ([#246](https://github.com/arnaud-zg/ts-foursquare/issues/246)) ([f932deb](https://github.com/arnaud-zg/ts-foursquare/commit/f932deb))
+- **deps:** update dependency @types/node to v12.7.11 ([#244](https://github.com/arnaud-zg/ts-foursquare/issues/244)) ([aa3dea6](https://github.com/arnaud-zg/ts-foursquare/commit/aa3dea6))
+- **deps:** update dependency husky to v3.0.8 ([#242](https://github.com/arnaud-zg/ts-foursquare/issues/242)) ([e58342b](https://github.com/arnaud-zg/ts-foursquare/commit/e58342b))
+
+### 🖋 Features
+
+- **venue-likes:** create an epic venue likes ([#245](https://github.com/arnaud-zg/ts-foursquare/issues/245)) ([672248a](https://github.com/arnaud-zg/ts-foursquare/commit/672248a))
+- **venue-suggest-completion:** add an adapter for venue suggest completion ([#243](https://github.com/arnaud-zg/ts-foursquare/issues/243)) ([e3f02bb](https://github.com/arnaud-zg/ts-foursquare/commit/e3f02bb))
+
 ### [0.3.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.0...v0.3.1) (2019-10-02)
 
 ### 🔧 Chore
