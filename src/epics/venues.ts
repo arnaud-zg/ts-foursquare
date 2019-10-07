@@ -36,8 +36,8 @@ export const getVenuesCategoriesEpic: Epic<
 > = (action$, state$) =>
   action$.pipe(
     filter(isActionOf(getVenuesCategoriesAsync.request)),
-    switchMap(action =>
-      getObservableVenuesCategories(action, state$).pipe(
+    switchMap(() =>
+      getObservableVenuesCategories({ state$ }).pipe(
         map(adaptGetVenuesCategories),
         map(getVenuesCategoriesAsync.success),
         catchError(err => of(getVenuesCategoriesAsync.failure(err))),
@@ -56,7 +56,7 @@ export const getVenuesExploreEpic: Epic<
   action$.pipe(
     filter(isActionOf(getVenuesExploreAsync.request)),
     switchMap(action =>
-      getObservableVenuesExplore(action, state$).pipe(
+      getObservableVenuesExplore({ action, state$ }).pipe(
         map(adaptGetVenuesExplore),
         map(getVenuesExploreAsync.success),
         catchError(err => of(getVenuesExploreAsync.failure(err))),
@@ -75,7 +75,7 @@ export const getVenuesLikesEpic: Epic<
   action$.pipe(
     filter(isActionOf(getVenuesLikesAsync.request)),
     switchMap(action =>
-      getObservableVenuesLikes(action, state$).pipe(
+      getObservableVenuesLikes({ action, state$ }).pipe(
         map(adapterGetVenuesLikes),
         map(getVenuesLikesAsync.success),
         catchError(err => of(getVenuesLikesAsync.failure(err))),
@@ -92,7 +92,7 @@ export const getVenuesSearchEpic: Epic<
   action$.pipe(
     filter(isActionOf(getVenuesSearchAsync.request)),
     switchMap(action =>
-      getObservableVenuesSearch(action, state$).pipe(
+      getObservableVenuesSearch({ action, state$ }).pipe(
         map(adaptGetVenuesSearch),
         map(getVenuesSearchAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
@@ -109,7 +109,7 @@ export const getVenuesTrendingEpic: Epic<
   action$.pipe(
     filter(isActionOf(getVenuesTrendingAsync.request)),
     switchMap(action =>
-      getObservableVenuesTrending(action, state$).pipe(
+      getObservableVenuesTrending({ action, state$ }).pipe(
         map(adaptGetVenuesTrending),
         map(getVenuesTrendingAsync.success),
         catchError(err => of(getVenuesTrendingAsync.failure(err))),
@@ -128,7 +128,7 @@ export const getVenuesSuggestCompletionEpic: Epic<
   action$.pipe(
     filter(isActionOf(getVenuesSuggestCompletionAsync.request)),
     switchMap(action =>
-      getObservableVenuesSuggestCompletion(action, state$).pipe(
+      getObservableVenuesSuggestCompletion({ action, state$ }).pipe(
         map(adaptGetVenuesSuggestCompletion),
         map(getVenuesSuggestCompletionAsync.success),
         catchError(err => of(getVenuesSuggestCompletionAsync.failure(err))),

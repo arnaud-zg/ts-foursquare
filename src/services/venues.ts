@@ -9,11 +9,11 @@ import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
 import { processFetchError, processFetchResponse } from './fetch'
 
-export const getObservableVenuesCategories = (
-  // @ts-ignore
-  action: NAction.IAction,
+export const getObservableVenuesCategories = ({
+  state$,
+}: {
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
@@ -32,10 +32,13 @@ export const getObservableVenuesCategories = (
   )
 }
 
-export const getObservableVenuesExplore = (
-  action: NAction.IAction,
+export const getObservableVenuesExplore = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
@@ -55,10 +58,13 @@ export const getObservableVenuesExplore = (
   )
 }
 
-export const getObservableVenuesLikes = (
-  action: NAction.IAction,
+export const getObservableVenuesLikes = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
   const { venueId } = action.payload
 
@@ -78,10 +84,13 @@ export const getObservableVenuesLikes = (
   )
 }
 
-export const getObservableVenuesSearch = (
-  action: NAction.IAction,
+export const getObservableVenuesSearch = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
@@ -101,10 +110,13 @@ export const getObservableVenuesSearch = (
   )
 }
 
-export const getObservableVenuesTrending = (
-  action: NAction.IAction,
+export const getObservableVenuesTrending = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
@@ -124,10 +136,13 @@ export const getObservableVenuesTrending = (
   )
 }
 
-export const getObservableVenuesSuggestCompletion = (
-  action: NAction.IAction,
+export const getObservableVenuesSuggestCompletion = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
   state$: StateObservable<NStore.IState>
-) => {
+}) => {
   const { clientId, clientSecret } = credentialsSelector(state$.value)
 
   return fromFetch(
