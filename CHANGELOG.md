@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.2...v0.3.3) (2019-10-07)
+
+### 🐛 Bug Fixes
+
+- **selectors:** add venues recommended places selector ([#248](https://github.com/arnaud-zg/ts-foursquare/issues/248)) ([da3ec14](https://github.com/arnaud-zg/ts-foursquare/commit/da3ec14))
+
+### 🖋 Features
+
+- **venues-categories:** add get venues categories action, adapter, epics, reducers, selectors and services ([#247](https://github.com/arnaud-zg/ts-foursquare/issues/247)) ([2bb9788](https://github.com/arnaud-zg/ts-foursquare/commit/2bb9788))
+
+### 🚧 Refactor
+
+- **action:** move async action name mapping into constants folder ([#250](https://github.com/arnaud-zg/ts-foursquare/issues/250)) ([3c75255](https://github.com/arnaud-zg/ts-foursquare/commit/3c75255))
+- **selectors:** reorder venues selectors ([#251](https://github.com/arnaud-zg/ts-foursquare/issues/251)) ([dadf122](https://github.com/arnaud-zg/ts-foursquare/commit/dadf122))
+
 ### [0.3.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.1...v0.3.2) (2019-10-07)
 
 ### 🔧 Chore
