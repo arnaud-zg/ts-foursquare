@@ -1,12 +1,12 @@
 import { createReducer, getType } from 'typesafe-actions'
 import { NStatus } from '../../types/statusState'
 import {
-  ASYNC_ACTION_NAME_MAPPING,
   getVenuesExploreAsync,
   getVenuesSearchAsync,
   getVenuesTrendingAsync,
   TRootAction,
 } from '../actions'
+import { ASYNC_ACTION_NAME_MAPPING } from '../constants/asyncAction'
 
 export const initialState: NStatus.IState = {}
 

@@ -2,28 +2,6 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
-  "ASYNC_ACTION_NAME_MAPPING": Object {
-    "GET_VENUES_CATEGORIES_CANCEL": "getVenuesCategoriesAsync",
-    "GET_VENUES_CATEGORIES_FAILURE": "getVenuesCategoriesAsync",
-    "GET_VENUES_CATEGORIES_REQUEST": "getVenuesCategoriesAsync",
-    "GET_VENUES_CATEGORIES_SUCCESS": "getVenuesCategoriesAsync",
-    "GET_VENUES_EXPLORE_CANCEL": "getVenuesExploreAsync",
-    "GET_VENUES_EXPLORE_FAILURE": "getVenuesExploreAsync",
-    "GET_VENUES_EXPLORE_REQUEST": "getVenuesExploreAsync",
-    "GET_VENUES_EXPLORE_SUCCESS": "getVenuesExploreAsync",
-    "GET_VENUES_LIKES_CANCEL": "getVenuesLikesAsync",
-    "GET_VENUES_LIKES_FAILURE": "getVenuesLikesAsync",
-    "GET_VENUES_LIKES_REQUEST": "getVenuesLikesAsync",
-    "GET_VENUES_LIKES_SUCCESS": "getVenuesLikesAsync",
-    "GET_VENUES_SEARCH_CANCEL": "getVenuesSearchAsync",
-    "GET_VENUES_SEARCH_FAILURE": "getVenuesSearchAsync",
-    "GET_VENUES_SEARCH_REQUEST": "getVenuesSearchAsync",
-    "GET_VENUES_SEARCH_SUCCESS": "getVenuesSearchAsync",
-    "GET_VENUES_TRENDING_CANCEL": "getVenuesTrendingAsync",
-    "GET_VENUES_TRENDING_FAILURE": "getVenuesTrendingAsync",
-    "GET_VENUES_TRENDING_REQUEST": "getVenuesTrendingAsync",
-    "GET_VENUES_TRENDING_SUCCESS": "getVenuesTrendingAsync",
-  },
   "StandaloneStore": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
