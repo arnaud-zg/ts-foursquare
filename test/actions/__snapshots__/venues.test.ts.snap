@@ -26,6 +26,12 @@ Object {
     "request": [Function],
     "success": [Function],
   },
+  "getVenuesSimilarAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesSuggestCompletionAsync": Object {
     "cancel": [Function],
     "failure": [Function],

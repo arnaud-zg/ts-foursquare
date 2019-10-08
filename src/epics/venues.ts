@@ -9,6 +9,7 @@ import {
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,
+  getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../actions/venues'
@@ -17,6 +18,7 @@ import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
+  adaptGetVenuesSimilar,
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../adapter/venues'
@@ -25,6 +27,7 @@ import {
   getObservableVenuesExplore,
   getObservableVenuesLikes,
   getObservableVenuesSearch,
+  getObservableVenuesSimilar,
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../services/venues'
@@ -97,6 +100,25 @@ export const getVenuesSearchEpic: Epic<
         map(getVenuesSearchAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
         takeUntil(action$.pipe(filter(isActionOf(getVenuesSearchAsync.cancel))))
+      )
+    )
+  )
+
+export const getVenuesSimilarEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesSimilarAsync.request)),
+    switchMap(action =>
+      getObservableVenuesSimilar({ action, state$ }).pipe(
+        map(adaptGetVenuesSimilar),
+        map(getVenuesSimilarAsync.success),
+        catchError(err => of(getVenuesSimilarAsync.failure(err))),
+        takeUntil(
+          action$.pipe(filter(isActionOf(getVenuesSimilarAsync.cancel)))
+        )
       )
     )
   )

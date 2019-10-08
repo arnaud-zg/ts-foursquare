@@ -110,6 +110,32 @@ export const getObservableVenuesSearch = ({
   )
 }
 
+export const getObservableVenuesSimilar = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
+  state$: StateObservable<NStore.IState>
+}) => {
+  const { clientId, clientSecret } = credentialsSelector(state$.value)
+  const { venueId } = action.payload
+
+  return fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: generatePath(EApiPathnames.VENUES_SIMILAR, { venueId }),
+      param: {
+        client_id: clientId,
+        client_secret: clientSecret,
+        v: EApiDefaultParameters.VERSION,
+      },
+    })
+  ).pipe(
+    switchMap(processFetchResponse),
+    catchError(processFetchError)
+  )
+}
+
 export const getObservableVenuesTrending = ({
   action,
   state$,

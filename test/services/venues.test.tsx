@@ -4,6 +4,7 @@ import {
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,
+  getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../../src/actions'
@@ -13,6 +14,7 @@ import {
   getObservableVenuesExplore,
   getObservableVenuesLikes,
   getObservableVenuesSearch,
+  getObservableVenuesSimilar,
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../../src/services'
@@ -64,6 +66,20 @@ describe('services/getObservableVenuesSearch', () => {
     )
 
     expect(getObservableVenuesSearch({ action, state$ })).toMatchSnapshot()
+  })
+})
+
+describe('services/getObservableVenuesSimilar', () => {
+  it('should get an observable instance', () => {
+    const action = getVenuesSimilarAsync.request({
+      venueId: '3fd66200f964a5209beb1ee3',
+    })
+    const state$: StateObservable<NStore.IState> = new StateObservable(
+      new Subject(),
+      initialState
+    )
+
+    expect(getObservableVenuesSimilar({ action, state$ })).toMatchSnapshot()
   })
 })
 

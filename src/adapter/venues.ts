@@ -2,6 +2,7 @@ import { NLikes } from '../../types/likes'
 import { NMiniVenue } from '../../types/miniVenue'
 import { NPayload } from '../../types/payload.d'
 import { NRecommendedPlaces } from '../../types/recommendedPlaces'
+import { NSimilarVenues } from '../../types/similarVenues'
 import { NVenue } from '../../types/venue.d'
 import { NVenuesCategories } from '../../types/venuesCategories'
 import { adaptPayload } from './payload'
@@ -51,6 +52,19 @@ export const adaptGetVenuesSearch = (
 
   return !!response && !!response.venues && !!response.venues.length
     ? response.venues
+    : []
+}
+
+export const adaptGetVenuesSimilar = (
+  payload: NPayload.IPayload<NSimilarVenues.IResponse>
+): NVenue.IVenue[] => {
+  const response = adaptPayload<NSimilarVenues.IResponse>(payload)
+
+  return !!response &&
+    !!response.similarVenues &&
+    !!response.similarVenues.items &&
+    !!response.similarVenues.items.length
+    ? response.similarVenues.items
     : []
 }
 

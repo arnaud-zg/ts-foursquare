@@ -9,6 +9,9 @@ export declare namespace NVenues {
       [key: string]: NVenue.IVenue
     }
     recommendedPlaces: NRecommendedPlaces.IGroupItem[]
+    similarVenues: {
+      [key: string]: NVenue.IVenue
+    }
     trendingEntities: {
       [key: string]: NVenue.IVenue
     }

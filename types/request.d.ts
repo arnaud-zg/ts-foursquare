@@ -89,6 +89,10 @@ export declare namespace NRequest {
     | IVenuesSearchPayloadByLocation
     | IVenuesSearchPayloadByPlace
 
+  interface IVenuesSimilarPayload {
+    venueId: string
+  }
+
   interface IVenuesSuggestCompletionPayload {
     alt?: number
     altAcc?: number
