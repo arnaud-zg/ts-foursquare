@@ -13,7 +13,7 @@ import {
   getVenuesTrendingAsync,
 } from '../actions/venues'
 import {
-  adapterGetVenuesLikes,
+  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
@@ -76,7 +76,7 @@ export const getVenuesLikesEpic: Epic<
     filter(isActionOf(getVenuesLikesAsync.request)),
     switchMap(action =>
       getObservableVenuesLikes({ action, state$ }).pipe(
-        map(adapterGetVenuesLikes),
+        map(adaptGetVenuesLikes),
         map(getVenuesLikesAsync.success),
         catchError(err => of(getVenuesLikesAsync.failure(err))),
         takeUntil(action$.pipe(filter(isActionOf(getVenuesLikesAsync.cancel))))

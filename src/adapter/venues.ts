@@ -30,7 +30,7 @@ export const adaptGetVenuesExplore = (
     : []
 }
 
-export const adapterGetVenuesLikes = (
+export const adaptGetVenuesLikes = (
   payload: NPayload.IPayload<NLikes.IResponse>
 ): NLikes.ILikes => {
   const response = adaptPayload<NLikes.IResponse>(payload)

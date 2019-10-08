@@ -1,5 +1,5 @@
 import {
-  adapterGetVenuesLikes,
+  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
@@ -71,10 +71,10 @@ describe('adapter/venues/adaptGetVenuesExplore', () => {
   })
 })
 
-describe('adapter/venues/adapterGetVenuesLikes', () => {
+describe('adapter/venues/adaptGetVenuesLikes', () => {
   it('should get an empty list', () => {
     expect(
-      adapterGetVenuesLikes({
+      adaptGetVenuesLikes({
         ...payloadGetVenuesLikes,
         meta: {
           code: 400,
@@ -85,7 +85,7 @@ describe('adapter/venues/adapterGetVenuesLikes', () => {
   })
 
   it('should get a list of venues likes', () => {
-    expect(adapterGetVenuesLikes(payloadGetVenuesLikes)).toMatchSnapshot()
+    expect(adaptGetVenuesLikes(payloadGetVenuesLikes)).toMatchSnapshot()
   })
 })
 
