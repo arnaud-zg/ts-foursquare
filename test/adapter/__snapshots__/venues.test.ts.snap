@@ -1785,7 +1785,7 @@ Array [
 ]
 `;
 
-exports[`adapter/venues/adapterGetVenuesLikes should get a list of venues likes 1`] = `
+exports[`adapter/venues/adaptGetVenuesLikes should get a list of venues likes 1`] = `
 Object {
   "count": 24,
   "items": Array [

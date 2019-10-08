@@ -9,7 +9,7 @@ import {
   getVenuesTrendingAsync,
 } from '../../src/actions/venues'
 import {
-  adapterGetVenuesLikes,
+  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesSearch,
@@ -59,7 +59,7 @@ describe('epics/venues', () => {
     ${'should get trending venues near to a location'}                   | ${getVenuesTrendingAsync.request({ near: 'Chicago, IL' })}                                                                                                                  | ${payloadGetVenuesTrending}          | ${[getVenuesTrendingAsync.success(adaptGetVenuesTrending(payloadGetVenuesTrending))]}                            | ${getVenuesTrendingEpic}
     ${'should suggest completion for venues by location'}                | ${getVenuesSuggestCompletionAsync.request({ ll: '40.7099,-73.9622', query: 'Burger' })}                                                                                     | ${payloadGetVenuesSuggestCompletion} | ${[getVenuesSuggestCompletionAsync.success(adaptGetVenuesSuggestCompletion(payloadGetVenuesSuggestCompletion))]} | ${getVenuesSuggestCompletionEpic}
     ${'should suggest completion for venues near to a location'}         | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}                                                                                        | ${payloadGetVenuesSuggestCompletion} | ${[getVenuesSuggestCompletionAsync.success(adaptGetVenuesSuggestCompletion(payloadGetVenuesSuggestCompletion))]} | ${getVenuesSuggestCompletionEpic}
-    ${'should get venues likes'}                                         | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                     | ${payloadGetVenuesLikes}             | ${[getVenuesLikesAsync.success(adapterGetVenuesLikes(payloadGetVenuesLikes))]}                                   | ${getVenuesLikesEpic}
+    ${'should get venues likes'}                                         | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                     | ${payloadGetVenuesLikes}             | ${[getVenuesLikesAsync.success(adaptGetVenuesLikes(payloadGetVenuesLikes))]}                                     | ${getVenuesLikesEpic}
     ${'should get venues categories'}                                    | ${getVenuesCategoriesAsync.request({})}                                                                                                                                     | ${payloadGetVenuesCategories}        | ${[getVenuesCategoriesAsync.success(adaptGetVenuesCategories(payloadGetVenuesCategories))]}                      | ${getVenuesCategoriesEpic}
   `('$scenario', ({ action, expectedActions, epic, payload, done }) => {
     mockingFetch({ response: { ...payload } })
