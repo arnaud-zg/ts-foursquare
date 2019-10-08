@@ -4,6 +4,7 @@ import {
   getVenuesExploreAsync,
   getVenuesLikesAsync,
   getVenuesSearchAsync,
+  getVenuesSimilarAsync,
   getVenuesTrendingAsync,
 } from '../actions'
 
@@ -32,6 +33,11 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesSearchAsync.success)]: 'getVenuesSearchAsync',
   [getType(getVenuesSearchAsync.failure)]: 'getVenuesSearchAsync',
   [getType(getVenuesSearchAsync.cancel)]: 'getVenuesSearchAsync',
+  // getVenuesSimilarAsync
+  [getType(getVenuesSimilarAsync.request)]: 'getVenuesSimilarAsync',
+  [getType(getVenuesSimilarAsync.success)]: 'getVenuesSimilarAsync',
+  [getType(getVenuesSimilarAsync.failure)]: 'getVenuesSimilarAsync',
+  [getType(getVenuesSimilarAsync.cancel)]: 'getVenuesSimilarAsync',
   // getVenuesTrendingAsync
   [getType(getVenuesTrendingAsync.request)]: 'getVenuesTrendingAsync',
   [getType(getVenuesTrendingAsync.success)]: 'getVenuesTrendingAsync',

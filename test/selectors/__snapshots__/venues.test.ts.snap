@@ -2,7 +2,11 @@
 
 exports[`selectors/venues should get a list a of categories 1`] = `Array []`;
 
-exports[`selectors/venues should get a list of recommended places 1`] = `
+exports[`selectors/venues should get a list a of categories 2`] = `Array []`;
+
+exports[`selectors/venues should get a list of recommended places 1`] = `Array []`;
+
+exports[`selectors/venues should get a list of recommended places 2`] = `
 Array [
   Object {
     "reasons": Object {
@@ -63,7 +67,62 @@ Array [
 ]
 `;
 
-exports[`selectors/venues should get a specific venue 1`] = `
+exports[`selectors/venues should get a list of similar venues 1`] = `Object {}`;
+
+exports[`selectors/venues should get a list of similar venues 2`] = `
+Object {
+  "3fd66200f964a5209beb1ee3": Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d1cc941735",
+        "name": "Steakhouse",
+        "pluralName": "Steakhouses",
+        "primary": true,
+        "shortName": "Steakhouse",
+      },
+    ],
+    "hasPerk": false,
+    "id": "3fd66200f964a5209beb1ee3",
+    "location": Object {
+      "address": "178 Broadway",
+      "cc": "US",
+      "city": "Brooklyn",
+      "country": "United States",
+      "crossStreet": "at Driggs Ave",
+      "distance": 10,
+      "formattedAddress": Array [
+        "178 Broadway (at Driggs Ave)",
+        "Brooklyn, NY 11211",
+        "United States",
+      ],
+      "labeledLatLngs": Array [
+        Object {
+          "label": "display",
+          "lat": 40.70995790682886,
+          "lng": -73.96229110893742,
+        },
+      ],
+      "lat": 40.70995790682886,
+      "lng": -73.96229110893742,
+      "postalCode": "11211",
+      "state": "NY",
+    },
+    "name": "Peter Luger Steak House",
+    "referralId": "v-1565543515",
+    "venuePage": Object {
+      "id": "77462637",
+    },
+  },
+}
+`;
+
+exports[`selectors/venues should get a specific venue 1`] = `undefined`;
+
+exports[`selectors/venues should get a specific venue 2`] = `
 Object {
   "categories": Array [
     Object {
@@ -112,7 +171,9 @@ Object {
 }
 `;
 
-exports[`selectors/venues should get categories of a venue 1`] = `
+exports[`selectors/venues should get categories of a venue 1`] = `Array []`;
+
+exports[`selectors/venues should get categories of a venue 2`] = `
 Array [
   Object {
     "icon": Object {
@@ -128,7 +189,9 @@ Array [
 ]
 `;
 
-exports[`selectors/venues should get location of a venue 1`] = `
+exports[`selectors/venues should get location of a venue 1`] = `null`;
+
+exports[`selectors/venues should get location of a venue 2`] = `
 Object {
   "address": "178 Broadway",
   "cc": "US",
@@ -156,6 +219,16 @@ Object {
 `;
 
 exports[`selectors/venues should get venues 1`] = `
+Object {
+  "categories": Array [],
+  "entities": Object {},
+  "recommendedPlaces": Array [],
+  "similarVenues": Object {},
+  "trendingEntities": Object {},
+}
+`;
+
+exports[`selectors/venues should get venues 2`] = `
 Object {
   "categories": Array [],
   "entities": Object {
@@ -264,11 +337,61 @@ Object {
       },
     },
   ],
+  "similarVenues": Object {
+    "3fd66200f964a5209beb1ee3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d1cc941735",
+          "name": "Steakhouse",
+          "pluralName": "Steakhouses",
+          "primary": true,
+          "shortName": "Steakhouse",
+        },
+      ],
+      "hasPerk": false,
+      "id": "3fd66200f964a5209beb1ee3",
+      "location": Object {
+        "address": "178 Broadway",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "at Driggs Ave",
+        "distance": 10,
+        "formattedAddress": Array [
+          "178 Broadway (at Driggs Ave)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.70995790682886,
+            "lng": -73.96229110893742,
+          },
+        ],
+        "lat": 40.70995790682886,
+        "lng": -73.96229110893742,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Peter Luger Steak House",
+      "referralId": "v-1565543515",
+      "venuePage": Object {
+        "id": "77462637",
+      },
+    },
+  },
   "trendingEntities": Object {},
 }
 `;
 
-exports[`selectors/venues should venues entities property 1`] = `
+exports[`selectors/venues should venues entities property 1`] = `Object {}`;
+
+exports[`selectors/venues should venues entities property 2`] = `
 Object {
   "3fd66200f964a5209beb1ee3": Object {
     "categories": Array [

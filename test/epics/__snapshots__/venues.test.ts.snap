@@ -10,6 +10,16 @@ Array [
 ]
 `;
 
+exports[`epics/venues | error case: no network should get similar venues 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: Error 404],
+    "type": "GET_VENUES_SIMILAR_FAILURE",
+  },
+]
+`;
+
 exports[`epics/venues | error case: no network should get trending venues by location 1`] = `
 Array [
   Object {
@@ -56,6 +66,16 @@ Array [
     "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_EXPLORE_FAILURE",
+  },
+]
+`;
+
+exports[`epics/venues | error case: not valid response should get similar venues 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: response.json is not a function],
+    "type": "GET_VENUES_SIMILAR_FAILURE",
   },
 ]
 `;
@@ -317,6 +337,238 @@ Array [
       },
     ],
     "type": "GET_VENUES_EXPLORE_SUCCESS",
+  },
+]
+`;
+
+exports[`epics/venues should get similar venues 1`] = `
+Array [
+  Object {
+    "meta": 0,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "id": "4c5ef77bfff99c74eda954d3",
+        "location": Object {
+          "address": "200 5th Ave",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "at W 23rd St",
+          "formattedAddress": Array [
+            "200 5th Ave (at W 23rd St)",
+            "New York, NY 10010",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.74198696405861,
+              "lng": -73.98991319280194,
+            },
+          ],
+          "lat": 40.74198696405861,
+          "lng": -73.98991319280194,
+          "postalCode": "10010",
+          "state": "NY",
+        },
+        "name": "Eataly",
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "id": "49dad010f964a520b15e1fe3",
+        "location": Object {
+          "address": "200 Grand St",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "at Mott St",
+          "formattedAddress": Array [
+            "200 Grand St (at Mott St)",
+            "New York, NY 10013",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.71914769980916,
+              "lng": -73.99657675353625,
+            },
+          ],
+          "lat": 40.71914769980916,
+          "lng": -73.99657675353625,
+          "postalCode": "10013",
+          "state": "NY",
+        },
+        "name": "Di Palo Fine Foods",
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "delivery": Object {
+          "id": "563543",
+          "provider": Object {
+            "icon": Object {
+              "name": "/delivery_provider_seamless_20180129.png",
+              "prefix": "https://fastly.4sqi.net/img/general/cap/",
+              "sizes": Array [
+                40,
+                50,
+              ],
+            },
+            "name": "seamless",
+          },
+          "url": "https://www.seamless.com/menu/pickle-guys-357-grand-st-new-york/563543?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=563543",
+        },
+        "id": "4a50e39ff964a52038b01fe3",
+        "location": Object {
+          "address": "357 Grand St",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "Essex St",
+          "formattedAddress": Array [
+            "357 Grand St (Essex St)",
+            "New York, NY 10002",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.716567980864525,
+              "lng": -73.9889929963776,
+            },
+          ],
+          "lat": 40.716567980864525,
+          "lng": -73.9889929963776,
+          "postalCode": "10002",
+          "state": "NY",
+        },
+        "name": "The Pickle Guys",
+        "venuePage": Object {
+          "id": "56125711",
+        },
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "id": "44d9e8dbf964a5208a361fe3",
+        "location": Object {
+          "address": "560 Broadway",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "at Prince St",
+          "formattedAddress": Array [
+            "560 Broadway (at Prince St)",
+            "New York, NY 10012",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.72413942875559,
+              "lng": -73.99762330336448,
+            },
+          ],
+          "lat": 40.72413942875559,
+          "lng": -73.99762330336448,
+          "postalCode": "10012",
+          "state": "NY",
+        },
+        "name": "Dean & DeLuca",
+        "venuePage": Object {
+          "id": "39094592",
+        },
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1f5941735",
+            "name": "Gourmet Shop",
+            "pluralName": "Gourmet Shops",
+            "primary": true,
+            "shortName": "Gourmet",
+          },
+        ],
+        "id": "4d6d4eeb8183a1438a6ba29f",
+        "location": Object {
+          "address": "166 Allen St",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "at Stanton St.",
+          "formattedAddress": Array [
+            "166 Allen St (at Stanton St.)",
+            "New York, NY 10002",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.720219738870185,
+              "lng": -73.98913343866487,
+            },
+          ],
+          "lat": 40.720219738870185,
+          "lng": -73.98913343866487,
+          "postalCode": "10002",
+          "state": "NY",
+        },
+        "name": "Shi Eurasian Market",
+      },
+    ],
+    "type": "GET_VENUES_SIMILAR_SUCCESS",
   },
 ]
 `;
