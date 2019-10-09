@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.3...v0.3.4) (2019-10-09)
+
+### 🔧 Chore
+
+- **adapter:** rename adapterGetVenuesLikes into adaptGetVenuesLikes ([#254](https://github.com/arnaud-zg/ts-foursquare/issues/254)) ([176ab7b](https://github.com/arnaud-zg/ts-foursquare/commit/176ab7b))
+- **deps:** update dependency @types/node to v12.7.12 ([#252](https://github.com/arnaud-zg/ts-foursquare/issues/252)) ([19587fe](https://github.com/arnaud-zg/ts-foursquare/commit/19587fe))
+- **deps:** update dependency typescript to v3.6.4 ([#256](https://github.com/arnaud-zg/ts-foursquare/issues/256)) ([09423ca](https://github.com/arnaud-zg/ts-foursquare/commit/09423ca))
+
+### 🖋 Features
+
+- **next-venues:** add get next venues action, adapter, epics, reducers, selectors and services ([#255](https://github.com/arnaud-zg/ts-foursquare/issues/255)) ([c3d6d1e](https://github.com/arnaud-zg/ts-foursquare/commit/c3d6d1e))
+- **venues-similar:** add get venues similar action, adapter, epics, reducers, selectors and services ([#253](https://github.com/arnaud-zg/ts-foursquare/issues/253)) ([94502bb](https://github.com/arnaud-zg/ts-foursquare/commit/94502bb))
+
 ### [0.3.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.2...v0.3.3) (2019-10-07)
 
 ### 🐛 Bug Fixes
