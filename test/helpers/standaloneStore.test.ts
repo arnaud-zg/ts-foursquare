@@ -11,7 +11,7 @@ describe('helpers/StandaloneStore', () => {
     standaloneStore.dispatchAction(
       putCredentials({
         clientId: '123',
-        clientSecret: '123',
+        clientSecret: '456',
       })
     )
   })
@@ -30,7 +30,7 @@ describe('helpers/StandaloneStore', () => {
     standaloneStore.dispatchAction(
       putCredentials({
         clientId: '123',
-        clientSecret: '123',
+        clientSecret: '456',
       })
     )
   })
