@@ -26,6 +26,12 @@ Object {
     "request": [Function],
     "success": [Function],
   },
+  "getVenuesNextVenuesAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesSearchAsync": Object {
     "cancel": [Function],
     "failure": [Function],
@@ -62,6 +68,7 @@ Object {
     "venues": Object {
       "categories": Array [],
       "entities": Object {},
+      "nextVenues": Object {},
       "recommendedPlaces": Array [],
       "similarVenues": Object {},
       "trendingEntities": Object {},
@@ -97,6 +104,12 @@ Object {
       "request": [Function],
       "success": [Function],
     },
+    "getVenuesNextVenuesAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "getVenuesSearchAsync": Object {
       "cancel": [Function],
       "failure": [Function],
@@ -124,6 +137,7 @@ Object {
   },
   "venuesCategoriesSelector": [Function],
   "venuesEntitiesSelector": [Function],
+  "venuesNextVenuesSelector": [Function],
   "venuesRecommendedPlacesSelector": [Function],
   "venuesSelector": [Function],
   "venuesSimilarSelector": [Function],

@@ -3,15 +3,17 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../../src/actions/venues'
 import {
-  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
+  adaptGetVenuesLikes,
+  adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
   adaptGetVenuesSuggestCompletion,
@@ -21,6 +23,7 @@ import {
   getVenuesCategoriesEpic,
   getVenuesExploreEpic,
   getVenuesLikesEpic,
+  getVenuesNextVenuesEpic,
   getVenuesSearchEpic,
   getVenuesSimilarEpic,
   getVenuesSuggestCompletionEpic,
@@ -36,6 +39,7 @@ import {
 import { payload as payloadGetVenuesCategories } from './__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from './__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesLikes } from './__mocks__/getVenuesLikesAsync.resolve'
+import { payload as payloadGetVenuesNextVenues } from './__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from './__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from './__mocks__/getVenuesSimilarAsync.resolve'
 import { payload as payloadGetVenuesSuggestCompletion } from './__mocks__/getVenuesSuggestCompletionAsync.resolve'
@@ -61,6 +65,7 @@ describe('epics/venues', () => {
     ${'should suggest completion for venues near to a location'}         | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}                                                                                        | ${payloadGetVenuesSuggestCompletion} | ${[getVenuesSuggestCompletionAsync.success(adaptGetVenuesSuggestCompletion(payloadGetVenuesSuggestCompletion))]} | ${getVenuesSuggestCompletionEpic}
     ${'should get venues likes'}                                         | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                     | ${payloadGetVenuesLikes}             | ${[getVenuesLikesAsync.success(adaptGetVenuesLikes(payloadGetVenuesLikes))]}                                     | ${getVenuesLikesEpic}
     ${'should get venues categories'}                                    | ${getVenuesCategoriesAsync.request({})}                                                                                                                                     | ${payloadGetVenuesCategories}        | ${[getVenuesCategoriesAsync.success(adaptGetVenuesCategories(payloadGetVenuesCategories))]}                      | ${getVenuesCategoriesEpic}
+    ${'should get venues next venues'}                                   | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                | ${payloadGetVenuesNextVenues}        | ${[getVenuesNextVenuesAsync.success(adaptGetVenuesNextVenues(payloadGetVenuesNextVenues))]}                      | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, expectedActions, epic, payload, done }) => {
     mockingFetch({ response: { ...payload } })
     testEpic(
@@ -94,6 +99,7 @@ describe('epics/venues | error case: no network', () => {
     ${'should suggest completion for venues near to a location'} | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}    | ${getVenuesTrendingEpic}
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
     ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request({})}                                                 | ${getVenuesCategoriesEpic}
+    ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(
       epic,
@@ -123,6 +129,7 @@ describe('epics/venues | error case: not valid response', () => {
     ${'should suggest completion for venues near to a location'} | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}    | ${getVenuesSuggestCompletionEpic}
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
     ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request({})}                                                 | ${getVenuesCategoriesEpic}
+    ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(
       epic,

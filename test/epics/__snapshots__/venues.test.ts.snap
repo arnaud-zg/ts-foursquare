@@ -60,6 +60,16 @@ Array [
 ]
 `;
 
+exports[`epics/venues | error case: no network should get venues next venues 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: Error 404],
+    "type": "GET_VENUES_NEXT_VENUES_FAILURE",
+  },
+]
+`;
+
 exports[`epics/venues | error case: not valid response should get recommended places by location 1`] = `
 Array [
   Object {
@@ -116,6 +126,16 @@ Array [
     "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_LIKES_FAILURE",
+  },
+]
+`;
+
+exports[`epics/venues | error case: not valid response should get venues next venues 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: response.json is not a function],
+    "type": "GET_VENUES_NEXT_VENUES_FAILURE",
   },
 ]
 `;
@@ -2180,6 +2200,222 @@ Array [
       },
     ],
     "type": "GET_VENUES_SEARCH_SUCCESS",
+  },
+]
+`;
+
+exports[`epics/venues should get venues next venues 1`] = `
+Array [
+  Object {
+    "meta": 0,
+    "payload": Array [
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d103951735",
+            "name": "Clothing Store",
+            "pluralName": "Clothing Stores",
+            "primary": true,
+            "shortName": "Apparel",
+          },
+        ],
+        "id": "4b410414f964a5206dbf25e3",
+        "location": Object {
+          "address": "184 Broadway (at Driggs)",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "btwn Driggs Ave & Roebling St",
+          "formattedAddress": Array [
+            "184 Broadway (at Driggs) (btwn Driggs Ave & Roebling St)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.709751,
+              "lng": -73.962264,
+            },
+          ],
+          "lat": 40.709751,
+          "lng": -73.962264,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Brooklyn Industries",
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d116941735",
+            "name": "Bar",
+            "pluralName": "Bars",
+            "primary": true,
+            "shortName": "Bar",
+          },
+        ],
+        "id": "4b2ef069f964a52085e824e3",
+        "location": Object {
+          "address": "174 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Driggs Ave",
+          "formattedAddress": Array [
+            "174 Broadway (at Driggs Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.710078899964,
+              "lng": -73.96263084075063,
+            },
+          ],
+          "lat": 40.710078899964,
+          "lng": -73.96263084075063,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Velvet Brooklyn Lounge",
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/beergarden_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d117941735",
+            "name": "Beer Garden",
+            "pluralName": "Beer Gardens",
+            "primary": true,
+            "shortName": "Beer Garden",
+          },
+        ],
+        "id": "474d3e5df964a520a24c1fe3",
+        "location": Object {
+          "address": "113 N 3rd St",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Berry St",
+          "formattedAddress": Array [
+            "113 N 3rd St (at Berry St)",
+            "Brooklyn, NY 11249",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.71657114852416,
+              "lng": -73.96142999712337,
+            },
+          ],
+          "lat": 40.71657114852416,
+          "lng": -73.96142999712337,
+          "postalCode": "11249",
+          "state": "NY",
+        },
+        "name": "Radegast Hall & Biergarten",
+        "venuePage": Object {
+          "id": "56755543",
+        },
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d116941735",
+            "name": "Bar",
+            "pluralName": "Bars",
+            "primary": true,
+            "shortName": "Bar",
+          },
+        ],
+        "id": "512997d7e4b0b35362953cb1",
+        "location": Object {
+          "address": "141 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "formattedAddress": Array [
+            "141 Broadway",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.71039332645751,
+              "lng": -73.9636134675309,
+            },
+          ],
+          "lat": 40.71039332645751,
+          "lng": -73.9636134675309,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "OTB",
+        "venuePage": Object {
+          "id": "51937976",
+        },
+      },
+      Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d1e5931735",
+            "name": "Music Venue",
+            "pluralName": "Music Venues",
+            "primary": true,
+            "shortName": "Music Venue",
+          },
+        ],
+        "id": "5261525c11d2bf8a5e104a61",
+        "location": Object {
+          "address": "146 Broadway",
+          "cc": "US",
+          "city": "Brooklyn",
+          "country": "United States",
+          "crossStreet": "at Bedford Ave",
+          "formattedAddress": Array [
+            "146 Broadway (at Bedford Ave)",
+            "Brooklyn, NY 11211",
+            "United States",
+          ],
+          "labeledLatLngs": Array [
+            Object {
+              "label": "display",
+              "lat": 40.710071,
+              "lng": -73.963449,
+            },
+          ],
+          "lat": 40.710071,
+          "lng": -73.963449,
+          "postalCode": "11211",
+          "state": "NY",
+        },
+        "name": "Baby's All Right",
+      },
+    ],
+    "type": "GET_VENUES_NEXT_VENUES_SUCCESS",
   },
 ]
 `;

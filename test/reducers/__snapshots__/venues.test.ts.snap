@@ -4,6 +4,224 @@ exports[`reducers/venues/getVenuesCategoriesAsync should get state after action:
 Object {
   "categories": Array [],
   "entities": Object {},
+  "nextVenues": Object {},
+  "recommendedPlaces": Array [],
+  "similarVenues": Object {},
+  "trendingEntities": Object {},
+}
+`;
+
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: {"type":"GET_VENUES_NEXT_VENUES_SUCCESS","payload":[{"id":"4b410414f964a5206dbf25e3","name":"Brooklyn Industries","location":{"address":"184 Broadway (at Driggs)","crossStreet":"btwn Driggs Ave & Roebling St","lat":40.709751,"lng":-73.962264,"labeledLatLngs":[{"label":"display","lat":40.709751,"lng":-73.962264}],"postalCode":"11211","cc":"US","city":"Brooklyn","state":"NY","country":"United States","formattedAddress":["184 Broadway (at Driggs) (btwn Driggs Ave & Roebling St)","Brooklyn, NY 11211","United States"]},"categories":[{"id":"4bf58dd8d48988d103951735","name":"Clothing Store","pluralName":"Clothing Stores","shortName":"Apparel","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/apparel_","suffix":".png"},"primary":true}]},{"id":"4b2ef069f964a52085e824e3","name":"Velvet Brooklyn Lounge","location":{"address":"174 Broadway","crossStreet":"at Driggs Ave","lat":40.710078899964,"lng":-73.96263084075063,"labeledLatLngs":[{"label":"display","lat":40.710078899964,"lng":-73.96263084075063}],"postalCode":"11211","cc":"US","city":"Brooklyn","state":"NY","country":"United States","formattedAddress":["174 Broadway (at Driggs Ave)","Brooklyn, NY 11211","United States"]},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_","suffix":".png"},"primary":true}]},{"id":"474d3e5df964a520a24c1fe3","name":"Radegast Hall & Biergarten","location":{"address":"113 N 3rd St","crossStreet":"at Berry St","lat":40.71657114852416,"lng":-73.96142999712337,"labeledLatLngs":[{"label":"display","lat":40.71657114852416,"lng":-73.96142999712337}],"postalCode":"11249","cc":"US","city":"Brooklyn","state":"NY","country":"United States","formattedAddress":["113 N 3rd St (at Berry St)","Brooklyn, NY 11249","United States"]},"categories":[{"id":"4bf58dd8d48988d117941735","name":"Beer Garden","pluralName":"Beer Gardens","shortName":"Beer Garden","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/beergarden_","suffix":".png"},"primary":true}],"venuePage":{"id":"56755543"}},{"id":"512997d7e4b0b35362953cb1","name":"OTB","location":{"address":"141 Broadway","lat":40.71039332645751,"lng":-73.9636134675309,"labeledLatLngs":[{"label":"display","lat":40.71039332645751,"lng":-73.9636134675309}],"postalCode":"11211","cc":"US","city":"Brooklyn","state":"NY","country":"United States","formattedAddress":["141 Broadway","Brooklyn, NY 11211","United States"]},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/nightlife/pub_","suffix":".png"},"primary":true}],"venuePage":{"id":"51937976"}},{"id":"5261525c11d2bf8a5e104a61","name":"Baby's All Right","location":{"address":"146 Broadway","crossStreet":"at Bedford Ave","lat":40.710071,"lng":-73.963449,"labeledLatLngs":[{"label":"display","lat":40.710071,"lng":-73.963449}],"postalCode":"11211","cc":"US","city":"Brooklyn","state":"NY","country":"United States","formattedAddress":["146 Broadway (at Bedford Ave)","Brooklyn, NY 11211","United States"]},"categories":[{"id":"4bf58dd8d48988d1e5931735","name":"Music Venue","pluralName":"Music Venues","shortName":"Music Venue","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_","suffix":".png"},"primary":true}]}]} with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_NEXT_VENUES_SUCCESS"} 1`] = `
+Object {
+  "categories": Array [],
+  "entities": Object {},
+  "nextVenues": Object {
+    "474d3e5df964a520a24c1fe3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/beergarden_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d117941735",
+          "name": "Beer Garden",
+          "pluralName": "Beer Gardens",
+          "primary": true,
+          "shortName": "Beer Garden",
+        },
+      ],
+      "id": "474d3e5df964a520a24c1fe3",
+      "location": Object {
+        "address": "113 N 3rd St",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "at Berry St",
+        "formattedAddress": Array [
+          "113 N 3rd St (at Berry St)",
+          "Brooklyn, NY 11249",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.71657114852416,
+            "lng": -73.96142999712337,
+          },
+        ],
+        "lat": 40.71657114852416,
+        "lng": -73.96142999712337,
+        "postalCode": "11249",
+        "state": "NY",
+      },
+      "name": "Radegast Hall & Biergarten",
+      "venuePage": Object {
+        "id": "56755543",
+      },
+    },
+    "4b2ef069f964a52085e824e3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d116941735",
+          "name": "Bar",
+          "pluralName": "Bars",
+          "primary": true,
+          "shortName": "Bar",
+        },
+      ],
+      "id": "4b2ef069f964a52085e824e3",
+      "location": Object {
+        "address": "174 Broadway",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "at Driggs Ave",
+        "formattedAddress": Array [
+          "174 Broadway (at Driggs Ave)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.710078899964,
+            "lng": -73.96263084075063,
+          },
+        ],
+        "lat": 40.710078899964,
+        "lng": -73.96263084075063,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Velvet Brooklyn Lounge",
+    },
+    "4b410414f964a5206dbf25e3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d103951735",
+          "name": "Clothing Store",
+          "pluralName": "Clothing Stores",
+          "primary": true,
+          "shortName": "Apparel",
+        },
+      ],
+      "id": "4b410414f964a5206dbf25e3",
+      "location": Object {
+        "address": "184 Broadway (at Driggs)",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "btwn Driggs Ave & Roebling St",
+        "formattedAddress": Array [
+          "184 Broadway (at Driggs) (btwn Driggs Ave & Roebling St)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.709751,
+            "lng": -73.962264,
+          },
+        ],
+        "lat": 40.709751,
+        "lng": -73.962264,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Brooklyn Industries",
+    },
+    "512997d7e4b0b35362953cb1": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d116941735",
+          "name": "Bar",
+          "pluralName": "Bars",
+          "primary": true,
+          "shortName": "Bar",
+        },
+      ],
+      "id": "512997d7e4b0b35362953cb1",
+      "location": Object {
+        "address": "141 Broadway",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "formattedAddress": Array [
+          "141 Broadway",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.71039332645751,
+            "lng": -73.9636134675309,
+          },
+        ],
+        "lat": 40.71039332645751,
+        "lng": -73.9636134675309,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "OTB",
+      "venuePage": Object {
+        "id": "51937976",
+      },
+    },
+    "5261525c11d2bf8a5e104a61": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/musicvenue_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d1e5931735",
+          "name": "Music Venue",
+          "pluralName": "Music Venues",
+          "primary": true,
+          "shortName": "Music Venue",
+        },
+      ],
+      "id": "5261525c11d2bf8a5e104a61",
+      "location": Object {
+        "address": "146 Broadway",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "at Bedford Ave",
+        "formattedAddress": Array [
+          "146 Broadway (at Bedford Ave)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.710071,
+            "lng": -73.963449,
+          },
+        ],
+        "lat": 40.710071,
+        "lng": -73.963449,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Baby's All Right",
+    },
+  },
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
   "trendingEntities": Object {},
@@ -61,6 +279,7 @@ Object {
       },
     },
   },
+  "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
   "trendingEntities": Object {},
@@ -70,7 +289,10 @@ Object {
 exports[`reducers/venues/getVenuesSimilarAsync should get state after action: {"type":"GET_VENUES_SIMILAR_SUCCESS","payload":[{"id":"4c5ef77bfff99c74eda954d3","name":"Eataly","location":{"address":"200 5th Ave","crossStreet":"at W 23rd St","lat":40.74198696405861,"lng":-73.98991319280194,"labeledLatLngs":[{"label":"display","lat":40.74198696405861,"lng":-73.98991319280194}],"postalCode":"10010","cc":"US","city":"New York","state":"NY","country":"United States","formattedAddress":["200 5th Ave (at W 23rd St)","New York, NY 10010","United States"]},"categories":[{"id":"4bf58dd8d48988d1f5941735","name":"Gourmet Shop","pluralName":"Gourmet Shops","shortName":"Gourmet","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_","suffix":".png"},"primary":true}]},{"id":"49dad010f964a520b15e1fe3","name":"Di Palo Fine Foods","location":{"address":"200 Grand St","crossStreet":"at Mott St","lat":40.71914769980916,"lng":-73.99657675353625,"labeledLatLngs":[{"label":"display","lat":40.71914769980916,"lng":-73.99657675353625}],"postalCode":"10013","cc":"US","city":"New York","state":"NY","country":"United States","formattedAddress":["200 Grand St (at Mott St)","New York, NY 10013","United States"]},"categories":[{"id":"4bf58dd8d48988d1f5941735","name":"Gourmet Shop","pluralName":"Gourmet Shops","shortName":"Gourmet","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_","suffix":".png"},"primary":true}]},{"id":"4a50e39ff964a52038b01fe3","name":"The Pickle Guys","location":{"address":"357 Grand St","crossStreet":"Essex St","lat":40.716567980864525,"lng":-73.9889929963776,"labeledLatLngs":[{"label":"display","lat":40.716567980864525,"lng":-73.9889929963776}],"postalCode":"10002","cc":"US","city":"New York","state":"NY","country":"United States","formattedAddress":["357 Grand St (Essex St)","New York, NY 10002","United States"]},"categories":[{"id":"4bf58dd8d48988d1f5941735","name":"Gourmet Shop","pluralName":"Gourmet Shops","shortName":"Gourmet","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_","suffix":".png"},"primary":true}],"delivery":{"id":"563543","url":"https://www.seamless.com/menu/pickle-guys-357-grand-st-new-york/563543?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=563543","provider":{"name":"seamless","icon":{"prefix":"https://fastly.4sqi.net/img/general/cap/","sizes":[40,50],"name":"/delivery_provider_seamless_20180129.png"}}},"venuePage":{"id":"56125711"}},{"id":"44d9e8dbf964a5208a361fe3","name":"Dean & DeLuca","location":{"address":"560 Broadway","crossStreet":"at Prince St","lat":40.72413942875559,"lng":-73.99762330336448,"labeledLatLngs":[{"label":"display","lat":40.72413942875559,"lng":-73.99762330336448}],"postalCode":"10012","cc":"US","city":"New York","state":"NY","country":"United States","formattedAddress":["560 Broadway (at Prince St)","New York, NY 10012","United States"]},"categories":[{"id":"4bf58dd8d48988d1f5941735","name":"Gourmet Shop","pluralName":"Gourmet Shops","shortName":"Gourmet","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_","suffix":".png"},"primary":true}],"venuePage":{"id":"39094592"}},{"id":"4d6d4eeb8183a1438a6ba29f","name":"Shi Eurasian Market","location":{"address":"166 Allen St","crossStreet":"at Stanton St.","lat":40.720219738870185,"lng":-73.98913343866487,"labeledLatLngs":[{"label":"display","lat":40.720219738870185,"lng":-73.98913343866487}],"postalCode":"10002","cc":"US","city":"New York","state":"NY","country":"United States","formattedAddress":["166 Allen St (at Stanton St.)","New York, NY 10002","United States"]},"categories":[{"id":"4bf58dd8d48988d1f5941735","name":"Gourmet Shop","pluralName":"Gourmet Shops","shortName":"Gourmet","icon":{"prefix":"https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_","suffix":".png"},"primary":true}]}]} with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SIMILAR_SUCCESS"} 1`] = `
 Object {
   "categories": Array [],
-  "entities": Object {
+  "entities": Object {},
+  "nextVenues": Object {},
+  "recommendedPlaces": Array [],
+  "similarVenues": Object {
     "44d9e8dbf964a5208a361fe3": Object {
       "categories": Array [
         Object {
@@ -293,8 +515,6 @@ Object {
       "name": "Shi Eurasian Market",
     },
   },
-  "recommendedPlaces": Array [],
-  "similarVenues": Object {},
   "trendingEntities": Object {},
 }
 `;
@@ -303,6 +523,7 @@ exports[`reducers/venues/getVenuesTrendingAsync should get state after action: {
 Object {
   "categories": Array [],
   "entities": Object {},
+  "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
   "trendingEntities": Object {
@@ -360,6 +581,7 @@ exports[`reducers/venues/payloadGetVenuesExplore should get state after action: 
 Object {
   "categories": Array [],
   "entities": Object {},
+  "nextVenues": Object {},
   "recommendedPlaces": Array [
     Object {
       "reasons": Object {

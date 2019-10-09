@@ -8,15 +8,17 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../actions/venues'
 import {
-  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
+  adaptGetVenuesLikes,
+  adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
   adaptGetVenuesSuggestCompletion,
@@ -26,6 +28,7 @@ import {
   getObservableVenuesCategories,
   getObservableVenuesExplore,
   getObservableVenuesLikes,
+  getObservableVenuesNextVenues,
   getObservableVenuesSearch,
   getObservableVenuesSimilar,
   getObservableVenuesSuggestCompletion,
@@ -83,6 +86,25 @@ export const getVenuesLikesEpic: Epic<
         map(getVenuesLikesAsync.success),
         catchError(err => of(getVenuesLikesAsync.failure(err))),
         takeUntil(action$.pipe(filter(isActionOf(getVenuesLikesAsync.cancel))))
+      )
+    )
+  )
+
+export const getVenuesNextVenuesEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesNextVenuesAsync.request)),
+    switchMap(action =>
+      getObservableVenuesNextVenues({ action, state$ }).pipe(
+        map(adaptGetVenuesNextVenues),
+        map(getVenuesNextVenuesAsync.success),
+        catchError(err => of(getVenuesNextVenuesAsync.failure(err))),
+        takeUntil(
+          action$.pipe(filter(isActionOf(getVenuesNextVenuesAsync.cancel)))
+        )
       )
     )
   )

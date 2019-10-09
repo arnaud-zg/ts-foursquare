@@ -26,6 +26,9 @@ export const venueSelector = (state: NStore.IState, venueId: string) =>
 export const venuesEntitiesSelector = (state: NStore.IState) =>
   venuesSelector(state).entities
 
+export const venuesNextVenuesSelector = (state: NStore.IState) =>
+  venuesSelector(state).nextVenues
+
 export const venuesSimilarSelector = (state: NStore.IState) =>
   venuesSelector(state).similarVenues
 

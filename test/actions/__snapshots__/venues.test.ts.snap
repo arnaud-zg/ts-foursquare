@@ -20,6 +20,12 @@ Object {
     "request": [Function],
     "success": [Function],
   },
+  "getVenuesNextVenuesAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesSearchAsync": Object {
     "cancel": [Function],
     "failure": [Function],
