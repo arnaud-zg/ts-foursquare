@@ -1,7 +1,8 @@
 import {
-  adaptGetVenuesLikes,
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
+  adaptGetVenuesLikes,
+  adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
   adaptGetVenuesSuggestCompletion,
@@ -10,6 +11,7 @@ import {
 import { payload as payloadGetVenuesCategories } from '../epics/__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'
+import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
 import { payload as payloadGetSuggestCompletion } from '../epics/__mocks__/getVenuesSuggestCompletionAsync.resolve'
@@ -88,6 +90,26 @@ describe('adapter/venues/adaptGetVenuesLikes', () => {
 
   it('should get a list of venues likes', () => {
     expect(adaptGetVenuesLikes(payloadGetVenuesLikes)).toMatchSnapshot()
+  })
+})
+
+describe('adapter/venues/adaptGetVenuesNextVenues', () => {
+  it('should get an empty list', () => {
+    expect(
+      adaptGetVenuesNextVenues({
+        ...payloadGetVenuesNextVenues,
+        meta: {
+          code: 400,
+          requestId: payloadGetVenuesNextVenues.meta.requestId,
+        },
+      })
+    ).toEqual([])
+  })
+
+  it('should get a list of venues likes', () => {
+    expect(
+      adaptGetVenuesNextVenues(payloadGetVenuesNextVenues)
+    ).toMatchSnapshot()
   })
 })
 

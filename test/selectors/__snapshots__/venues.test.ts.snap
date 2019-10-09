@@ -4,6 +4,53 @@ exports[`selectors/venues should get a list a of categories 1`] = `Array []`;
 
 exports[`selectors/venues should get a list a of categories 2`] = `Array []`;
 
+exports[`selectors/venues should get a list of next venues 1`] = `Object {}`;
+
+exports[`selectors/venues should get a list of next venues 2`] = `
+Object {
+  "4b410414f964a5206dbf25e3": Object {
+    "categories": Array [
+      Object {
+        "icon": Object {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_",
+          "suffix": ".png",
+        },
+        "id": "4bf58dd8d48988d103951735",
+        "name": "Clothing Store",
+        "pluralName": "Clothing Stores",
+        "primary": true,
+        "shortName": "Apparel",
+      },
+    ],
+    "id": "4b410414f964a5206dbf25e3",
+    "location": Object {
+      "address": "184 Broadway (at Driggs)",
+      "cc": "US",
+      "city": "Brooklyn",
+      "country": "United States",
+      "crossStreet": "btwn Driggs Ave & Roebling St",
+      "formattedAddress": Array [
+        "184 Broadway (at Driggs) (btwn Driggs Ave & Roebling St)",
+        "Brooklyn, NY 11211",
+        "United States",
+      ],
+      "labeledLatLngs": Array [
+        Object {
+          "label": "display",
+          "lat": 40.709751,
+          "lng": -73.962264,
+        },
+      ],
+      "lat": 40.709751,
+      "lng": -73.962264,
+      "postalCode": "11211",
+      "state": "NY",
+    },
+    "name": "Brooklyn Industries",
+  },
+}
+`;
+
 exports[`selectors/venues should get a list of recommended places 1`] = `Array []`;
 
 exports[`selectors/venues should get a list of recommended places 2`] = `
@@ -71,51 +118,45 @@ exports[`selectors/venues should get a list of similar venues 1`] = `Object {}`;
 
 exports[`selectors/venues should get a list of similar venues 2`] = `
 Object {
-  "3fd66200f964a5209beb1ee3": Object {
+  "4c5ef77bfff99c74eda954d3": Object {
     "categories": Array [
       Object {
         "icon": Object {
-          "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
           "suffix": ".png",
         },
-        "id": "4bf58dd8d48988d1cc941735",
-        "name": "Steakhouse",
-        "pluralName": "Steakhouses",
+        "id": "4bf58dd8d48988d1f5941735",
+        "name": "Gourmet Shop",
+        "pluralName": "Gourmet Shops",
         "primary": true,
-        "shortName": "Steakhouse",
+        "shortName": "Gourmet",
       },
     ],
-    "hasPerk": false,
-    "id": "3fd66200f964a5209beb1ee3",
+    "id": "4c5ef77bfff99c74eda954d3",
     "location": Object {
-      "address": "178 Broadway",
+      "address": "200 5th Ave",
       "cc": "US",
-      "city": "Brooklyn",
+      "city": "New York",
       "country": "United States",
-      "crossStreet": "at Driggs Ave",
-      "distance": 10,
+      "crossStreet": "at W 23rd St",
       "formattedAddress": Array [
-        "178 Broadway (at Driggs Ave)",
-        "Brooklyn, NY 11211",
+        "200 5th Ave (at W 23rd St)",
+        "New York, NY 10010",
         "United States",
       ],
       "labeledLatLngs": Array [
         Object {
           "label": "display",
-          "lat": 40.70995790682886,
-          "lng": -73.96229110893742,
+          "lat": 40.74198696405861,
+          "lng": -73.98991319280194,
         },
       ],
-      "lat": 40.70995790682886,
-      "lng": -73.96229110893742,
-      "postalCode": "11211",
+      "lat": 40.74198696405861,
+      "lng": -73.98991319280194,
+      "postalCode": "10010",
       "state": "NY",
     },
-    "name": "Peter Luger Steak House",
-    "referralId": "v-1565543515",
-    "venuePage": Object {
-      "id": "77462637",
-    },
+    "name": "Eataly",
   },
 }
 `;
@@ -222,6 +263,7 @@ exports[`selectors/venues should get venues 1`] = `
 Object {
   "categories": Array [],
   "entities": Object {},
+  "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
   "trendingEntities": Object {},
@@ -277,6 +319,48 @@ Object {
       "venuePage": Object {
         "id": "77462637",
       },
+    },
+  },
+  "nextVenues": Object {
+    "4b410414f964a5206dbf25e3": Object {
+      "categories": Array [
+        Object {
+          "icon": Object {
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/apparel_",
+            "suffix": ".png",
+          },
+          "id": "4bf58dd8d48988d103951735",
+          "name": "Clothing Store",
+          "pluralName": "Clothing Stores",
+          "primary": true,
+          "shortName": "Apparel",
+        },
+      ],
+      "id": "4b410414f964a5206dbf25e3",
+      "location": Object {
+        "address": "184 Broadway (at Driggs)",
+        "cc": "US",
+        "city": "Brooklyn",
+        "country": "United States",
+        "crossStreet": "btwn Driggs Ave & Roebling St",
+        "formattedAddress": Array [
+          "184 Broadway (at Driggs) (btwn Driggs Ave & Roebling St)",
+          "Brooklyn, NY 11211",
+          "United States",
+        ],
+        "labeledLatLngs": Array [
+          Object {
+            "label": "display",
+            "lat": 40.709751,
+            "lng": -73.962264,
+          },
+        ],
+        "lat": 40.709751,
+        "lng": -73.962264,
+        "postalCode": "11211",
+        "state": "NY",
+      },
+      "name": "Brooklyn Industries",
     },
   },
   "recommendedPlaces": Array [
@@ -338,51 +422,45 @@ Object {
     },
   ],
   "similarVenues": Object {
-    "3fd66200f964a5209beb1ee3": Object {
+    "4c5ef77bfff99c74eda954d3": Object {
       "categories": Array [
         Object {
           "icon": Object {
-            "prefix": "https://ss3.4sqi.net/img/categories_v2/food/steakhouse_",
+            "prefix": "https://ss3.4sqi.net/img/categories_v2/shops/food_gourmet_",
             "suffix": ".png",
           },
-          "id": "4bf58dd8d48988d1cc941735",
-          "name": "Steakhouse",
-          "pluralName": "Steakhouses",
+          "id": "4bf58dd8d48988d1f5941735",
+          "name": "Gourmet Shop",
+          "pluralName": "Gourmet Shops",
           "primary": true,
-          "shortName": "Steakhouse",
+          "shortName": "Gourmet",
         },
       ],
-      "hasPerk": false,
-      "id": "3fd66200f964a5209beb1ee3",
+      "id": "4c5ef77bfff99c74eda954d3",
       "location": Object {
-        "address": "178 Broadway",
+        "address": "200 5th Ave",
         "cc": "US",
-        "city": "Brooklyn",
+        "city": "New York",
         "country": "United States",
-        "crossStreet": "at Driggs Ave",
-        "distance": 10,
+        "crossStreet": "at W 23rd St",
         "formattedAddress": Array [
-          "178 Broadway (at Driggs Ave)",
-          "Brooklyn, NY 11211",
+          "200 5th Ave (at W 23rd St)",
+          "New York, NY 10010",
           "United States",
         ],
         "labeledLatLngs": Array [
           Object {
             "label": "display",
-            "lat": 40.70995790682886,
-            "lng": -73.96229110893742,
+            "lat": 40.74198696405861,
+            "lng": -73.98991319280194,
           },
         ],
-        "lat": 40.70995790682886,
-        "lng": -73.96229110893742,
-        "postalCode": "11211",
+        "lat": 40.74198696405861,
+        "lng": -73.98991319280194,
+        "postalCode": "10010",
         "state": "NY",
       },
-      "name": "Peter Luger Steak House",
-      "referralId": "v-1565543515",
-      "venuePage": Object {
-        "id": "77462637",
-      },
+      "name": "Eataly",
     },
   },
   "trendingEntities": Object {},

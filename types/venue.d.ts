@@ -48,7 +48,7 @@ export declare namespace NVenue {
     cc: string
     city: string
     country: string
-    crossStreet: string
+    crossStreet?: string
     distance?: number
     formattedAddress: string[]
     labeledLatLngs: ILabeledLatLngs[]

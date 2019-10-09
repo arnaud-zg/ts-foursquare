@@ -32,6 +32,13 @@ export const getVenuesLikesAsync = createAsyncAction(
   'GET_VENUES_LIKES_CANCEL'
 )<NRequest.IVenuesLikesPayload, NLikes.ILikes, Error, string>()
 
+export const getVenuesNextVenuesAsync = createAsyncAction(
+  'GET_VENUES_NEXT_VENUES_REQUEST',
+  'GET_VENUES_NEXT_VENUES_SUCCESS',
+  'GET_VENUES_NEXT_VENUES_FAILURE',
+  'GET_VENUES_NEXT_VENUES_CANCEL'
+)<NRequest.IVenuesNextVenuesPayload, NVenue.IVenue[], Error, string>()
+
 export const getVenuesSearchAsync = createAsyncAction(
   'GET_VENUES_SEARCH_REQUEST',
   'GET_VENUES_SEARCH_SUCCESS',
@@ -69,6 +76,7 @@ export const venuesActions = {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,

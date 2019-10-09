@@ -6,25 +6,35 @@ import {
   venuesCategoriesSelector,
   venueSelector,
   venuesEntitiesSelector,
+  venuesNextVenuesSelector,
   venuesRecommendedPlacesSelector,
   venuesSelector,
   venuesSimilarSelector,
 } from '../../src/selectors/venues'
 import { NStore } from '../../types/store'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
+import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
+import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
 
 const venueId = payloadGetVenuesSearch.response.venues[0].id
+
 const state: NStore.IState = {
   ...initialState,
   venues: {
     ...initialState.venues,
     entities: {
-      [venueId]: payloadGetVenuesSearch.response.venues[0],
+      [payloadGetVenuesSearch.response.venues[0].id]:
+        payloadGetVenuesSearch.response.venues[0],
+    },
+    nextVenues: {
+      [payloadGetVenuesNextVenues.response.nextVenues.items[0].id]:
+        payloadGetVenuesNextVenues.response.nextVenues.items[0],
     },
     recommendedPlaces: adaptGetVenuesExplore(payloadGetVenuesExplore),
     similarVenues: {
-      [venueId]: payloadGetVenuesSearch.response.venues[0],
+      [payloadGetVenuesSimilar.response.similarVenues.items[0].id]:
+        payloadGetVenuesSimilar.response.similarVenues.items[0],
     },
     trendingEntities: {},
   },
@@ -76,5 +86,10 @@ describe('selectors/venues', () => {
   it('should get a list of similar venues', () => {
     expect(venuesSimilarSelector({ ...initialState })).toMatchSnapshot()
     expect(venuesSimilarSelector(state)).toMatchSnapshot()
+  })
+
+  it('should get a list of next venues', () => {
+    expect(venuesNextVenuesSelector({ ...initialState })).toMatchSnapshot()
+    expect(venuesNextVenuesSelector(state)).toMatchSnapshot()
   })
 })
