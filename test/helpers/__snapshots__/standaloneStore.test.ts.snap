@@ -5,7 +5,7 @@ Object {
   "life": Object {
     "credentials": Object {
       "clientId": "123",
-      "clientSecret": "123",
+      "clientSecret": "456",
     },
     "status": true,
   },
