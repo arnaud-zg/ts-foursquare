@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.4...v0.3.5) (2019-10-10)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v0.0.6 ([#258](https://github.com/arnaud-zg/ts-foursquare/issues/258)) ([10879ce](https://github.com/arnaud-zg/ts-foursquare/commit/10879ce))
+* **services:** use getDefaultRequestParameters ([#259](https://github.com/arnaud-zg/ts-foursquare/issues/259)) ([de1d94f](https://github.com/arnaud-zg/ts-foursquare/commit/de1d94f))
+
+
+### 🔧 Chore
+
+* **project:** remove pretty-quick ([#261](https://github.com/arnaud-zg/ts-foursquare/issues/261)) ([547ba0e](https://github.com/arnaud-zg/ts-foursquare/commit/547ba0e))
+* **project:** update tsconfig.json file ([#260](https://github.com/arnaud-zg/ts-foursquare/issues/260)) ([51411cf](https://github.com/arnaud-zg/ts-foursquare/commit/51411cf))
+
+
+### 🚧 Refactor
+
+* **services:** get default request parameters ([#257](https://github.com/arnaud-zg/ts-foursquare/issues/257)) ([54b286d](https://github.com/arnaud-zg/ts-foursquare/commit/54b286d))
+
 ### [0.3.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.3...v0.3.4) (2019-10-09)
 
 ### 🔧 Chore
