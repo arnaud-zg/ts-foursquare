@@ -83,7 +83,6 @@ export const getObservableVenuesNextVenues = ({
   action: NAction.IAction
   state$: StateObservable<NStore.IState>
 }) => {
-  const { clientId, clientSecret } = credentialsSelector(state$.value)
   const { venueId } = action.payload
 
   return fromFetch(
@@ -91,9 +90,7 @@ export const getObservableVenuesNextVenues = ({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.VENUES_NEXT_VENUES, { venueId }),
       param: {
-        client_id: clientId,
-        client_secret: clientSecret,
-        v: EApiDefaultParameters.VERSION,
+        ...getDefaultRequestParameters(state$),
       },
     })
   ).pipe(
