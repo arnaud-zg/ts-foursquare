@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsdx build",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tsdx lint src test types",
+    "lint": "tsdx lint",
     "release": "standard-version",
     "start": "tsdx watch",
     "test:coverage:report": "yarn run test:coverage && codecov -f coverage/*.json",
