@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.5...v0.3.6) (2019-10-13)
+
+
+### 🔧 Chore
+
+* **deps:** move path-to-regexp to deps ([#263](https://github.com/arnaud-zg/ts-foursquare/issues/263)) ([a931a46](https://github.com/arnaud-zg/ts-foursquare/commit/a931a46))
+* **deps:** pin dependency prettier to 1.18.2 ([#262](https://github.com/arnaud-zg/ts-foursquare/issues/262)) ([db539d1](https://github.com/arnaud-zg/ts-foursquare/commit/db539d1))
+* **deps:** pin dependency prettier to 1.18.2 ([#265](https://github.com/arnaud-zg/ts-foursquare/issues/265)) ([edcc1bb](https://github.com/arnaud-zg/ts-foursquare/commit/edcc1bb))
+* **deps:** update dependency husky to v3.0.9 ([#266](https://github.com/arnaud-zg/ts-foursquare/issues/266)) ([9278b88](https://github.com/arnaud-zg/ts-foursquare/commit/9278b88))
+* **project:** use lint on whole project ([#264](https://github.com/arnaud-zg/ts-foursquare/issues/264)) ([15de139](https://github.com/arnaud-zg/ts-foursquare/commit/15de139))
+
 ### [0.3.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.4...v0.3.5) (2019-10-10)
 
 
