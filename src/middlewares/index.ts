@@ -1,9 +1,27 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable'
 import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
-import { getVenuesExploreEpic, getVenuesSearchEpic } from '../epics'
+import {
+  getVenuesCategoriesEpic,
+  getVenuesExploreEpic,
+  getVenuesLikesEpic,
+  getVenuesNextVenuesEpic,
+  getVenuesSearchEpic,
+  getVenuesSimilarEpic,
+  getVenuesSuggestCompletionEpic,
+  getVenuesTrendingEpic,
+} from '../epics'
 
-export const rootEpic = combineEpics(getVenuesSearchEpic, getVenuesExploreEpic)
+export const rootEpic = combineEpics(
+  getVenuesCategoriesEpic,
+  getVenuesExploreEpic,
+  getVenuesLikesEpic,
+  getVenuesNextVenuesEpic,
+  getVenuesSearchEpic,
+  getVenuesSimilarEpic,
+  getVenuesSuggestCompletionEpic,
+  getVenuesTrendingEpic
+)
 export const epicMiddleware = createEpicMiddleware<
   TRootAction,
   TRootAction,
