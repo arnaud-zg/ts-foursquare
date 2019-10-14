@@ -10,7 +10,6 @@ install:
   - yarn install --check-files
 
 script:
-  - yarn run format
   - yarn run lint
   - yarn run build
   - yarn run test:coverage:report
