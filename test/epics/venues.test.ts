@@ -64,7 +64,7 @@ describe('epics/venues', () => {
     ${'should suggest completion for venues by location'}                | ${getVenuesSuggestCompletionAsync.request({ ll: '40.7099,-73.9622', query: 'Burger' })}                                                                                     | ${payloadGetVenuesSuggestCompletion} | ${[getVenuesSuggestCompletionAsync.success(adaptGetVenuesSuggestCompletion(payloadGetVenuesSuggestCompletion))]} | ${getVenuesSuggestCompletionEpic}
     ${'should suggest completion for venues near to a location'}         | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}                                                                                        | ${payloadGetVenuesSuggestCompletion} | ${[getVenuesSuggestCompletionAsync.success(adaptGetVenuesSuggestCompletion(payloadGetVenuesSuggestCompletion))]} | ${getVenuesSuggestCompletionEpic}
     ${'should get venues likes'}                                         | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                     | ${payloadGetVenuesLikes}             | ${[getVenuesLikesAsync.success(adaptGetVenuesLikes(payloadGetVenuesLikes))]}                                     | ${getVenuesLikesEpic}
-    ${'should get venues categories'}                                    | ${getVenuesCategoriesAsync.request({})}                                                                                                                                     | ${payloadGetVenuesCategories}        | ${[getVenuesCategoriesAsync.success(adaptGetVenuesCategories(payloadGetVenuesCategories))]}                      | ${getVenuesCategoriesEpic}
+    ${'should get venues categories'}                                    | ${getVenuesCategoriesAsync.request()}                                                                                                                                       | ${payloadGetVenuesCategories}        | ${[getVenuesCategoriesAsync.success(adaptGetVenuesCategories(payloadGetVenuesCategories))]}                      | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                                   | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                | ${payloadGetVenuesNextVenues}        | ${[getVenuesNextVenuesAsync.success(adaptGetVenuesNextVenues(payloadGetVenuesNextVenues))]}                      | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, expectedActions, epic, payload, done }) => {
     mockingFetch({ response: { ...payload } })
@@ -98,7 +98,7 @@ describe('epics/venues | error case: no network', () => {
     ${'should suggest completion for venues by location'}        | ${getVenuesSuggestCompletionAsync.request({ ll: '40.7099,-73.9622', query: 'Burger' })} | ${getVenuesTrendingEpic}
     ${'should suggest completion for venues near to a location'} | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}    | ${getVenuesTrendingEpic}
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
-    ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request({})}                                                 | ${getVenuesCategoriesEpic}
+    ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request()}                                                   | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(
@@ -128,7 +128,7 @@ describe('epics/venues | error case: not valid response', () => {
     ${'should suggest completion for venues by location'}        | ${getVenuesSuggestCompletionAsync.request({ ll: '40.7099,-73.9622', query: 'Burger' })} | ${getVenuesSuggestCompletionEpic}
     ${'should suggest completion for venues near to a location'} | ${getVenuesSuggestCompletionAsync.request({ near: 'Chicago, IL', query: 'Burger' })}    | ${getVenuesSuggestCompletionEpic}
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
-    ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request({})}                                                 | ${getVenuesCategoriesEpic}
+    ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request()}                                                   | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(

@@ -11,7 +11,7 @@ export const getVenuesCategoriesAsync = createAsyncAction(
   'GET_VENUES_CATEGORIES_SUCCESS',
   'GET_VENUES_CATEGORIES_FAILURE',
   'GET_VENUES_CATEGORIES_CANCEL'
-)<{}, NVenuesCategories.ICategory[], Error, string>()
+)<void, NVenuesCategories.ICategory[], Error, string>()
 
 export const getVenuesExploreAsync = createAsyncAction(
   'GET_VENUES_EXPLORE_REQUEST',
