@@ -17,7 +17,6 @@
   ],
   "scripts": {
     "build": "tsdx build",
-    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tsdx lint",
     "release": "standard-version",
     "start": "tsdx watch",
@@ -32,7 +31,6 @@
     "@types/redux": "3.6.0",
     "codecov": "3.6.1",
     "husky": "3.0.9",
-    "prettier": "1.18.2",
     "standard-version": "7.0.0",
     "tsdx": "0.9.3",
     "tslib": "1.10.0",
