@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.6...v0.3.7) (2019-10-14)
+
+
+### 🐛 Bug Fixes
+
+* **acions:** no payload on get venues categories request ([#270](https://github.com/arnaud-zg/ts-foursquare/issues/270)) ([98571ed](https://github.com/arnaud-zg/ts-foursquare/commit/98571ed))
+* **deps:** update dependency http-response-status to v0.0.7 ([#267](https://github.com/arnaud-zg/ts-foursquare/issues/267)) ([341b4b1](https://github.com/arnaud-zg/ts-foursquare/commit/341b4b1))
+* **middleware:** add all epics into combineEpics ([#269](https://github.com/arnaud-zg/ts-foursquare/issues/269)) ([29e86e4](https://github.com/arnaud-zg/ts-foursquare/commit/29e86e4))
+
+
+### 📦 Build System
+
+* **prettier:** remove duplicate prettier configuration, already handled by tsdx ([#271](https://github.com/arnaud-zg/ts-foursquare/issues/271)) ([25060ad](https://github.com/arnaud-zg/ts-foursquare/commit/25060ad))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.0.19 ([#268](https://github.com/arnaud-zg/ts-foursquare/issues/268)) ([9d6aa8b](https://github.com/arnaud-zg/ts-foursquare/commit/9d6aa8b))
+
 ### [0.3.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.5...v0.3.6) (2019-10-13)
 
 
