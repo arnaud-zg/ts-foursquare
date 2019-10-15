@@ -1,6 +1,6 @@
 export enum EApiDefaultParameters {
   ORIGIN = 'https://api.foursquare.com',
-  VERSION = '20191007',
+  VERSION = '20191016',
 }
 
 export enum EApiPathnames {
