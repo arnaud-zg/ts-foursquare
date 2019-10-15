@@ -20,7 +20,7 @@ import {
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../../src/services'
-import { NStore } from '../../types/store'
+import { NStore } from '../../types/store.d'
 
 describe('services/getObservableVenuesCategories', () => {
   it('should get an observable instance', () => {

@@ -1,5 +1,5 @@
 import { createReducer, getType } from 'typesafe-actions'
-import { NVenues } from '../../types/venuesState'
+import { NVenues } from '../../types/venuesState.d'
 import {
   getVenuesExploreAsync,
   getVenuesNextVenuesAsync,
