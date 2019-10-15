@@ -1,6 +1,6 @@
 import { getDefaultRequestParameters } from '../../src/services/fetch'
 import { StateObservable } from 'redux-observable'
-import { NStore } from '../../types/store'
+import { NStore } from '../../types/store.d'
 import { initialState } from '../../src/reducers'
 import { Subject } from 'rxjs'
 

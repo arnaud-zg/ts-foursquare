@@ -2,7 +2,7 @@ import { getType } from 'typesafe-actions'
 import { getVenuesSearchAsync } from '../../src/actions'
 import { initialState } from '../../src/reducers/app'
 import { moduleStateSelector, statusSelector } from '../../src/selectors/status'
-import { NStore } from '../../types/store'
+import { NStore } from '../../types/store.d'
 
 const state: NStore.IState = {
   ...initialState,
