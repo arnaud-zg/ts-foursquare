@@ -1,6 +1,4 @@
-import { NIcon } from './icon'
-
-export declare namespace NVenuesCategories {
+declare namespace NVenuesCategories {
   interface IResponse {
     categories: ICategory[]
   }

@@ -1,7 +1,6 @@
 import { StateObservable } from 'redux-observable'
 import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
-import { NStore } from '../../types/store.d'
 import { EApiDefaultParameters } from '../constants/api'
 import { credentialsSelector } from '../selectors/life'
 

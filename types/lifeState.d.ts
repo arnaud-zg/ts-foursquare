@@ -1,4 +1,4 @@
-export declare namespace NLife {
+declare namespace NLife {
   interface ICredentials {
     clientId: string
     clientSecret: string

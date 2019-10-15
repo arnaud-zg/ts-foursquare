@@ -1,4 +1,4 @@
-export declare namespace NStatus {
+declare namespace NStatus {
   interface IModuleState {
     hasError: boolean
     isCancelled: boolean
