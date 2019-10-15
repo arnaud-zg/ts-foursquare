@@ -1,4 +1,3 @@
-import { NIcon } from '../../types/icon.d'
 import { EIconSize } from '../constants/icon'
 
 interface IIconUrls {

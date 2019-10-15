@@ -1,4 +1,4 @@
-export declare namespace NIcon {
+declare namespace NIcon {
   interface IIcon {
     prefix: string
     suffix?: string

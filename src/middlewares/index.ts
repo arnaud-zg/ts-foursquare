@@ -1,5 +1,4 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable'
-import { NStore } from '../../types/store'
 import { TRootAction } from '../actions'
 import {
   getVenuesCategoriesEpic,

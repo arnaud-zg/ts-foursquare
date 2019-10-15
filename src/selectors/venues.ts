@@ -1,6 +1,3 @@
-import { NStore } from '../../types/store'
-import { NVenue } from '../../types/venue'
-
 export const venueCategoriesStateSelector = (
   state: NStore.IState,
   venueId: string
