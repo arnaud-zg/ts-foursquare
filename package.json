@@ -1,6 +1,6 @@
 {
   "name": "ts-foursquare",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "main": "dist/index.js",
   "module": "dist/ts-foursquare.esm.js",
   "typings": "dist/index.d.ts",
