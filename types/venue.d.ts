@@ -1,4 +1,6 @@
-declare namespace NVenue {
+import { NIcon } from './icon.d'
+
+export declare namespace NVenue {
   interface IResponse {
     venues: IVenue[]
   }
