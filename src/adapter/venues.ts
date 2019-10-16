@@ -1,11 +1,3 @@
-import { NLikes } from '../../types/likes.d'
-import { NMiniVenue } from '../../types/miniVenue.d'
-import { NNextVenues } from '../../types/nextVenues.d'
-import { NPayload } from '../../types/payload.d'
-import { NRecommendedPlaces } from '../../types/recommendedPlaces.d'
-import { NSimilarVenues } from '../../types/similarVenues.d'
-import { NVenue } from '../../types/venue.d'
-import { NVenuesCategories } from '../../types/venuesCategories.d'
 import { adaptPayload } from './payload'
 
 export const adaptGetVenuesCategories = (

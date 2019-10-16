@@ -1,4 +1,4 @@
-export declare namespace NLikes {
+declare namespace NLikes {
   interface IResponse {
     likes: ILikes
   }

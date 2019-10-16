@@ -11,7 +11,6 @@ import {
   venuesSelector,
   venuesSimilarSelector,
 } from '../../src/selectors/venues'
-import { NStore } from '../../types/store.d'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
