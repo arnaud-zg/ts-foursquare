@@ -12,7 +12,9 @@
     "dist"
   ],
   "keywords": [
-    "foursquare"
+    "foursquare",
+    "foursquare-api",
+    "typescript"
   ],
   "scripts": {
     "build": "tsdx build",
