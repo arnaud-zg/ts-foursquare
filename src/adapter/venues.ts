@@ -1,3 +1,13 @@
+import {
+  NLikes,
+  NMiniVenue,
+  NNextVenues,
+  NPayload,
+  NRecommendedPlaces,
+  NSimilarVenues,
+  NVenue,
+  NVenuesCategories,
+} from '../../types'
 import { adaptPayload } from './payload'
 
 export const adaptGetVenuesCategories = (

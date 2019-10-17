@@ -1,6 +1,7 @@
 import { StateObservable } from 'redux-observable'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
+import { NAction, NStore } from '../../types'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'

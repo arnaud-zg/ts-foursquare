@@ -1,5 +1,6 @@
 import { createReducer, getType } from 'typesafe-actions'
-import { TLifeAction, putCredentials } from '../actions/life'
+import { NLife } from '../../types'
+import { putCredentials, TLifeAction } from '../actions/life'
 
 export const initialState: NLife.IState = {
   status: false,

@@ -1,3 +1,5 @@
+import { NStore } from '../../types'
+
 export const lifeSelector = (state: NStore.IState) => state.life
 
 export const lifeStatusSelector = (state: NStore.IState) =>

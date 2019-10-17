@@ -1,4 +1,4 @@
-declare namespace NResolve {
+export declare namespace NResolve {
   interface ICredentialsPayload {
     clientId: string
     clientSecret: string

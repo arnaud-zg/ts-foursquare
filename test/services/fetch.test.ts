@@ -1,7 +1,8 @@
-import { getDefaultRequestParameters } from '../../src/services/fetch'
 import { StateObservable } from 'redux-observable'
-import { initialState } from '../../src/reducers'
 import { Subject } from 'rxjs'
+import { initialState } from '../../src/reducers'
+import { getDefaultRequestParameters } from '../../src/services/fetch'
+import { NStore } from '../../types'
 
 describe('utils/fetch/getDefaultRequestParameters', () => {
   it('should get default request parameters', () => {

@@ -1,4 +1,4 @@
-declare namespace NPayload {
+export declare namespace NPayload {
   interface IPayload<TResponse> {
     meta?: IMeta
     response?: TResponse

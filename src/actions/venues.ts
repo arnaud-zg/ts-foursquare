@@ -1,4 +1,12 @@
 import { ActionType, createAsyncAction } from 'typesafe-actions'
+import {
+  NLikes,
+  NMiniVenue,
+  NRecommendedPlaces,
+  NRequest,
+  NVenue,
+  NVenuesCategories,
+} from '../../types'
 
 export const getVenuesCategoriesAsync = createAsyncAction(
   'GET_VENUES_CATEGORIES_REQUEST',

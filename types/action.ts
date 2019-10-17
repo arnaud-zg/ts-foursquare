@@ -1,4 +1,4 @@
-declare namespace NAction {
+export declare namespace NAction {
   interface IActionMeta {
     [key: string]: any
   }
