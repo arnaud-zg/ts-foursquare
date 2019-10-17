@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.10-1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.10-0...v0.3.10-1) (2019-10-17)
+
+
+### 📦 Build System
+
+* **project:** remove types folder ([#284](https://github.com/arnaud-zg/ts-foursquare/issues/284)) ([d2d644f](https://github.com/arnaud-zg/ts-foursquare/commit/d2d644f))
+
+
+### 🔧 Chore
+
+* **project:** update project keywords ([#285](https://github.com/arnaud-zg/ts-foursquare/issues/285)) ([cef6c06](https://github.com/arnaud-zg/ts-foursquare/commit/cef6c06))
+
 ### [0.3.10-0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.9...v0.3.10-0) (2019-10-17)
 
 
