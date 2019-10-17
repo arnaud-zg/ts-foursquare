@@ -1,4 +1,6 @@
-declare namespace NMiniVenue {
+import { NVenue } from './venue'
+
+export declare namespace NMiniVenue {
   interface IResponse {
     minivenues: IMiniVenue[]
   }

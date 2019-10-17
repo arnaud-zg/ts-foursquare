@@ -1,4 +1,6 @@
-declare namespace NNextVenues {
+import { NVenue } from './venue'
+
+export declare namespace NNextVenues {
   interface IResponse {
     nextVenues: INextVenues
   }

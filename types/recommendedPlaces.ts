@@ -1,4 +1,6 @@
-declare namespace NRecommendedPlaces {
+import { NVenue } from './venue'
+
+export declare namespace NRecommendedPlaces {
   interface IResponse {
     warning?: IWarning
     suggestedRadius?: number

@@ -1,3 +1,5 @@
+import { NStore, NVenue } from '../../types'
+
 export const venueCategoriesStateSelector = (
   state: NStore.IState,
   venueId: string

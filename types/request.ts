@@ -1,4 +1,4 @@
-declare namespace NRequest {
+export declare namespace NRequest {
   interface IVenuesExplorePayload {
     alt?: number
     altAcc?: number

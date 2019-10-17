@@ -2,6 +2,7 @@ import { Epic } from 'redux-observable'
 import { of } from 'rxjs/internal/observable/of'
 import { catchError, filter, map, switchMap, takeUntil } from 'rxjs/operators'
 import { isActionOf } from 'typesafe-actions'
+import { NStore } from '../../types'
 import { TRootAction } from '../actions'
 import {
   getVenuesCategoriesAsync,
