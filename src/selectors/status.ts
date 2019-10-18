@@ -1,4 +1,5 @@
-import { NStore, NStatus } from '../../types'
+import { NStore } from '../../types/store.d'
+import { NStatus } from '../../types/statusState.d'
 
 export const statusSelector = (state: NStore.IState) => state.status
 

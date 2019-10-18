@@ -1,4 +1,4 @@
-import { NVenue } from './venue'
+import { NVenue } from './venue.d'
 
 export declare namespace NSimilarVenues {
   interface IResponse {

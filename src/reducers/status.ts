@@ -1,5 +1,5 @@
 import { createReducer, getType } from 'typesafe-actions'
-import { NStatus } from '../../types'
+import { NStatus } from '../../types/statusState.d'
 import {
   getVenuesExploreAsync,
   getVenuesSearchAsync,

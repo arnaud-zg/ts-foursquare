@@ -1,4 +1,4 @@
-import { NStore } from '../../types'
+import { NStore } from '../../types/store'
 
 export const lifeSelector = (state: NStore.IState) => state.life
 
