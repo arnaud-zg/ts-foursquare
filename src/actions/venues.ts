@@ -1,10 +1,12 @@
 import { ActionType, createAsyncAction } from 'typesafe-actions'
-import { NLikes } from '../../types/likes.d'
-import { NMiniVenue } from '../../types/miniVenue.d'
-import { NRecommendedPlaces } from '../../types/recommendedPlaces.d'
-import { NRequest } from '../../types/request.d'
-import { NVenue } from '../../types/venue.d'
-import { NVenuesCategories } from '../../types/venuesCategories.d'
+import {
+  NLikes,
+  NMiniVenue,
+  NRecommendedPlaces,
+  NRequest,
+  NVenue,
+  NVenuesCategories,
+} from '../../types'
 
 export const getVenuesCategoriesAsync = createAsyncAction(
   'GET_VENUES_CATEGORIES_REQUEST',
