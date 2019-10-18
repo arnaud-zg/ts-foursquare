@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.12](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.11...v0.3.12) (2019-10-18)
+
+
+### 📦 Build System
+
+* **project:** use stable version of tsdx ([#288](https://github.com/arnaud-zg/ts-foursquare/issues/288)) ([aea6c06](https://github.com/arnaud-zg/ts-foursquare/commit/aea6c06))
+* **script:** add clean tracking branches script ([#289](https://github.com/arnaud-zg/ts-foursquare/issues/289)) ([4de3f66](https://github.com/arnaud-zg/ts-foursquare/commit/4de3f66))
+
 ### [0.3.11](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.10...v0.3.11) (2019-10-18)
 
 
