@@ -9,7 +9,8 @@
     "url": "https://github.com/arnaud-zg/ts-foursquare.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "keywords": [
     "foursquare",
