@@ -1,5 +1,5 @@
 import { createAction, ActionType } from 'typesafe-actions'
-import { NResolve } from '../../types/resolve.d'
+import { NResolve } from '../../types'
 
 export const putCredentials = createAction(
   'PUT_CREDENTIALS',
