@@ -2,7 +2,6 @@
 
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
-  "StandaloneStore": [Function],
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
