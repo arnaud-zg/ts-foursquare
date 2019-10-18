@@ -1,5 +1,4 @@
 export * from './action.d'
-export * from './foursquare.d'
 export * from './icon.d'
 export * from './lifeState.d'
 export * from './likes.d'

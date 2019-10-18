@@ -2,6 +2,58 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.11](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.10...v0.3.11) (2019-10-18)
+
+
+### 📦 Build System
+
+* **project:** add types folder ([#284](https://github.com/arnaud-zg/ts-foursquare/issues/284)) ([#286](https://github.com/arnaud-zg/ts-foursquare/issues/286)) ([b49136d](https://github.com/arnaud-zg/ts-foursquare/commit/b49136d))
+
+### [0.3.10](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.10-1...v0.3.10) (2019-10-17)
+
+### [0.3.10-1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.10-0...v0.3.10-1) (2019-10-17)
+
+
+### 📦 Build System
+
+* **project:** remove types folder ([#284](https://github.com/arnaud-zg/ts-foursquare/issues/284)) ([d2d644f](https://github.com/arnaud-zg/ts-foursquare/commit/d2d644f))
+
+
+### 🔧 Chore
+
+* **project:** update project keywords ([#285](https://github.com/arnaud-zg/ts-foursquare/issues/285)) ([cef6c06](https://github.com/arnaud-zg/ts-foursquare/commit/cef6c06))
+
+### [0.3.10-0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.9...v0.3.10-0) (2019-10-17)
+
+
+### 📦 Build System
+
+* **package:** export index instead of folder ([#282](https://github.com/arnaud-zg/ts-foursquare/issues/282)) ([ebf5df1](https://github.com/arnaud-zg/ts-foursquare/commit/ebf5df1))
+* **project:** export typing file ([#283](https://github.com/arnaud-zg/ts-foursquare/issues/283)) ([51a9d02](https://github.com/arnaud-zg/ts-foursquare/commit/51a9d02))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency tsdx to v0.10.5 ([#280](https://github.com/arnaud-zg/ts-foursquare/issues/280)) ([f81f4b3](https://github.com/arnaud-zg/ts-foursquare/commit/f81f4b3))
+
+### [0.3.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.8...v0.3.9) (2019-10-16)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.11.1 ([#277](https://github.com/arnaud-zg/ts-foursquare/issues/277)) ([15cc8ed](https://github.com/arnaud-zg/ts-foursquare/commit/15cc8ed))
+
+### [0.3.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.7...v0.3.8) (2019-10-15)
+
+
+### 🔧 Chore
+
+* **config:** update api version parameter ([#275](https://github.com/arnaud-zg/ts-foursquare/issues/275)) ([84715a2](https://github.com/arnaud-zg/ts-foursquare/commit/84715a2))
+* **deps:** update dependency @types/node to v12.11.0 ([#273](https://github.com/arnaud-zg/ts-foursquare/issues/273)) ([3698383](https://github.com/arnaud-zg/ts-foursquare/commit/3698383))
+* **deps:** update dependency tsdx to v0.10.0 ([#272](https://github.com/arnaud-zg/ts-foursquare/issues/272)) ([629b74c](https://github.com/arnaud-zg/ts-foursquare/commit/629b74c))
+* **project:** remove useless file ([#276](https://github.com/arnaud-zg/ts-foursquare/issues/276)) ([773bed6](https://github.com/arnaud-zg/ts-foursquare/commit/773bed6))
+* **type:** import typing file with extension ([#274](https://github.com/arnaud-zg/ts-foursquare/issues/274)) ([35ba6ca](https://github.com/arnaud-zg/ts-foursquare/commit/35ba6ca))
+
 ### [0.3.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.6...v0.3.7) (2019-10-14)
 
 

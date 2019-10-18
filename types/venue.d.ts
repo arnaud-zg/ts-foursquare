@@ -1,4 +1,4 @@
-import { NIcon } from './icon.d'
+import { NIcon } from './icon'
 
 export declare namespace NVenue {
   interface IResponse {
