@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.13](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.12...v0.3.13) (2019-10-20)
+
+
+### 🔧 Chore
+
+* **project:** remove standalone store ([#290](https://github.com/arnaud-zg/ts-foursquare/issues/290)) ([de5f5b9](https://github.com/arnaud-zg/ts-foursquare/commit/de5f5b9))
+
 ### [0.3.12](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.11...v0.3.12) (2019-10-18)
 
 
