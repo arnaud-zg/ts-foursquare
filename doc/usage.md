@@ -14,6 +14,7 @@ Works in Node and with any browser that support javascript.
   - [Venues action](#venues-action)
     - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
+    - [getVenuesLikesAsync](#getVenuesLikesAsync)
     - [getVenuesSearchAsync](#getVenuesSearchAsync)
     - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
     - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
@@ -103,6 +104,24 @@ const onExplore = async () => {
 
   getVenuesExploreAsync.request({
     ll: '40.7099,-73.9622',
+  })
+}
+```
+
+#### getVenuesLikesAsync
+
+> Returns friends and a total count of users who have liked this venue.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/likes" target="_blank">https://developer.foursquare.com/docs/api/venues/likes</a></cite>
+
+`getVenuesLikesAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getVenuesLikesAsync.request({
+    venueId: '49b6e8d2f964a52016531fe3',
   })
 }
 ```
