@@ -80,7 +80,7 @@ const onInit = () => {
 
 ##### Redux context
 
-````js
+```js
 const onExplore = async () => {
   const { getVenuesExploreAsync } = this.props
 
@@ -88,7 +88,9 @@ const onExplore = async () => {
     ll: '40.7099,-73.9622',
   })
 }
-```#### getVenuesSearchAsync
+```
+
+#### getVenuesSearchAsync
 
 > Returns a list of venues near the current location, optionally matching a search term.
 >
@@ -110,7 +112,7 @@ const onSearch = () => {
     query: 'peter steakhouse',
   })
 }
-````
+```
 
 #### getVenuesSuggestCompletionAsync
 
