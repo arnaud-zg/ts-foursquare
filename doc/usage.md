@@ -57,9 +57,7 @@ Works in Node and with any browser that support javascript.
 ##### Redux context
 
 ```js
-const onInit = () => {
-  const { putCredentials } = this.props
-
+const onFetchData = () => {
   putCredentials({
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
@@ -78,9 +76,7 @@ const onInit = () => {
 ##### Redux context
 
 ```js
-;() => {
-  const { getVenuesCategoriesAsync } = this.props
-
+const onFetchData = () => {
   getVenuesCategoriesAsync.request()
 }
 ```
@@ -98,9 +94,7 @@ const onInit = () => {
 ##### Redux context
 
 ```js
-const onExplore = async () => {
-  const { getVenuesExploreAsync } = this.props
-
+const onFetchData = () => {
   getVenuesExploreAsync.request({
     ll: '40.7099,-73.9622',
   })
@@ -122,9 +116,7 @@ const onExplore = async () => {
 ##### Redux context
 
 ```js
-const onSearch = () => {
-  const { getVenuesSearchAsync } = this.props
-
+const onFetchData = () => {
   getVenuesSearchAsync.request({
     query: 'peter steakhouse',
   })
@@ -142,9 +134,7 @@ const onSearch = () => {
 ##### Redux context
 
 ```js
-const onSuggestCompletion = async () => {
-  const { getVenuesSuggestCompletionAsync } = this.props
-
+const onFetchData = () => {
   getVenuesSuggestCompletionAsync.request({
     ll: '40.7099,-73.9622',
     query: 'burger',
@@ -163,9 +153,7 @@ const onSuggestCompletion = async () => {
 ##### Redux context
 
 ```js
-const onSubmit = () => {
-  const { getVenuesTrendingAsync } = this.props
-
+const onFetchData = () => {
   getVenuesTrendingAsync.request({
     ll: '40.7099,-73.9622',
   })
