@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { epicMiddleware, rootEpic } from '../middlewares'
 import { appReducer } from './app'
 
-export { initialState } from './app'
+export { initialState, TState } from './app'
 
 const composeEnhancers = composeWithDevTools({})
 
