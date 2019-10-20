@@ -12,6 +12,7 @@ Works in Node and with any browser that support javascript.
   - [Life action](#life-action)
     - [putCredentials](#putCredentials)
   - [Venues action](#venues-action)
+    - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
     - [getVenuesSearchAsync](#getVenuesSearchAsync)
     - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
@@ -67,6 +68,22 @@ const onInit = () => {
 ```
 
 ### Venues action
+
+#### getVenuesCategoriesAsync
+
+> Returns a hierarchical list of categories applied to venues. This list is also available on our categories page.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/categories" target="_blank">https://developer.foursquare.com/docs/api/venues/categories</a></cite>
+
+##### Redux context
+
+```js
+;() => {
+  const { getVenuesCategoriesAsync } = this.props
+
+  getVenuesCategoriesAsync.request()
+}
+```
 
 #### getVenuesExploreAsync
 
