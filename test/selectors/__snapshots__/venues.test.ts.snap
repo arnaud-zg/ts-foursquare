@@ -51,7 +51,7 @@ Object {
 }
 `;
 
-exports[`selectors/venues should get a list of recommended places 1`] = `Array []`;
+exports[`selectors/venues should get a list of recommended places 1`] = `Object {}`;
 
 exports[`selectors/venues should get a list of recommended places 2`] = `
 Array [
@@ -264,7 +264,7 @@ Object {
   "categories": Object {},
   "entities": Object {},
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }

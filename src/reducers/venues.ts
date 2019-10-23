@@ -14,7 +14,7 @@ export const initialState: NVenues.IState = {
   categories: {},
   entities: {},
   nextVenues: {},
-  recommendedPlaces: [],
+  recommendedPlaces: {},
   similarVenues: {},
   trendingEntities: {},
 }
@@ -89,10 +89,16 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
   .handleAction(
     getType(getVenuesExploreAsync.success),
     (state, action): NVenues.IState => {
-      const recommendedPlaces = action.payload
+      const recommendedPlaces = action.payload.reduce(
+        (acc, cur) => ({ ...acc, [cur.venue.id]: cur }),
+        {}
+      )
+
       return {
         ...state,
-        recommendedPlaces,
+        recommendedPlaces: {
+          ...recommendedPlaces,
+        },
       }
     }
   )

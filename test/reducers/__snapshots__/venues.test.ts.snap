@@ -1162,7 +1162,7 @@ Object {
   },
   "entities": Object {},
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }
@@ -1379,7 +1379,7 @@ Object {
       "name": "Baby's All Right",
     },
   },
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }
@@ -1437,7 +1437,7 @@ Object {
     },
   },
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }
@@ -1448,7 +1448,7 @@ Object {
   "categories": Object {},
   "entities": Object {},
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {
     "44d9e8dbf964a5208a361fe3": Object {
       "categories": Array [
@@ -1681,7 +1681,7 @@ Object {
   "categories": Object {},
   "entities": Object {},
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {
     "3fd66200f964a5209beb1ee3": Object {
@@ -1739,8 +1739,8 @@ Object {
   "categories": Object {},
   "entities": Object {},
   "nextVenues": Object {},
-  "recommendedPlaces": Array [
-    Object {
+  "recommendedPlaces": Object {
+    "49b6e8d2f964a52016531fe3": Object {
       "reasons": Object {
         "count": 0,
         "items": Array [
@@ -1796,7 +1796,7 @@ Object {
         },
       },
     },
-  ],
+  },
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }
