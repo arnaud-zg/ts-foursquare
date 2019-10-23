@@ -264,6 +264,7 @@ Object {
   "categories": Object {},
   "entities": Object {},
   "likesEntities": Object {},
+  "miniVenues": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -323,6 +324,7 @@ Object {
     },
   },
   "likesEntities": Object {},
+  "miniVenues": Object {},
   "nextVenues": Object {
     "4b410414f964a5206dbf25e3": Object {
       "categories": Array [
