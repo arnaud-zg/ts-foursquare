@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.16](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.15...v0.3.16) (2019-10-23)
+
+
+### 🐛 Bug Fixes
+
+* **recommended-places:** update recommended places schema in state ([#310](https://github.com/arnaud-zg/ts-foursquare/issues/310)) ([85f4b22](https://github.com/arnaud-zg/ts-foursquare/commit/85f4b22))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.11.5 ([#306](https://github.com/arnaud-zg/ts-foursquare/issues/306)) ([5cee589](https://github.com/arnaud-zg/ts-foursquare/commit/5cee589))
+
+
+### 🖋 Features
+
+* **categories:** add venues categories in state ([#307](https://github.com/arnaud-zg/ts-foursquare/issues/307)) ([767d571](https://github.com/arnaud-zg/ts-foursquare/commit/767d571))
+* **likes:** add venues likes in state ([#308](https://github.com/arnaud-zg/ts-foursquare/issues/308)) ([917574a](https://github.com/arnaud-zg/ts-foursquare/commit/917574a))
+* **suggest-completion:** add mini venues in state ([#309](https://github.com/arnaud-zg/ts-foursquare/issues/309)) ([27772ef](https://github.com/arnaud-zg/ts-foursquare/commit/27772ef))
+
 ### [0.3.15](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.14...v0.3.15) (2019-10-22)
 
 
