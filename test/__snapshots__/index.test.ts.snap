@@ -67,6 +67,7 @@ Object {
     "venues": Object {
       "categories": Object {},
       "entities": Object {},
+      "likesEntities": Object {},
       "nextVenues": Object {},
       "recommendedPlaces": Object {},
       "similarVenues": Object {},

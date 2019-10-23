@@ -1,3 +1,4 @@
+import { NLikes } from './likes'
 import { NRecommendedPlaces } from './recommendedPlaces'
 import { NVenue } from './venue'
 import { NVenuesCategories } from './venuesCategories'
@@ -6,6 +7,7 @@ export declare namespace NVenues {
   interface IState {
     categories: { [key: string]: NVenuesCategories.ICategory }
     entities: { [key: string]: NVenue.IVenue }
+    likesEntities: { [key: string]: NLikes.IItem }
     nextVenues: { [key: string]: NVenue.IVenue }
     recommendedPlaces: { [key: string]: NRecommendedPlaces.IGroupItem }
     similarVenues: { [key: string]: NVenue.IVenue }
