@@ -1,6 +1,7 @@
 import { createReducer, getType } from 'typesafe-actions'
 import { NVenues } from '../../types'
 import {
+  getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
@@ -10,7 +11,7 @@ import {
 } from '../actions/venues'
 
 export const initialState: NVenues.IState = {
-  categories: [],
+  categories: {},
   entities: {},
   nextVenues: {},
   recommendedPlaces: [],
@@ -21,6 +22,22 @@ export const initialState: NVenues.IState = {
 export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
   initialState
 )
+  .handleAction(
+    getType(getVenuesCategoriesAsync.success),
+    (state, action): NVenues.IState => {
+      const categories = action.payload.reduce(
+        (acc, cur) => ({ ...acc, [cur.id]: cur }),
+        {}
+      )
+
+      return {
+        ...state,
+        categories: {
+          ...categories,
+        },
+      }
+    }
+  )
   .handleAction(
     getType(getVenuesNextVenuesAsync.success),
     (state, action): NVenues.IState => {

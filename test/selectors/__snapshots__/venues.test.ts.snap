@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`selectors/venues should get a list a of categories 1`] = `Array []`;
+exports[`selectors/venues should get a list a of categories 1`] = `Object {}`;
 
-exports[`selectors/venues should get a list a of categories 2`] = `Array []`;
+exports[`selectors/venues should get a list a of categories 2`] = `Object {}`;
 
 exports[`selectors/venues should get a list of next venues 1`] = `Object {}`;
 
@@ -261,7 +261,7 @@ Object {
 
 exports[`selectors/venues should get venues 1`] = `
 Object {
-  "categories": Array [],
+  "categories": Object {},
   "entities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
@@ -272,7 +272,7 @@ Object {
 
 exports[`selectors/venues should get venues 2`] = `
 Object {
-  "categories": Array [],
+  "categories": Object {},
   "entities": Object {
     "3fd66200f964a5209beb1ee3": Object {
       "categories": Array [
