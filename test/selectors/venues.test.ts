@@ -31,7 +31,10 @@ const state: NStore.IState = {
       [payloadGetVenuesNextVenues.response.nextVenues.items[0].id]:
         payloadGetVenuesNextVenues.response.nextVenues.items[0],
     },
-    recommendedPlaces: adaptGetVenuesExplore(payloadGetVenuesExplore),
+    recommendedPlaces: {
+      [adaptGetVenuesExplore(payloadGetVenuesExplore)[0].venue
+        .id]: adaptGetVenuesExplore(payloadGetVenuesExplore)[0],
+    },
     similarVenues: {
       [payloadGetVenuesSimilar.response.similarVenues.items[0].id]:
         payloadGetVenuesSimilar.response.similarVenues.items[0],

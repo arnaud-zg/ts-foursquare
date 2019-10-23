@@ -11,7 +11,7 @@ export declare namespace NVenues {
     likesEntities: { [key: string]: NLikes.IItem }
     miniVenues: { [key: string]: NMiniVenue.IMiniVenue }
     nextVenues: { [key: string]: NVenue.IVenue }
-    recommendedPlaces: NRecommendedPlaces.IGroupItem[]
+    recommendedPlaces: { [key: string]: NRecommendedPlaces.IGroupItem }
     similarVenues: { [key: string]: NVenue.IVenue }
     trendingEntities: { [key: string]: NVenue.IVenue }
   }

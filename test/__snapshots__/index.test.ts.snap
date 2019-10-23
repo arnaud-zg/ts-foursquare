@@ -70,7 +70,7 @@ Object {
       "likesEntities": Object {},
       "miniVenues": Object {},
       "nextVenues": Object {},
-      "recommendedPlaces": Array [],
+      "recommendedPlaces": Object {},
       "similarVenues": Object {},
       "trendingEntities": Object {},
     },
