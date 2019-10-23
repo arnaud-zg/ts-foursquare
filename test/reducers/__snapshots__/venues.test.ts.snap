@@ -1922,7 +1922,7 @@ Object {
     },
   },
   "nextVenues": Object {},
-  "recommendedPlaces": Array [],
+  "recommendedPlaces": Object {},
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }
