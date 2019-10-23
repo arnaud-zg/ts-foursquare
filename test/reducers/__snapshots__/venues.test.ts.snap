@@ -1161,6 +1161,7 @@ Object {
     },
   },
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1172,6 +1173,7 @@ exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action:
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {
     "474d3e5df964a520a24c1fe3": Object {
       "categories": Array [
@@ -1436,6 +1438,7 @@ Object {
       },
     },
   },
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1447,6 +1450,7 @@ exports[`reducers/venues/getVenuesSimilarAsync should get state after action: {"
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {
@@ -1680,6 +1684,7 @@ exports[`reducers/venues/getVenuesTrendingAsync should get state after action: {
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1738,6 +1743,7 @@ exports[`reducers/venues/payloadGetVenuesExplore should get state after action: 
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [
     Object {
