@@ -263,6 +263,7 @@ exports[`selectors/venues should get venues 1`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
+  "miniVenues": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -321,6 +322,7 @@ Object {
       },
     },
   },
+  "miniVenues": Object {},
   "nextVenues": Object {
     "4b410414f964a5206dbf25e3": Object {
       "categories": Array [
