@@ -4,7 +4,7 @@ import { NVenuesCategories } from './venuesCategories'
 
 export declare namespace NVenues {
   interface IState {
-    categories: NVenuesCategories.ICategory[]
+    categories: { [key: string]: NVenuesCategories.ICategory }
     entities: { [key: string]: NVenue.IVenue }
     nextVenues: { [key: string]: NVenue.IVenue }
     recommendedPlaces: NRecommendedPlaces.IGroupItem[]

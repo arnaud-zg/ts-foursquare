@@ -65,7 +65,7 @@ Object {
     },
     "status": Object {},
     "venues": Object {
-      "categories": Array [],
+      "categories": Object {},
       "entities": Object {},
       "nextVenues": Object {},
       "recommendedPlaces": Array [],
