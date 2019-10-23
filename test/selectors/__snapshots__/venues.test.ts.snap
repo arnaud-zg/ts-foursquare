@@ -54,8 +54,8 @@ Object {
 exports[`selectors/venues should get a list of recommended places 1`] = `Object {}`;
 
 exports[`selectors/venues should get a list of recommended places 2`] = `
-Array [
-  Object {
+Object {
+  "49b6e8d2f964a52016531fe3": Object {
     "reasons": Object {
       "count": 0,
       "items": Array [
@@ -111,7 +111,7 @@ Array [
       },
     },
   },
-]
+}
 `;
 
 exports[`selectors/venues should get a list of similar venues 1`] = `Object {}`;
@@ -367,8 +367,8 @@ Object {
       "name": "Brooklyn Industries",
     },
   },
-  "recommendedPlaces": Array [
-    Object {
+  "recommendedPlaces": Object {
+    "49b6e8d2f964a52016531fe3": Object {
       "reasons": Object {
         "count": 0,
         "items": Array [
@@ -424,7 +424,7 @@ Object {
         },
       },
     },
-  ],
+  },
   "similarVenues": Object {
     "4c5ef77bfff99c74eda954d3": Object {
       "categories": Array [
