@@ -3,6 +3,7 @@ import { NVenues } from '../../types'
 import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
+  getVenuesLikesAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -14,6 +15,7 @@ import {
 export const initialState: NVenues.IState = {
   categories: {},
   entities: {},
+  likesEntities: {},
   miniVenues: {},
   nextVenues: {},
   recommendedPlaces: [],
@@ -98,7 +100,19 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
       }
     }
   )
+  .handleAction(getType(getVenuesLikesAsync.success), (state, action) => {
+    const likesEntities = action.payload.items.reduce(
+      (acc, cur) => ({ ...acc, [cur.id]: cur }),
+      {}
+    )
 
+    return {
+      ...state,
+      likesEntities: {
+        ...likesEntities,
+      },
+    }
+  })
   .handleAction(
     getType(getVenuesSuggestCompletionAsync.success),
     (state, action): NVenues.IState => {
@@ -115,7 +129,6 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
       }
     }
   )
-
   .handleAction(
     getType(getVenuesTrendingAsync.success),
     (state, action): NVenues.IState => {
