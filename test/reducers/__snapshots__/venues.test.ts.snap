@@ -1161,6 +1161,7 @@ Object {
     },
   },
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1172,6 +1173,7 @@ exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action:
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {
     "474d3e5df964a520a24c1fe3": Object {
       "categories": Array [
@@ -1436,6 +1438,7 @@ Object {
       },
     },
   },
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1447,6 +1450,7 @@ exports[`reducers/venues/getVenuesSimilarAsync should get state after action: {"
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {
@@ -1680,6 +1684,7 @@ exports[`reducers/venues/getVenuesTrendingAsync should get state after action: {
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [],
   "similarVenues": Object {},
@@ -1738,6 +1743,7 @@ exports[`reducers/venues/payloadGetVenuesExplore should get state after action: 
 Object {
   "categories": Object {},
   "entities": Object {},
+  "likesEntities": Object {},
   "nextVenues": Object {},
   "recommendedPlaces": Array [
     Object {
@@ -1797,6 +1803,49 @@ Object {
       },
     },
   ],
+  "similarVenues": Object {},
+  "trendingEntities": Object {},
+}
+`;
+
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: {"type":"GET_VENUES_LIKES_SUCCESS","payload":{"count":24,"summary":"24 Likes","items":[{"id":"66019143","firstName":"Joe","lastName":"Benz","gender":"male","photo":{"prefix":"https://fastly.4sqi.net/img/user/","suffix":"/66019143_U7cpUhMp_MBPhsA_er-CfMmMiFXj2KsurXDZxMKR9KSiqf8vDKNtm8CuETX01F_RUzfyzjpa6.jpg"}},{"id":"275151","firstName":"Tyler","lastName":"Elliott","gender":"male","photo":{"prefix":"https://fastly.4sqi.net/img/user/","suffix":"/275151-4G0WJJPRVXOCJBAS.jpg"}},{"id":"29109434","firstName":"Miraculous","lastName":"Assembly","gender":"none","photo":{"prefix":"https://fastly.4sqi.net/img/user/","suffix":"/29109434_EKGvTLjo_d3wFukA0xdHXaFwxCMmxzb3BoI_6W1JQVeXLs3rgbsD3tGOPhAZoY8-wnUghn_LP"}}]}} with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LIKES_SUCCESS"} 1`] = `
+Object {
+  "categories": Object {},
+  "entities": Object {},
+  "likesEntities": Object {
+    "275151": Object {
+      "firstName": "Tyler",
+      "gender": "male",
+      "id": "275151",
+      "lastName": "Elliott",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/275151-4G0WJJPRVXOCJBAS.jpg",
+      },
+    },
+    "29109434": Object {
+      "firstName": "Miraculous",
+      "gender": "none",
+      "id": "29109434",
+      "lastName": "Assembly",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/29109434_EKGvTLjo_d3wFukA0xdHXaFwxCMmxzb3BoI_6W1JQVeXLs3rgbsD3tGOPhAZoY8-wnUghn_LP",
+      },
+    },
+    "66019143": Object {
+      "firstName": "Joe",
+      "gender": "male",
+      "id": "66019143",
+      "lastName": "Benz",
+      "photo": Object {
+        "prefix": "https://fastly.4sqi.net/img/user/",
+        "suffix": "/66019143_U7cpUhMp_MBPhsA_er-CfMmMiFXj2KsurXDZxMKR9KSiqf8vDKNtm8CuETX01F_RUzfyzjpa6.jpg",
+      },
+    },
+  },
+  "nextVenues": Object {},
+  "recommendedPlaces": Array [],
   "similarVenues": Object {},
   "trendingEntities": Object {},
 }

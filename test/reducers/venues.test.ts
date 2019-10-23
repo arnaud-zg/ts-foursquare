@@ -1,6 +1,7 @@
 import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
+  getVenuesLikesAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -9,6 +10,7 @@ import {
 import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
+  adaptGetVenuesLikes,
   adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
@@ -17,6 +19,7 @@ import {
 import { initialState, venuesReducer } from '../../src/reducers/venues'
 import { payload as payloadGetVenuesCategories } from '../epics/__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
+import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'
 import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
@@ -77,6 +80,19 @@ describe('reducers/venues/getVenuesSimilarAsync', () => {
 describe('reducers/venues/payloadGetVenuesExplore', () => {
   const action = getVenuesExploreAsync.success(
     adaptGetVenuesExplore(payloadGetVenuesExplore)
+  )
+
+  test.each`
+    scenario                                                      | action
+    ${`should get state after action: ${JSON.stringify(action)}`} | ${action}
+  `('$scenario with action: $action', ({ action }) => {
+    expect(venuesReducer(initialState, action)).toMatchSnapshot()
+  })
+})
+
+describe('reducers/venues/payloadGetVenuesLikes', () => {
+  const action = getVenuesLikesAsync.success(
+    adaptGetVenuesLikes(payloadGetVenuesLikes)
   )
 
   test.each`
