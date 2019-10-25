@@ -99,18 +99,6 @@ describe('services/getObservableVenuesSimilar', () => {
   })
 })
 
-describe('services/getObservableVenuesTrending', () => {
-  it('should get an observable instance', () => {
-    const action = getVenuesTrendingAsync.request({ ll: '40.7099,-73.9622' })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
-
-    expect(getObservableVenuesTrending({ action, state$ })).toMatchSnapshot()
-  })
-})
-
 describe('services/getObservableVenuesSuggestCompletion', () => {
   it('should get an observable instance', () => {
     const action = getVenuesSuggestCompletionAsync.request({
@@ -125,5 +113,17 @@ describe('services/getObservableVenuesSuggestCompletion', () => {
     expect(
       getObservableVenuesSuggestCompletion({ action, state$ })
     ).toMatchSnapshot()
+  })
+})
+
+describe('services/getObservableVenuesTrending', () => {
+  it('should get an observable instance', () => {
+    const action = getVenuesTrendingAsync.request({ ll: '40.7099,-73.9622' })
+    const state$: StateObservable<NStore.IState> = new StateObservable(
+      new Subject(),
+      initialState
+    )
+
+    expect(getObservableVenuesTrending({ action, state$ })).toMatchSnapshot()
   })
 })

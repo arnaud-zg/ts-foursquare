@@ -11,7 +11,7 @@ Object {
 }
 `;
 
-exports[`utils/test/testEpic should get search for venues by location with state: {"life": [Object], "status": [Object], "venues": [Object]} 1`] = `
+exports[`utils/test/testEpic should get search for venues by location with state: {"life": [Object], "request": [Object], "status": [Object], "venues": [Object]} 1`] = `
 Array [
   Object {
     "meta": 0,

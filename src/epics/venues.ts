@@ -145,25 +145,6 @@ export const getVenuesSimilarEpic: Epic<
     )
   )
 
-export const getVenuesTrendingEpic: Epic<
-  TRootAction,
-  TRootAction,
-  NStore.IState
-> = (action$, state$) =>
-  action$.pipe(
-    filter(isActionOf(getVenuesTrendingAsync.request)),
-    switchMap(action =>
-      getObservableVenuesTrending({ action, state$ }).pipe(
-        map(adaptGetVenuesTrending),
-        map(getVenuesTrendingAsync.success),
-        catchError(err => of(getVenuesTrendingAsync.failure(err))),
-        takeUntil(
-          action$.pipe(filter(isActionOf(getVenuesTrendingAsync.cancel)))
-        )
-      )
-    )
-  )
-
 export const getVenuesSuggestCompletionEpic: Epic<
   TRootAction,
   TRootAction,
@@ -180,6 +161,25 @@ export const getVenuesSuggestCompletionEpic: Epic<
           action$.pipe(
             filter(isActionOf(getVenuesSuggestCompletionAsync.cancel))
           )
+        )
+      )
+    )
+  )
+
+export const getVenuesTrendingEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesTrendingAsync.request)),
+    switchMap(action =>
+      getObservableVenuesTrending({ action, state$ }).pipe(
+        map(adaptGetVenuesTrending),
+        map(getVenuesTrendingAsync.success),
+        catchError(err => of(getVenuesTrendingAsync.failure(err))),
+        takeUntil(
+          action$.pipe(filter(isActionOf(getVenuesTrendingAsync.cancel)))
         )
       )
     )

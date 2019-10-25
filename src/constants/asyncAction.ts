@@ -3,8 +3,10 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
+  getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../actions'
 
@@ -28,6 +30,11 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesLikesAsync.success)]: 'getVenuesLikesAsync',
   [getType(getVenuesLikesAsync.failure)]: 'getVenuesLikesAsync',
   [getType(getVenuesLikesAsync.cancel)]: 'getVenuesLikesAsync',
+  // getVenuesNextVenuesAsync
+  [getType(getVenuesNextVenuesAsync.request)]: 'getVenuesNextVenuesAsync',
+  [getType(getVenuesNextVenuesAsync.success)]: 'getVenuesNextVenuesAsync',
+  [getType(getVenuesNextVenuesAsync.failure)]: 'getVenuesNextVenuesAsync',
+  [getType(getVenuesNextVenuesAsync.cancel)]: 'getVenuesNextVenuesAsync',
   // getVenuesSearchAsync
   [getType(getVenuesSearchAsync.request)]: 'getVenuesSearchAsync',
   [getType(getVenuesSearchAsync.success)]: 'getVenuesSearchAsync',
@@ -38,6 +45,19 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesSimilarAsync.success)]: 'getVenuesSimilarAsync',
   [getType(getVenuesSimilarAsync.failure)]: 'getVenuesSimilarAsync',
   [getType(getVenuesSimilarAsync.cancel)]: 'getVenuesSimilarAsync',
+  // getVenuesSuggestCompletionAsync
+  [getType(
+    getVenuesSuggestCompletionAsync.request
+  )]: 'getVenuesSuggestCompletionAsync',
+  [getType(
+    getVenuesSuggestCompletionAsync.success
+  )]: 'getVenuesSuggestCompletionAsync',
+  [getType(
+    getVenuesSuggestCompletionAsync.failure
+  )]: 'getVenuesSuggestCompletionAsync',
+  [getType(
+    getVenuesSuggestCompletionAsync.cancel
+  )]: 'getVenuesSuggestCompletionAsync',
   // getVenuesTrendingAsync
   [getType(getVenuesTrendingAsync.request)]: 'getVenuesTrendingAsync',
   [getType(getVenuesTrendingAsync.success)]: 'getVenuesTrendingAsync',
