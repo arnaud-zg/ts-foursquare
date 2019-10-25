@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selectors/venues should get request action 1`] = `
+Object {
+  "entityIds": Array [
+    "3fd66200f964a5209beb1ee3",
+  ],
+}
+`;
+
+exports[`selectors/venues should get request action's cancel reason 1`] = `undefined`;
+
+exports[`selectors/venues should get request action's cancel reason 2`] = `
+Object {
+  "cancelReason": "An user cancelled this action",
+  "entityIds": Array [
+    "3fd66200f964a5209beb1ee3",
+  ],
+}
+`;
+
+exports[`selectors/venues should get request action's entityIds 1`] = `Array []`;
+
+exports[`selectors/venues should get request action's entityIds 2`] = `
+Object {
+  "entityIds": Array [
+    "3fd66200f964a5209beb1ee3",
+  ],
+}
+`;
+
+exports[`selectors/venues should get request action's error 1`] = `undefined`;
+
+exports[`selectors/venues should get request action's error 2`] = `
+Object {
+  "entityIds": Array [
+    "3fd66200f964a5209beb1ee3",
+  ],
+  "error": [Error: An error occurred],
+}
+`;
+
+exports[`selectors/venues should get request state 1`] = `
+Object {
+  "getVenuesSearchAsync": Object {
+    "entityIds": Array [
+      "3fd66200f964a5209beb1ee3",
+    ],
+  },
+}
+`;

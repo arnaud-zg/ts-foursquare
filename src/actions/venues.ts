@@ -55,13 +55,6 @@ export const getVenuesSimilarAsync = createAsyncAction(
   'GET_VENUES_SIMILAR_CANCEL'
 )<NRequest.IVenuesSimilarPayload, NVenue.IVenue[], Error, string>()
 
-export const getVenuesTrendingAsync = createAsyncAction(
-  'GET_VENUES_TRENDING_REQUEST',
-  'GET_VENUES_TRENDING_SUCCESS',
-  'GET_VENUES_TRENDING_FAILURE',
-  'GET_VENUES_TRENDING_CANCEL'
-)<NRequest.TVenuesTrendingPayload, NVenue.IVenue[], Error, string>()
-
 export const getVenuesSuggestCompletionAsync = createAsyncAction(
   'GET_VENUES_SUGGEST_COMPLETION_REQUEST',
   'GET_VENUES_SUGGEST_COMPLETION_SUCCESS',
@@ -73,6 +66,13 @@ export const getVenuesSuggestCompletionAsync = createAsyncAction(
   Error,
   string
 >()
+
+export const getVenuesTrendingAsync = createAsyncAction(
+  'GET_VENUES_TRENDING_REQUEST',
+  'GET_VENUES_TRENDING_SUCCESS',
+  'GET_VENUES_TRENDING_FAILURE',
+  'GET_VENUES_TRENDING_CANCEL'
+)<NRequest.TVenuesTrendingPayload, NVenue.IVenue[], Error, string>()
 
 export const venuesActions = {
   getVenuesCategoriesAsync,
