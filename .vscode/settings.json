@@ -7,7 +7,7 @@
   "editor.rulers": [80, 120],
   "editor.tabSize": 2,
   "files.trimTrailingWhitespace": true,
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 0,
   "workbench.activityBar.visible": true,
   "workbench.sideBar.location": "right"
 }
