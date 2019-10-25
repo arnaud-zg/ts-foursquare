@@ -10,14 +10,7 @@ Object {
 
 exports[`selectors/venues should get request action's cancel reason 1`] = `undefined`;
 
-exports[`selectors/venues should get request action's cancel reason 2`] = `
-Object {
-  "cancelReason": "An user cancelled this action",
-  "entityIds": Array [
-    "3fd66200f964a5209beb1ee3",
-  ],
-}
-`;
+exports[`selectors/venues should get request action's cancel reason 2`] = `"An user cancelled this action"`;
 
 exports[`selectors/venues should get request action's entityIds 1`] = `Array []`;
 
@@ -31,14 +24,7 @@ Object {
 
 exports[`selectors/venues should get request action's error 1`] = `undefined`;
 
-exports[`selectors/venues should get request action's error 2`] = `
-Object {
-  "entityIds": Array [
-    "3fd66200f964a5209beb1ee3",
-  ],
-  "error": [Error: An error occurred],
-}
-`;
+exports[`selectors/venues should get request action's error 2`] = `[Error: An error occurred]`;
 
 exports[`selectors/venues should get request state 1`] = `
 Object {

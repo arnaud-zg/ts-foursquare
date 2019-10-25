@@ -54,7 +54,7 @@ describe('selectors/venues', () => {
       )
     ).toMatchSnapshot()
     expect(
-      requestEntityIdsSelector(
+      requestErrorSelector(
         {
           ...state,
           request: {
@@ -79,7 +79,7 @@ describe('selectors/venues', () => {
       )
     ).toMatchSnapshot()
     expect(
-      requestEntityIdsSelector(
+      requestCancelReasonSelector(
         {
           ...state,
           request: {
