@@ -123,6 +123,10 @@ export declare namespace NRequest {
     venueId: string
   }
 
+  interface IVenuesListedPayload {
+    venueId: string
+  }
+
   interface IVenuesNextVenuesPayload {
     venueId: string
   }
