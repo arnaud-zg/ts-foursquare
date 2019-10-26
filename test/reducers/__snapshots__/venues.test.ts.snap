@@ -1228,7 +1228,14 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 1`] = `Object {}`;
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 1`] = `
+Object {
+  "getVenuesListedAsync": Object {
+    "cancelReason": "An user cancelled this action",
+    "entityIds": Array [],
+  },
+}
+`;
 
 exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 2`] = `
 Object {
@@ -1244,7 +1251,14 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 1`] = `Object {}`;
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 1`] = `
+Object {
+  "getVenuesListedAsync": Object {
+    "entityIds": Array [],
+    "error": [Error: An error occurred],
+  },
+}
+`;
 
 exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 2`] = `
 Object {
@@ -1260,7 +1274,15 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 1`] = `Object {}`;
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 1`] = `
+Object {
+  "getVenuesListedAsync": Object {
+    "entityIds": Array [
+      "others-Lists from other people",
+    ],
+  },
+}
+`;
 
 exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 2`] = `
 Object {
