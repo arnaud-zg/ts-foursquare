@@ -6,6 +6,7 @@ import {
   NRecommendedPlaces,
   NSimilarVenues,
   NVenue,
+  NVenueListed,
   NVenuesCategories,
 } from '../../types'
 import { adaptPayload } from './payload'
@@ -45,6 +46,19 @@ export const adaptGetVenuesLikes = (
         count: 0,
         items: [],
         summary: '0 Likes',
+      }
+}
+
+export const adaptGetVenuesListed = (
+  payload: NPayload.IPayload<NVenueListed.IResponse>
+): NVenueListed.ILists => {
+  const response = adaptPayload<NVenueListed.IResponse>(payload)
+
+  return response && response.lists
+    ? response.lists
+    : {
+        count: 0,
+        groups: [],
       }
 }
 

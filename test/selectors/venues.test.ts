@@ -6,13 +6,17 @@ import {
   venuesCategoriesSelector,
   venueSelector,
   venuesEntitiesSelector,
+  venuesListedGroupSelector,
+  venuesListedSelector,
   venuesNextVenuesSelector,
   venuesRecommendedPlacesSelector,
   venuesSelector,
   venuesSimilarSelector,
 } from '../../src/selectors/venues'
+import { getVenuesListedGroupKey } from '../../src/utils/venue'
 import { NStore } from '../../types'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
+import { payload as payloadGetVenuesListed } from '../epics/__mocks__/getVenuesListedAsync.resolve'
 import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
@@ -40,6 +44,10 @@ const state: NStore.IState = {
         payloadGetVenuesSimilar.response.similarVenues.items[0],
     },
     trendingEntities: {},
+    venuesListed: {
+      [`${payloadGetVenuesListed.response.lists.groups[0].type}-${payloadGetVenuesListed.response.lists.groups[0].name}`]: payloadGetVenuesListed
+        .response.lists.groups[0],
+    },
   },
 }
 
@@ -72,6 +80,26 @@ describe('selectors/venues', () => {
     expect(venuesEntitiesSelector({ ...initialState })).toMatchSnapshot()
     expect(Object.keys(venuesEntitiesSelector(state)).length).toEqual(1)
     expect(venuesEntitiesSelector(state)).toMatchSnapshot()
+  })
+
+  it('should venues entities property', () => {
+    const groupKey = getVenuesListedGroupKey(
+      payloadGetVenuesListed.response.lists.groups[0]
+    )
+
+    expect(
+      venuesListedGroupSelector({ ...initialState }, groupKey)
+    ).toMatchSnapshot()
+    expect(
+      Object.keys(venuesListedGroupSelector(state, groupKey)).length
+    ).toEqual(4)
+    expect(venuesListedGroupSelector(state, groupKey)).toMatchSnapshot()
+  })
+
+  it('should venues entities property', () => {
+    expect(venuesListedSelector({ ...initialState })).toMatchSnapshot()
+    expect(Object.keys(venuesListedSelector(state)).length).toEqual(1)
+    expect(venuesListedSelector(state)).toMatchSnapshot()
   })
 
   it('should get a list of recommended places', () => {

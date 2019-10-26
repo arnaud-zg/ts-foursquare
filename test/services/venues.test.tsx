@@ -3,6 +3,7 @@ import { Subject } from 'rxjs/internal/Subject'
 import {
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -14,6 +15,7 @@ import {
   getObservableVenuesCategories,
   getObservableVenuesExplore,
   getObservableVenuesLikes,
+  getObservableVenuesListed,
   getObservableVenuesNextVenues,
   getObservableVenuesSearch,
   getObservableVenuesSimilar,
@@ -56,6 +58,20 @@ describe('services/getObservableVenuesLikes', () => {
     )
 
     expect(getObservableVenuesLikes({ action, state$ })).toMatchSnapshot()
+  })
+})
+
+describe('services/getObservableVenuesListed', () => {
+  it('should get an observable instance', () => {
+    const action = getVenuesListedAsync.request({
+      venueId: '3fd66200f964a5209beb1ee3',
+    })
+    const state$: StateObservable<NStore.IState> = new StateObservable(
+      new Subject(),
+      initialState
+    )
+
+    expect(getObservableVenuesListed({ action, state$ })).toMatchSnapshot()
   })
 })
 

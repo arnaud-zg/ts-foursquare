@@ -3,6 +3,7 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -13,6 +14,7 @@ import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesLikes,
+  adaptGetVenuesListed,
   adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
@@ -23,6 +25,7 @@ import {
   getVenuesCategoriesEpic,
   getVenuesExploreEpic,
   getVenuesLikesEpic,
+  getVenuesListedEpic,
   getVenuesNextVenuesEpic,
   getVenuesSearchEpic,
   getVenuesSimilarEpic,
@@ -39,6 +42,7 @@ import {
 import { payload as payloadGetVenuesCategories } from './__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from './__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesLikes } from './__mocks__/getVenuesLikesAsync.resolve'
+import { payload as payloadGetVenuesListed } from './__mocks__/getVenuesListedAsync.resolve'
 import { payload as payloadGetVenuesNextVenues } from './__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from './__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from './__mocks__/getVenuesSimilarAsync.resolve'
@@ -66,6 +70,7 @@ describe('epics/venues', () => {
     ${'should get venues likes'}                                         | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                     | ${payloadGetVenuesLikes}             | ${[getVenuesLikesAsync.success(adaptGetVenuesLikes(payloadGetVenuesLikes))]}                                     | ${getVenuesLikesEpic}
     ${'should get venues categories'}                                    | ${getVenuesCategoriesAsync.request()}                                                                                                                                       | ${payloadGetVenuesCategories}        | ${[getVenuesCategoriesAsync.success(adaptGetVenuesCategories(payloadGetVenuesCategories))]}                      | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                                   | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                | ${payloadGetVenuesNextVenues}        | ${[getVenuesNextVenuesAsync.success(adaptGetVenuesNextVenues(payloadGetVenuesNextVenues))]}                      | ${getVenuesNextVenuesEpic}
+    ${'should get a list that this venue appears on'}                    | ${getVenuesListedAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                                                                                                    | ${payloadGetVenuesListed}            | ${[getVenuesListedAsync.success(adaptGetVenuesListed(payloadGetVenuesListed))]}                                  | ${getVenuesListedEpic}
   `('$scenario', ({ action, expectedActions, epic, payload, done }) => {
     mockingFetch({ response: { ...payload } })
     testEpic(
@@ -100,6 +105,7 @@ describe('epics/venues | error case: no network', () => {
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
     ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request()}                                                   | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
+    ${'should get a list that this venue appears on'}            | ${getVenuesListedAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                | ${getVenuesListedEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(
       epic,
@@ -130,6 +136,7 @@ describe('epics/venues | error case: not valid response', () => {
     ${'should get venues likes'}                                 | ${getVenuesLikesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                 | ${getVenuesLikesEpic}
     ${'should get venues categories'}                            | ${getVenuesCategoriesAsync.request()}                                                   | ${getVenuesCategoriesEpic}
     ${'should get venues next venues'}                           | ${getVenuesNextVenuesAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}            | ${getVenuesNextVenuesEpic}
+    ${'should get a list that this venue appears on'}            | ${getVenuesListedAsync.request({ venueId: '49b6e8d2f964a52016531fe3' })}                | ${getVenuesListedEpic}
   `('$scenario', ({ action, epic, done }) => {
     testEpic(
       epic,

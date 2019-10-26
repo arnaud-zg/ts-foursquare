@@ -2,6 +2,7 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -12,6 +13,7 @@ import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesLikes,
+  adaptGetVenuesListed,
   adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
@@ -29,6 +31,7 @@ import {
 import { payload as payloadGetVenuesCategories } from '../epics/__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'
+import { payload as payloadGetVenuesListed } from '../epics/__mocks__/getVenuesListedAsync.resolve'
 import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
@@ -104,6 +107,18 @@ describe('reducers/venues/payloadGetVenuesLikes', () => {
     ${`should get state after action: payloadGetVenuesLikes.success`} | ${getVenuesLikesAsync.success(adaptGetVenuesLikes(payloadGetVenuesLikes))}
     ${`should get state after action: payloadGetVenuesLikes.cancel`}  | ${getVenuesLikesAsync.cancel(genericCancelReason)}
     ${`should get state after action: payloadGetVenuesLikes.failure`} | ${getVenuesLikesAsync.failure(genericFailureError)}
+  `('$scenario with action: $action', ({ action }) => {
+    expect(requestReducer(initialStateRequest, action)).toMatchSnapshot()
+    expect(venuesReducer(initialStateVenues, action)).toMatchSnapshot()
+  })
+})
+
+describe('reducers/venues/getVenuesListedAsync', () => {
+  test.each`
+    scenario                                                         | action
+    ${`should get state after action: getVenuesListedAsync.success`} | ${getVenuesListedAsync.success(adaptGetVenuesListed(payloadGetVenuesListed))}
+    ${`should get state after action: getVenuesListedAsync.cancel`}  | ${getVenuesListedAsync.cancel(genericCancelReason)}
+    ${`should get state after action: getVenuesListedAsync.failure`} | ${getVenuesListedAsync.failure(genericFailureError)}
   `('$scenario with action: $action', ({ action }) => {
     expect(requestReducer(initialStateRequest, action)).toMatchSnapshot()
     expect(venuesReducer(initialStateVenues, action)).toMatchSnapshot()

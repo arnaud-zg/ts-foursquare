@@ -75,6 +75,29 @@ export const getObservableVenuesLikes = ({
   )
 }
 
+export const getObservableVenuesListed = ({
+  action,
+  state$,
+}: {
+  action: NAction.IAction
+  state$: StateObservable<NStore.IState>
+}) => {
+  const { venueId } = action.payload
+
+  return fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname: generatePath(EApiPathnames.VENUES_LISTED, { venueId }),
+      param: {
+        ...getDefaultRequestParameters(state$),
+      },
+    })
+  ).pipe(
+    switchMap(processFetchResponse),
+    catchError(processFetchError)
+  )
+}
+
 export const getObservableVenuesNextVenues = ({
   action,
   state$,

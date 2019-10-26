@@ -1261,6 +1261,148 @@ Object {
 }
 `;
 
+exports[`adapter/venues/adaptGetVenuesListed should get a list that this venue appears on 1`] = `
+Object {
+  "count": 1277,
+  "groups": Array [
+    Object {
+      "count": 1277,
+      "items": Array [
+        Object {
+          "canonicalUrl": "https://foursquare.com/thesparkgroup/list/nyc-bars-w-free-wifi",
+          "collaborative": false,
+          "createdAt": 1341267590,
+          "description": "",
+          "editable": false,
+          "followers": Object {
+            "count": 108,
+          },
+          "id": "4ff21e86e4b0ac2746c17ac1",
+          "listItems": Object {
+            "count": 147,
+            "items": Array [
+              Object {
+                "createdAt": 1341320340,
+                "id": "v4cbcafab035d236aebebe64e",
+              },
+            ],
+          },
+          "name": "NYC Bars w/ Free Wi-Fi",
+          "photo": Object {
+            "createdAt": 1316910845,
+            "height": 720,
+            "id": "4e7e76fd46906788c6b9da00",
+            "prefix": "https://igx.4sqi.net/img/general/",
+            "suffix": "/XZYJNQSANIQTTIDP4ZFTEUDXF50Q5234VCKEEMXII1JSV0XS.jpg",
+            "user": Object {
+              "firstName": "John",
+              "gender": "male",
+              "id": "123456",
+              "lastName": "Doe",
+              "photo": Object {
+                "prefix": "https://igx.4sqi.net/img/user/",
+                "suffix": "/123456.jpg",
+              },
+            },
+            "visibility": "public",
+            "width": 537,
+          },
+          "public": true,
+          "type": "others",
+          "updatedAt": 1474559629,
+          "url": "/thesparkgroup/list/nyc-bars-w-free-wifi",
+          "user": Object {
+            "firstName": "The Spark Group",
+            "gender": "none",
+            "id": "2027973",
+            "photo": Object {
+              "prefix": "https://igx.4sqi.net/img/user/",
+              "suffix": "/123456.png",
+            },
+          },
+        },
+        Object {
+          "canonicalUrl": "https://foursquare.com/timeoutnewyork/list/summer-parties",
+          "collaborative": false,
+          "createdAt": 1374179715,
+          "description": "Put on your dancing shoes and head to these sizzling spots for summer’s hottest parties.",
+          "editable": false,
+          "followers": Object {
+            "count": 304,
+          },
+          "id": "51e85183498e59b10a3f7bea",
+          "listItems": Object {
+            "count": 14,
+            "items": Array [
+              Object {
+                "createdAt": 1374180131,
+                "id": "t51e8543b498e7d7abd657c24",
+                "photo": Object {
+                  "createdAt": 1374180441,
+                  "height": 370,
+                  "id": "51e854598bbdf64c27214c74",
+                  "prefix": "https://igx.4sqi.net/img/general/",
+                  "suffix": "/742542_Vj4eR1iQui22nyGV4G-xvfruWkRmr7hcOwXMaPbwVho.jpg",
+                  "user": Object {
+                    "firstName": "Time Out New York",
+                    "gender": "none",
+                    "id": "742542",
+                    "photo": Object {
+                      "prefix": "https://igx.4sqi.net/img/user/",
+                      "suffix": "/XXHKCBSQHBORZNSR.jpg",
+                    },
+                    "type": "page",
+                  },
+                  "visibility": "public",
+                  "width": 555,
+                },
+              },
+            ],
+          },
+          "logView": true,
+          "name": "Summer Parties",
+          "photo": Object {
+            "createdAt": 1374179263,
+            "height": 370,
+            "id": "51e84fbf8bbdf64c271c797b",
+            "prefix": "https://igx.4sqi.net/img/general/",
+            "suffix": "/742542_FrC-C6NUK0-7sjuLGQcVvyDcQhAhlfjd8Ghw_FxJigE.jpg",
+            "user": Object {
+              "firstName": "Time Out New York",
+              "gender": "none",
+              "id": "742542",
+              "photo": Object {
+                "prefix": "https://igx.4sqi.net/img/user/",
+                "suffix": "/XXHKCBSQHBORZNSR.jpg",
+              },
+              "type": "page",
+            },
+            "visibility": "public",
+            "width": 555,
+          },
+          "public": true,
+          "type": "others",
+          "updatedAt": 1374180690,
+          "url": "/timeoutnewyork/list/summer-parties",
+          "user": Object {
+            "firstName": "Time Out New York",
+            "gender": "none",
+            "id": "742542",
+            "photo": Object {
+              "prefix": "https://igx.4sqi.net/img/user/",
+              "suffix": "/XXHKCBSQHBORZNSR.jpg",
+            },
+            "type": "page",
+          },
+        },
+      ],
+      "name": "Lists from other people",
+      "type": "others",
+    },
+  ],
+}
+`;
+
 exports[`adapter/venues/adaptGetVenuesNextVenues should get a list of venues likes 1`] = `
 Array [
   Object {

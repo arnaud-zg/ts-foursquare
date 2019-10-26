@@ -8,6 +8,7 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -18,6 +19,7 @@ import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
   adaptGetVenuesLikes,
+  adaptGetVenuesListed,
   adaptGetVenuesNextVenues,
   adaptGetVenuesSearch,
   adaptGetVenuesSimilar,
@@ -28,6 +30,7 @@ import {
   getObservableVenuesCategories,
   getObservableVenuesExplore,
   getObservableVenuesLikes,
+  getObservableVenuesListed,
   getObservableVenuesNextVenues,
   getObservableVenuesSearch,
   getObservableVenuesSimilar,
@@ -86,6 +89,23 @@ export const getVenuesLikesEpic: Epic<
         map(getVenuesLikesAsync.success),
         catchError(err => of(getVenuesLikesAsync.failure(err))),
         takeUntil(action$.pipe(filter(isActionOf(getVenuesLikesAsync.cancel))))
+      )
+    )
+  )
+
+export const getVenuesListedEpic: Epic<
+  TRootAction,
+  TRootAction,
+  NStore.IState
+> = (action$, state$) =>
+  action$.pipe(
+    filter(isActionOf(getVenuesListedAsync.request)),
+    switchMap(action =>
+      getObservableVenuesListed({ action, state$ }).pipe(
+        map(adaptGetVenuesListed),
+        map(getVenuesListedAsync.success),
+        catchError(err => of(getVenuesListedAsync.failure(err))),
+        takeUntil(action$.pipe(filter(isActionOf(getVenuesListedAsync.cancel))))
       )
     )
   )

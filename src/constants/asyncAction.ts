@@ -3,6 +3,7 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -30,6 +31,11 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getVenuesLikesAsync.success)]: 'getVenuesLikesAsync',
   [getType(getVenuesLikesAsync.failure)]: 'getVenuesLikesAsync',
   [getType(getVenuesLikesAsync.cancel)]: 'getVenuesLikesAsync',
+  // getVenuesListedAsync
+  [getType(getVenuesListedAsync.request)]: 'getVenuesListedAsync',
+  [getType(getVenuesListedAsync.success)]: 'getVenuesListedAsync',
+  [getType(getVenuesListedAsync.failure)]: 'getVenuesListedAsync',
+  [getType(getVenuesListedAsync.cancel)]: 'getVenuesListedAsync',
   // getVenuesNextVenuesAsync
   [getType(getVenuesNextVenuesAsync.request)]: 'getVenuesNextVenuesAsync',
   [getType(getVenuesNextVenuesAsync.success)]: 'getVenuesNextVenuesAsync',
