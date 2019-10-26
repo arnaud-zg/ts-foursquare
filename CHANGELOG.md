@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.16...v0.4.0) (2019-10-26)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.0.20 ([#313](https://github.com/arnaud-zg/ts-foursquare/issues/313)) ([f6c0aea](https://github.com/arnaud-zg/ts-foursquare/commit/f6c0aea))
+* **deps:** update dependency @types/node to v12.11.6 ([#311](https://github.com/arnaud-zg/ts-foursquare/issues/311)) ([d6b71e3](https://github.com/arnaud-zg/ts-foursquare/commit/d6b71e3))
+* **deps:** update dependency @types/node to v12.11.7 ([#312](https://github.com/arnaud-zg/ts-foursquare/issues/312)) ([2fb7a49](https://github.com/arnaud-zg/ts-foursquare/commit/2fb7a49))
+
+
+### 🖋 Features
+
+* **request:** save response of each http request ([#314](https://github.com/arnaud-zg/ts-foursquare/issues/314)) ([c72e66a](https://github.com/arnaud-zg/ts-foursquare/commit/c72e66a))
+* **venue-listed:** add get venue listed action, adapter, epics, reducers, selectors and services ([#315](https://github.com/arnaud-zg/ts-foursquare/issues/315)) ([157d6fb](https://github.com/arnaud-zg/ts-foursquare/commit/157d6fb))
+
 ### [0.3.16](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.15...v0.3.16) (2019-10-23)
 
 
