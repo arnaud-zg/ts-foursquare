@@ -2,6 +2,7 @@ import { createReducer, getType } from 'typesafe-actions'
 import { NStatus } from '../../types'
 import {
   getVenuesExploreAsync,
+  getVenuesListedAsync,
   getVenuesSearchAsync,
   getVenuesTrendingAsync,
   TRootAction,
@@ -16,6 +17,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getVenuesExploreAsync.request),
+      getType(getVenuesListedAsync.request),
       getType(getVenuesSearchAsync.request),
       getType(getVenuesTrendingAsync.request),
     ],
@@ -32,6 +34,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getVenuesExploreAsync.failure),
+      getType(getVenuesListedAsync.failure),
       getType(getVenuesSearchAsync.failure),
       getType(getVenuesTrendingAsync.failure),
     ],
@@ -48,6 +51,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getVenuesExploreAsync.cancel),
+      getType(getVenuesListedAsync.cancel),
       getType(getVenuesSearchAsync.cancel),
       getType(getVenuesTrendingAsync.cancel),
     ],
@@ -64,6 +68,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getVenuesExploreAsync.success),
+      getType(getVenuesListedAsync.success),
       getType(getVenuesSearchAsync.success),
       getType(getVenuesTrendingAsync.success),
     ],
