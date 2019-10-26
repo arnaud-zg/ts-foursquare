@@ -34,4 +34,12 @@ export const venuesSimilarSelector = (state: NStore.IState) =>
 export const venuesRecommendedPlacesSelector = (state: NStore.IState) =>
   venuesSelector(state).recommendedPlaces
 
+export const venuesListedSelector = (state: NStore.IState) =>
+  venuesSelector(state).venuesListed
+
+export const venuesListedGroupSelector = (
+  state: NStore.IState,
+  groupKey: string
+) => venuesSelector(state).venuesListed[groupKey]
+
 export const venuesSelector = (state: NStore.IState) => state.venues

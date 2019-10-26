@@ -2,6 +2,7 @@ import { NLikes } from './likes'
 import { NMiniVenue } from './miniVenue'
 import { NRecommendedPlaces } from './recommendedPlaces'
 import { NVenue } from './venue'
+import { NVenueListed } from './venueListed'
 import { NVenuesCategories } from './venuesCategories'
 
 export declare namespace NVenues {
@@ -14,5 +15,6 @@ export declare namespace NVenues {
     recommendedPlaces: { [key: string]: NRecommendedPlaces.IGroupItem }
     similarVenues: { [key: string]: NVenue.IVenue }
     trendingEntities: { [key: string]: NVenue.IVenue }
+    venuesListed: { [key: string]: NVenueListed.IGroup }
   }
 }

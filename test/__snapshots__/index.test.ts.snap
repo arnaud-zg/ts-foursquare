@@ -80,6 +80,7 @@ Object {
       "recommendedPlaces": Object {},
       "similarVenues": Object {},
       "trendingEntities": Object {},
+      "venuesListed": Object {},
     },
   },
   "lifeActions": Object {
@@ -112,6 +113,12 @@ Object {
       "success": [Function],
     },
     "getVenuesLikesAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+    "getVenuesListedAsync": Object {
       "cancel": [Function],
       "failure": [Function],
       "request": [Function],
@@ -150,6 +157,8 @@ Object {
   },
   "venuesCategoriesSelector": [Function],
   "venuesEntitiesSelector": [Function],
+  "venuesListedGroupSelector": [Function],
+  "venuesListedSelector": [Function],
   "venuesNextVenuesSelector": [Function],
   "venuesRecommendedPlacesSelector": [Function],
   "venuesSelector": [Function],

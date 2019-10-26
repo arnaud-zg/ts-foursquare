@@ -5,6 +5,7 @@ import {
   NRecommendedPlaces,
   NRequest,
   NVenue,
+  NVenueListed,
   NVenuesCategories,
 } from '../../types'
 
@@ -39,7 +40,7 @@ export const getVenuesListedAsync = createAsyncAction(
   'GET_VENUES_LISTED_SUCCESS',
   'GET_VENUES_LISTED_FAILURE',
   'GET_VENUES_LISTED_CANCEL'
-)<NRequest.IVenuesListedPayload, NLikes.ILikes, Error, string>()
+)<NRequest.IVenuesListedPayload, NVenueListed.ILists, Error, string>()
 
 export const getVenuesNextVenuesAsync = createAsyncAction(
   'GET_VENUES_NEXT_VENUES_REQUEST',
@@ -85,6 +86,7 @@ export const venuesActions = {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,

@@ -4,6 +4,7 @@ import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
+  getVenuesListedAsync,
   getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
   getVenuesSimilarAsync,
@@ -11,6 +12,7 @@ import {
   getVenuesTrendingAsync,
   TVenuesAction,
 } from '../actions/venues'
+import { getVenuesListedGroupKey } from '../utils/venue'
 
 export const initialState: NVenues.IState = {
   categories: {},
@@ -21,6 +23,7 @@ export const initialState: NVenues.IState = {
   recommendedPlaces: {},
   similarVenues: {},
   trendingEntities: {},
+  venuesListed: {},
 }
 
 export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
@@ -116,6 +119,19 @@ export const venuesReducer = createReducer<NVenues.IState, TVenuesAction>(
       ...state,
       likesEntities: {
         ...likesEntities,
+      },
+    }
+  })
+  .handleAction(getType(getVenuesListedAsync.success), (state, action) => {
+    const groupEntities = action.payload.groups.reduce(
+      (acc, cur) => ({ ...acc, [getVenuesListedGroupKey(cur)]: cur }),
+      {}
+    )
+
+    return {
+      ...state,
+      venuesListed: {
+        ...groupEntities,
       },
     }
   })
