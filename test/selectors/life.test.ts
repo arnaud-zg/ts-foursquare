@@ -1,6 +1,6 @@
 import { initialState } from '../../src/reducers/app'
 import {
-  credentialsSelector,
+  lifeCredentialsSelector,
   lifeSelector,
   lifeStatusSelector,
 } from '../../src/selectors/life'
@@ -26,7 +26,7 @@ describe('selectors/life', () => {
     expect(lifeStatusSelector(state)).toMatchSnapshot()
   })
 
-  it('should get credentialsSelector', () => {
-    expect(credentialsSelector(state)).toMatchSnapshot()
+  it('should get lifeCredentialsSelector', () => {
+    expect(lifeCredentialsSelector(state)).toMatchSnapshot()
   })
 })

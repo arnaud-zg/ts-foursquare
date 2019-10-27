@@ -3,7 +3,6 @@
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
   "configureStore": [Function],
-  "credentialsSelector": [Function],
   "getIconUrlList": [Function],
   "getListsAsync": Object {
     "cancel": [Function],
@@ -95,6 +94,7 @@ Object {
   "lifeActions": Object {
     "putCredentials": [Function],
   },
+  "lifeCredentialsSelector": [Function],
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
   "listSelector": [Function],

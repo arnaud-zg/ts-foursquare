@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
 import { NStore } from '../../types'
 import { EApiDefaultParameters } from '../constants/api'
-import { credentialsSelector } from '../selectors/life'
+import { lifeCredentialsSelector } from '../selectors/life'
 
 export const processFetchResponse = (
   response: Response
@@ -21,7 +21,7 @@ export const processFetchError = (err: Error): Observable<Error> =>
 export const getDefaultRequestParameters = (
   state$: StateObservable<NStore.IState>
 ) => {
-  const { clientId, clientSecret } = credentialsSelector(state$.value)
+  const { clientId, clientSecret } = lifeCredentialsSelector(state$.value)
 
   return {
     client_id: clientId,
