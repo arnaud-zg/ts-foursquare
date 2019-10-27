@@ -1,5 +1,6 @@
 import { getType } from 'typesafe-actions'
 import {
+  getListsAsync,
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
@@ -16,6 +17,11 @@ interface IAsyncActionNameMapping {
 }
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
+  // getListsAsync
+  [getType(getListsAsync.request)]: 'getListsAsync',
+  [getType(getListsAsync.success)]: 'getListsAsync',
+  [getType(getListsAsync.failure)]: 'getListsAsync',
+  [getType(getListsAsync.cancel)]: 'getListsAsync',
   // getVenuesCategoriesAsync
   [getType(getVenuesCategoriesAsync.request)]: 'getVenuesCategoriesAsync',
   [getType(getVenuesCategoriesAsync.success)]: 'getVenuesCategoriesAsync',

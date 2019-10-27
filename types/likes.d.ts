@@ -1,12 +1,8 @@
+import { NEntity } from './entity'
+
 export declare namespace NLikes {
   interface IResponse {
-    likes: ILikes
-  }
-
-  interface ILikes {
-    count: number
-    summary: string
-    items: IItem[]
+    likes: NEntity.IEntityGroup<IItem>
   }
 
   interface IItem {

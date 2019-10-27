@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`epics/lists | error case: no network should gives details about a list 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: Error 404],
+    "type": "GET_LISTS_FAILURE",
+  },
+]
+`;
+
+exports[`epics/lists should gives details about a list 1`] = `
+Array [
+  Object {
+    "meta": 0,
+    "payload": Object {
+      "canonicalUrl": "https://foursquare.com/foursquare/list/nycs-best-rooftops",
+      "categories": Object {
+        "count": 9,
+        "items": Array [
+          Object {
+            "category": Object {
+              "icon": Object {
+                "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/pub_",
+                "suffix": ".png",
+              },
+              "id": "4bf58dd8d48988d116941735",
+              "name": "Bar",
+              "pluralName": "Bars",
+              "shortName": "Bar",
+            },
+            "count": 8,
+          },
+          Object {
+            "category": Object {
+              "icon": Object {
+                "prefix": "https://ss3.4sqi.net/img/categories_v2/travel/hotel_",
+                "suffix": ".png",
+              },
+              "id": "4bf58dd8d48988d1fa931735",
+              "name": "Hotel",
+              "pluralName": "Hotels",
+              "shortName": "Hotel",
+            },
+            "count": 4,
+          },
+        ],
+      },
+      "collaborative": false,
+      "collaborators": Object {
+        "count": 0,
+        "items": Array [],
+      },
+      "completedCount": 0,
+      "createdAt": 1434481182,
+      "description": "",
+      "editable": false,
+      "followers": Object {
+        "count": 350,
+      },
+      "following": false,
+      "id": "5580721e498e7c48540bf83f",
+      "listItems": Object {
+        "count": 10,
+        "items": Array [
+          Object {
+            "createdAt": 1493226584,
+            "id": "t57e71351498e9292956226a1",
+            "index": 0,
+            "isNew": true,
+            "tip": Object {
+              "agreeCount": 3,
+              "canonicalUrl": "https://foursquare.com/item/57e71351498e9292956226a1",
+              "createdAt": 1474761553,
+              "disagreeCount": 0,
+              "id": "57e71351498e9292956226a1",
+              "logView": true,
+              "saves": Object {},
+              "text": "Awesome new rooftop with relatively cheap beer and great views of NYC. Get there right at 4pm when they open or be prepared to wait in line.",
+              "todo": Object {
+                "count": 17,
+              },
+              "type": "user",
+              "user": Object {},
+            },
+            "venue": Object {
+              "allowMenuUrlEdit": true,
+              "beenHere": Object {
+                "lastCheckinExpiredAt": 0,
+              },
+              "contact": Object {
+                "formattedPhone": "(718) 307-7100",
+                "phone": "7183077100",
+              },
+              "id": "57acf9af498e6b8d5376c2d4",
+              "location": Object {
+                "address": "111 N 12th St",
+                "cc": "US",
+                "city": "Brooklyn",
+                "country": "United States",
+                "crossStreet": "at Wythe Ave",
+                "formattedAddress": Array [
+                  "111 N 12th St (at Wythe Ave)",
+                  "Brooklyn, NY 11249",
+                  "United States",
+                ],
+                "labeledLatLngs": Array [
+                  Object {
+                    "label": "display",
+                    "lat": 40.722294869596624,
+                    "lng": -73.95677447319031,
+                  },
+                ],
+                "lat": 40.722294869596624,
+                "lng": -73.95677447319031,
+                "postalCode": "11249",
+                "state": "NY",
+              },
+              "name": "Westlight",
+              "rating": 9.1,
+              "ratingColor": "00B551",
+              "ratingSignals": 353,
+              "stats": Object {
+                "checkinsCount": 3253,
+                "tipCount": 62,
+                "usersCount": 2517,
+              },
+              "url": "http://westlightnyc.com",
+              "verified": false,
+            },
+          },
+        ],
+      },
+      "logView": true,
+      "name": "NYC's Best Rooftops",
+      "photo": Object {
+        "createdAt": 1411429238,
+        "height": 720,
+        "id": "5420b376498e3fdb42d08c8d",
+        "prefix": "https://igx.4sqi.net/img/general/",
+        "suffix": "/18091_SPs8d1c-WsbNGV89cUg9ou1QOGa7YcDlRJLUlh1b6CQ.jpg",
+        "visibility": "public",
+        "width": 960,
+      },
+      "public": true,
+      "sort": "list-order",
+      "type": "others",
+      "updatedAt": 1497977804,
+      "user": Object {
+        "firstName": "Foursquare City Guide",
+        "gender": "none",
+        "id": "23438729",
+        "photo": Object {
+          "prefix": "https://igx.4sqi.net/img/user/",
+          "suffix": "/23438729-TODURDIUDUMY4JF5.png",
+        },
+        "type": "page",
+      },
+      "venueCount": 10,
+      "visitedCount": 0,
+    },
+    "type": "GET_LISTS_SUCCESS",
+  },
+]
+`;
+
+exports[`epics/venues | error case: not valid response should gives details about a list 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: response.json is not a function],
+    "type": "GET_LISTS_FAILURE",
+  },
+]
+`;

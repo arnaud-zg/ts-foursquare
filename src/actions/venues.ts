@@ -1,5 +1,6 @@
 import { ActionType, createAsyncAction } from 'typesafe-actions'
 import {
+  NEntity,
   NLikes,
   NMiniVenue,
   NRecommendedPlaces,
@@ -33,7 +34,12 @@ export const getVenuesLikesAsync = createAsyncAction(
   'GET_VENUES_LIKES_SUCCESS',
   'GET_VENUES_LIKES_FAILURE',
   'GET_VENUES_LIKES_CANCEL'
-)<NRequest.IVenuesLikesPayload, NLikes.ILikes, Error, string>()
+)<
+  NRequest.IVenuesLikesPayload,
+  NEntity.IEntityGroup<NLikes.IItem>,
+  Error,
+  string
+>()
 
 export const getVenuesListedAsync = createAsyncAction(
   'GET_VENUES_LISTED_REQUEST',

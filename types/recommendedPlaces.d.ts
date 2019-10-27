@@ -1,3 +1,4 @@
+import { NEntity } from './entity'
 import { NVenue } from './venue'
 
 export declare namespace NRecommendedPlaces {
@@ -48,14 +49,9 @@ export declare namespace NRecommendedPlaces {
   }
 
   interface IGroupItem {
-    reasons: IReasons
+    reasons: NEntity.IEntityGroup<IReasonsItem>
     venue: NVenue.IVenue
     referralId?: string
-  }
-
-  interface IReasons {
-    count: number
-    items: IReasonsItem[]
   }
 
   interface IReasonsItem {

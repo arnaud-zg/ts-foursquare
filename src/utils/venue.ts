@@ -1,4 +1,5 @@
-import { NVenueListed } from '../../types'
+import { NEntity, NVenueListed } from '../../types'
 
-export const getVenuesListedGroupKey = (group: NVenueListed.IGroup) =>
-  `${group.type}-${group.name}`
+export const getVenuesListedGroupKey = (
+  group: NEntity.IEntityGroup<NVenueListed.IGroupItem>
+) => `${group.type}-${group.name}`

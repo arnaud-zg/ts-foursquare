@@ -5,6 +5,12 @@ Object {
   "configureStore": [Function],
   "credentialsSelector": [Function],
   "getIconUrlList": [Function],
+  "getListsAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getVenuesCategoriesAsync": Object {
@@ -69,6 +75,9 @@ Object {
       },
       "status": false,
     },
+    "lists": Object {
+      "entities": Object {},
+    },
     "request": Object {},
     "status": Object {},
     "venues": Object {
@@ -88,6 +97,16 @@ Object {
   },
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
+  "listSelector": [Function],
+  "listsActions": Object {
+    "getListsAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+  },
+  "listsSelector": [Function],
   "moduleStateSelector": [Function],
   "putCredentials": [Function],
   "requestActionSelector": [Function],
