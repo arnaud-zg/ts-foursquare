@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.0...v0.4.1) (2019-10-27)
+
+
+### 🐛 Bug Fixes
+
+* **life:** add life prefix on credentials selector ([6b46493](https://github.com/arnaud-zg/ts-foursquare/commit/6b46493))
+* **status:** add status prefix on module state selector ([#319](https://github.com/arnaud-zg/ts-foursquare/issues/319)) ([e08f143](https://github.com/arnaud-zg/ts-foursquare/commit/e08f143))
+* **status:** handle all async action venues on status reducer ([#317](https://github.com/arnaud-zg/ts-foursquare/issues/317)) ([94c5c70](https://github.com/arnaud-zg/ts-foursquare/commit/94c5c70))
+* **venues:** use return type of adapter on create action ([#318](https://github.com/arnaud-zg/ts-foursquare/issues/318)) ([c9545fb](https://github.com/arnaud-zg/ts-foursquare/commit/c9545fb))
+
+
+### 🖋 Features
+
+* **list-details:** add get list details action, adapter, epics, reducers, selectors and services ([#316](https://github.com/arnaud-zg/ts-foursquare/issues/316)) ([c7516fc](https://github.com/arnaud-zg/ts-foursquare/commit/c7516fc))
+
 ## [0.4.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.3.16...v0.4.0) (2019-10-26)
 
 
