@@ -4,7 +4,7 @@ import { ECommonError } from '../constants/error'
 
 export const adaptGetLists = (
   payload: NPayload.IPayload<NLists.IResponse>
-): NLists.IList | null => {
+): NLists.IList => {
   const response = adaptPayload<NLists.IResponse>(payload)
 
   if (!response || !response.list) {

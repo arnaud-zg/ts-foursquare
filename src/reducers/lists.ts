@@ -11,16 +11,12 @@ export const listsReducer = createReducer<NListsState.IState, TListsAction>(
 ).handleAction(
   getType(getListsAsync.success),
   (state, action): NListsState.IState => {
-    if (action.payload) {
-      return {
-        ...state,
-        entities: {
-          ...state.entities,
-          [action.payload.id]: action.payload,
-        },
-      }
+    return {
+      ...state,
+      entities: {
+        ...state.entities,
+        [action.payload.id]: action.payload,
+      },
     }
-
-    return { ...state }
   }
 )
