@@ -1,5 +1,6 @@
 import { createReducer, getType } from 'typesafe-actions'
 import {
+  NEntity,
   NLikes,
   NMiniVenue,
   NRecommendedPlaces,
@@ -78,7 +79,8 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
     getType(getVenuesListedAsync.success),
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.groups.map(
-        (group: NVenueListed.IGroup) => getVenuesListedGroupKey(group)
+        (group: NEntity.IEntityGroup<NVenueListed.IGroupItem>) =>
+          getVenuesListedGroupKey(group)
       )
 
       return {

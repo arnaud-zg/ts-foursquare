@@ -1,4 +1,5 @@
 import {
+  NEntity,
   NLikes,
   NMiniVenue,
   NNextVenues,
@@ -37,7 +38,7 @@ export const adaptGetVenuesExplore = (
 
 export const adaptGetVenuesLikes = (
   payload: NPayload.IPayload<NLikes.IResponse>
-): NLikes.ILikes => {
+): NEntity.IEntityGroup<NLikes.IItem> => {
   const response = adaptPayload<NLikes.IResponse>(payload)
 
   return response && response.likes

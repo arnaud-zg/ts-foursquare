@@ -1,3 +1,4 @@
+import { NEntity } from './entity'
 import { NUser } from './user'
 
 export declare namespace NVenueListed {
@@ -7,14 +8,7 @@ export declare namespace NVenueListed {
 
   interface ILists {
     count: number
-    groups: IGroup[]
-  }
-
-  interface IGroup {
-    type: string
-    name: string
-    count: number
-    items: IGroupItem[]
+    groups: NEntity.IEntityGroup<IGroupItem>[]
   }
 
   interface IGroupItem {
@@ -32,17 +26,12 @@ export declare namespace NVenueListed {
     updatedAt: number
     photo: IItemPhoto
     followers: IFollowers
-    listItems: IListItems
+    listItems: NEntity.IEntityGroup<IListItemsItem>
     logView?: boolean
   }
 
   interface IFollowers {
     count: number
-  }
-
-  interface IListItems {
-    count: number
-    items: IListItemsItem[]
   }
 
   interface IListItemsItem {
