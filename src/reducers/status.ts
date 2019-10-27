@@ -2,9 +2,14 @@ import { createReducer, getType } from 'typesafe-actions'
 import { NStatus } from '../../types'
 import {
   getListsAsync,
+  getVenuesCategoriesAsync,
   getVenuesExploreAsync,
+  getVenuesLikesAsync,
   getVenuesListedAsync,
+  getVenuesNextVenuesAsync,
   getVenuesSearchAsync,
+  getVenuesSimilarAsync,
+  getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
   TRootAction,
 } from '../actions'
@@ -18,9 +23,14 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getListsAsync.request),
+      getType(getVenuesCategoriesAsync.request),
       getType(getVenuesExploreAsync.request),
+      getType(getVenuesLikesAsync.request),
       getType(getVenuesListedAsync.request),
+      getType(getVenuesNextVenuesAsync.request),
       getType(getVenuesSearchAsync.request),
+      getType(getVenuesSimilarAsync.request),
+      getType(getVenuesSuggestCompletionAsync.request),
       getType(getVenuesTrendingAsync.request),
     ],
     (state, action: TRootAction): NStatus.IState => ({
@@ -36,9 +46,14 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getListsAsync.failure),
+      getType(getVenuesCategoriesAsync.failure),
       getType(getVenuesExploreAsync.failure),
+      getType(getVenuesLikesAsync.failure),
       getType(getVenuesListedAsync.failure),
+      getType(getVenuesNextVenuesAsync.failure),
       getType(getVenuesSearchAsync.failure),
+      getType(getVenuesSimilarAsync.failure),
+      getType(getVenuesSuggestCompletionAsync.failure),
       getType(getVenuesTrendingAsync.failure),
     ],
     (state, action: TRootAction): NStatus.IState => ({
@@ -54,9 +69,14 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getListsAsync.cancel),
+      getType(getVenuesCategoriesAsync.cancel),
       getType(getVenuesExploreAsync.cancel),
+      getType(getVenuesLikesAsync.cancel),
       getType(getVenuesListedAsync.cancel),
+      getType(getVenuesNextVenuesAsync.cancel),
       getType(getVenuesSearchAsync.cancel),
+      getType(getVenuesSimilarAsync.cancel),
+      getType(getVenuesSuggestCompletionAsync.cancel),
       getType(getVenuesTrendingAsync.cancel),
     ],
     (state, action: TRootAction): NStatus.IState => ({
@@ -72,9 +92,14 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
   .handleAction(
     [
       getType(getListsAsync.success),
+      getType(getVenuesCategoriesAsync.success),
       getType(getVenuesExploreAsync.success),
+      getType(getVenuesLikesAsync.success),
       getType(getVenuesListedAsync.success),
+      getType(getVenuesNextVenuesAsync.success),
       getType(getVenuesSearchAsync.success),
+      getType(getVenuesSimilarAsync.success),
+      getType(getVenuesSuggestCompletionAsync.success),
       getType(getVenuesTrendingAsync.success),
     ],
     (state, action: TRootAction): NStatus.IState => ({
