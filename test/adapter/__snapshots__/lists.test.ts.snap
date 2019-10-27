@@ -148,3 +148,5 @@ Object {
   "visitedCount": 0,
 }
 `;
+
+exports[`adapter/lists/adaptGetLists should get an empty list 1`] = `"Response is not valid"`;

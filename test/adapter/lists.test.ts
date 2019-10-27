@@ -3,7 +3,7 @@ import { payload as payloadGetLists } from '../epics/__mocks__/getListsAsync.res
 
 describe('adapter/lists/adaptGetLists', () => {
   it('should get an empty list', () => {
-    expect(
+    expect(() =>
       adaptGetLists({
         ...payloadGetLists,
         meta: {
@@ -11,7 +11,7 @@ describe('adapter/lists/adaptGetLists', () => {
           requestId: payloadGetLists.meta.requestId,
         },
       })
-    ).toEqual(null)
+    ).toThrowErrorMatchingSnapshot()
   })
 
   it('should get a list of categories', () => {
