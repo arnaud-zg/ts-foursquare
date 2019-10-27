@@ -99,10 +99,6 @@ export const adaptGetVenuesSimilar = (
     : []
 }
 
-export const adaptGetVenuesTrending = (
-  payload: NPayload.IPayload<NVenue.IResponse>
-): NVenue.IVenue[] => adaptGetVenuesSearch(payload)
-
 export const adaptGetVenuesSuggestCompletion = (
   payload: NPayload.IPayload<NMiniVenue.IResponse>
 ): NMiniVenue.IMiniVenue[] => {
@@ -112,3 +108,7 @@ export const adaptGetVenuesSuggestCompletion = (
     ? response.minivenues
     : []
 }
+
+export const adaptGetVenuesTrending = (
+  payload: NPayload.IPayload<NVenue.IResponse>
+): NVenue.IVenue[] => adaptGetVenuesSearch(payload)
