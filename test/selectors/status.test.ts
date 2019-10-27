@@ -1,7 +1,10 @@
 import { getType } from 'typesafe-actions'
 import { getVenuesSearchAsync } from '../../src/actions'
 import { initialState } from '../../src/reducers/app'
-import { moduleStateSelector, statusSelector } from '../../src/selectors/status'
+import {
+  statusModuleStateSelector,
+  statusSelector,
+} from '../../src/selectors/status'
 import { NStore } from '../../types'
 
 const state: NStore.IState = {
@@ -22,11 +25,14 @@ describe('selectors/status', () => {
 
   it('should get module state', () => {
     expect(
-      moduleStateSelector(initialState, getType(getVenuesSearchAsync.request))
+      statusModuleStateSelector(
+        initialState,
+        getType(getVenuesSearchAsync.request)
+      )
     ).toMatchSnapshot()
 
     expect(
-      moduleStateSelector(state, getType(getVenuesSearchAsync.request))
+      statusModuleStateSelector(state, getType(getVenuesSearchAsync.request))
     ).toMatchSnapshot()
   })
 })
