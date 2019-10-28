@@ -15,7 +15,10 @@ Works in Node and with any browser that support javascript.
     - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
     - [getVenuesLikesAsync](#getVenuesLikesAsync)
+    - [getVenuesListedAsync](#getVenuesListedAsync)
+    - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync)
     - [getVenuesSearchAsync](#getVenuesSearchAsync)
+    - [getVenuesSimilarAsync](#getVenuesSimilarAsync)
     - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
     - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
 - [Helpers](#helpers)
@@ -120,6 +123,42 @@ const onFetchData = () => {
 }
 ```
 
+#### getVenuesListedAsync
+
+> Returns the lists that this venue appears on.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/listed" target="_blank">https://developer.foursquare.com/docs/api/venues/listed</a></cite>
+
+`getVenuesListedAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getVenuesListedAsync.request({
+    venueId: '49b6e8d2f964a52016531fe3',
+  })
+}
+```
+
+#### getVenuesNextVenuesAsync
+
+> Returns venues that people often check in to after the current venue.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/nextvenues" target="_blank">https://developer.foursquare.com/docs/api/venues/nextvenues</a></cite>
+
+`getVenuesNextVenuesAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getVenuesNextVenuesAsync.request({
+    venueId: '49b6e8d2f964a52016531fe3',
+  })
+}
+```
+
 #### getVenuesSearchAsync
 
 > Returns a list of venues near the current location, optionally matching a search term.
@@ -138,6 +177,24 @@ const onFetchData = () => {
 const onFetchData = () => {
   getVenuesSearchAsync.request({
     query: 'peter steakhouse',
+  })
+}
+```
+
+#### getVenuesSimilarAsync
+
+> Returns a list of venues similar to the specified venue.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/similar" target="_blank">https://developer.foursquare.com/docs/api/venues/similar</a></cite>
+
+`getVenuesSimilarAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getVenuesSimilarAsync.request({
+    venueId: '49b6e8d2f964a52016531fe3',
   })
 }
 ```
