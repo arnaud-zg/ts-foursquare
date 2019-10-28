@@ -11,6 +11,8 @@ Works in Node and with any browser that support javascript.
 - [Actions](#actions)
   - [Life action](#life-action)
     - [putCredentials](#putCredentials)
+  - [Lists action](#lists-action)
+    - [getListsAsync](#getListsAsync)
   - [Venues action](#venues-action)
     - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
@@ -65,6 +67,26 @@ const onFetchData = () => {
   putCredentials({
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
+  })
+}
+```
+
+### Lists action
+
+#### getListsAsync
+
+> Gives details about a list.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/lists/details" target="_blank">https://developer.foursquare.com/docs/api/lists/details</a></cite>
+
+`getListsAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getListsAsync.request({
+    listId: '5580721e498e7c48540bf83f',
   })
 }
 ```
