@@ -3,7 +3,7 @@
 exports[`constants/api/EApiDefaultParameters should make a snapshot of EApiDefaultParameters 1`] = `
 Object {
   "ORIGIN": "https://api.foursquare.com",
-  "VERSION": "20191016",
+  "VERSION": "20191028",
 }
 `;
 
