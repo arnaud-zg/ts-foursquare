@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.1...v0.4.2) (2019-10-31)
+
+
+### 🔧 Chore
+
+* **config:** update api version parameter ([#322](https://github.com/arnaud-zg/ts-foursquare/issues/322)) ([2aad11c](https://github.com/arnaud-zg/ts-foursquare/commit/2aad11c))
+* **deps:** update dependency @types/node to v12.12.0 ([#325](https://github.com/arnaud-zg/ts-foursquare/issues/325)) ([597becd](https://github.com/arnaud-zg/ts-foursquare/commit/597becd))
+* **deps:** update dependency @types/node to v12.12.3 ([#326](https://github.com/arnaud-zg/ts-foursquare/issues/326)) ([cd8a59b](https://github.com/arnaud-zg/ts-foursquare/commit/cd8a59b))
+
 ### [0.4.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.0...v0.4.1) (2019-10-27)
 
 
