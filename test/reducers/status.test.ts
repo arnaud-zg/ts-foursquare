@@ -9,7 +9,7 @@ describe('epics/status', () => {
   test.each`
     initialState    | action
     ${initialState} | ${getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })}
-    ${initialState} | ${getVenuesSearchAsync.failure(new Error(`Error ${NHttpStatuses.ClientError.NOT_FOUND}`))}
+    ${initialState} | ${getVenuesSearchAsync.failure(new Error(`Error ${NHttpStatuses.EClientError.NOT_FOUND}`))}
     ${initialState} | ${getVenuesSearchAsync.cancel('Action cancelled')}
     ${initialState} | ${getVenuesSearchAsync.success(adaptGetVenuesSearch(payload))}
   `('should set isLoading property', ({ initialState, action }) => {
