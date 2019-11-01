@@ -28,7 +28,7 @@ export const mockingFailingNotValidFetch = () => {
 export const mockingFailingNotFoundFetch = () => {
   const mockFetchPromise = Promise.resolve({
     ok: false,
-    status: NHttpStatuses.ClientError.NOT_FOUND,
+    status: NHttpStatuses.EClientError.NOT_FOUND,
   })
 
   // @ts-ignore
