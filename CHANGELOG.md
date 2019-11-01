@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.2...v0.4.3) (2019-11-01)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v0.0.10 ([#328](https://github.com/arnaud-zg/ts-foursquare/issues/328)) ([a1230dd](https://github.com/arnaud-zg/ts-foursquare/commit/a1230dd))
+* **deps:** update dependency http-response-status to v0.0.9 ([#327](https://github.com/arnaud-zg/ts-foursquare/issues/327)) ([95177ec](https://github.com/arnaud-zg/ts-foursquare/commit/95177ec))
+* **http:** accept all http code begin with 2xx ([#329](https://github.com/arnaud-zg/ts-foursquare/issues/329)) ([c177cdf](https://github.com/arnaud-zg/ts-foursquare/commit/c177cdf))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.0.21 ([#324](https://github.com/arnaud-zg/ts-foursquare/issues/324)) ([db5de2c](https://github.com/arnaud-zg/ts-foursquare/commit/db5de2c))
+* **deps:** update dependency tsdx to v0.11.0 ([#323](https://github.com/arnaud-zg/ts-foursquare/issues/323)) ([643d154](https://github.com/arnaud-zg/ts-foursquare/commit/643d154))
+
 ### [0.4.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.1...v0.4.2) (2019-10-31)
 
 
