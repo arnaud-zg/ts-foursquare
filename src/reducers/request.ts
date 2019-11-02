@@ -3,14 +3,15 @@ import {
   NEntity,
   NLikes,
   NMiniVenue,
+  NPhotos,
   NRecommendedPlaces,
   NRequestState,
   NVenue,
   NVenueListed,
   NVenuesCategories,
 } from '../../types'
-import { TRootAction } from '../actions'
 import {
+  getPhotosDetailsAsync,
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
@@ -20,7 +21,8 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-} from '../actions/venues'
+  TRootAction,
+} from '../actions'
 import { ASYNC_ACTION_NAME_MAPPING } from '../constants/asyncAction'
 import { getVenuesListedGroupKey } from '../utils/venue'
 
@@ -29,6 +31,19 @@ export const initialState: NRequestState.IState = {}
 export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   initialState
 )
+  .handleAction(
+    getType(getPhotosDetailsAsync.success),
+    (state, action): NRequestState.IState => {
+      const entity: NPhotos.IPhoto = action.payload
+
+      return {
+        ...state,
+        [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
+          entityIds: [entity.id],
+        },
+      }
+    }
+  )
   .handleAction(
     getType(getVenuesCategoriesAsync.success),
     (state, action): NRequestState.IState => {
@@ -127,15 +142,16 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
+      getType(getPhotosDetailsAsync.cancel),
       getType(getVenuesCategoriesAsync.cancel),
       getType(getVenuesExploreAsync.cancel),
       getType(getVenuesLikesAsync.cancel),
+      getType(getVenuesListedAsync.cancel),
       getType(getVenuesNextVenuesAsync.cancel),
       getType(getVenuesSearchAsync.cancel),
       getType(getVenuesSimilarAsync.cancel),
       getType(getVenuesSuggestCompletionAsync.cancel),
       getType(getVenuesTrendingAsync.cancel),
-      getType(getVenuesListedAsync.cancel),
     ],
     (state, action): NRequestState.IState => ({
       ...state,
@@ -147,15 +163,16 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
+      getType(getPhotosDetailsAsync.failure),
       getType(getVenuesCategoriesAsync.failure),
       getType(getVenuesExploreAsync.failure),
       getType(getVenuesLikesAsync.failure),
+      getType(getVenuesListedAsync.failure),
       getType(getVenuesNextVenuesAsync.failure),
       getType(getVenuesSearchAsync.failure),
       getType(getVenuesSimilarAsync.failure),
       getType(getVenuesSuggestCompletionAsync.failure),
       getType(getVenuesTrendingAsync.failure),
-      getType(getVenuesListedAsync.failure),
     ],
     (state, action): NRequestState.IState => ({
       ...state,

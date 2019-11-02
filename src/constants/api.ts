@@ -5,6 +5,7 @@ export enum EApiDefaultParameters {
 
 export enum EApiPathnames {
   LISTS = '/v2/lists/:listId',
+  PHOTOS_DETAILS = '/v2/photos/:photoId',
   VENUES_CATEGORIES = '/v2/venues/categories',
   VENUES_EXPLORE = '/v2/venues/explore',
   VENUES_LIKES = '/v2/venues/:venueId/likes',
