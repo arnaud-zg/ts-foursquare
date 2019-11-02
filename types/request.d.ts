@@ -134,4 +134,8 @@ export declare namespace NRequest {
   interface IListsPayload {
     listId: string
   }
+
+  interface IPhotosDetailsPayload {
+    photoId: string
+  }
 }

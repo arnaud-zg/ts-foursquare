@@ -12,6 +12,12 @@ Object {
   },
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
+  "getPhotosDetailsAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getVenuesCategoriesAsync": Object {
     "cancel": [Function],
     "failure": [Function],
@@ -77,6 +83,9 @@ Object {
     "lists": Object {
       "entities": Object {},
     },
+    "photos": Object {
+      "entities": Object {},
+    },
     "request": Object {},
     "status": Object {},
     "venues": Object {
@@ -107,6 +116,16 @@ Object {
     },
   },
   "listsSelector": [Function],
+  "photoSelector": [Function],
+  "photosActions": Object {
+    "getPhotosDetailsAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
+  },
+  "photosSelector": [Function],
   "putCredentials": [Function],
   "requestActionSelector": [Function],
   "requestCancelReasonSelector": [Function],

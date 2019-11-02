@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`epics/lists | error case: no network should gives details about a photo 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: Error 404],
+    "type": "GET_PHOTOS_DETAILS_FAILURE",
+  },
+]
+`;
+
+exports[`epics/lists should gives details about a photo 1`] = `
+Array [
+  Object {
+    "meta": 0,
+    "payload": Object {
+      "createdAt": 1373902108,
+      "height": 612,
+      "id": "51e4151c498e60b5d17bc721",
+      "prefix": "https://igx.4sqi.net/img/general/",
+      "source": Object {
+        "name": "Instagram",
+        "url": "http://instagram.com",
+      },
+      "suffix": "/1022386_wEd7VXnWzp5lajvRLtAPunoiufDSIq8PMEtEuIH2Tzg.jpg",
+      "user": Object {
+        "firstName": "John",
+        "gender": "male",
+        "id": "12345678",
+        "lastName": "Doe",
+        "photo": Object {
+          "prefix": "https://igx.4sqi.net/img/user/",
+          "suffix": "/YXNQ5O4TLYSNHMKY.jpg",
+        },
+      },
+      "venue": Object {
+        "categories": Array [
+          Object {
+            "icon": Object {
+              "prefix": "https://ss3.4sqi.net/img/categories_v2/arts_entertainment/museum_art_",
+              "suffix": ".png",
+            },
+            "id": "4bf58dd8d48988d18f941735",
+            "name": "Art Museum",
+            "pluralName": "Art Museums",
+            "primary": true,
+            "shortName": "Art Museum",
+          },
+        ],
+        "contact": Object {},
+        "id": "427c0500f964a52097211fe3",
+        "location": Object {
+          "address": "1000 5th Ave",
+          "cc": "US",
+          "city": "New York",
+          "country": "United States",
+          "crossStreet": "btwn E 80th & E 84th St",
+          "formattedAddress": Array [
+            "1000 5th Ave (btwn E 80th & E 84th St)",
+            "New York, NY 10028",
+            "United States",
+          ],
+          "lat": 40.779150129460504,
+          "lng": -73.9627398125614,
+          "postalCode": "10028",
+          "state": "NY",
+        },
+        "name": "The Metropolitan Museum of Art (Metropolitan Museum of Art)",
+      },
+      "visibility": "public",
+      "width": 612,
+    },
+    "type": "GET_PHOTOS_DETAILS_SUCCESS",
+  },
+]
+`;
+
+exports[`epics/venues | error case: not valid response should gives details about a photo 1`] = `
+Array [
+  Object {
+    "meta": undefined,
+    "payload": [Error: response.json is not a function],
+    "type": "GET_PHOTOS_DETAILS_FAILURE",
+  },
+]
+`;

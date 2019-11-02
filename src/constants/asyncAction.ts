@@ -10,6 +10,7 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
+  getPhotosDetailsAsync,
 } from '../actions'
 
 interface IAsyncActionNameMapping {
@@ -22,6 +23,11 @@ export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
   [getType(getListsAsync.success)]: 'getListsAsync',
   [getType(getListsAsync.failure)]: 'getListsAsync',
   [getType(getListsAsync.cancel)]: 'getListsAsync',
+  //   getPhotosDetailsAsync
+  [getType(getPhotosDetailsAsync.request)]: 'getPhotosDetailsAsync',
+  [getType(getPhotosDetailsAsync.success)]: 'getPhotosDetailsAsync',
+  [getType(getPhotosDetailsAsync.failure)]: 'getPhotosDetailsAsync',
+  [getType(getPhotosDetailsAsync.cancel)]: 'getPhotosDetailsAsync',
   // getVenuesCategoriesAsync
   [getType(getVenuesCategoriesAsync.request)]: 'getVenuesCategoriesAsync',
   [getType(getVenuesCategoriesAsync.success)]: 'getVenuesCategoriesAsync',

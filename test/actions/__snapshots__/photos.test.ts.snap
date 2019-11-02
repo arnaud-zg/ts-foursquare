@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/photos should make a snapshot of getPhotosDetailsAsync 1`] = `
+Object {
+  "cancel": [Function],
+  "failure": [Function],
+  "request": [Function],
+  "success": [Function],
+}
+`;
