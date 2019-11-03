@@ -4,6 +4,7 @@ import { NRecommendedPlaces } from './recommendedPlaces'
 import { NVenue } from './venue'
 import { NVenueListed } from './venueListed'
 import { NVenuesCategories } from './venuesCategories'
+import { NEntity } from './entity'
 
 export declare namespace NVenues {
   interface IState {
@@ -15,6 +16,8 @@ export declare namespace NVenues {
     recommendedPlaces: { [key: string]: NRecommendedPlaces.IGroupItem }
     similarVenues: { [key: string]: NVenue.IVenue }
     trendingEntities: { [key: string]: NVenue.IVenue }
-    venuesListed: { [key: string]: NVenueListed.IGroup }
+    venuesListed: {
+      [key: string]: NEntity.IEntityGroup<NVenueListed.IGroupItem>
+    }
   }
 }
