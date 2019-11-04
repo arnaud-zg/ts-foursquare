@@ -1,4 +1,4 @@
-export declare namespace NStatus {
+export declare namespace NStatusState {
   interface IModuleState {
     hasError: boolean
     isCancelled: boolean
@@ -6,6 +6,6 @@ export declare namespace NStatus {
   }
 
   interface IState {
-    [key: string]: IModuleState
+    [actionType: string]: IModuleState
   }
 }

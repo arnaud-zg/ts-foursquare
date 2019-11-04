@@ -1,5 +1,5 @@
 import { createReducer, getType } from 'typesafe-actions'
-import { NStatus } from '../../types'
+import { NStatusState } from '../../types'
 import {
   getListsAsync,
   getPhotosDetailsAsync,
@@ -16,9 +16,9 @@ import {
 } from '../actions'
 import { ASYNC_ACTION_NAME_MAPPING } from '../constants/asyncAction'
 
-export const initialState: NStatus.IState = {}
+export const initialState: NStatusState.IState = {}
 
-export const statusReducer = createReducer<NStatus.IState, TRootAction>(
+export const statusReducer = createReducer<NStatusState.IState, TRootAction>(
   initialState
 )
   .handleAction(
@@ -35,7 +35,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
       getType(getVenuesSuggestCompletionAsync.request),
       getType(getVenuesTrendingAsync.request),
     ],
-    (state, action: TRootAction): NStatus.IState => ({
+    (state, action: TRootAction): NStatusState.IState => ({
       ...state,
       [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
@@ -59,7 +59,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
       getType(getVenuesSuggestCompletionAsync.failure),
       getType(getVenuesTrendingAsync.failure),
     ],
-    (state, action: TRootAction): NStatus.IState => ({
+    (state, action: TRootAction): NStatusState.IState => ({
       ...state,
       [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
@@ -83,7 +83,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
       getType(getVenuesSuggestCompletionAsync.cancel),
       getType(getVenuesTrendingAsync.cancel),
     ],
-    (state, action: TRootAction): NStatus.IState => ({
+    (state, action: TRootAction): NStatusState.IState => ({
       ...state,
       [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],
@@ -107,7 +107,7 @@ export const statusReducer = createReducer<NStatus.IState, TRootAction>(
       getType(getVenuesSuggestCompletionAsync.success),
       getType(getVenuesTrendingAsync.success),
     ],
-    (state, action: TRootAction): NStatus.IState => ({
+    (state, action: TRootAction): NStatusState.IState => ({
       ...state,
       [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
         ...state[action.type],

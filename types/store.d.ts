@@ -1,17 +1,17 @@
-import { NLife } from './lifeState'
+import { NLifeState } from './lifeState'
 import { NListsState } from './listsState'
 import { NPhotosState } from './photosState'
 import { NRequestState } from './requestState'
-import { NStatus } from './statusState'
+import { NStatusState } from './statusState'
 import { NVenues } from './venuesState'
 
 export declare namespace NStore {
   interface IState {
-    life: NLife.IState
+    life: NLifeState.IState
     lists: NListsState.IState
     photos: NPhotosState.IState
     request: NRequestState.IState
-    status: NStatus.IState
-    venues: NVenues.IState
+    status: NStatusState.IState
+    venues: NVenuesState.IState
   }
 }
