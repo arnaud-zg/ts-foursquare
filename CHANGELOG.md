@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.3...v0.4.4) (2019-11-04)
+
+
+### 📦 Build System
+
+* **project:** update venues state type ([#333](https://github.com/arnaud-zg/ts-foursquare/issues/333)) ([1cb6ec8](https://github.com/arnaud-zg/ts-foursquare/commit/1cb6ec8))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.5 ([#330](https://github.com/arnaud-zg/ts-foursquare/issues/330)) ([45253c2](https://github.com/arnaud-zg/ts-foursquare/commit/45253c2))
+* **project:** reorder request adapter methods ([#334](https://github.com/arnaud-zg/ts-foursquare/issues/334)) ([d803d82](https://github.com/arnaud-zg/ts-foursquare/commit/d803d82))
+* **type:** rename state namespace ([#335](https://github.com/arnaud-zg/ts-foursquare/issues/335)) ([0113490](https://github.com/arnaud-zg/ts-foursquare/commit/0113490))
+
+
+### 🖋 Features
+
+* **photo-details:** add get photos details action, adapter, epics, reducers, selectors and services ([#331](https://github.com/arnaud-zg/ts-foursquare/issues/331)) ([7f6f659](https://github.com/arnaud-zg/ts-foursquare/commit/7f6f659))
+
 ### [0.4.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.2...v0.4.3) (2019-11-01)
 
 
