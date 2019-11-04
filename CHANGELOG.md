@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.4...v0.4.5) (2019-11-04)
+
+
+### 🔧 Chore
+
+* **venues:** use venues state ([#336](https://github.com/arnaud-zg/ts-foursquare/issues/336)) ([d7722aa](https://github.com/arnaud-zg/ts-foursquare/commit/d7722aa))
+
 ### [0.4.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.3...v0.4.4) (2019-11-04)
 
 
