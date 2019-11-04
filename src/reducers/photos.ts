@@ -1,4 +1,4 @@
-import { createReducer, getType } from 'typesafe-actions'
+import { createReducer } from 'typesafe-actions'
 import { NPhotosState } from '../../types'
 import { getPhotosDetailsAsync, TPhotosAction } from '../actions'
 
@@ -9,7 +9,7 @@ export const initialState: NPhotosState.IState = {
 export const photosReducer = createReducer<NPhotosState.IState, TPhotosAction>(
   initialState
 ).handleAction(
-  getType(getPhotosDetailsAsync.success),
+  getPhotosDetailsAsync.success,
   (state, action): NPhotosState.IState => {
     return {
       ...state,

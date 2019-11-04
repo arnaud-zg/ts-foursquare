@@ -3,7 +3,6 @@
 exports[`epics/lists | error case: no network should gives details about a photo 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_PHOTOS_DETAILS_FAILURE",
   },
@@ -79,7 +78,6 @@ Array [
 exports[`epics/venues | error case: not valid response should gives details about a photo 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_PHOTOS_DETAILS_FAILURE",
   },

@@ -1,4 +1,4 @@
-import { createReducer, getType } from 'typesafe-actions'
+import { createReducer } from 'typesafe-actions'
 import {
   NEntity,
   NLikes,
@@ -32,7 +32,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   initialState
 )
   .handleAction(
-    getType(getPhotosDetailsAsync.success),
+    getPhotosDetailsAsync.success,
     (state, action): NRequestState.IState => {
       const entity: NPhotos.IPhoto = action.payload
 
@@ -45,7 +45,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
     }
   )
   .handleAction(
-    getType(getVenuesCategoriesAsync.success),
+    getVenuesCategoriesAsync.success,
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.map(
         (item: NVenuesCategories.ICategory) => item.id
@@ -60,7 +60,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
     }
   )
   .handleAction(
-    getType(getVenuesExploreAsync.success),
+    getVenuesExploreAsync.success,
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.map(
         (item: NRecommendedPlaces.IGroupItem) => item.venue.id
@@ -75,7 +75,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
     }
   )
   .handleAction(
-    getType(getVenuesLikesAsync.success),
+    getVenuesLikesAsync.success,
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.items.map(
         (item: NLikes.IItem) => item.id
@@ -91,7 +91,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
 
   .handleAction(
-    getType(getVenuesListedAsync.success),
+    getVenuesListedAsync.success,
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.groups.map(
         (group: NEntity.IEntityGroup<NVenueListed.IGroupItem>) =>
@@ -109,10 +109,10 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
 
   .handleAction(
     [
-      getType(getVenuesNextVenuesAsync.success),
-      getType(getVenuesSearchAsync.success),
-      getType(getVenuesSimilarAsync.success),
-      getType(getVenuesTrendingAsync.success),
+      getVenuesNextVenuesAsync.success,
+      getVenuesSearchAsync.success,
+      getVenuesSimilarAsync.success,
+      getVenuesTrendingAsync.success,
     ],
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.map((item: NVenue.IVenue) => item.id)
@@ -126,7 +126,7 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
     }
   )
   .handleAction(
-    getType(getVenuesSuggestCompletionAsync.success),
+    getVenuesSuggestCompletionAsync.success,
     (state, action): NRequestState.IState => {
       const entityIds = action.payload.map(
         (item: NMiniVenue.IMiniVenue) => item.id
@@ -142,16 +142,16 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
-      getType(getPhotosDetailsAsync.cancel),
-      getType(getVenuesCategoriesAsync.cancel),
-      getType(getVenuesExploreAsync.cancel),
-      getType(getVenuesLikesAsync.cancel),
-      getType(getVenuesListedAsync.cancel),
-      getType(getVenuesNextVenuesAsync.cancel),
-      getType(getVenuesSearchAsync.cancel),
-      getType(getVenuesSimilarAsync.cancel),
-      getType(getVenuesSuggestCompletionAsync.cancel),
-      getType(getVenuesTrendingAsync.cancel),
+      getPhotosDetailsAsync.cancel,
+      getVenuesCategoriesAsync.cancel,
+      getVenuesExploreAsync.cancel,
+      getVenuesLikesAsync.cancel,
+      getVenuesListedAsync.cancel,
+      getVenuesNextVenuesAsync.cancel,
+      getVenuesSearchAsync.cancel,
+      getVenuesSimilarAsync.cancel,
+      getVenuesSuggestCompletionAsync.cancel,
+      getVenuesTrendingAsync.cancel,
     ],
     (state, action): NRequestState.IState => ({
       ...state,
@@ -163,16 +163,16 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
-      getType(getPhotosDetailsAsync.failure),
-      getType(getVenuesCategoriesAsync.failure),
-      getType(getVenuesExploreAsync.failure),
-      getType(getVenuesLikesAsync.failure),
-      getType(getVenuesListedAsync.failure),
-      getType(getVenuesNextVenuesAsync.failure),
-      getType(getVenuesSearchAsync.failure),
-      getType(getVenuesSimilarAsync.failure),
-      getType(getVenuesSuggestCompletionAsync.failure),
-      getType(getVenuesTrendingAsync.failure),
+      getPhotosDetailsAsync.failure,
+      getVenuesCategoriesAsync.failure,
+      getVenuesExploreAsync.failure,
+      getVenuesLikesAsync.failure,
+      getVenuesListedAsync.failure,
+      getVenuesNextVenuesAsync.failure,
+      getVenuesSearchAsync.failure,
+      getVenuesSimilarAsync.failure,
+      getVenuesSuggestCompletionAsync.failure,
+      getVenuesTrendingAsync.failure,
     ],
     (state, action): NRequestState.IState => ({
       ...state,

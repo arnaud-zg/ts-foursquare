@@ -1,4 +1,4 @@
-import { createReducer, getType } from 'typesafe-actions'
+import { createReducer } from 'typesafe-actions'
 import { NVenuesState } from '../../types'
 import {
   getVenuesCategoriesAsync,
@@ -30,7 +30,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
   initialState
 )
   .handleAction(
-    getType(getVenuesCategoriesAsync.success),
+    getVenuesCategoriesAsync.success,
     (state, action): NVenuesState.IState => {
       const categories = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
@@ -46,7 +46,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   )
   .handleAction(
-    getType(getVenuesNextVenuesAsync.success),
+    getVenuesNextVenuesAsync.success,
     (state, action): NVenuesState.IState => {
       const venues = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
@@ -62,7 +62,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   )
   .handleAction(
-    getType(getVenuesSimilarAsync.success),
+    getVenuesSimilarAsync.success,
     (state, action): NVenuesState.IState => {
       const venues = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
@@ -78,7 +78,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   )
   .handleAction(
-    getType(getVenuesSearchAsync.success),
+    getVenuesSearchAsync.success,
     (state, action): NVenuesState.IState => {
       const venues = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
@@ -94,7 +94,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   )
   .handleAction(
-    getType(getVenuesExploreAsync.success),
+    getVenuesExploreAsync.success,
     (state, action): NVenuesState.IState => {
       const recommendedPlaces = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.venue.id]: cur }),
@@ -109,7 +109,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
       }
     }
   )
-  .handleAction(getType(getVenuesLikesAsync.success), (state, action) => {
+  .handleAction(getVenuesLikesAsync.success, (state, action) => {
     const likesEntities = action.payload.items.reduce(
       (acc, cur) => ({ ...acc, [cur.id]: cur }),
       {}
@@ -122,7 +122,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
       },
     }
   })
-  .handleAction(getType(getVenuesListedAsync.success), (state, action) => {
+  .handleAction(getVenuesListedAsync.success, (state, action) => {
     const groupEntities = action.payload.groups.reduce(
       (acc, cur) => ({ ...acc, [getVenuesListedGroupKey(cur)]: cur }),
       {}
@@ -136,7 +136,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   })
   .handleAction(
-    getType(getVenuesSuggestCompletionAsync.success),
+    getVenuesSuggestCompletionAsync.success,
     (state, action): NVenuesState.IState => {
       const miniVenues = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
@@ -152,7 +152,7 @@ export const venuesReducer = createReducer<NVenuesState.IState, TVenuesAction>(
     }
   )
   .handleAction(
-    getType(getVenuesTrendingAsync.success),
+    getVenuesTrendingAsync.success,
     (state, action): NVenuesState.IState => {
       const venues = action.payload.reduce(
         (acc, cur) => ({ ...acc, [cur.id]: cur }),
