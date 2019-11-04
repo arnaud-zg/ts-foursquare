@@ -3,7 +3,6 @@
 exports[`epics/venues | error case: no network should get a list that this venue appears on 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_LISTED_FAILURE",
   },
@@ -13,7 +12,6 @@ Array [
 exports[`epics/venues | error case: no network should get recommended places by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_EXPLORE_FAILURE",
   },
@@ -23,7 +21,6 @@ Array [
 exports[`epics/venues | error case: no network should get similar venues 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_SIMILAR_FAILURE",
   },
@@ -33,7 +30,6 @@ Array [
 exports[`epics/venues | error case: no network should get trending venues by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_TRENDING_FAILURE",
   },
@@ -43,7 +39,6 @@ Array [
 exports[`epics/venues | error case: no network should get venues by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_SEARCH_FAILURE",
   },
@@ -53,7 +48,6 @@ Array [
 exports[`epics/venues | error case: no network should get venues categories 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_CATEGORIES_FAILURE",
   },
@@ -63,7 +57,6 @@ Array [
 exports[`epics/venues | error case: no network should get venues likes 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_LIKES_FAILURE",
   },
@@ -73,7 +66,6 @@ Array [
 exports[`epics/venues | error case: no network should get venues next venues 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: Error 404],
     "type": "GET_VENUES_NEXT_VENUES_FAILURE",
   },
@@ -83,7 +75,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get a list that this venue appears on 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_LISTED_FAILURE",
   },
@@ -93,7 +84,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get recommended places by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_EXPLORE_FAILURE",
   },
@@ -103,7 +93,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get similar venues 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_SIMILAR_FAILURE",
   },
@@ -113,7 +102,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get trending venues by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_TRENDING_FAILURE",
   },
@@ -123,7 +111,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get venues by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_SEARCH_FAILURE",
   },
@@ -133,7 +120,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get venues categories 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_CATEGORIES_FAILURE",
   },
@@ -143,7 +129,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get venues likes 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_LIKES_FAILURE",
   },
@@ -153,7 +138,6 @@ Array [
 exports[`epics/venues | error case: not valid response should get venues next venues 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_NEXT_VENUES_FAILURE",
   },
@@ -163,7 +147,6 @@ Array [
 exports[`epics/venues | error case: not valid response should suggest completion for venues by location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE",
   },
@@ -173,7 +156,6 @@ Array [
 exports[`epics/venues | error case: not valid response should suggest completion for venues near to a location 1`] = `
 Array [
   Object {
-    "meta": undefined,
     "payload": [Error: response.json is not a function],
     "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE",
   },

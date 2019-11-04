@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 1`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 1`] = `
 Object {
   "entities": Object {},
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 2`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 2`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -15,7 +15,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 3`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_PHOTOS_DETAILS_CANCEL"} 3`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "hasError": false,
@@ -25,13 +25,13 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 1`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 1`] = `
 Object {
   "entities": Object {},
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 2`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 2`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "entityIds": Array [],
@@ -40,7 +40,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 3`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_PHOTOS_DETAILS_FAILURE"} 3`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "hasError": true,
@@ -50,7 +50,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 1`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 1`] = `
 Object {
   "entities": Object {
     "51e4151c498e60b5d17bc721": Object {
@@ -114,7 +114,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 2`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 2`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "entityIds": Array [
@@ -124,7 +124,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 3`] = `
+exports[`reducers/lists/getPhotosDetailsAsync should get state after action: getPhotosDetailsAsync.success with action: {"payload": [Object], "type": "GET_PHOTOS_DETAILS_SUCCESS"} 3`] = `
 Object {
   "getPhotosDetailsAsync": Object {
     "hasError": false,

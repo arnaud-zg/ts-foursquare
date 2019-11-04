@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_CATEGORIES_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_CATEGORIES_CANCEL"} 1`] = `
 Object {
   "getVenuesCategoriesAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_CATEGORIES_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_CATEGORIES_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -23,7 +23,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_CATEGORIES_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_CATEGORIES_FAILURE"} 1`] = `
 Object {
   "getVenuesCategoriesAsync": Object {
     "entityIds": Array [],
@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_CATEGORIES_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_CATEGORIES_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -46,7 +46,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_CATEGORIES_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.success with action: {"payload": [Array], "type": "GET_VENUES_CATEGORIES_SUCCESS"} 1`] = `
 Object {
   "getVenuesCategoriesAsync": Object {
     "entityIds": Array [
@@ -57,7 +57,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_CATEGORIES_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesCategoriesAsync should get state after action: getVenuesCategoriesAsync.success with action: {"payload": [Array], "type": "GET_VENUES_CATEGORIES_SUCCESS"} 2`] = `
 Object {
   "categories": Object {
     "4d4b7104d754a06370d81259": Object {
@@ -1228,7 +1228,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 1`] = `
 Object {
   "getVenuesListedAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -1237,7 +1237,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_LISTED_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1251,7 +1251,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 1`] = `
 Object {
   "getVenuesListedAsync": Object {
     "entityIds": Array [],
@@ -1260,7 +1260,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_LISTED_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1274,7 +1274,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 1`] = `
 Object {
   "getVenuesListedAsync": Object {
     "entityIds": Array [
@@ -1284,7 +1284,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesListedAsync should get state after action: getVenuesListedAsync.success with action: {"payload": [Object], "type": "GET_VENUES_LISTED_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1433,7 +1433,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_NEXT_VENUES_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_NEXT_VENUES_CANCEL"} 1`] = `
 Object {
   "getVenuesNextVenuesAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -1442,7 +1442,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_NEXT_VENUES_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_NEXT_VENUES_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1456,7 +1456,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_NEXT_VENUES_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_NEXT_VENUES_FAILURE"} 1`] = `
 Object {
   "getVenuesNextVenuesAsync": Object {
     "entityIds": Array [],
@@ -1465,7 +1465,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_NEXT_VENUES_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_NEXT_VENUES_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1479,7 +1479,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_NEXT_VENUES_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.success with action: {"payload": [Array], "type": "GET_VENUES_NEXT_VENUES_SUCCESS"} 1`] = `
 Object {
   "getVenuesNextVenuesAsync": Object {
     "entityIds": Array [
@@ -1493,7 +1493,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_NEXT_VENUES_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesNextVenuesAsync should get state after action: getVenuesNextVenuesAsync.success with action: {"payload": [Array], "type": "GET_VENUES_NEXT_VENUES_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1713,7 +1713,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SEARCH_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SEARCH_CANCEL"} 1`] = `
 Object {
   "getVenuesSearchAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -1722,7 +1722,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SEARCH_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SEARCH_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1736,7 +1736,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SEARCH_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SEARCH_FAILURE"} 1`] = `
 Object {
   "getVenuesSearchAsync": Object {
     "entityIds": Array [],
@@ -1745,7 +1745,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SEARCH_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SEARCH_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1759,7 +1759,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SEARCH_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SEARCH_SUCCESS"} 1`] = `
 Object {
   "getVenuesSearchAsync": Object {
     "entityIds": Array [
@@ -1769,7 +1769,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SEARCH_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesSearchAsync should get state after action: getVenuesSearchAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SEARCH_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {
@@ -1830,7 +1830,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SIMILAR_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SIMILAR_CANCEL"} 1`] = `
 Object {
   "getVenuesSimilarAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -1839,7 +1839,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SIMILAR_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SIMILAR_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1853,7 +1853,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SIMILAR_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SIMILAR_FAILURE"} 1`] = `
 Object {
   "getVenuesSimilarAsync": Object {
     "entityIds": Array [],
@@ -1862,7 +1862,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SIMILAR_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SIMILAR_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -1876,7 +1876,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SIMILAR_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SIMILAR_SUCCESS"} 1`] = `
 Object {
   "getVenuesSimilarAsync": Object {
     "entityIds": Array [
@@ -1890,7 +1890,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SIMILAR_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesSimilarAsync should get state after action: getVenuesSimilarAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SIMILAR_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2126,7 +2126,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SUGGEST_COMPLETION_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SUGGEST_COMPLETION_CANCEL"} 1`] = `
 Object {
   "getVenuesSuggestCompletionAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -2135,7 +2135,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_SUGGEST_COMPLETION_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_SUGGEST_COMPLETION_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2149,7 +2149,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE"} 1`] = `
 Object {
   "getVenuesSuggestCompletionAsync": Object {
     "entityIds": Array [],
@@ -2158,7 +2158,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_SUGGEST_COMPLETION_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2172,7 +2172,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SUGGEST_COMPLETION_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SUGGEST_COMPLETION_SUCCESS"} 1`] = `
 Object {
   "getVenuesSuggestCompletionAsync": Object {
     "entityIds": Array [
@@ -2186,7 +2186,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_SUGGEST_COMPLETION_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesSuggestCompletionAsync should get state after action: getVenuesSuggestCompletionAsync.success with action: {"payload": [Array], "type": "GET_VENUES_SUGGEST_COMPLETION_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2431,7 +2431,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_TRENDING_CANCEL"} 1`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_TRENDING_CANCEL"} 1`] = `
 Object {
   "getVenuesTrendingAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -2440,7 +2440,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_TRENDING_CANCEL"} 2`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_TRENDING_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2454,7 +2454,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_TRENDING_FAILURE"} 1`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_TRENDING_FAILURE"} 1`] = `
 Object {
   "getVenuesTrendingAsync": Object {
     "entityIds": Array [],
@@ -2463,7 +2463,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_TRENDING_FAILURE"} 2`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_TRENDING_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2477,7 +2477,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_TRENDING_SUCCESS"} 1`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.success with action: {"payload": [Array], "type": "GET_VENUES_TRENDING_SUCCESS"} 1`] = `
 Object {
   "getVenuesTrendingAsync": Object {
     "entityIds": Array [
@@ -2487,7 +2487,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_TRENDING_SUCCESS"} 2`] = `
+exports[`reducers/venues/getVenuesTrendingAsync should get state after action: getVenuesTrendingAsync.success with action: {"payload": [Array], "type": "GET_VENUES_TRENDING_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2548,7 +2548,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_EXPLORE_CANCEL"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_EXPLORE_CANCEL"} 1`] = `
 Object {
   "getVenuesExploreAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -2557,7 +2557,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_EXPLORE_CANCEL"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_EXPLORE_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2571,7 +2571,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_EXPLORE_FAILURE"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_EXPLORE_FAILURE"} 1`] = `
 Object {
   "getVenuesExploreAsync": Object {
     "entityIds": Array [],
@@ -2580,7 +2580,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_EXPLORE_FAILURE"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_EXPLORE_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2594,7 +2594,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_EXPLORE_SUCCESS"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.success with action: {"payload": [Array], "type": "GET_VENUES_EXPLORE_SUCCESS"} 1`] = `
 Object {
   "getVenuesExploreAsync": Object {
     "entityIds": Array [
@@ -2604,7 +2604,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.success with action: {"meta": undefined, "payload": [Array], "type": "GET_VENUES_EXPLORE_SUCCESS"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesExplore should get state after action: payloadGetVenuesExplore.success with action: {"payload": [Array], "type": "GET_VENUES_EXPLORE_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2675,7 +2675,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LIKES_CANCEL"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_LIKES_CANCEL"} 1`] = `
 Object {
   "getVenuesLikesAsync": Object {
     "cancelReason": "An user cancelled this action",
@@ -2684,7 +2684,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_VENUES_LIKES_CANCEL"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.cancel with action: {"payload": "An user cancelled this action", "type": "GET_VENUES_LIKES_CANCEL"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2698,7 +2698,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LIKES_FAILURE"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_LIKES_FAILURE"} 1`] = `
 Object {
   "getVenuesLikesAsync": Object {
     "entityIds": Array [],
@@ -2707,7 +2707,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_VENUES_LIKES_FAILURE"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.failure with action: {"payload": [Error: An error occurred], "type": "GET_VENUES_LIKES_FAILURE"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},
@@ -2721,7 +2721,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LIKES_SUCCESS"} 1`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.success with action: {"payload": [Object], "type": "GET_VENUES_LIKES_SUCCESS"} 1`] = `
 Object {
   "getVenuesLikesAsync": Object {
     "entityIds": Array [
@@ -2733,7 +2733,7 @@ Object {
 }
 `;
 
-exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.success with action: {"meta": undefined, "payload": [Object], "type": "GET_VENUES_LIKES_SUCCESS"} 2`] = `
+exports[`reducers/venues/payloadGetVenuesLikes should get state after action: payloadGetVenuesLikes.success with action: {"payload": [Object], "type": "GET_VENUES_LIKES_SUCCESS"} 2`] = `
 Object {
   "categories": Object {},
   "entities": Object {},

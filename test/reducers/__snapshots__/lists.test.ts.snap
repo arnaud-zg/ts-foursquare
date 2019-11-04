@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 1`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 1`] = `
 Object {
   "entities": Object {},
 }
 `;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 2`] = `Object {}`;
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 2`] = `Object {}`;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"meta": undefined, "payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 3`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.cancel with action: {"payload": "An user cancelled this action", "type": "GET_LISTS_CANCEL"} 3`] = `
 Object {
   "getListsAsync": Object {
     "hasError": false,
@@ -18,15 +18,15 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 1`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 1`] = `
 Object {
   "entities": Object {},
 }
 `;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 2`] = `Object {}`;
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 2`] = `Object {}`;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"meta": undefined, "payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 3`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.failure with action: {"payload": [Error: An error occurred], "type": "GET_LISTS_FAILURE"} 3`] = `
 Object {
   "getListsAsync": Object {
     "hasError": true,
@@ -36,7 +36,7 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_LISTS_SUCCESS"} 1`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"payload": [Object], "type": "GET_LISTS_SUCCESS"} 1`] = `
 Object {
   "entities": Object {
     "5580721e498e7c48540bf83f": Object {
@@ -189,9 +189,9 @@ Object {
 }
 `;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_LISTS_SUCCESS"} 2`] = `Object {}`;
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"payload": [Object], "type": "GET_LISTS_SUCCESS"} 2`] = `Object {}`;
 
-exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"meta": undefined, "payload": [Object], "type": "GET_LISTS_SUCCESS"} 3`] = `
+exports[`reducers/lists/getListsAsync should get state after action: getListsAsync.success with action: {"payload": [Object], "type": "GET_LISTS_SUCCESS"} 3`] = `
 Object {
   "getListsAsync": Object {
     "hasError": false,
