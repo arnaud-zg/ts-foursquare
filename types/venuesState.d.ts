@@ -6,7 +6,7 @@ import { NVenueListed } from './venueListed'
 import { NVenuesCategories } from './venuesCategories'
 import { NEntity } from './entity'
 
-export declare namespace NVenues {
+export declare namespace NVenuesState {
   interface IState {
     categories: { [key: string]: NVenuesCategories.ICategory }
     entities: { [key: string]: NVenue.IVenue }
