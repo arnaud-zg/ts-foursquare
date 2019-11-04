@@ -3,7 +3,7 @@ import { NListsState } from './listsState'
 import { NPhotosState } from './photosState'
 import { NRequestState } from './requestState'
 import { NStatusState } from './statusState'
-import { NVenues } from './venuesState'
+import { NVenuesState } from './venuesState'
 
 export declare namespace NStore {
   interface IState {
