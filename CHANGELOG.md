@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.5...v0.4.6) (2019-11-05)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency typesafe-actions to v5 ([#332](https://github.com/arnaud-zg/ts-foursquare/issues/332)) ([c4ff841](https://github.com/arnaud-zg/ts-foursquare/commit/c4ff841))
+
+
+### 📦 Build System
+
+* **project:** deploy package with lock file ([#339](https://github.com/arnaud-zg/ts-foursquare/issues/339)) ([919861b](https://github.com/arnaud-zg/ts-foursquare/commit/919861b))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency typescript to v3.7.2 ([#337](https://github.com/arnaud-zg/ts-foursquare/issues/337)) ([907a3a6](https://github.com/arnaud-zg/ts-foursquare/commit/907a3a6))
+
 ### [0.4.5](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.4...v0.4.5) (2019-11-04)
 
 
