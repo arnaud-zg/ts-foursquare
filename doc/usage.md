@@ -13,6 +13,8 @@ Works in Node and with any browser that support javascript.
     - [putCredentials](#putCredentials)
   - [Lists action](#lists-action)
     - [getListsAsync](#getListsAsync)
+  - [Photos action](#photos-action)
+    - [getPhotosDetailsAsync](#getPhotosDetailsAsync)
   - [Venues action](#venues-action)
     - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
     - [getVenuesExploreAsync](#getVenuesExploreAsync)
@@ -23,8 +25,6 @@ Works in Node and with any browser that support javascript.
     - [getVenuesSimilarAsync](#getVenuesSimilarAsync)
     - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
     - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
-- [Helpers](#helpers)
-  - [Standalone Store](#standalone-store)
 - [Reducers](#reducers)
   - [Life reducer](#life-reducer)
   - [Venues reducer](#venues-reducer)
@@ -87,6 +87,26 @@ const onFetchData = () => {
 const onFetchData = () => {
   getListsAsync.request({
     listId: '5580721e498e7c48540bf83f',
+  })
+}
+```
+
+### Photos action
+
+#### getPhotosDetailsAsync
+
+> Get details of a photo.
+>
+> -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/photos/details" target="_blank">https://developer.foursquare.com/docs/api/photos/details</a></cite>
+
+`getPhotosDetailsAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+
+##### Redux context
+
+```js
+const onFetchData = () => {
+  getPhotosDetailsAsync.request({
+    photoId: '51e4151c498e60b5d17bc721',
   })
 }
 ```
