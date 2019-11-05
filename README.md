@@ -1,29 +1,26 @@
-# ts-foursquare
+<h1 align="center">Welcome to ts-foursquare 👋</h1>
 
-A simple library for Foursquare API
+<p>A simple library for Foursquare API</p>
 
-[![Build Status](https://travis-ci.org/arnaud-zg/ts-foursquare.svg?branch=develop)](https://travis-ci.org/arnaud-zg/ts-foursquare)
-[![Bundle Size](https://badgen.net/bundlephobia/min/ts-foursquare)](https://bundlephobia.com/result?p=ts-foursquare)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/arnaud-zg/ts-foursquare)
-![Version](https://img.shields.io/npm/v/ts-foursquare)
+<p>
+  <a href="https://www.npmjs.com/package/ts-foursquare" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/ts-foursquare.svg">
+  </a>
+  <img alt="Commit Activity" src="https://img.shields.io/github/commit-activity/m/arnaud-zg/ts-foursquare" />
+  <a href="https://travis-ci.org/arnaud-zg/ts-foursquare" target="_blank">
+    <img alt="Build Status" src="https://travis-ci.org/arnaud-zg/ts-foursquare.svg?branch=develop" />
+  </a>
+  <a href="https://bundlephobia.com/result?p=ts-foursquare" target="_blank">
+    <img alt="Bundle Size" src="https://badgen.net/bundlephobia/min/ts-foursquare" />
+  </a>
+</p>
 
-| Closed | Open |
-|-|-|
-| ![Issues Open](https://img.shields.io/github/issues-closed/arnaud-zg/ts-foursquare) | ![Issues Closed](https://img.shields.io/github/issues/arnaud-zg/ts-foursquare) |
-| ![Pull Requests Open](https://img.shields.io/github/issues-pr-closed/arnaud-zg/ts-foursquare) | ![Pull Requests Closed](https://img.shields.io/github/issues-pr/arnaud-zg/ts-foursquare) |
-
-## Getting Started
-
-These instructions will let you know how to use the library.
-
-### Prerequisites
-
-Things you need to install before using this library.
-
-```shell
-node: 10.15.0
-nvm: 0.33.6
-```
+<p>
+  <img alt="Issues Closed" src="https://img.shields.io/github/issues-closed/arnaud-zg/ts-foursquare">
+  <img alt="Issues Open" src="https://img.shields.io/github/issues/arnaud-zg/ts-foursquare">
+  <img alt="Pull Request Closed" src="https://img.shields.io/github/issues-pr-closed/arnaud-zg/ts-foursquare">
+  <img alt="Pull Request Open" src="https://img.shields.io/github/issues-pr/arnaud-zg/ts-foursquare">
+</p>
 
 ### Installing
 
@@ -74,6 +71,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Arnaud Zheng** - *Initial work* - [arnaud-zg](https://github.com/arnaud-zg)
 
 See also the list of [contributors](https://github.com/arnaud-zg/ts-foursquare/graphs/contributors) who participated in this project.
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
 
 ## License
 
