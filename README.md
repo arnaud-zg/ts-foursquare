@@ -40,7 +40,7 @@ yarn add --dev ts-foursquare
 
 Look at the documentation
 
-* [Usage](./doc/usage.md)
+- [Usage](./docs/usage.md)
 
 ## Running the tests
 
@@ -56,7 +56,7 @@ yarn run test
 
 ## Built With
 
-* [TSDX](https://github.com/palmerhq/tsdx) - TSDX
+- [TSDX](https://github.com/palmerhq/tsdx) - TSDX
 
 ## Contributing
 
@@ -68,7 +68,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Arnaud Zheng** - *Initial work* - [arnaud-zg](https://github.com/arnaud-zg)
+- **Arnaud Zheng** - _Initial work_ - [arnaud-zg](https://github.com/arnaud-zg)
 
 See also the list of [contributors](https://github.com/arnaud-zg/ts-foursquare/graphs/contributors) who participated in this project.
 
