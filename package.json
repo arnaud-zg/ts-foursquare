@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/arnaud-zg/ts-foursquare.git"
   },
+  "homepage": "https://github.com/arnaud-zg/ts-foursquare",
+  "bugs": {
+    "url": "https://github.com/arnaud-zg/ts-foursquare/issues"
+  },
   "files": [
     "dist",
     "types"
