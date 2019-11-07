@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.6...v0.4.7) (2019-11-07)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.0.22 ([#342](https://github.com/arnaud-zg/ts-foursquare/issues/342)) ([2e429d1](https://github.com/arnaud-zg/ts-foursquare/commit/2e429d1))
+* **deps:** update dependency @types/node to v12.12.6 ([#340](https://github.com/arnaud-zg/ts-foursquare/issues/340)) ([064ce9f](https://github.com/arnaud-zg/ts-foursquare/commit/064ce9f))
+* **project:** add package description ([#343](https://github.com/arnaud-zg/ts-foursquare/issues/343)) ([092b354](https://github.com/arnaud-zg/ts-foursquare/commit/092b354))
+* **project:** add package homepage and bugs url ([#344](https://github.com/arnaud-zg/ts-foursquare/issues/344)) ([2de8303](https://github.com/arnaud-zg/ts-foursquare/commit/2de8303))
+* **project:** update project markdown ([#345](https://github.com/arnaud-zg/ts-foursquare/issues/345)) ([0241499](https://github.com/arnaud-zg/ts-foursquare/commit/0241499))
+
 ### [0.4.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.5...v0.4.6) (2019-11-05)
 
 
