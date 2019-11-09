@@ -44,7 +44,7 @@
     "typescript": "3.7.2"
   },
   "dependencies": {
-    "http-response-status": "0.0.10",
+    "http-response-status": "0.0.11",
     "isomorphic-fetch": "2.2.1",
     "path-to-regexp": "^3.1.0",
     "redux": "4.0.4",
