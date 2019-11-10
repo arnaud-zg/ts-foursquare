@@ -1,9 +1,11 @@
+import { createSelector } from 'selector'
 import { NStore } from '../../types'
 
-export const lifeSelector = (state: NStore.IState) => state.life
+export const lifeSelector = (state: NStore.IState) =>
+  createSelector('life')(state)
 
 export const lifeStatusSelector = (state: NStore.IState) =>
-  lifeSelector(state).status
+  createSelector('status')(lifeSelector(state))
 
 export const lifeCredentialsSelector = (state: NStore.IState) =>
-  lifeSelector(state).credentials
+  createSelector('credentials')(lifeSelector(state))
