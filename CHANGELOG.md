@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.7...v0.4.8) (2019-11-13)
+
+
+### 🐛 Bug Fixes
+
+* **config:** remove tslint from ".npmignore" ([#349](https://github.com/arnaud-zg/ts-foursquare/issues/349)) ([7de4987](https://github.com/arnaud-zg/ts-foursquare/commit/7de4987))
+* **deps:** update dependency http-response-status to v0.0.11 ([#348](https://github.com/arnaud-zg/ts-foursquare/issues/348)) ([a71ded8](https://github.com/arnaud-zg/ts-foursquare/commit/a71ded8))
+* **deps:** update dependency path-to-regexp to v5 ([#355](https://github.com/arnaud-zg/ts-foursquare/issues/355)) ([878fddc](https://github.com/arnaud-zg/ts-foursquare/commit/878fddc))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.0.23 ([#356](https://github.com/arnaud-zg/ts-foursquare/issues/356)) ([9ed916e](https://github.com/arnaud-zg/ts-foursquare/commit/9ed916e))
+* **deps:** update dependency @types/node to v12.12.7 ([#347](https://github.com/arnaud-zg/ts-foursquare/issues/347)) ([94da3a7](https://github.com/arnaud-zg/ts-foursquare/commit/94da3a7))
+
 ### [0.4.7](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.6...v0.4.7) (2019-11-07)
 
 
