@@ -1,6 +1,6 @@
-import pathToRegexp from 'path-to-regexp'
+import { compile } from 'path-to-regexp'
 
-const compilePath = (path: string) => pathToRegexp.compile(path)
+const compilePath = (path: string) => compile(path)
 
 /**
  * Public API for generating a URL pathname from a path and parameters.
