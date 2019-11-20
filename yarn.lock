@@ -4535,9 +4535,9 @@ path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
 
-path-to-regexp@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-5.0.0.tgz#e56dd58778b9dc06e76f0f3e39e741bbddc0bd26"
+path-to-regexp@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.0.0.tgz#8797c236ca80f62b9e36e39eb3ef5208ad6ab68e"
 
 path-type@^1.0.0:
   version "1.1.0"
