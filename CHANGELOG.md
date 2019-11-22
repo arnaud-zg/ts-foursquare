@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.8...v0.4.9) (2019-11-22)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.11 ([#361](https://github.com/arnaud-zg/ts-foursquare/issues/361)) ([8b27355](https://github.com/arnaud-zg/ts-foursquare/commit/8b27355b0177cae1a5fa6b49815eae40a72e75de))
+* **deps:** update dependency @types/node to v12.12.8 ([#357](https://github.com/arnaud-zg/ts-foursquare/issues/357)) ([831f46f](https://github.com/arnaud-zg/ts-foursquare/commit/831f46ff1869fe794cddc9792010dc68ce02766d))
+* **deps:** update dependency @types/node to v12.12.9 ([#360](https://github.com/arnaud-zg/ts-foursquare/issues/360)) ([7782fcc](https://github.com/arnaud-zg/ts-foursquare/commit/7782fcc2ac667a47de944daa99a18f3f6f5588da))
+* **deps:** update dependency husky to v3.1.0 ([#358](https://github.com/arnaud-zg/ts-foursquare/issues/358)) ([e38664c](https://github.com/arnaud-zg/ts-foursquare/commit/e38664c051e78a2cd4af7a3c843d2c6c88d4590d))
+* **deps:** update dependency standard-version to v7.0.1 ([#359](https://github.com/arnaud-zg/ts-foursquare/issues/359)) ([e9366b4](https://github.com/arnaud-zg/ts-foursquare/commit/e9366b4843119cbbb39ba4a77395cfa8762c3ae3))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency path-to-regexp to v6 ([#362](https://github.com/arnaud-zg/ts-foursquare/issues/362)) ([ad235da](https://github.com/arnaud-zg/ts-foursquare/commit/ad235dad9dcb5a21290bc8c035392548bb0b58a4))
+
 ### [0.4.8](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.7...v0.4.8) (2019-11-13)
 
 
