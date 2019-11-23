@@ -7,3 +7,6 @@ export const lifeStatusSelector = (state: NStore.IState) =>
 
 export const lifeCredentialsSelector = (state: NStore.IState) =>
   lifeSelector(state).credentials
+
+export const lifeAccessTokenSelector = (state: NStore.IState) =>
+  lifeCredentialsSelector(state).accessToken
