@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`reducers/life should get state after action: putAccessToken with action: {"payload": [Object], "type": "PUT_ACCESS_TOKEN"} 1`] = `
+Object {
+  "credentials": Object {
+    "accessToken": "9123",
+    "clientId": "",
+    "clientSecret": "",
+  },
+  "status": true,
+}
+`;
+
 exports[`reducers/life should get state after action: putCredentials with action: {"payload": [Object], "type": "PUT_CREDENTIALS"} 1`] = `
 Object {
   "credentials": Object {
