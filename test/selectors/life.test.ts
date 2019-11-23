@@ -3,6 +3,7 @@ import {
   lifeCredentialsSelector,
   lifeSelector,
   lifeStatusSelector,
+  lifeAccessTokenSelector,
 } from '../../src/selectors/life'
 import { NStore } from '../../types'
 
@@ -11,6 +12,7 @@ const state: NStore.IState = {
   life: {
     status: true,
     credentials: {
+      accessToken: '9123',
       clientId: '1234',
       clientSecret: '5678',
     },
@@ -28,5 +30,9 @@ describe('selectors/life', () => {
 
   it('should get lifeCredentialsSelector', () => {
     expect(lifeCredentialsSelector(state)).toMatchSnapshot()
+  })
+
+  it('should get lifeAccessTokenSelector', () => {
+    expect(lifeAccessTokenSelector(state)).toMatchSnapshot()
   })
 })

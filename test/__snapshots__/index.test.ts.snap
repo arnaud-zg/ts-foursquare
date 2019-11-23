@@ -75,6 +75,7 @@ Object {
   "initialState": Object {
     "life": Object {
       "credentials": Object {
+        "accessToken": "",
         "clientId": "",
         "clientSecret": "",
       },
@@ -100,7 +101,9 @@ Object {
       "venuesListed": Object {},
     },
   },
+  "lifeAccessTokenSelector": [Function],
   "lifeActions": Object {
+    "putAccessToken": [Function],
     "putCredentials": [Function],
   },
   "lifeCredentialsSelector": [Function],
@@ -126,6 +129,7 @@ Object {
     },
   },
   "photosSelector": [Function],
+  "putAccessToken": [Function],
   "putCredentials": [Function],
   "requestActionSelector": [Function],
   "requestCancelReasonSelector": [Function],

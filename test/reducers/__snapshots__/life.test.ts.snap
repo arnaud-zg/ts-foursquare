@@ -3,6 +3,7 @@
 exports[`reducers/life should get state after action: putCredentials with action: {"payload": [Object], "type": "PUT_CREDENTIALS"} 1`] = `
 Object {
   "credentials": Object {
+    "accessToken": "",
     "clientId": "1234",
     "clientSecret": "5678",
   },
