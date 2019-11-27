@@ -21,11 +21,18 @@ export const processFetchError = (err: Error): Observable<Error> =>
 export const getDefaultRequestParameters = (
   state$: StateObservable<NStore.IState>
 ) => {
-  const { clientId, clientSecret } = lifeCredentialsSelector(state$.value)
+  const { clientId, clientSecret, accessToken } = lifeCredentialsSelector(
+    state$.value
+  )
 
-  return {
-    client_id: clientId,
-    client_secret: clientSecret,
-    v: EApiDefaultParameters.VERSION,
-  }
+  return accessToken
+    ? {
+        oauth_token: accessToken,
+        v: EApiDefaultParameters.VERSION,
+      }
+    : {
+        client_id: clientId,
+        client_secret: clientSecret,
+        v: EApiDefaultParameters.VERSION,
+      }
 }

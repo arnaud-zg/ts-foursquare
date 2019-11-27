@@ -1,6 +1,8 @@
 export declare namespace NResolve {
-  interface IAccessTokenPayload {
-    accessToken: string
+  interface IOAuth2 {
+    clientId: string
+    clientSecret: string
+    redirectUri: string
   }
 
   interface ICredentialsPayload {

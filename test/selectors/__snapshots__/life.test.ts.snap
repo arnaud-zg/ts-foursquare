@@ -6,6 +6,7 @@ Object {
     "accessToken": "9123",
     "clientId": "1234",
     "clientSecret": "5678",
+    "redirectUri": "https://arnaud-zg.github.io/ts-foursquare-playground/code",
   },
   "status": true,
 }
@@ -20,5 +21,8 @@ Object {
   "accessToken": "9123",
   "clientId": "1234",
   "clientSecret": "5678",
+  "redirectUri": "https://arnaud-zg.github.io/ts-foursquare-playground/code",
 }
 `;
+
+exports[`selectors/life should get lifeOAuth2UrlSelector 1`] = `"https://foursquare.com/oauth2/authenticate?client_id=1234&redirect_uri=https%3A%2F%2Farnaud-zg.github.io%2Fts-foursquare-playground%2Fcode&response_type=code"`;

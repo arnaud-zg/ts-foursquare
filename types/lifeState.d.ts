@@ -1,8 +1,9 @@
 export declare namespace NLifeState {
   interface ICredentials {
-    accessToken: string
+    accessToken?: string
     clientId: string
     clientSecret: string
+    redirectUri?: string
   }
 
   interface IState {

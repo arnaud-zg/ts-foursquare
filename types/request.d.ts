@@ -1,4 +1,8 @@
 export declare namespace NRequest {
+  interface IOAuth2AccessTokenPayload {
+    code: string
+  }
+
   interface IVenuesExplorePayload {
     alt?: number
     altAcc?: number

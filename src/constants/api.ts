@@ -16,3 +16,20 @@ export enum EApiPathnames {
   VENUES_SUGGEST_COMPLETION = '/v2/venues/suggestcompletion',
   VENUES_TRENDING = '/v2/venues/trending',
 }
+
+export enum EAuthApiDefaultParameters {
+  ORIGIN = 'https://foursquare.com',
+}
+
+export enum EAuthApiPathnames {
+  AUTHENTICATE = '/oauth2/authenticate',
+  ACCESS_TOKEN = '/oauth2/access_token',
+}
+
+export enum EResponseType {
+  CODE = 'code',
+}
+
+export enum EGrantType {
+  AUTHORIZATION_CODE = 'authorization_code',
+}

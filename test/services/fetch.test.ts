@@ -23,4 +23,23 @@ describe('utils/fetch/getDefaultRequestParameters', () => {
 
     expect(getDefaultRequestParameters(state$)).toMatchSnapshot()
   })
+  it('should get default logged request parameters', () => {
+    const state$: StateObservable<NStore.IState> = new StateObservable(
+      new Subject(),
+      {
+        ...initialState,
+        life: {
+          ...initialState.life,
+          credentials: {
+            ...initialState.life.credentials,
+            accessToken: '789',
+            clientId: '123',
+            clientSecret: '456',
+          },
+        },
+      }
+    )
+
+    expect(getDefaultRequestParameters(state$)).toMatchSnapshot()
+  })
 })
