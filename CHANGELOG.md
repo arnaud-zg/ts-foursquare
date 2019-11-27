@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.9...v0.5.0) (2019-11-27)
+
+
+### 🖋 Features
+
+* **auth:** support authenticated endpoint ([#364](https://github.com/arnaud-zg/ts-foursquare/issues/364)) ([318b16f](https://github.com/arnaud-zg/ts-foursquare/commit/318b16f6689e3869ea42407a5ff553c62099f629))
+* **auth:** support authenticated endpoint ([#366](https://github.com/arnaud-zg/ts-foursquare/issues/366)) ([844c846](https://github.com/arnaud-zg/ts-foursquare/commit/844c8465ea775ca120b492735b0f81370a91f2a8))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.12 ([#363](https://github.com/arnaud-zg/ts-foursquare/issues/363)) ([167f5f1](https://github.com/arnaud-zg/ts-foursquare/commit/167f5f12f2289d4f61314d38d14192698a97ea2b))
+* **deps:** update dependency @types/node to v12.12.14 ([#365](https://github.com/arnaud-zg/ts-foursquare/issues/365)) ([dbb08bb](https://github.com/arnaud-zg/ts-foursquare/commit/dbb08bb1e7fb4a8e043c46ba4654e6fa1175dc5b))
+
 ### [0.4.9](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.8...v0.4.9) (2019-11-22)
 
 
