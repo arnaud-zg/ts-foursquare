@@ -2,6 +2,7 @@ import { combineEpics, createEpicMiddleware } from 'redux-observable'
 import { NStore } from '../../types'
 import { TRootAction } from '../actions'
 import {
+  getAccessTokenEpic,
   getListsEpic,
   getPhotosDetailsEpic,
   getVenuesCategoriesEpic,
@@ -16,6 +17,7 @@ import {
 } from '../epics'
 
 export const rootEpic = combineEpics(
+  getAccessTokenEpic,
   getListsEpic,
   getPhotosDetailsEpic,
   getVenuesCategoriesEpic,

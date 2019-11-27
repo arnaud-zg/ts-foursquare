@@ -1,9 +1,10 @@
 import { initialState } from '../../src/reducers/app'
 import {
+  lifeAccessTokenSelector,
   lifeCredentialsSelector,
   lifeSelector,
   lifeStatusSelector,
-  lifeAccessTokenSelector,
+  lifeOAuth2UrlSelector,
 } from '../../src/selectors/life'
 import { NStore } from '../../types'
 
@@ -15,6 +16,7 @@ const state: NStore.IState = {
       accessToken: '9123',
       clientId: '1234',
       clientSecret: '5678',
+      redirectUri: 'https://arnaud-zg.github.io/ts-foursquare-playground/code',
     },
   },
 }
@@ -34,5 +36,9 @@ describe('selectors/life', () => {
 
   it('should get lifeAccessTokenSelector', () => {
     expect(lifeAccessTokenSelector(state)).toMatchSnapshot()
+  })
+
+  it('should get lifeOAuth2UrlSelector', () => {
+    expect(lifeOAuth2UrlSelector(state)).toMatchSnapshot()
   })
 })

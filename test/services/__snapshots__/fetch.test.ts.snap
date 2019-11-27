@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`utils/fetch/getDefaultRequestParameters should get default logged request parameters 1`] = `
+Object {
+  "oauth_token": "789",
+  "v": "20191028",
+}
+`;
+
 exports[`utils/fetch/getDefaultRequestParameters should get default request parameters 1`] = `
 Object {
   "client_id": "123",

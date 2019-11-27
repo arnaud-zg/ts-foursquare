@@ -3,6 +3,12 @@
 exports[`tsFoursquare should have a list of method 1`] = `
 Object {
   "configureStore": [Function],
+  "getAccessTokenAsync": Object {
+    "cancel": [Function],
+    "failure": [Function],
+    "request": [Function],
+    "success": [Function],
+  },
   "getIconUrlList": [Function],
   "getListsAsync": Object {
     "cancel": [Function],
@@ -75,7 +81,6 @@ Object {
   "initialState": Object {
     "life": Object {
       "credentials": Object {
-        "accessToken": "",
         "clientId": "",
         "clientSecret": "",
       },
@@ -103,10 +108,17 @@ Object {
   },
   "lifeAccessTokenSelector": [Function],
   "lifeActions": Object {
-    "putAccessToken": [Function],
+    "getAccessTokenAsync": Object {
+      "cancel": [Function],
+      "failure": [Function],
+      "request": [Function],
+      "success": [Function],
+    },
     "putCredentials": [Function],
+    "setOAuth2": [Function],
   },
   "lifeCredentialsSelector": [Function],
+  "lifeOAuth2UrlSelector": [Function],
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
   "listSelector": [Function],
@@ -129,13 +141,13 @@ Object {
     },
   },
   "photosSelector": [Function],
-  "putAccessToken": [Function],
   "putCredentials": [Function],
   "requestActionSelector": [Function],
   "requestCancelReasonSelector": [Function],
   "requestEntityIdsSelector": [Function],
   "requestErrorSelector": [Function],
   "requestSelector": [Function],
+  "setOAuth2": [Function],
   "statusModuleStateSelector": [Function],
   "statusSelector": [Function],
   "venueCategoriesStateSelector": [Function],
