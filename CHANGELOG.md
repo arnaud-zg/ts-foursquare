@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.0...v0.5.1) (2019-12-05)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency typescript to v3.7.3 ([#368](https://github.com/arnaud-zg/ts-foursquare/issues/368)) ([207c0f3](https://github.com/arnaud-zg/ts-foursquare/commit/207c0f3c9ab4d08b5dbdf69f5fcd1966eaaddbc3))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v0.1.0 ([#367](https://github.com/arnaud-zg/ts-foursquare/issues/367)) ([46fc953](https://github.com/arnaud-zg/ts-foursquare/commit/46fc953efde0bb2c18dbdd8e5aaefd05269376ef))
+
 ## [0.5.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.4.9...v0.5.0) (2019-11-27)
 
 
