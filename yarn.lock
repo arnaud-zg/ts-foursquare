@@ -2835,9 +2835,9 @@ html-encoding-sniffer@^1.0.2:
   dependencies:
     whatwg-encoding "^1.0.1"
 
-http-response-status@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-0.1.1.tgz#324b38c1606220ed7137f31153144296ef6689bb"
+http-response-status@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-0.1.2.tgz#29d2bfbeb41c4967a65b30291a3f335b7e009674"
 
 http-signature@~1.2.0:
   version "1.2.0"
