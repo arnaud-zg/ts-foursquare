@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.1...v0.5.2) (2019-12-11)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.16 ([#371](https://github.com/arnaud-zg/ts-foursquare/issues/371)) ([0d3e5c9](https://github.com/arnaud-zg/ts-foursquare/commit/0d3e5c98eac91b980fe0745e622f5b5af133e96c))
+* **deps:** update dependency @types/node to v12.12.17 ([#373](https://github.com/arnaud-zg/ts-foursquare/issues/373)) ([6aab82f](https://github.com/arnaud-zg/ts-foursquare/commit/6aab82f3e2b33b619cbc80976a9160a7b1a5b23b))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v0.1.1 ([#370](https://github.com/arnaud-zg/ts-foursquare/issues/370)) ([fdfa6c9](https://github.com/arnaud-zg/ts-foursquare/commit/fdfa6c925c3b3f4648241717a91bb9788f1fbd0f))
+* **deps:** update dependency http-response-status to v0.1.2 ([#372](https://github.com/arnaud-zg/ts-foursquare/issues/372)) ([746badf](https://github.com/arnaud-zg/ts-foursquare/commit/746badf010a7012005bc9de806e50555eb0ee076))
+
+
+### 📦 Build System
+
+* use fixed version of serialize-javascript ([#369](https://github.com/arnaud-zg/ts-foursquare/issues/369)) ([e31e9cf](https://github.com/arnaud-zg/ts-foursquare/commit/e31e9cf510ffcf2e164b776608c6fd8e80fe65d8))
+
 ### [0.5.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.0...v0.5.1) (2019-12-05)
 
 
