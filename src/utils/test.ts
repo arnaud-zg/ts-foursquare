@@ -48,10 +48,7 @@ export const testEpic = (
   const state$ = new StateObservable(state, initialState)
 
   epic(actions$, state$)
-    .pipe(
-      take(count),
-      toArray()
-    )
+    .pipe(take(count), toArray())
     .subscribe(callback)
 
   actions.next(action)

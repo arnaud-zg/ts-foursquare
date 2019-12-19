@@ -24,10 +24,7 @@ export const getObservableVenuesCategories = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesExplore = ({
@@ -46,10 +43,7 @@ export const getObservableVenuesExplore = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesLikes = ({
@@ -69,10 +63,7 @@ export const getObservableVenuesLikes = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesListed = ({
@@ -92,10 +83,7 @@ export const getObservableVenuesListed = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesNextVenues = ({
@@ -115,10 +103,7 @@ export const getObservableVenuesNextVenues = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesSearch = ({
@@ -137,10 +122,7 @@ export const getObservableVenuesSearch = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesSimilar = ({
@@ -160,10 +142,7 @@ export const getObservableVenuesSimilar = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesTrending = ({
@@ -182,10 +161,7 @@ export const getObservableVenuesTrending = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
 
 export const getObservableVenuesSuggestCompletion = ({
@@ -204,8 +180,5 @@ export const getObservableVenuesSuggestCompletion = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
