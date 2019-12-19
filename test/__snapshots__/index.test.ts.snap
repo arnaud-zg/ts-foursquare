@@ -150,6 +150,7 @@ Object {
   "setOAuth2": [Function],
   "statusModuleStateSelector": [Function],
   "statusSelector": [Function],
+  "tsFoursquare": [Function],
   "venueCategoriesStateSelector": [Function],
   "venueLocationSelector": [Function],
   "venueSelector": [Function],
