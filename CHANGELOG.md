@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.3...v0.6.0) (2019-12-19)
+
+
+### 🖋 Features
+
+* **standalone:** add standalone mode ([#381](https://github.com/arnaud-zg/ts-foursquare/issues/381)) ([d48cc8b](https://github.com/arnaud-zg/ts-foursquare/commit/d48cc8bd1fac026b0b238a26739057dee2be93aa))
+
 ### [0.5.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.2...v0.5.3) (2019-12-19)
 
 
