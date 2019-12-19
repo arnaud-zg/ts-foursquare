@@ -28,8 +28,5 @@ export const getObservablePhotosDetails = ({
         ...getDefaultRequestParameters(state$),
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }

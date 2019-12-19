@@ -34,8 +34,5 @@ export const getObservableAccessToken = ({
         redirect_uri: redirectUri,
       },
     })
-  ).pipe(
-    switchMap(processFetchResponse),
-    catchError(processFetchError)
-  )
+  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
