@@ -26,7 +26,7 @@ export class tsFoursquare {
   }: {
     actionsDispatch: AnyAction[]
     actionCreatorsResolve: ActionCreator[]
-  }): ReturnType<typeof dispatchActionsAndWaitResponse> =>
+  }) =>
     dispatchActionsAndWaitResponse<NStore.IState, NStore.IState>({
       actionsDispatch: [
         putCredentials({

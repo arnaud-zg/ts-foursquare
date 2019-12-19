@@ -1,5 +1,6 @@
 import { getVenuesSearchAsync } from '../src'
 import { tsFoursquare } from '../src/standalone'
+import { NStore } from '../types'
 
 describe('tsFoursquare', () => {
   it('should wait end of actions and make a snapshot of store', done => {
@@ -16,7 +17,7 @@ describe('tsFoursquare', () => {
           getVenuesSearchAsync.success,
         ],
       })
-      .then(state => {
+      .then((state: NStore.IState) => {
         expect(state).toMatchSnapshot()
       })
       .catch((error: Error | string) => {

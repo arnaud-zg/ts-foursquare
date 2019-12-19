@@ -53,9 +53,10 @@ Node.js >= 10.x: Node.js is a server platform which runs JavaScript.
 
 #### Search for a list of venues
 
+##### Promise
+
 ```ts
 const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
-
 ts4S
   .dispatchActionsAsync({
     actionsDispatch: [getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })],
@@ -65,15 +66,40 @@ ts4S
       getVenuesSearchAsync.success,
     ],
   })
-  .then(state => {
+  .then((state: NStore.IState) => {
     console.log(state)
   })
   .catch((error: Error | string) => {
-    console.log(data)
+    console.log(error)
   })
   .finally(() => {
-    done()
+    // Do something if needed
   })
+```
+
+##### Async / Await
+
+```ts
+const getVenuesByLocation = async ({ ll }: NRequest.TVenuesSearchPayload) => {
+  try {
+    const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
+    const state: NStore.IState = await ts4S.dispatchActionsAsync({
+      actionsDispatch: [
+        getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' }),
+      ],
+      actionCreatorsResolve: [
+        getVenuesSearchAsync.cancel,
+        getVenuesSearchAsync.failure,
+        getVenuesSearchAsync.success,
+      ],
+    })
+    console.log(state)
+  } catch (error) {
+    console.log(error)
+  } finally {
+    console.log('done')
+  }
+}
 ```
 
 ## Actions
