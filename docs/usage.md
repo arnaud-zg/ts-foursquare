@@ -67,8 +67,10 @@ ts4S
     ],
   })
   .then((state: NStore.IState) => {
-    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(state)
-    console.log({ state, entities })
+    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
+      state
+    )
+    console.log({ entities, state })
   })
   .catch((error: Error | string) => {
     console.log(error)
@@ -94,7 +96,10 @@ const getVenuesByLocation = async ({ ll }: NRequest.TVenuesSearchPayload) => {
         getVenuesSearchAsync.success,
       ],
     })
-    console.log(state)
+    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
+      state
+    )
+    console.log({ entities, state })
   } catch (error) {
     console.log(error)
   } finally {
