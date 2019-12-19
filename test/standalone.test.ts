@@ -1,6 +1,6 @@
-import { getVenuesSearchAsync } from '../src'
+import { getVenuesSearchAsync, venuesEntitiesSelector } from '../src'
 import { tsFoursquare } from '../src/standalone'
-import { NStore } from '../types'
+import { NStore, NVenue } from '../types'
 
 describe('tsFoursquare', () => {
   it('should wait end of actions and make a snapshot of store', done => {
@@ -19,6 +19,11 @@ describe('tsFoursquare', () => {
       })
       .then((state: NStore.IState) => {
         expect(state).toMatchSnapshot()
+        return venuesEntitiesSelector(state)
+      })
+      .then((entities: { [key: string]: NVenue.IVenue }) => {
+        expect(entities).toMatchSnapshot()
+        return entities
       })
       .catch((error: Error | string) => {
         expect(error).toMatchSnapshot()

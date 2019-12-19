@@ -41,3 +41,5 @@ Object {
   },
 }
 `;
+
+exports[`tsFoursquare should wait end of actions and make a snapshot of store 2`] = `Object {}`;

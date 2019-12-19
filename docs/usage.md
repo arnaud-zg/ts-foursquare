@@ -67,7 +67,8 @@ ts4S
     ],
   })
   .then((state: NStore.IState) => {
-    console.log(state)
+    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(state)
+    console.log({ state, entities })
   })
   .catch((error: Error | string) => {
     console.log(error)
