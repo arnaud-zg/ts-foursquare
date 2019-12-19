@@ -1,7 +1,7 @@
-import * as tsFoursquare from '../src'
+import * as tsFoursquarePackage from '../src'
 
-describe('tsFoursquare', () => {
+describe('tsFoursquarePackage', () => {
   it('should have a list of method', () => {
-    expect(tsFoursquare).toMatchSnapshot()
+    expect(tsFoursquarePackage).toMatchSnapshot()
   })
 })
