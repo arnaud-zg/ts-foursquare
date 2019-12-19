@@ -5164,7 +5164,7 @@ rollup-plugin-terser@^5.1.2:
     "@babel/code-frame" "^7.0.0"
     jest-worker "^24.6.0"
     rollup-pluginutils "^2.8.1"
-    serialize-javascript "1.7.0"
+    serialize-javascript "^1.7.0"
     terser "^4.1.0"
 
 rollup-plugin-typescript2@^0.25.3:
@@ -5285,9 +5285,10 @@ semver@^6.0.0, semver@^6.1.0:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.1.1.tgz#53f53da9b30b2103cd4f15eab3a18ecbcb210c9b"
 
-serialize-javascript@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.7.0.tgz#d6e0dfb2a3832a8c94468e6eb1db97e55a192a65"
+serialize-javascript@^1.7.0:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.9.1.tgz#cfc200aef77b600c47da9bb8149c943e798c2fdb"
+  integrity sha512-0Vb/54WJ6k5v8sSWN09S0ora+Hnr+cX40r9F170nT+mSkaxltoE/7R3OrIdBSUv1OoiobH1QoWQbCnAO+e8J1A==
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
@@ -5495,6 +5496,14 @@ sshpk@^1.7.0:
 stack-utils@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
+
+standalone-store@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/standalone-store/-/standalone-store-1.1.1.tgz#1f0f7083f4bbacbfb75fc564ad52eed77314bf52"
+  integrity sha512-32/qDmAmrgzV3pfozXShJEj98mZ9bUdNNTA4rJ1NW1ETfiiaQL8SVL3cdJmEBekGLjGuQfmmrtPfN7NtDYnVRA==
+  dependencies:
+    redux "4.0.4"
+    typesafe-actions "^5.1.0"
 
 standard-version@7.0.1:
   version "7.0.1"
@@ -5948,7 +5957,7 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typesafe-actions@5.1.0:
+typesafe-actions@5.1.0, typesafe-actions@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/typesafe-actions/-/typesafe-actions-5.1.0.tgz#9afe8b1e6a323af1fd59e6a57b11b7dd6623d2f1"
 

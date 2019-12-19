@@ -2,12 +2,11 @@
 
 A JS client for working with <a href="https://developer.foursquare.com/docs/api" target="_blank">Foursquare APIs</a>
 
-Works in Node and with any browser that support javascript.
-
 ## Table of contents
 
 - [Usage](#usage)
 - [Overview](#overview)
+- [Getting Started](#getting-started)
 - [Actions](#actions)
   - [Life action](#life-action)
     - [putCredentials](#putCredentials)
@@ -40,11 +39,74 @@ Works in Node and with any browser that support javascript.
 
 ## Usage
 
-// @to-do
-
 ## Overview
 
-// @to-do
+## Getting Started
+
+This quick start guide will get you up and running. Let's begin with a simple app with a list of venues.
+
+### Requirements
+
+Before we start, check that your computer or server meets the following requirements:
+
+Node.js >= 10.x: Node.js is a server platform which runs JavaScript.
+
+#### Search for a list of venues
+
+##### Promise
+
+```ts
+const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
+ts4S
+  .dispatchActionsAsync({
+    actionsDispatch: [getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })],
+    actionCreatorsResolve: [
+      getVenuesSearchAsync.cancel,
+      getVenuesSearchAsync.failure,
+      getVenuesSearchAsync.success,
+    ],
+  })
+  .then((state: NStore.IState) => {
+    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
+      state
+    )
+    console.log({ entities, state })
+  })
+  .catch((error: Error | string) => {
+    console.log(error)
+  })
+  .finally(() => {
+    // Do something if needed
+  })
+```
+
+##### Async / Await
+
+```ts
+const getVenuesByLocation = async ({ ll }: NRequest.TVenuesSearchPayload) => {
+  try {
+    const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
+    const state: NStore.IState = await ts4S.dispatchActionsAsync({
+      actionsDispatch: [
+        getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' }),
+      ],
+      actionCreatorsResolve: [
+        getVenuesSearchAsync.cancel,
+        getVenuesSearchAsync.failure,
+        getVenuesSearchAsync.success,
+      ],
+    })
+    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
+      state
+    )
+    console.log({ entities, state })
+  } catch (error) {
+    console.log(error)
+  } finally {
+    console.log('done')
+  }
+}
+```
 
 ## Actions
 

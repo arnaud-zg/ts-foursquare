@@ -51,6 +51,7 @@
     "redux-devtools-extension": "2.13.8",
     "redux-observable": "1.2.0",
     "rxjs": "6.5.3",
+    "standalone-store": "1.1.1",
     "typesafe-actions": "5.1.0"
   }
 }
