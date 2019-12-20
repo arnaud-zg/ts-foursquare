@@ -41,7 +41,7 @@
     "standard-version": "7.0.1",
     "tsdx": "0.12.0",
     "tslib": "1.10.0",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "dependencies": {
     "http-response-status": "0.1.3",
