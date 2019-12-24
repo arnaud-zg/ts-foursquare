@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.0...v0.6.1) (2019-12-24)
+
+
+### ⚠️ Tests
+
+* add test for client credentials ([#387](https://github.com/arnaud-zg/ts-foursquare/issues/387)) ([f381249](https://github.com/arnaud-zg/ts-foursquare/commit/f381249db540edaf51de287bc0f50ee1232e2147))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.22 ([#385](https://github.com/arnaud-zg/ts-foursquare/issues/385)) ([503eae5](https://github.com/arnaud-zg/ts-foursquare/commit/503eae5b21360fd1bb0f85587097f5e19758bcef))
+* **deps:** update dependency typescript to v3.7.4 ([#383](https://github.com/arnaud-zg/ts-foursquare/issues/383)) ([0f9adfd](https://github.com/arnaud-zg/ts-foursquare/commit/0f9adfdf47579e109e264a519b9fb3247ee36c89))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v0.1.3 ([#384](https://github.com/arnaud-zg/ts-foursquare/issues/384)) ([0cd690a](https://github.com/arnaud-zg/ts-foursquare/commit/0cd690abe173a19d6731a9264529ff5720030771))
+* **deps:** update dependency standalone-store to v1.1.2 ([#382](https://github.com/arnaud-zg/ts-foursquare/issues/382)) ([9a2919c](https://github.com/arnaud-zg/ts-foursquare/commit/9a2919c4d59cbfdb50e72795f46987ed57d78b2e))
+
 ## [0.6.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.5.3...v0.6.0) (2019-12-19)
 
 
