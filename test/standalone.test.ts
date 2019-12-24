@@ -6,6 +6,9 @@ describe('tsFoursquare', () => {
   it('should wait end of actions and make a snapshot of store', done => {
     const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
 
+    expect(ts4S.clientId).toMatchInlineSnapshot(`"1234"`)
+    expect(ts4S.clientSecret).toMatchInlineSnapshot(`"5678"`)
+
     ts4S
       .dispatchActionsAsync({
         actionsDispatch: [

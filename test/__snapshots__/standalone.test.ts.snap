@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tsFoursquare should wait end of actions and make a snapshot of store 1`] = `
+exports[`tsFoursquare should wait end of actions and make a snapshot of store 3`] = `
 Object {
   "life": Object {
     "credentials": Object {
@@ -42,4 +42,4 @@ Object {
 }
 `;
 
-exports[`tsFoursquare should wait end of actions and make a snapshot of store 2`] = `Object {}`;
+exports[`tsFoursquare should wait end of actions and make a snapshot of store 4`] = `Object {}`;
