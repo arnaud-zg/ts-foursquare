@@ -4929,6 +4929,14 @@ redux@*, redux@4.0.4:
     loose-envify "^1.4.0"
     symbol-observable "^1.2.0"
 
+redux@4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.5.tgz#4db5de5816e17891de8a80c424232d06f051d93f"
+  integrity sha512-VSz1uMAH24DM6MF72vcojpYPtrTUu3ByVWfPL1nPfVRb5mZVTve5GnNCUV53QM/BZ66xfWrm0CTWoM+Xlz8V1w==
+  dependencies:
+    loose-envify "^1.4.0"
+    symbol-observable "^1.2.0"
+
 regenerate-unicode-properties@^8.0.2:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
@@ -5500,12 +5508,12 @@ stack-utils@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
 
-standalone-store@1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/standalone-store/-/standalone-store-1.1.2.tgz#830627d63072c62e5615938bc7961eb41278691c"
-  integrity sha512-k6rLiyVTnEDET2sWkbuVPv/qQkTzhnTlNcfqu0Tg7vaiE/4syaaFoEb145mHeggxQySsihYtC4d+zyuWWy8HCA==
+standalone-store@1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/standalone-store/-/standalone-store-1.1.3.tgz#149334a898832a6be01051b12b31593ab6b6111a"
+  integrity sha512-eGIrT1P9baw2PqBK//ulTH9x6adFsrsn3HTG+5m1VYS4pBnkStCsFlV9fS1wMO71JKToYVxRkNNSs4VJ4cMoRA==
   dependencies:
-    redux "4.0.4"
+    redux "4.0.5"
     typesafe-actions "5.1.0"
 
 standard-version@7.0.1:
