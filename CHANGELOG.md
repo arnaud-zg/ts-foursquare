@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.3...v0.6.4) (2020-01-08)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency husky to v4 ([#394](https://github.com/arnaud-zg/ts-foursquare/issues/394)) ([9d357a1](https://github.com/arnaud-zg/ts-foursquare/commit/9d357a15d09ad90de18c096468810dd499efd105))
+
 ### [0.6.3](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.2...v0.6.3) (2020-01-05)
 
 
