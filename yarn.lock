@@ -3036,10 +3036,10 @@ html-encoding-sniffer@^1.0.2:
   dependencies:
     whatwg-encoding "^1.0.1"
 
-http-response-status@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.0.tgz#2234191fb717b6402106dba3b0fda5e063240cf2"
-  integrity sha512-w2pvM2Uk3q3m9S5Hpg7XosWxrPoFkkkIEuMbcwpn7cORPNs22jcg0qIROJWQOMcFgKaDtjqViFrP39riihcYpg==
+http-response-status@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.1.tgz#7695deeee2efe3fa80464d01a301314cbaceaf9d"
+  integrity sha512-eomk/HrIF68kKKi/PyY60Pkp/MMkFQDQEZlfUkN2ym6BcutWPu6JBaXOFIozDdltzOBZQfG6Ic87W5lAfyH2sw==
 
 http-signature@~1.2.0:
   version "1.2.0"
