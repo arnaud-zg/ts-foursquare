@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.6...v0.7.0) (2020-01-13)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency standalone-store to v1.1.5 ([#403](https://github.com/arnaud-zg/ts-foursquare/issues/403)) ([5ed2c80](https://github.com/arnaud-zg/ts-foursquare/commit/5ed2c80ff7d2d2a84d748b921fcf3f7c4de02e46))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency tsdx to v0.12.3 ([#402](https://github.com/arnaud-zg/ts-foursquare/issues/402)) ([2fd8e5a](https://github.com/arnaud-zg/ts-foursquare/commit/2fd8e5a1505199c143748c66c3964a68b9081c40))
+
 ### [0.6.6](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.5...v0.6.6) (2020-01-12)
 
 
