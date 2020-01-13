@@ -5662,10 +5662,10 @@ stack-utils@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.2.tgz#33eba3897788558bebfc2db059dc158ec36cebb8"
 
-standalone-store@1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/standalone-store/-/standalone-store-1.1.4.tgz#d65a90fbd7d442fbb25894acb8c4a6b8f9cfee62"
-  integrity sha512-O847BlLDR9xwOv4bs4JV2Wg+dSYfr4isuFRshB2k+VQ6beWbaxRz1Q8I402SI3wdRlhOWZwKz4j6yJmg7kzGhQ==
+standalone-store@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/standalone-store/-/standalone-store-1.1.5.tgz#d31c95ef7141eaacb6500b0f2ff4030d7d79f6b5"
+  integrity sha512-GcQaSclNXmD213YU1ZGb3pOWr9VBrSHgPw00bXFjBD4YF3xiGYXbtXmfmun8l2c9gdwXntfFAhnoM0Um6Mlt5A==
   dependencies:
     redux "4.0.5"
     typesafe-actions "5.1.0"
