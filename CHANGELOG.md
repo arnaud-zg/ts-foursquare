@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.7.0...v0.7.1) (2020-01-16)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v1.0.1 ([#404](https://github.com/arnaud-zg/ts-foursquare/issues/404)) ([c22c0f0](https://github.com/arnaud-zg/ts-foursquare/commit/c22c0f066ccce10cab039b669d6426bdd84d595f))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v24.9.0 ([#406](https://github.com/arnaud-zg/ts-foursquare/issues/406)) ([ac8a122](https://github.com/arnaud-zg/ts-foursquare/commit/ac8a1220d2b45c25b670e30c3622ec4d78216c87))
+* **deps:** update dependency husky to v4.0.10 ([#405](https://github.com/arnaud-zg/ts-foursquare/issues/405)) ([beb4d2f](https://github.com/arnaud-zg/ts-foursquare/commit/beb4d2f42655e0ee5ecfc9cc00b57531dd77844c))
+
 ## [0.7.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.6.6...v0.7.0) (2020-01-13)
 
 
