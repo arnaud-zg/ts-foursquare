@@ -3,7 +3,7 @@ import { dispatchActionsAndWaitResponse } from 'standalone-store'
 import { ActionCreator } from 'typesafe-actions'
 import { NStore } from '../types'
 import { putCredentials } from './index'
-import { configureStore } from './reducers'
+import { configureStore } from './DEPRECATED_reducers'
 
 export class tsFoursquare {
   clientId: string

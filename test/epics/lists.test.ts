@@ -1,8 +1,8 @@
 import { Action } from 'typesafe-actions'
-import { getListsAsync } from '../../src/actions'
+import { getListsAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetLists } from '../../src/adapter'
-import { getListsEpic } from '../../src/epics'
-import { initialState } from '../../src/reducers/app'
+import { getListsEpic } from '../../src/DEPRECATED_epics'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   mockingFailingNotFoundFetch,
   mockingFailingNotValidFetch,

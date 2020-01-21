@@ -1,6 +1,9 @@
 import { adaptGetLists } from '../../src/adapter/lists'
-import { initialState } from '../../src/reducers/app'
-import { listSelector, listsSelector } from '../../src/selectors/lists'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
+import {
+  listSelector,
+  listsSelector,
+} from '../../src/DEPRECATED_selectors/lists'
 import { NLists, NStore } from '../../types'
 import { payload as payloadGetLists } from '../epics/__mocks__/getListsAsync.resolve'
 

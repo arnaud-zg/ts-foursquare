@@ -1,4 +1,4 @@
-import { getListsAsync } from '../../src/actions/lists'
+import { getListsAsync } from '../../src/DEPRECATED_actions/lists'
 
 describe('actions/lists', () => {
   it(`should make a snapshot of getListsAsync`, () => {

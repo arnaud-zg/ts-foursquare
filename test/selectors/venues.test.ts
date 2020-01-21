@@ -1,5 +1,5 @@
 import { adaptGetVenuesExplore } from '../../src/adapter/venues'
-import { initialState } from '../../src/reducers/app'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   venueCategoriesStateSelector,
   venueLocationSelector,
@@ -12,7 +12,7 @@ import {
   venuesRecommendedPlacesSelector,
   venuesSelector,
   venuesSimilarSelector,
-} from '../../src/selectors/venues'
+} from '../../src/DEPRECATED_selectors/venues'
 import { getVenuesListedGroupKey } from '../../src/utils/venue'
 import { NStore } from '../../types'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'

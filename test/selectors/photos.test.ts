@@ -1,6 +1,9 @@
 import { adaptGetPhotosDetails } from '../../src/adapter/photos'
-import { initialState } from '../../src/reducers/app'
-import { photoSelector, photosSelector } from '../../src/selectors/photos'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
+import {
+  photoSelector,
+  photosSelector,
+} from '../../src/DEPRECATED_selectors/photos'
 import { NPhotos, NStore } from '../../types'
 import { payload as payloadGetPhotosDetails } from '../epics/__mocks__/getPhotosDetailsAsync.revolve'
 

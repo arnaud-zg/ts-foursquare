@@ -1,6 +1,6 @@
 import { createReducer } from 'typesafe-actions'
 import { NListsState } from '../../types'
-import { getListsAsync, TListsAction } from '../actions'
+import { getListsAsync, TListsAction } from '../DEPRECATED_actions'
 
 export const initialState: NListsState.IState = {
   entities: {},

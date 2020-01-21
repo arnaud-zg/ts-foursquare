@@ -1,17 +1,17 @@
-import { getPhotosDetailsAsync } from '../../src/actions'
+import { getPhotosDetailsAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetPhotosDetails } from '../../src/adapter'
 import {
   initialState as initialStatePhotos,
   photosReducer,
-} from '../../src/reducers/photos'
+} from '../../src/DEPRECATED_reducers/photos'
 import {
   initialState as initialStateRequest,
   requestReducer,
-} from '../../src/reducers/request'
+} from '../../src/DEPRECATED_reducers/request'
 import {
   initialState as initialStateStatus,
   statusReducer,
-} from '../../src/reducers/status'
+} from '../../src/DEPRECATED_reducers/status'
 import { payload as payloadGetPhotosDetails } from '../epics/__mocks__/getPhotosDetailsAsync.revolve'
 
 const genericFailureError = new Error('An error occurred')

@@ -1,8 +1,8 @@
 import { Action } from 'typesafe-actions'
-import { getAccessTokenAsync } from '../../src/actions'
+import { getAccessTokenAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetAccessToken } from '../../src/adapter'
-import { getAccessTokenEpic } from '../../src/epics'
-import { initialState } from '../../src/reducers/app'
+import { getAccessTokenEpic } from '../../src/DEPRECATED_epics'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   mockingFailingNotFoundFetch,
   mockingFailingNotValidFetch,

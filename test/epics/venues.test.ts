@@ -9,7 +9,7 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-} from '../../src/actions/venues'
+} from '../../src/DEPRECATED_actions/venues'
 import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
@@ -31,8 +31,8 @@ import {
   getVenuesSimilarEpic,
   getVenuesSuggestCompletionEpic,
   getVenuesTrendingEpic,
-} from '../../src/epics/venues'
-import { initialState } from '../../src/reducers/app'
+} from '../../src/DEPRECATED_epics/venues'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   mockingFailingNotFoundFetch,
   mockingFailingNotValidFetch,

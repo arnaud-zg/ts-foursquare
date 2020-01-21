@@ -1,11 +1,11 @@
-import { initialState } from '../../src/reducers/app'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   lifeAccessTokenSelector,
   lifeCredentialsSelector,
   lifeSelector,
   lifeStatusSelector,
   lifeOAuth2UrlSelector,
-} from '../../src/selectors/life'
+} from '../../src/DEPRECATED_selectors/life'
 import { NStore } from '../../types'
 
 const state: NStore.IState = {

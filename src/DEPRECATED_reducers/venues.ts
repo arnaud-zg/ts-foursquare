@@ -11,7 +11,7 @@ import {
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
   TVenuesAction,
-} from '../actions/venues'
+} from '../DEPRECATED_actions/venues'
 import { getVenuesListedGroupKey } from '../utils/venue'
 
 export const initialState: NVenuesState.IState = {

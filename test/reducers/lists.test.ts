@@ -1,17 +1,17 @@
-import { getListsAsync } from '../../src/actions'
+import { getListsAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetLists } from '../../src/adapter'
 import {
   initialState as initialStateLists,
   listsReducer,
-} from '../../src/reducers/lists'
+} from '../../src/DEPRECATED_reducers/lists'
 import {
   initialState as initialStateRequest,
   requestReducer,
-} from '../../src/reducers/request'
+} from '../../src/DEPRECATED_reducers/request'
 import {
   initialState as initialStateStatus,
   statusReducer,
-} from '../../src/reducers/status'
+} from '../../src/DEPRECATED_reducers/status'
 import { payload as payloadGetLists } from '../epics/__mocks__/getListsAsync.resolve'
 
 const genericFailureError = new Error('An error occurred')

@@ -1,4 +1,4 @@
-import { getPhotosDetailsAsync } from '../../src/actions/photos'
+import { getPhotosDetailsAsync } from '../../src/DEPRECATED_actions/photos'
 
 describe('actions/photos', () => {
   it(`should make a snapshot of getPhotosDetailsAsync`, () => {
