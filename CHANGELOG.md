@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.7.1...v1.0.0-nightly.0) (2020-01-21)
+
+
+### 🚧 Refactor
+
+* add deprecated prefix on useless code for next breaking release ([#412](https://github.com/arnaud-zg/ts-foursquare/issues/412)) ([792ccb8](https://github.com/arnaud-zg/ts-foursquare/commit/792ccb865420c06af481a572d854e92f7f2ac31f))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.25 ([#408](https://github.com/arnaud-zg/ts-foursquare/issues/408)) ([057960a](https://github.com/arnaud-zg/ts-foursquare/commit/057960a826e4ce77ee0663c98ebb74e64a5357d2))
+* **deps:** update dependency husky to v4.1.0 ([#410](https://github.com/arnaud-zg/ts-foursquare/issues/410)) ([b9a5325](https://github.com/arnaud-zg/ts-foursquare/commit/b9a5325dcf132bf7d0ebfb65673d5cc4bcb4a9fa))
+* **deps:** update dependency typescript to v3.7.5 ([#407](https://github.com/arnaud-zg/ts-foursquare/issues/407)) ([9382a15](https://github.com/arnaud-zg/ts-foursquare/commit/9382a152925eaf369b5006fe9ac9869095f00197))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency standalone-store to v1.1.6 ([#409](https://github.com/arnaud-zg/ts-foursquare/issues/409)) ([ca7d3c2](https://github.com/arnaud-zg/ts-foursquare/commit/ca7d3c2cd2394d0344bd6f20503a01f96db721cb))
+
 ### [0.7.1](https://github.com/arnaud-zg/ts-foursquare/compare/v0.7.0...v0.7.1) (2020-01-16)
 
 

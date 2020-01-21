@@ -1,6 +1,6 @@
 {
   "name": "ts-foursquare",
-  "version": "0.7.1",
+  "version": "1.0.0-nightly.0",
   "description": "A simple library for Foursquare API",
   "main": "dist/index.js",
   "module": "dist/ts-foursquare.esm.js",
