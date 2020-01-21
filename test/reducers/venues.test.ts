@@ -8,7 +8,7 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-} from '../../src/actions/venues'
+} from '../../src/DEPRECATED_actions/venues'
 import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
@@ -23,11 +23,11 @@ import {
 import {
   initialState as initialStateRequest,
   requestReducer,
-} from '../../src/reducers/request'
+} from '../../src/DEPRECATED_reducers/request'
 import {
   initialState as initialStateVenues,
   venuesReducer,
-} from '../../src/reducers/venues'
+} from '../../src/DEPRECATED_reducers/venues'
 import { payload as payloadGetVenuesCategories } from '../epics/__mocks__/getVenuesCategoriesAsync.resolve'
 import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
 import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'

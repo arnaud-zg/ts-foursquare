@@ -2,8 +2,8 @@ import {
   putCredentials,
   getAccessTokenAsync,
   setOAuth2,
-} from '../../src/actions/life'
-import { initialState, lifeReducer } from '../../src/reducers/life'
+} from '../../src/DEPRECATED_actions/life'
+import { initialState, lifeReducer } from '../../src/DEPRECATED_reducers/life'
 
 describe('reducers/life', () => {
   test.each`

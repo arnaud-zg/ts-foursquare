@@ -1,4 +1,4 @@
-import { configureStore } from '../../src/reducers'
+import { configureStore } from '../../src/DEPRECATED_reducers'
 import { Dispatch, AnyAction, MiddlewareAPI } from 'redux'
 
 describe('reducers', () => {

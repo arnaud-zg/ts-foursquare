@@ -1,7 +1,7 @@
 import { StateObservable } from 'redux-observable'
 import { Subject } from 'rxjs/internal/Subject'
-import { getListsAsync } from '../../src/actions'
-import { initialState } from '../../src/reducers'
+import { getListsAsync } from '../../src/DEPRECATED_actions'
+import { initialState } from '../../src/DEPRECATED_reducers'
 import { getObservableLists } from '../../src/services'
 import { NStore } from '../../types'
 

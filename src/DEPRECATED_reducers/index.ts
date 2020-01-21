@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, Middleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { epicMiddleware, rootEpic } from '../middlewares'
+import { epicMiddleware, rootEpic } from '../DEPRECATED_middlewares'
 import { appReducer } from './app'
 
 export { initialState, TState } from './app'

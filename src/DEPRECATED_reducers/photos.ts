@@ -1,6 +1,6 @@
 import { createReducer } from 'typesafe-actions'
 import { NPhotosState } from '../../types'
-import { getPhotosDetailsAsync, TPhotosAction } from '../actions'
+import { getPhotosDetailsAsync, TPhotosAction } from '../DEPRECATED_actions'
 
 export const initialState: NPhotosState.IState = {
   entities: {},

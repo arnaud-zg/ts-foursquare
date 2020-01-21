@@ -5,7 +5,7 @@ import {
   putCredentials,
   setOAuth2,
   TLifeAction,
-} from '../actions'
+} from '../DEPRECATED_actions'
 
 export const initialState: NLifeState.IState = {
   status: false,

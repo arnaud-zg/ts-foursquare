@@ -14,7 +14,7 @@ import {
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
   TRootAction,
-} from '../actions'
+} from '../DEPRECATED_actions'
 import { ASYNC_ACTION_NAME_MAPPING } from '../constants/asyncAction'
 
 export const initialState: NStatusState.IState = {}

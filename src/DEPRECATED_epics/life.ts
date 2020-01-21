@@ -3,7 +3,7 @@ import { of } from 'rxjs/internal/observable/of'
 import { catchError, filter, map, switchMap, takeUntil } from 'rxjs/operators'
 import { isActionOf } from 'typesafe-actions'
 import { NStore } from '../../types'
-import { getAccessTokenAsync, TRootAction } from '../actions'
+import { getAccessTokenAsync, TRootAction } from '../DEPRECATED_actions'
 import { adaptGetAccessToken } from '../adapter'
 import { getObservableAccessToken } from '../services'
 

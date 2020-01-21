@@ -1,10 +1,10 @@
 import { getType } from 'typesafe-actions'
-import { getVenuesSearchAsync } from '../../src/actions'
-import { initialState } from '../../src/reducers/app'
+import { getVenuesSearchAsync } from '../../src/DEPRECATED_actions'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   statusModuleStateSelector,
   statusSelector,
-} from '../../src/selectors/status'
+} from '../../src/DEPRECATED_selectors/status'
 import { NStore } from '../../types'
 
 const state: NStore.IState = {

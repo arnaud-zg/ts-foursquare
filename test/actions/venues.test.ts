@@ -1,4 +1,4 @@
-import { venuesActions } from '../../src/actions/venues'
+import { venuesActions } from '../../src/DEPRECATED_actions/venues'
 require('isomorphic-fetch')
 
 describe('actions/venues', () => {

@@ -1,7 +1,10 @@
 import { NHttpStatuses } from 'http-response-status'
-import { getVenuesSearchAsync } from '../../src/actions/venues'
+import { getVenuesSearchAsync } from '../../src/DEPRECATED_actions/venues'
 import { adaptGetVenuesSearch } from '../../src/adapter/venues'
-import { initialState, statusReducer } from '../../src/reducers/status'
+import {
+  initialState,
+  statusReducer,
+} from '../../src/DEPRECATED_reducers/status'
 import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 require('isomorphic-fetch')
 

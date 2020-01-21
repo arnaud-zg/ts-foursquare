@@ -3,7 +3,7 @@ import { of } from 'rxjs/internal/observable/of'
 import { catchError, filter, map, switchMap, takeUntil } from 'rxjs/operators'
 import { isActionOf } from 'typesafe-actions'
 import { NStore } from '../../types'
-import { TRootAction } from '../actions'
+import { TRootAction } from '../DEPRECATED_actions'
 import {
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
@@ -14,7 +14,7 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-} from '../actions/venues'
+} from '../DEPRECATED_actions/venues'
 import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,

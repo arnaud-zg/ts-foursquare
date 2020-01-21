@@ -1,8 +1,8 @@
 import { Action } from 'typesafe-actions'
-import { getVenuesSearchAsync } from '../../src/actions'
+import { getVenuesSearchAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetVenuesSearch } from '../../src/adapter/venues'
-import { getVenuesSearchEpic } from '../../src/epics/venues'
-import { initialState } from '../../src/reducers/app'
+import { getVenuesSearchEpic } from '../../src/DEPRECATED_epics/venues'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import { mockingFetch, testEpic } from '../../src/utils/test'
 import { payload } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 

@@ -9,7 +9,7 @@ import {
 } from '../constants/api'
 import { getLocationHref } from '../utils'
 import { processFetchError, processFetchResponse } from './fetch'
-import { lifeCredentialsSelector } from '../selectors'
+import { lifeCredentialsSelector } from '../DEPRECATED_selectors'
 
 export const getObservableAccessToken = ({
   action,

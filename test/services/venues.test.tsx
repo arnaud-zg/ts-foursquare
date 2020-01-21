@@ -9,8 +9,8 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-} from '../../src/actions'
-import { initialState } from '../../src/reducers'
+} from '../../src/DEPRECATED_actions'
+import { initialState } from '../../src/DEPRECATED_reducers'
 import {
   getObservableVenuesCategories,
   getObservableVenuesExplore,

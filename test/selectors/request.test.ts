@@ -1,14 +1,14 @@
 import { getType } from 'typesafe-actions'
-import { getVenuesSearchAsync } from '../../src/actions/venues'
+import { getVenuesSearchAsync } from '../../src/DEPRECATED_actions/venues'
 import { ASYNC_ACTION_NAME_MAPPING } from '../../src/constants/asyncAction'
-import { initialState } from '../../src/reducers/app'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   requestActionSelector,
   requestCancelReasonSelector,
   requestEntityIdsSelector,
   requestErrorSelector,
   requestSelector,
-} from '../../src/selectors/request'
+} from '../../src/DEPRECATED_selectors/request'
 import { NStore } from '../../types'
 import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
 

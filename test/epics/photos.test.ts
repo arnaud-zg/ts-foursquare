@@ -1,8 +1,8 @@
 import { Action } from 'typesafe-actions'
-import { getPhotosDetailsAsync } from '../../src/actions'
+import { getPhotosDetailsAsync } from '../../src/DEPRECATED_actions'
 import { adaptGetPhotosDetails } from '../../src/adapter'
-import { getPhotosDetailsEpic } from '../../src/epics'
-import { initialState } from '../../src/reducers/app'
+import { getPhotosDetailsEpic } from '../../src/DEPRECATED_epics'
+import { initialState } from '../../src/DEPRECATED_reducers/app'
 import {
   mockingFailingNotFoundFetch,
   mockingFailingNotValidFetch,

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
 import { NStore } from '../../types'
 import { EApiDefaultParameters } from '../constants/api'
-import { lifeCredentialsSelector } from '../selectors/life'
+import { lifeCredentialsSelector } from '../DEPRECATED_selectors/life'
 
 export const processFetchResponse = (
   response: Response

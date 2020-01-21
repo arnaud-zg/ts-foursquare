@@ -11,7 +11,7 @@ import {
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
   getPhotosDetailsAsync,
-} from '../actions'
+} from '../DEPRECATED_actions'
 
 interface IAsyncActionNameMapping {
   [actionType: string]: string

@@ -22,7 +22,7 @@ import {
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
   TRootAction,
-} from '../actions'
+} from '../DEPRECATED_actions'
 import { ASYNC_ACTION_NAME_MAPPING } from '../constants/asyncAction'
 import { getVenuesListedGroupKey } from '../utils/venue'
 
