@@ -33,7 +33,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@types/jest": "24.9.0",
+    "@types/jest": "24.9.1",
     "@types/node": "12.12.25",
     "@types/redux": "3.6.0",
     "codecov": "3.6.1",
