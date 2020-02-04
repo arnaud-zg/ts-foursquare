@@ -24,9 +24,7 @@ export const getObservablePhotosDetails = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.PHOTOS_DETAILS, { photoId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }

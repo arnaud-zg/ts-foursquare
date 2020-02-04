@@ -20,9 +20,7 @@ export const getObservableVenuesCategories = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: EApiPathnames.VENUES_CATEGORIES,
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
@@ -40,7 +38,6 @@ export const getObservableVenuesExplore = ({
       pathname: EApiPathnames.VENUES_EXPLORE,
       param: {
         ...action.payload,
-        ...getDefaultRequestParameters(state$),
       },
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
@@ -59,9 +56,7 @@ export const getObservableVenuesLikes = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.VENUES_LIKES, { venueId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
@@ -79,9 +74,7 @@ export const getObservableVenuesListed = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.VENUES_LISTED, { venueId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
@@ -99,9 +92,7 @@ export const getObservableVenuesNextVenues = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.VENUES_NEXT_VENUES, { venueId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
@@ -119,7 +110,6 @@ export const getObservableVenuesSearch = ({
       pathname: EApiPathnames.VENUES_SEARCH,
       param: {
         ...action.payload,
-        ...getDefaultRequestParameters(state$),
       },
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
@@ -138,9 +128,7 @@ export const getObservableVenuesSimilar = ({
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.VENUES_SIMILAR, { venueId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
 }
@@ -158,7 +146,6 @@ export const getObservableVenuesTrending = ({
       pathname: EApiPathnames.VENUES_TRENDING,
       param: {
         ...action.payload,
-        ...getDefaultRequestParameters(state$),
       },
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
@@ -177,7 +164,6 @@ export const getObservableVenuesSuggestCompletion = ({
       pathname: EApiPathnames.VENUES_SUGGEST_COMPLETION,
       param: {
         ...action.payload,
-        ...getDefaultRequestParameters(state$),
       },
     })
   ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
