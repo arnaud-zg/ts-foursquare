@@ -1,13 +1,11 @@
-import { StateObservable } from 'redux-observable'
 import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
-import { NStore } from '../../types'
 import { EApiDefaultParameters } from '../constants/api'
-import { lifeCredentialsSelector } from '../DEPRECATED_selectors/life'
+import { IStandaloneConfig } from '../standalone'
 
-export const processFetchResponse = (
+export const processFetchResponse = <TResponse = any>(
   response: Response
-): Promise<any> | Observable<Error> => {
+): Promise<TResponse> | Observable<Error> => {
   if (response.ok) {
     return response.json()
   }
@@ -18,12 +16,8 @@ export const processFetchResponse = (
 export const processFetchError = (err: Error): Observable<Error> =>
   throwError(new Error(err.message))
 
-export const getDefaultRequestParameters = (
-  state$: StateObservable<NStore.IState>
-) => {
-  const { clientId, clientSecret, accessToken } = lifeCredentialsSelector(
-    state$.value
-  )
+export const getDefaultRequestParameters = (config: IStandaloneConfig) => {
+  const { clientId, clientSecret, accessToken } = config
 
   return accessToken
     ? {

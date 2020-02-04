@@ -8,28 +8,20 @@ A JS client for working with <a href="https://developer.foursquare.com/docs/api"
 - [Overview](#overview)
 - [Getting Started](#getting-started)
 - [Actions](#actions)
-  - [Life action](#life-action)
-    - [putCredentials](#putCredentials)
   - [Lists action](#lists-action)
     - [getListsAsync](#getListsAsync)
-  - [Photos action](#photos-action)
-    - [getPhotosDetailsAsync](#getPhotosDetailsAsync)
-  - [Venues action](#venues-action)
-    - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync)
-    - [getVenuesExploreAsync](#getVenuesExploreAsync)
-    - [getVenuesLikesAsync](#getVenuesLikesAsync)
-    - [getVenuesListedAsync](#getVenuesListedAsync)
-    - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync)
-    - [getVenuesSearchAsync](#getVenuesSearchAsync)
-    - [getVenuesSimilarAsync](#getVenuesSimilarAsync)
-    - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync)
-    - [getVenuesTrendingAsync](#getVenuesTrendingAsync)
-- [Reducers](#reducers)
-  - [Life reducer](#life-reducer)
-  - [Venues reducer](#venues-reducer)
-- [Selectors](#selectors)
-  - [Life selectors](#life-selectors)
-  - [Venues selectors](#venues-selectors)
+      <!-- - [Photos action](#photos-action) -->
+        <!-- - [getPhotosDetailsAsync](#getPhotosDetailsAsync) -->
+      <!-- - [Venues action](#venues-action) -->
+        <!-- - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync) -->
+        <!-- - [getVenuesExploreAsync](#getVenuesExploreAsync) -->
+        <!-- - [getVenuesLikesAsync](#getVenuesLikesAsync) -->
+        <!-- - [getVenuesListedAsync](#getVenuesListedAsync) -->
+        <!-- - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync) -->
+        <!-- - [getVenuesSearchAsync](#getVenuesSearchAsync) -->
+        <!-- - [getVenuesSimilarAsync](#getVenuesSimilarAsync) -->
+        <!-- - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync) -->
+        <!-- - [getVenuesTrendingAsync](#getVenuesTrendingAsync) -->
 - [Utils](##utils)
   - [Icon](#icon)
   - [Test](#test)
@@ -51,29 +43,20 @@ Before we start, check that your computer or server meets the following requirem
 
 Node.js >= 10.x: Node.js is a server platform which runs JavaScript.
 
-#### Search for a list of venues
+#### Gives details about a list
 
 ##### Promise
 
 ```ts
 const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
-ts4S
-  .dispatchActionsAsync({
-    actionsDispatch: [getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })],
-    actionCreatorsResolve: [
-      getVenuesSearchAsync.cancel,
-      getVenuesSearchAsync.failure,
-      getVenuesSearchAsync.success,
-    ],
+
+ts4Sq.actions
+  .getLists({ payload: { listId: '5580721e498e7c48540bf83f' } })
+  .then((list: NLists.IList) => {
+    console.log({ list })
   })
-  .then((state: NStore.IState) => {
-    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
-      state
-    )
-    console.log({ entities, state })
-  })
-  .catch((error: Error | string) => {
-    console.log(error)
+  .catch((error: Error) => {
+    console.error(error)
   })
   .finally(() => {
     // Do something if needed
@@ -83,25 +66,15 @@ ts4S
 ##### Async / Await
 
 ```ts
-const getVenuesByLocation = async ({ ll }: NRequest.TVenuesSearchPayload) => {
+const getLists = async ({ payload }: NRequest.IListsPayload) => {
   try {
     const ts4S = new tsFoursquare({ clientId: '1234', clientSecret: '5678' })
-    const state: NStore.IState = await ts4S.dispatchActionsAsync({
-      actionsDispatch: [
-        getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' }),
-      ],
-      actionCreatorsResolve: [
-        getVenuesSearchAsync.cancel,
-        getVenuesSearchAsync.failure,
-        getVenuesSearchAsync.success,
-      ],
+    const list: NLists.IList = await ts4S.getLists({
+      payload: { listId: '5580721e498e7c48540bf83f' },
     })
-    const entities: { [key: string]: NVenue.IVenue } = venuesEntitiesSelector(
-      state
-    )
-    console.log({ entities, state })
+    console.log({ list })
   } catch (error) {
-    console.log(error)
+    console.error(error)
   } finally {
     console.log('done')
   }
@@ -109,29 +82,6 @@ const getVenuesByLocation = async ({ ll }: NRequest.TVenuesSearchPayload) => {
 ```
 
 ## Actions
-
-### Life action
-
-### putCredentials
-
-> Put credentials into store, you'll only need to call this method only one time.
-
-`putCredentials` create an enhanced action-creator with unlimited number of arguments.
-
-- Resulting action-creator will preserve semantic names of their arguments (id, title, amount, etc...).
-
-- Returned action object have predefined properties `({ type, payload, meta })`
-
-##### Redux context
-
-```js
-const onFetchData = () => {
-  putCredentials({
-    clientId: CLIENT_ID,
-    clientSecret: CLIENT_SECRET,
-  })
-}
-```
 
 ### Lists action
 
@@ -143,17 +93,18 @@ const onFetchData = () => {
 
 `getListsAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getListsAsync.request({
-    listId: '5580721e498e7c48540bf83f',
+const onFetchData = async () => {
+  const list: NLists.IList = await ts4S.getLists({
+    payload: { listId: '5580721e498e7c48540bf83f' },
   })
+  console.log(list)
 }
 ```
 
-### Photos action
+<!-- ### Photos action
 
 #### getPhotosDetailsAsync
 
@@ -364,7 +315,7 @@ const onFetchData = () => {
 
 ### Venues selectors
 
-// @to-do
+// @to-do -->
 
 ## Utils
 

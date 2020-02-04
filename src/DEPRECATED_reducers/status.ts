@@ -2,7 +2,6 @@ import { createReducer } from 'typesafe-actions'
 import { NStatusState } from '../../types'
 import {
   getAccessTokenAsync,
-  getListsAsync,
   getPhotosDetailsAsync,
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
@@ -25,7 +24,6 @@ export const statusReducer = createReducer<NStatusState.IState, TRootAction>(
   .handleAction(
     [
       getAccessTokenAsync.request,
-      getListsAsync.request,
       getPhotosDetailsAsync.request,
       getVenuesCategoriesAsync.request,
       getVenuesExploreAsync.request,
@@ -50,7 +48,6 @@ export const statusReducer = createReducer<NStatusState.IState, TRootAction>(
   .handleAction(
     [
       getAccessTokenAsync.failure,
-      getListsAsync.failure,
       getPhotosDetailsAsync.failure,
       getVenuesCategoriesAsync.failure,
       getVenuesExploreAsync.failure,
@@ -75,7 +72,6 @@ export const statusReducer = createReducer<NStatusState.IState, TRootAction>(
   .handleAction(
     [
       getAccessTokenAsync.cancel,
-      getListsAsync.cancel,
       getPhotosDetailsAsync.cancel,
       getVenuesCategoriesAsync.cancel,
       getVenuesExploreAsync.cancel,
@@ -100,7 +96,6 @@ export const statusReducer = createReducer<NStatusState.IState, TRootAction>(
   .handleAction(
     [
       getAccessTokenAsync.success,
-      getListsAsync.success,
       getPhotosDetailsAsync.success,
       getVenuesCategoriesAsync.success,
       getVenuesExploreAsync.success,

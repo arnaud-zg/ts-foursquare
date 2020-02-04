@@ -1,45 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tsFoursquare should wait end of actions and make a snapshot of store 3`] = `
-Object {
-  "life": Object {
-    "credentials": Object {
-      "clientId": "1234",
-      "clientSecret": "5678",
-    },
-    "status": true,
+exports[`tsFoursquare should get a snapshot of tsFoursquare instance 1`] = `
+tsFoursquare {
+  "actions": Object {
+    "getLists": [Function],
   },
-  "lists": Object {
-    "entities": Object {},
-  },
-  "photos": Object {
-    "entities": Object {},
-  },
-  "request": Object {
-    "getVenuesSearchAsync": Object {
-      "entityIds": Array [],
-      "error": [Error: Error 400],
-    },
-  },
-  "status": Object {
-    "getVenuesSearchAsync": Object {
-      "hasError": true,
-      "isCancelled": false,
-      "isLoading": false,
-    },
-  },
-  "venues": Object {
-    "categories": Object {},
-    "entities": Object {},
-    "likesEntities": Object {},
-    "miniVenues": Object {},
-    "nextVenues": Object {},
-    "recommendedPlaces": Object {},
-    "similarVenues": Object {},
-    "trendingEntities": Object {},
-    "venuesListed": Object {},
-  },
+  "clientId": "",
+  "clientSecret": "",
+  "injectContextInAction": [Function],
+  "returnType": "PROMISE",
 }
 `;
-
-exports[`tsFoursquare should wait end of actions and make a snapshot of store 4`] = `Object {}`;
