@@ -3,7 +3,6 @@ import { NStore } from '../../types'
 import { TRootAction } from '../DEPRECATED_actions'
 import {
   getAccessTokenEpic,
-  getListsEpic,
   getPhotosDetailsEpic,
   getVenuesCategoriesEpic,
   getVenuesExploreEpic,
@@ -18,7 +17,6 @@ import {
 
 export const rootEpic = combineEpics(
   getAccessTokenEpic,
-  getListsEpic,
   getPhotosDetailsEpic,
   getVenuesCategoriesEpic,
   getVenuesExploreEpic,

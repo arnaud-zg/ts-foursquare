@@ -10,12 +10,6 @@ Object {
     "success": [Function],
   },
   "getIconUrlList": [Function],
-  "getListsAsync": Object {
-    "cancel": [Function],
-    "failure": [Function],
-    "request": [Function],
-    "success": [Function],
-  },
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
   "getPhotosDetailsAsync": Object {
@@ -86,9 +80,6 @@ Object {
       },
       "status": false,
     },
-    "lists": Object {
-      "entities": Object {},
-    },
     "photos": Object {
       "entities": Object {},
     },
@@ -121,16 +112,6 @@ Object {
   "lifeOAuth2UrlSelector": [Function],
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
-  "listSelector": [Function],
-  "listsActions": Object {
-    "getListsAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-  },
-  "listsSelector": [Function],
   "photoSelector": [Function],
   "photosActions": Object {
     "getPhotosDetailsAsync": Object {
@@ -150,7 +131,6 @@ Object {
   "setOAuth2": [Function],
   "statusModuleStateSelector": [Function],
   "statusSelector": [Function],
-  "tsFoursquare": [Function],
   "venueCategoriesStateSelector": [Function],
   "venueLocationSelector": [Function],
   "venueSelector": [Function],

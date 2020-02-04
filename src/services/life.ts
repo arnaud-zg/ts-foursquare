@@ -7,9 +7,9 @@ import {
   EAuthApiPathnames,
   EGrantType,
 } from '../constants/api'
+import { lifeCredentialsSelector } from '../DEPRECATED_selectors'
 import { getLocationHref } from '../utils'
 import { processFetchError, processFetchResponse } from './fetch'
-import { lifeCredentialsSelector } from '../DEPRECATED_selectors'
 
 export const getObservableAccessToken = ({
   action,

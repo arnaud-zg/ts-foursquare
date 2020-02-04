@@ -1,42 +1,48 @@
-import { AnyAction } from 'redux'
-import { dispatchActionsAndWaitResponse } from 'standalone-store'
-import { ActionCreator } from 'typesafe-actions'
-import { NStore } from '../types'
-import { putCredentials } from './index'
-import { configureStore } from './DEPRECATED_reducers'
+import { actions, TActions, TActionsValue } from './actions'
 
-export class tsFoursquare {
+export enum EReturnType {
+  OBSERVABLE = 'OBSERVABLE',
+  PROMISE = 'PROMISE',
+}
+
+export interface IStandaloneConfig {
   clientId: string
   clientSecret: string
+  accessToken?: string
+  returnType?: EReturnType
+}
 
-  constructor({
-    clientId,
-    clientSecret,
-  }: {
-    clientId: string
-    clientSecret: string
-  }) {
+export class tsFoursquare {
+  actions: TActions
+  clientId: string
+  clientSecret: string
+  returnType: EReturnType
+
+  constructor({ clientId, clientSecret, returnType }: IStandaloneConfig) {
+    this.actions = Object.entries(actions).reduce(
+      (acc, actionEntry) => ({
+        ...acc,
+        [actionEntry[0]]: this.injectContextInAction({
+          action: actionEntry[1],
+        }),
+      }),
+      {} as TActions
+    )
+
     this.clientId = clientId
     this.clientSecret = clientSecret
+    this.returnType = returnType || EReturnType.PROMISE
   }
 
-  dispatchActionsAsync = ({
-    actionsDispatch,
-    actionCreatorsResolve,
-  }: {
-    actionsDispatch: AnyAction[]
-    actionCreatorsResolve: ActionCreator[]
-  }) =>
-    dispatchActionsAndWaitResponse<NStore.IState, NStore.IState>({
-      actionsDispatch: [
-        putCredentials({
-          clientId: this.clientId,
-          clientSecret: this.clientSecret,
-        }),
-        ...actionsDispatch,
-      ],
-      actionCreatorsResolve,
-      configureStore,
-      selector: state => state,
+  private injectContextInAction = ({ action }: { action: TActionsValue }) => (
+    props: any
+  ) =>
+    action({
+      ...props,
+      config: {
+        clientId: this.clientId,
+        clientSecret: this.clientSecret,
+        returnType: this.returnType,
+      },
     })
 }

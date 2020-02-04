@@ -11,11 +11,11 @@ export const getPhotosDetailsEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getPhotosDetailsAsync.request)),
     switchMap(action =>
-      getObservablePhotosDetails({ action, state$ }).pipe(
+      getObservablePhotosDetails({ action }).pipe(
         map(adaptGetPhotosDetails),
         map(getPhotosDetailsAsync.success),
         catchError(err => of(getPhotosDetailsAsync.failure(err))),
