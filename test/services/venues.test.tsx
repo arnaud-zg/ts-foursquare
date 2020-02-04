@@ -1,5 +1,3 @@
-import { StateObservable } from 'redux-observable'
-import { Subject } from 'rxjs/internal/Subject'
 import {
   getVenuesExploreAsync,
   getVenuesLikesAsync,
@@ -10,7 +8,6 @@ import {
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
 } from '../../src/DEPRECATED_actions'
-import { initialState } from '../../src/DEPRECATED_reducers'
 import {
   getObservableVenuesCategories,
   getObservableVenuesExplore,
@@ -22,28 +19,18 @@ import {
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../../src/services'
-import { NStore } from '../../types'
 
 describe('services/getObservableVenuesCategories', () => {
   it('should get an observable instance', () => {
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
-
-    expect(getObservableVenuesCategories({ state$ })).toMatchSnapshot()
+    expect(getObservableVenuesCategories({})).toMatchSnapshot()
   })
 })
 
 describe('services/getObservableVenuesExplore', () => {
   it('should get an observable instance', () => {
     const action = getVenuesExploreAsync.request({ ll: '40.7099,-73.9622' })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesExplore({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesExplore({ action })).toMatchSnapshot()
   })
 })
 
@@ -52,12 +39,8 @@ describe('services/getObservableVenuesLikes', () => {
     const action = getVenuesLikesAsync.request({
       venueId: '3fd66200f964a5209beb1ee3',
     })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesLikes({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesLikes({ action })).toMatchSnapshot()
   })
 })
 
@@ -66,12 +49,8 @@ describe('services/getObservableVenuesListed', () => {
     const action = getVenuesListedAsync.request({
       venueId: '3fd66200f964a5209beb1ee3',
     })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesListed({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesListed({ action })).toMatchSnapshot()
   })
 })
 
@@ -80,24 +59,16 @@ describe('services/getObservableVenuesNextVenues', () => {
     const action = getVenuesNextVenuesAsync.request({
       venueId: '3fd66200f964a5209beb1ee3',
     })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesNextVenues({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesNextVenues({ action })).toMatchSnapshot()
   })
 })
 
 describe('services/getObservableVenuesSearch', () => {
   it('should get an observable instance', () => {
     const action = getVenuesSearchAsync.request({ ll: '40.7099,-73.9622' })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesSearch({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesSearch({ action })).toMatchSnapshot()
   })
 })
 
@@ -106,12 +77,8 @@ describe('services/getObservableVenuesSimilar', () => {
     const action = getVenuesSimilarAsync.request({
       venueId: '3fd66200f964a5209beb1ee3',
     })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesSimilar({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesSimilar({ action })).toMatchSnapshot()
   })
 })
 
@@ -121,25 +88,15 @@ describe('services/getObservableVenuesSuggestCompletion', () => {
       ll: '40.7099,-73.9622',
       query: 'Burger',
     })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(
-      getObservableVenuesSuggestCompletion({ action, state$ })
-    ).toMatchSnapshot()
+    expect(getObservableVenuesSuggestCompletion({ action })).toMatchSnapshot()
   })
 })
 
 describe('services/getObservableVenuesTrending', () => {
   it('should get an observable instance', () => {
     const action = getVenuesTrendingAsync.request({ ll: '40.7099,-73.9622' })
-    const state$: StateObservable<NStore.IState> = new StateObservable(
-      new Subject(),
-      initialState
-    )
 
-    expect(getObservableVenuesTrending({ action, state$ })).toMatchSnapshot()
+    expect(getObservableVenuesTrending({ action })).toMatchSnapshot()
   })
 })

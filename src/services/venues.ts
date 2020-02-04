@@ -1,17 +1,12 @@
-import { StateObservable } from 'redux-observable'
 import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap } from 'rxjs/operators'
-import { NAction, NStore } from '../../types'
+import { NAction } from '../../types'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
 import { processFetchError, processFetchResponse } from './fetch'
 
-export const getObservableVenuesCategories = ({
-  state$,
-}: {
-  state$: StateObservable<NStore.IState>
-}) => {
+export const getObservableVenuesCategories = () => {
   return fromFetch(
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
@@ -23,10 +18,8 @@ export const getObservableVenuesCategories = ({
 
 export const getObservableVenuesExplore = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   return fromFetch(
     getLocationHref({
@@ -41,10 +34,8 @@ export const getObservableVenuesExplore = ({
 
 export const getObservableVenuesLikes = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   const { venueId } = action.payload
 
@@ -59,10 +50,8 @@ export const getObservableVenuesLikes = ({
 
 export const getObservableVenuesListed = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   const { venueId } = action.payload
 
@@ -77,10 +66,8 @@ export const getObservableVenuesListed = ({
 
 export const getObservableVenuesNextVenues = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   const { venueId } = action.payload
 
@@ -95,10 +82,8 @@ export const getObservableVenuesNextVenues = ({
 
 export const getObservableVenuesSearch = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   return fromFetch(
     getLocationHref({
@@ -113,10 +98,8 @@ export const getObservableVenuesSearch = ({
 
 export const getObservableVenuesSimilar = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   const { venueId } = action.payload
 
@@ -131,10 +114,8 @@ export const getObservableVenuesSimilar = ({
 
 export const getObservableVenuesTrending = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   return fromFetch(
     getLocationHref({
@@ -149,10 +130,8 @@ export const getObservableVenuesTrending = ({
 
 export const getObservableVenuesSuggestCompletion = ({
   action,
-  state$,
 }: {
   action: NAction.IAction
-  state$: StateObservable<NStore.IState>
 }) => {
   return fromFetch(
     getLocationHref({
