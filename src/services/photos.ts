@@ -5,11 +5,7 @@ import { NAction, NStore } from '../../types'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
-import {
-  getDefaultRequestParameters,
-  processFetchError,
-  processFetchResponse,
-} from './fetch'
+import { processFetchError, processFetchResponse } from './fetch'
 
 export const getObservablePhotosDetails = ({
   action,
