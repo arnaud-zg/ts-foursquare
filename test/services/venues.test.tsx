@@ -22,7 +22,7 @@ import {
 
 describe('services/getObservableVenuesCategories', () => {
   it('should get an observable instance', () => {
-    expect(getObservableVenuesCategories({})).toMatchSnapshot()
+    expect(getObservableVenuesCategories()).toMatchSnapshot()
   })
 })
 
