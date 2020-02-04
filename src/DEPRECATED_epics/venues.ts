@@ -42,11 +42,11 @@ export const getVenuesCategoriesEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesCategoriesAsync.request)),
     switchMap(() =>
-      getObservableVenuesCategories({ state$ }).pipe(
+      getObservableVenuesCategories().pipe(
         map(adaptGetVenuesCategories),
         map(getVenuesCategoriesAsync.success),
         catchError(err => of(getVenuesCategoriesAsync.failure(err))),
@@ -61,11 +61,11 @@ export const getVenuesExploreEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesExploreAsync.request)),
     switchMap(action =>
-      getObservableVenuesExplore({ action, state$ }).pipe(
+      getObservableVenuesExplore({ action }).pipe(
         map(adaptGetVenuesExplore),
         map(getVenuesExploreAsync.success),
         catchError(err => of(getVenuesExploreAsync.failure(err))),
@@ -80,11 +80,11 @@ export const getVenuesLikesEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesLikesAsync.request)),
     switchMap(action =>
-      getObservableVenuesLikes({ action, state$ }).pipe(
+      getObservableVenuesLikes({ action }).pipe(
         map(adaptGetVenuesLikes),
         map(getVenuesLikesAsync.success),
         catchError(err => of(getVenuesLikesAsync.failure(err))),
@@ -97,11 +97,11 @@ export const getVenuesListedEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesListedAsync.request)),
     switchMap(action =>
-      getObservableVenuesListed({ action, state$ }).pipe(
+      getObservableVenuesListed({ action }).pipe(
         map(adaptGetVenuesListed),
         map(getVenuesListedAsync.success),
         catchError(err => of(getVenuesListedAsync.failure(err))),
@@ -114,11 +114,11 @@ export const getVenuesNextVenuesEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesNextVenuesAsync.request)),
     switchMap(action =>
-      getObservableVenuesNextVenues({ action, state$ }).pipe(
+      getObservableVenuesNextVenues({ action }).pipe(
         map(adaptGetVenuesNextVenues),
         map(getVenuesNextVenuesAsync.success),
         catchError(err => of(getVenuesNextVenuesAsync.failure(err))),
@@ -133,11 +133,11 @@ export const getVenuesSearchEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesSearchAsync.request)),
     switchMap(action =>
-      getObservableVenuesSearch({ action, state$ }).pipe(
+      getObservableVenuesSearch({ action }).pipe(
         map(adaptGetVenuesSearch),
         map(getVenuesSearchAsync.success),
         catchError(err => of(getVenuesSearchAsync.failure(err))),
@@ -150,11 +150,11 @@ export const getVenuesSimilarEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesSimilarAsync.request)),
     switchMap(action =>
-      getObservableVenuesSimilar({ action, state$ }).pipe(
+      getObservableVenuesSimilar({ action }).pipe(
         map(adaptGetVenuesSimilar),
         map(getVenuesSimilarAsync.success),
         catchError(err => of(getVenuesSimilarAsync.failure(err))),
@@ -169,11 +169,11 @@ export const getVenuesSuggestCompletionEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesSuggestCompletionAsync.request)),
     switchMap(action =>
-      getObservableVenuesSuggestCompletion({ action, state$ }).pipe(
+      getObservableVenuesSuggestCompletion({ action }).pipe(
         map(adaptGetVenuesSuggestCompletion),
         map(getVenuesSuggestCompletionAsync.success),
         catchError(err => of(getVenuesSuggestCompletionAsync.failure(err))),
@@ -190,11 +190,11 @@ export const getVenuesTrendingEpic: Epic<
   TRootAction,
   TRootAction,
   NStore.IState
-> = (action$, state$) =>
+> = action$ =>
   action$.pipe(
     filter(isActionOf(getVenuesTrendingAsync.request)),
     switchMap(action =>
-      getObservableVenuesTrending({ action, state$ }).pipe(
+      getObservableVenuesTrending({ action }).pipe(
         map(adaptGetVenuesTrending),
         map(getVenuesTrendingAsync.success),
         catchError(err => of(getVenuesTrendingAsync.failure(err))),

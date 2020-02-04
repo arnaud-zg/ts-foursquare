@@ -1,32 +1,30 @@
-import { StateObservable } from 'redux-observable'
 import { fromFetch } from 'rxjs/fetch'
-import { catchError, switchMap } from 'rxjs/operators'
-import { NAction, NStore } from '../../types'
+import { catchError, switchMap, map } from 'rxjs/operators'
+import { NRequest } from '../../types'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
-import {
-  getDefaultRequestParameters,
-  processFetchError,
-  processFetchResponse,
-} from './fetch'
+import { processFetchError, processFetchResponse } from './fetch'
+import { adaptGetLists } from '../adapter'
+import { IStandaloneConfig } from '../standalone'
 
 export const getObservableLists = ({
-  action,
-  state$,
+  payload,
 }: {
-  action: NAction.IAction
-  state$: StateObservable<NStore.IState>
+  config?: IStandaloneConfig
+  payload: NRequest.IListsPayload
 }) => {
-  const { listId } = action.payload
+  const { listId } = payload
 
   return fromFetch(
     getLocationHref({
       origin: EApiDefaultParameters.ORIGIN,
       pathname: generatePath(EApiPathnames.LISTS, { listId }),
-      param: {
-        ...getDefaultRequestParameters(state$),
-      },
+      param: {},
     })
-  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
+  ).pipe(
+    switchMap(processFetchResponse),
+    map(adaptGetLists),
+    catchError(processFetchError)
+  )
 }
