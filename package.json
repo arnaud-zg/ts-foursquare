@@ -37,7 +37,7 @@
     "@types/node": "12.12.27",
     "@types/redux": "3.6.0",
     "codecov": "3.6.5",
-    "husky": "4.2.1",
+    "husky": "4.2.3",
     "standard-version": "7.1.0",
     "tsdx": "0.12.3",
     "tslib": "1.10.0",
