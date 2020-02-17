@@ -2,6 +2,10 @@
 
 exports[`tsFoursquarePackage should have a list of method 1`] = `
 Object {
+  "EReturnType": Object {
+    "OBSERVABLE": "OBSERVABLE",
+    "PROMISE": "PROMISE",
+  },
   "configureStore": [Function],
   "getAccessTokenAsync": Object {
     "cancel": [Function],
@@ -12,12 +16,6 @@ Object {
   "getIconUrlList": [Function],
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
-  "getPhotosDetailsAsync": Object {
-    "cancel": [Function],
-    "failure": [Function],
-    "request": [Function],
-    "success": [Function],
-  },
   "getVenuesCategoriesAsync": Object {
     "cancel": [Function],
     "failure": [Function],
@@ -80,9 +78,6 @@ Object {
       },
       "status": false,
     },
-    "photos": Object {
-      "entities": Object {},
-    },
     "request": Object {},
     "status": Object {},
     "venues": Object {
@@ -112,16 +107,6 @@ Object {
   "lifeOAuth2UrlSelector": [Function],
   "lifeSelector": [Function],
   "lifeStatusSelector": [Function],
-  "photoSelector": [Function],
-  "photosActions": Object {
-    "getPhotosDetailsAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-  },
-  "photosSelector": [Function],
   "putCredentials": [Function],
   "requestActionSelector": [Function],
   "requestCancelReasonSelector": [Function],
@@ -131,6 +116,7 @@ Object {
   "setOAuth2": [Function],
   "statusModuleStateSelector": [Function],
   "statusSelector": [Function],
+  "tsFoursquare": [Function],
   "venueCategoriesStateSelector": [Function],
   "venueLocationSelector": [Function],
   "venueSelector": [Function],

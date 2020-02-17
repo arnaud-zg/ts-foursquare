@@ -8,7 +8,6 @@ import { NVenuesState } from './venuesState'
 export declare namespace NStore {
   interface IState {
     life: NLifeState.IState
-    photos: NPhotosState.IState
     request: NRequestState.IState
     status: NStatusState.IState
     venues: NVenuesState.IState

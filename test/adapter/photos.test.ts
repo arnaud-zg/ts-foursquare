@@ -1,8 +1,8 @@
 import { adaptGetPhotosDetails } from '../../src/adapter/photos'
-import { payload as payloadGetPhotosDetails } from '../epics/__mocks__/getPhotosDetailsAsync.revolve'
+import { payload as payloadGetPhotosDetails } from '../actions/__mocks__/getPhotosDetailsAsync.revolve'
 
 describe('adapter/lists/adaptGetPhotosDetails', () => {
-  it('should throw an error', () => {
+  it('should get an empty list', () => {
     expect(() =>
       adaptGetPhotosDetails({
         ...payloadGetPhotosDetails,
@@ -14,7 +14,7 @@ describe('adapter/lists/adaptGetPhotosDetails', () => {
     ).toThrowErrorMatchingSnapshot()
   })
 
-  it('should get details of a photo', () => {
+  it('should get photos details', () => {
     expect(adaptGetPhotosDetails(payloadGetPhotosDetails)).toMatchSnapshot()
   })
 })

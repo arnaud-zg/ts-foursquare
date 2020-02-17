@@ -4,6 +4,7 @@ exports[`tsFoursquare should get a snapshot of tsFoursquare instance 1`] = `
 tsFoursquare {
   "actions": Object {
     "getLists": [Function],
+    "getPhotosDetails": [Function],
   },
   "clientId": "",
   "clientSecret": "",
