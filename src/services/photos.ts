@@ -1,17 +1,20 @@
 import { fromFetch } from 'rxjs/fetch'
-import { catchError, switchMap } from 'rxjs/operators'
-import { NAction } from '../../types'
+import { catchError, map, switchMap } from 'rxjs/operators'
+import { NRequest } from '../../types'
+import { adaptGetPhotosDetails } from '../adapter'
 import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
+import { IStandaloneConfig } from '../standalone'
 import { generatePath } from '../utils/generatePath'
 import { getLocationHref } from '../utils/url'
 import { processFetchError, processFetchResponse } from './fetch'
 
 export const getObservablePhotosDetails = ({
-  action,
+  payload,
 }: {
-  action: NAction.IAction
+  config?: IStandaloneConfig
+  payload: NRequest.IPhotosDetailsPayload
 }) => {
-  const { photoId } = action.payload
+  const { photoId } = payload
 
   return fromFetch(
     getLocationHref({
@@ -19,5 +22,9 @@ export const getObservablePhotosDetails = ({
       pathname: generatePath(EApiPathnames.PHOTOS_DETAILS, { photoId }),
       param: {},
     })
-  ).pipe(switchMap(processFetchResponse), catchError(processFetchError))
+  ).pipe(
+    switchMap(processFetchResponse),
+    map(adaptGetPhotosDetails),
+    catchError(processFetchError)
+  )
 }

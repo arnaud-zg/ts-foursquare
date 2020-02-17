@@ -1,5 +1,4 @@
 export * from './life'
-export * from './photos'
 export * from './request'
 export * from './status'
 export * from './venues'

@@ -3,7 +3,6 @@ import {
   NEntity,
   NLikes,
   NMiniVenue,
-  NPhotos,
   NRecommendedPlaces,
   NRequestState,
   NVenue,
@@ -11,7 +10,6 @@ import {
   NVenuesCategories,
 } from '../../types'
 import {
-  getPhotosDetailsAsync,
   getVenuesCategoriesAsync,
   getVenuesExploreAsync,
   getVenuesLikesAsync,
@@ -31,19 +29,6 @@ export const initialState: NRequestState.IState = {}
 export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   initialState
 )
-  .handleAction(
-    getPhotosDetailsAsync.success,
-    (state, action): NRequestState.IState => {
-      const entity: NPhotos.IPhoto = action.payload
-
-      return {
-        ...state,
-        [ASYNC_ACTION_NAME_MAPPING[action.type]]: {
-          entityIds: [entity.id],
-        },
-      }
-    }
-  )
   .handleAction(
     getVenuesCategoriesAsync.success,
     (state, action): NRequestState.IState => {
@@ -142,7 +127,6 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
-      getPhotosDetailsAsync.cancel,
       getVenuesCategoriesAsync.cancel,
       getVenuesExploreAsync.cancel,
       getVenuesLikesAsync.cancel,
@@ -163,7 +147,6 @@ export const requestReducer = createReducer<NRequestState.IState, TRootAction>(
   )
   .handleAction(
     [
-      getPhotosDetailsAsync.failure,
       getVenuesCategoriesAsync.failure,
       getVenuesExploreAsync.failure,
       getVenuesLikesAsync.failure,

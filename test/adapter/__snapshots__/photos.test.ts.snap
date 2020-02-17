@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`adapter/lists/adaptGetPhotosDetails should get details of a photo 1`] = `
+exports[`adapter/lists/adaptGetPhotosDetails should get an empty list 1`] = `"Response is not valid"`;
+
+exports[`adapter/lists/adaptGetPhotosDetails should get photos details 1`] = `
 Object {
   "createdAt": 1373902108,
   "height": 612,
@@ -59,5 +61,3 @@ Object {
   "width": 612,
 }
 `;
-
-exports[`adapter/lists/adaptGetPhotosDetails should throw an error 1`] = `"Response is not valid"`;
