@@ -9,19 +9,19 @@ A JS client for working with <a href="https://developer.foursquare.com/docs/api"
 - [Getting Started](#getting-started)
 - [Actions](#actions)
   - [Lists action](#lists-action)
-    - [getListsAsync](#getListsAsync)
-      <!-- - [Photos action](#photos-action) -->
-        <!-- - [getPhotosDetailsAsync](#getPhotosDetailsAsync) -->
+    - [getLists](#getLists)
+  - [Photos action](#photos-action)
+    - [getPhotosDetails](#getPhotosDetails)
       <!-- - [Venues action](#venues-action) -->
-        <!-- - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync) -->
-        <!-- - [getVenuesExploreAsync](#getVenuesExploreAsync) -->
-        <!-- - [getVenuesLikesAsync](#getVenuesLikesAsync) -->
-        <!-- - [getVenuesListedAsync](#getVenuesListedAsync) -->
-        <!-- - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync) -->
-        <!-- - [getVenuesSearchAsync](#getVenuesSearchAsync) -->
-        <!-- - [getVenuesSimilarAsync](#getVenuesSimilarAsync) -->
-        <!-- - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync) -->
-        <!-- - [getVenuesTrendingAsync](#getVenuesTrendingAsync) -->
+      <!-- - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync) -->
+      <!-- - [getVenuesExploreAsync](#getVenuesExploreAsync) -->
+      <!-- - [getVenuesLikesAsync](#getVenuesLikesAsync) -->
+      <!-- - [getVenuesListedAsync](#getVenuesListedAsync) -->
+      <!-- - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync) -->
+      <!-- - [getVenuesSearchAsync](#getVenuesSearchAsync) -->
+      <!-- - [getVenuesSimilarAsync](#getVenuesSimilarAsync) -->
+      <!-- - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync) -->
+      <!-- - [getVenuesTrendingAsync](#getVenuesTrendingAsync) -->
 - [Utils](##utils)
   - [Icon](#icon)
   - [Test](#test)
@@ -85,46 +85,53 @@ const getLists = async ({ payload }: NRequest.IListsPayload) => {
 
 ### Lists action
 
-#### getListsAsync
+#### getLists
 
 > Gives details about a list.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/lists/details" target="_blank">https://developer.foursquare.com/docs/api/lists/details</a></cite>
 
-`getListsAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getLists` is a function, it takes `GetListsProps` as props and return a promise `Promise<{NLists.IList | Error}>`.
+
+- [GetListsProps](../src/actions/lists.ts)
+- [NLists](../types/lists.d.ts)
 
 ##### Example
 
 ```js
 const onFetchData = async () => {
-  const list: NLists.IList = await ts4S.getLists({
+  const list: NLists.IList | Error = await ts4S.getLists({
     payload: { listId: '5580721e498e7c48540bf83f' },
   })
   console.log(list)
 }
 ```
 
-<!-- ### Photos action
+### Photos action
 
-#### getPhotosDetailsAsync
+#### getPhotosDetails
 
 > Get details of a photo.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/photos/details" target="_blank">https://developer.foursquare.com/docs/api/photos/details</a></cite>
 
-`getPhotosDetailsAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getPhotosDetails` is a function, it takes `GetPhotosDetailsProps` as props and return a promise `Promise<{NPhotos.IPhoto | Error}>`.
 
-##### Redux context
+- [GetPhotosDetailsProps](../src/actions/photos.ts)
+- [NPhotos](../types/photos.d.ts)
+
+##### Example
 
 ```js
-const onFetchData = () => {
-  getPhotosDetailsAsync.request({
-    photoId: '51e4151c498e60b5d17bc721',
+const onFetchData = async () => {
+  const photo: NPhotos.IPhoto | Error = await ts4S.getPhotosDetails({
+    payload: { listId: '51e4151c498e60b5d17bc721' },
   })
+  console.log(photo)
 }
 ```
 
-### Venues action
+<!-- ### Venues action
 
 #### getVenuesCategoriesAsync
 

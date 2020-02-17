@@ -1,9 +1,7 @@
 import { TLifeAction } from './life'
-import { TPhotosAction } from './photos'
 import { TVenuesAction } from './venues'
 
-export type TRootAction = TLifeAction | TPhotosAction | TVenuesAction
+export type TRootAction = TLifeAction | TVenuesAction
 
 export * from './life'
-export * from './photos'
 export * from './venues'

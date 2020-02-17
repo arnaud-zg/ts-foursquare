@@ -9,7 +9,6 @@ import {
   getVenuesSimilarAsync,
   getVenuesSuggestCompletionAsync,
   getVenuesTrendingAsync,
-  getPhotosDetailsAsync,
 } from '../DEPRECATED_actions'
 
 interface IAsyncActionNameMapping {
@@ -17,11 +16,6 @@ interface IAsyncActionNameMapping {
 }
 
 export const ASYNC_ACTION_NAME_MAPPING: IAsyncActionNameMapping = {
-  //   getPhotosDetailsAsync
-  [getType(getPhotosDetailsAsync.request)]: 'getPhotosDetailsAsync',
-  [getType(getPhotosDetailsAsync.success)]: 'getPhotosDetailsAsync',
-  [getType(getPhotosDetailsAsync.failure)]: 'getPhotosDetailsAsync',
-  [getType(getPhotosDetailsAsync.cancel)]: 'getPhotosDetailsAsync',
   // getVenuesCategoriesAsync
   [getType(getVenuesCategoriesAsync.request)]: 'getVenuesCategoriesAsync',
   [getType(getVenuesCategoriesAsync.success)]: 'getVenuesCategoriesAsync',
