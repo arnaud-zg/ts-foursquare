@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.2](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.1...v1.0.0-nightly.2) (2020-02-17)
+
+
+### 🖋 Features
+
+* **photos:** migrate action photos ([#430](https://github.com/arnaud-zg/ts-foursquare/issues/430)) ([3f67904](https://github.com/arnaud-zg/ts-foursquare/commit/3f6790496784b8154b0006d535bac2a3fd2a256c))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v25.1.2 ([#425](https://github.com/arnaud-zg/ts-foursquare/issues/425)) ([d6f5a83](https://github.com/arnaud-zg/ts-foursquare/commit/d6f5a83a747185f41430c3c361b1d93f1f53f137))
+* **deps:** update dependency @types/node to v12.12.27 ([#428](https://github.com/arnaud-zg/ts-foursquare/issues/428)) ([43071b1](https://github.com/arnaud-zg/ts-foursquare/commit/43071b12666b9bb834fc706b1aacc2b1820e7050))
+* **deps:** update dependency codecov to v3.6.5 ([#426](https://github.com/arnaud-zg/ts-foursquare/issues/426)) ([a49e7bd](https://github.com/arnaud-zg/ts-foursquare/commit/a49e7bd138fe21fdc64abdffa6a16d834ab37498))
+* **deps:** update dependency husky to v4.2.3 ([#429](https://github.com/arnaud-zg/ts-foursquare/issues/429)) ([23db643](https://github.com/arnaud-zg/ts-foursquare/commit/23db643df028713f8d7b8b20fd6944a0674ef93b))
+* **deps:** update node.js to v10.19.0 ([#424](https://github.com/arnaud-zg/ts-foursquare/issues/424)) ([048df8a](https://github.com/arnaud-zg/ts-foursquare/commit/048df8a62722b1fc436018259d42e94f6628a55f))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency redux to v4.0.5 ([#386](https://github.com/arnaud-zg/ts-foursquare/issues/386)) ([6a4e2f0](https://github.com/arnaud-zg/ts-foursquare/commit/6a4e2f0a75d8b4c1a916477e139aadbe65cee580))
+* **deps:** update dependency standalone-store to v1.1.9 ([#427](https://github.com/arnaud-zg/ts-foursquare/issues/427)) ([e2e3722](https://github.com/arnaud-zg/ts-foursquare/commit/e2e3722723c5835268d03cdd2e71d553cf022897))
+
 ## [1.0.0-nightly.1](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.0...v1.0.0-nightly.1) (2020-02-04)
 
 
