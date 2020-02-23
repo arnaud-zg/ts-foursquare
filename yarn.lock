@@ -3084,10 +3084,10 @@ http-proxy-agent@^4.0.0:
     agent-base "6"
     debug "4"
 
-http-response-status@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.1.tgz#7695deeee2efe3fa80464d01a301314cbaceaf9d"
-  integrity sha512-eomk/HrIF68kKKi/PyY60Pkp/MMkFQDQEZlfUkN2ym6BcutWPu6JBaXOFIozDdltzOBZQfG6Ic87W5lAfyH2sw==
+http-response-status@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.6.tgz#55ddd546ec6d4b0176ed75be06414d7637fa6174"
+  integrity sha512-gPIqlAXhOPmxW3bFXqzQi2E5/HApNljlpucXdaUTviDsEi6fZsTd79YM4oyAzJt130hf6+AYWLohy0MuJu6ZFQ==
 
 http-signature@~1.2.0:
   version "1.2.0"
