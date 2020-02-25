@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.5](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.4...v1.0.0-nightly.5) (2020-02-25)
+
+
+### 🔧 Chore
+
+* remove useless dependencies ([#439](https://github.com/arnaud-zg/ts-foursquare/issues/439)) ([42fa464](https://github.com/arnaud-zg/ts-foursquare/commit/42fa4643d8d9630795ce7013fcdeae8b2e0598c0))
+
 ## [1.0.0-nightly.4](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.3...v1.0.0-nightly.4) (2020-02-25)
 
 
