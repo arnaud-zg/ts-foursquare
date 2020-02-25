@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.3](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.2...v1.0.0-nightly.3) (2020-02-25)
+
+
+### 🖋 Features
+
+* **venues:** migrate action venues ([#437](https://github.com/arnaud-zg/ts-foursquare/issues/437)) ([3d3967e](https://github.com/arnaud-zg/ts-foursquare/commit/3d3967e1b834aa13fc068367b55738b143c60fc4))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v1.0.6 ([#436](https://github.com/arnaud-zg/ts-foursquare/issues/436)) ([676110c](https://github.com/arnaud-zg/ts-foursquare/commit/676110c901d25545d98fe9f80fc6c7b95338e3d1))
+* **deps:** update dependency standalone-store to v1.1.10 ([#435](https://github.com/arnaud-zg/ts-foursquare/issues/435)) ([1bbc56e](https://github.com/arnaud-zg/ts-foursquare/commit/1bbc56ebe0d1601af96e6a961a954fa7cda34785))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v25.1.3 ([#431](https://github.com/arnaud-zg/ts-foursquare/issues/431)) ([564c76c](https://github.com/arnaud-zg/ts-foursquare/commit/564c76c3e9e99ac738dff21cee00a2b30adbcc9f))
+* **deps:** update dependency @types/node to v12.12.28 ([#432](https://github.com/arnaud-zg/ts-foursquare/issues/432)) ([3440d2b](https://github.com/arnaud-zg/ts-foursquare/commit/3440d2b8b8a91dc38eb9ff245c5dd61694a2043e))
+* **deps:** update dependency tslib to v1.11.0 ([#433](https://github.com/arnaud-zg/ts-foursquare/issues/433)) ([7824fed](https://github.com/arnaud-zg/ts-foursquare/commit/7824fed3a34a43d2061366a8cf8e6fe42019ea44))
+* **deps:** update dependency typescript to v3.8.2 ([#434](https://github.com/arnaud-zg/ts-foursquare/issues/434)) ([7788865](https://github.com/arnaud-zg/ts-foursquare/commit/7788865847bfa737a0b7e7a03c5a01a54d35a4b5))
+
 ## [1.0.0-nightly.2](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.1...v1.0.0-nightly.2) (2020-02-17)
 
 
