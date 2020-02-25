@@ -4,7 +4,7 @@ import {
   mockingFailingNotValidFetch,
   mockingFetch,
 } from '../../src/utils/test'
-import { payload as payloadGetLists } from './__mocks__/getListsAsync.resolve'
+import { payload as payloadGetLists } from './__mocks__/getLists.resolve'
 
 describe('actions/lists', () => {
   test.each`
