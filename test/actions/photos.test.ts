@@ -4,7 +4,7 @@ import {
   mockingFailingNotValidFetch,
   mockingFetch,
 } from '../../src/utils/test'
-import { payload as payloadGetPhotosDetails } from './__mocks__/getPhotosDetailsAsync.revolve'
+import { payload as payloadGetPhotosDetails } from './__mocks__/getPhotosDetails.revolve'
 
 describe('actions/photos', () => {
   test.each`

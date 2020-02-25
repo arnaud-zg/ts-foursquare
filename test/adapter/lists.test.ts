@@ -1,5 +1,5 @@
 import { adaptGetLists } from '../../src/adapter/lists'
-import { payload as payloadGetLists } from '../actions/__mocks__/getListsAsync.resolve'
+import { payload as payloadGetLists } from '../actions/__mocks__/getLists.resolve'
 
 describe('adapter/lists/adaptGetLists', () => {
   it('should get an empty list', () => {
