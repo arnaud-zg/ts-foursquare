@@ -6,42 +6,9 @@ Object {
     "OBSERVABLE": "OBSERVABLE",
     "PROMISE": "PROMISE",
   },
-  "configureStore": [Function],
-  "getAccessTokenAsync": Object {
-    "cancel": [Function],
-    "failure": [Function],
-    "request": [Function],
-    "success": [Function],
-  },
   "getIconUrlList": [Function],
   "getLocationHref": [Function],
   "getLocationSearch": [Function],
-  "initialState": Object {
-    "life": Object {
-      "credentials": Object {
-        "clientId": "",
-        "clientSecret": "",
-      },
-      "status": false,
-    },
-  },
-  "lifeAccessTokenSelector": [Function],
-  "lifeActions": Object {
-    "getAccessTokenAsync": Object {
-      "cancel": [Function],
-      "failure": [Function],
-      "request": [Function],
-      "success": [Function],
-    },
-    "putCredentials": [Function],
-    "setOAuth2": [Function],
-  },
-  "lifeCredentialsSelector": [Function],
-  "lifeOAuth2UrlSelector": [Function],
-  "lifeSelector": [Function],
-  "lifeStatusSelector": [Function],
-  "putCredentials": [Function],
-  "setOAuth2": [Function],
   "tsFoursquare": [Function],
 }
 `;
