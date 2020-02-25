@@ -1,6 +1,6 @@
 {
   "name": "ts-foursquare",
-  "version": "1.0.0-nightly.2",
+  "version": "1.0.0-nightly.3",
   "description": "A simple library for Foursquare API",
   "main": "dist/index.js",
   "module": "dist/ts-foursquare.esm.js",
@@ -39,15 +39,15 @@
     "husky": "4.2.3",
     "standard-version": "7.1.0",
     "tsdx": "0.12.3",
-    "tslib": "1.10.0",
-    "typescript": "3.7.5"
+    "tslib": "1.11.0",
+    "typescript": "3.8.2"
   },
   "dependencies": {
-    "http-response-status": "1.0.1",
+    "http-response-status": "1.0.6",
     "isomorphic-fetch": "2.2.1",
     "path-to-regexp": "^6.0.0",
     "rxjs": "6.5.4",
-    "standalone-store": "1.1.9",
+    "standalone-store": "1.1.10",
     "typesafe-actions": "5.1.0"
   }
 }
