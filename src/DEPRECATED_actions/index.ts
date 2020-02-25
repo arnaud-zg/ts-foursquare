@@ -1,7 +1,5 @@
 import { TLifeAction } from './life'
-import { TVenuesAction } from './venues'
 
-export type TRootAction = TLifeAction | TVenuesAction
+export type TRootAction = TLifeAction
 
 export * from './life'
-export * from './venues'

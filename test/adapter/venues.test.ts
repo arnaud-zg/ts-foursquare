@@ -9,15 +9,15 @@ import {
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../../src/adapter/venues'
-import { payload as payloadGetVenuesCategories } from '../epics/__mocks__/getVenuesCategoriesAsync.resolve'
-import { payload as payloadGetVenuesExplore } from '../epics/__mocks__/getVenuesExploreAsync.resolve'
-import { payload as payloadGetVenuesLikes } from '../epics/__mocks__/getVenuesLikesAsync.resolve'
-import { payload as payloadGetVenuesListed } from '../epics/__mocks__/getVenuesListedAsync.resolve'
-import { payload as payloadGetVenuesNextVenues } from '../epics/__mocks__/getVenuesNextVenues.resolve'
-import { payload as payloadGetVenuesSearch } from '../epics/__mocks__/getVenuesSearchAsync.resolve'
-import { payload as payloadGetVenuesSimilar } from '../epics/__mocks__/getVenuesSimilarAsync.resolve'
-import { payload as payloadGetSuggestCompletion } from '../epics/__mocks__/getVenuesSuggestCompletionAsync.resolve'
-import { payload as payloadGetVenuesTrending } from '../epics/__mocks__/getVenuesTrendingAsync.resolve'
+import { payload as payloadGetVenuesCategories } from '../actions/__mocks__/getVenuesCategories.resolve'
+import { payload as payloadGetVenuesExplore } from '../actions/__mocks__/getVenuesExplore.resolve'
+import { payload as payloadGetVenuesLikes } from '../actions/__mocks__/getVenuesLikes.resolve'
+import { payload as payloadGetVenuesListed } from '../actions/__mocks__/getVenuesListed.resolve'
+import { payload as payloadGetVenuesNextVenues } from '../actions/__mocks__/getVenuesNextVenues.resolve'
+import { payload as payloadGetVenuesSearch } from '../actions/__mocks__/getVenuesSearch.resolve'
+import { payload as payloadGetVenuesSimilar } from '../actions/__mocks__/getVenuesSimilar.resolve'
+import { payload as payloadGetSuggestCompletion } from '../actions/__mocks__/getVenuesSuggestCompletion.resolve'
+import { payload as payloadGetVenuesTrending } from '../actions/__mocks__/getVenuesTrending.resolve'
 
 describe('adapter/venues/adaptGetVenuesCategories', () => {
   it('should get an empty list', () => {

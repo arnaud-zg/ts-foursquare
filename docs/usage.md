@@ -12,16 +12,16 @@ A JS client for working with <a href="https://developer.foursquare.com/docs/api"
     - [getLists](#getLists)
   - [Photos action](#photos-action)
     - [getPhotosDetails](#getPhotosDetails)
-      <!-- - [Venues action](#venues-action) -->
-      <!-- - [getVenuesCategoriesAsync](#getVenuesCategoriesAsync) -->
-      <!-- - [getVenuesExploreAsync](#getVenuesExploreAsync) -->
-      <!-- - [getVenuesLikesAsync](#getVenuesLikesAsync) -->
-      <!-- - [getVenuesListedAsync](#getVenuesListedAsync) -->
-      <!-- - [getVenuesNextVenuesAsync](#getVenuesNextVenuesAsync) -->
-      <!-- - [getVenuesSearchAsync](#getVenuesSearchAsync) -->
-      <!-- - [getVenuesSimilarAsync](#getVenuesSimilarAsync) -->
-      <!-- - [getVenuesSuggestCompletionAsync](#getVenuesSuggestCompletionAsync) -->
-      <!-- - [getVenuesTrendingAsync](#getVenuesTrendingAsync) -->
+  - [Venues action](#venues-action)
+    - [getVenuesCategories](#getVenuesCategories)
+    - [getVenuesExplore](#getVenuesExplore)
+    - [getVenuesLikes](#getVenuesLikes)
+    - [getVenuesListed](#getVenuesListed)
+    - [getVenuesNextVenues](#getVenuesNextVenues)
+    - [getVenuesSearch](#getVenuesSearch)
+    - [getVenuesSimilar](#getVenuesSimilar)
+    - [getVenuesSuggestCompletion](#getVenuesSuggestCompletion)
+    - [getVenuesTrending](#getVenuesTrending)
 - [Utils](##utils)
   - [Icon](#icon)
   - [Test](#test)
@@ -100,10 +100,14 @@ const getLists = async ({ payload }: NRequest.IListsPayload) => {
 
 ```js
 const onFetchData = async () => {
-  const list: NLists.IList | Error = await ts4S.getLists({
-    payload: { listId: '5580721e498e7c48540bf83f' },
-  })
-  console.log(list)
+  try {
+    const list = await ts4S.getLists({
+      payload: { listId: '5580721e498e7c48540bf83f' },
+    })
+    console.log(list)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
 
@@ -124,30 +128,42 @@ const onFetchData = async () => {
 
 ```js
 const onFetchData = async () => {
-  const photo: NPhotos.IPhoto | Error = await ts4S.getPhotosDetails({
-    payload: { listId: '51e4151c498e60b5d17bc721' },
-  })
-  console.log(photo)
+  try {
+    const photo = await ts4S.getPhotosDetails({
+      payload: { listId: '51e4151c498e60b5d17bc721' },
+    })
+    console.log(photo)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
 
-<!-- ### Venues action
+### Venues action
 
-#### getVenuesCategoriesAsync
+#### getVenuesCategories
 
 > Returns a hierarchical list of categories applied to venues. This list is also available on our categories page.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/categories" target="_blank">https://developer.foursquare.com/docs/api/venues/categories</a></cite>
 
-##### Redux context
+`getVenuesCategories` is a function, it takes `GetVenuesCategoriesProps` as props and return a promise `Promise<Error | NVenuesCategories.ICategory[]>`.
+
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesCategoriesAsync.request()
+const onFetchData = async () => {
+  try {
+    const categories = await ts4S.getVenuesCategories()
+    console.log(categories)
+  }
+  catch (error: Error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesExploreAsync
+#### getVenuesExplore
 
 > Returns a list of recommended venues near the current location. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
 >
@@ -155,73 +171,90 @@ const onFetchData = () => {
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/explore" target="_blank">https://developer.foursquare.com/docs/api/venues/explore</a></cite>
 
-`getVenuesExploreAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesExplore` is a function, it takes `GetVenuesExploreProps` as props and return a promise `Promise<Error | NRecommendedPlaces.IGroupItem[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesExploreAsync.request({
-    ll: '40.7099,-73.9622',
-  })
+const onFetchData = async () => {
+  try {
+    const recommendedPlaces = await ts4S.getVenuesExplore({ ll: '40.7099,-73.9622' })
+    console.log(recommendedPlaces)
+  }
+  catch (error: Error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesLikesAsync
+#### getVenuesLikes
 
 > Returns friends and a total count of users who have liked this venue.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/likes" target="_blank">https://developer.foursquare.com/docs/api/venues/likes</a></cite>
 
-`getVenuesLikesAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesLikes` is a function, it takes `GetVenuesLikesProps` as props and return a promise `Promise<Error | NEntity.IEntityGroup<NLikes.IItem>>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesLikesAsync.request({
-    venueId: '49b6e8d2f964a52016531fe3',
-  })
+const onFetchData = async () => {
+  try {
+    const venuesLikes = await ts4S.getVenuesLikes({ venueId: '49b6e8d2f964a52016531fe3' })
+    console.log(venuesLikes)
+  }
+  catch (error: Error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesListedAsync
+#### getVenuesListed
 
 > Returns the lists that this venue appears on.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/listed" target="_blank">https://developer.foursquare.com/docs/api/venues/listed</a></cite>
 
-`getVenuesListedAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesListed` is a function, it takes `getVenuesListed` as props and return a promise `Promise<Error | NVenueListed.ILists>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesListedAsync.request({
-    venueId: '49b6e8d2f964a52016531fe3',
-  })
+const onFetchData = async () => {
+  try {
+    const venuesListed = await ts4S.getVenuesListed({
+      venueId: '49b6e8d2f964a52016531fe3',
+    })
+    console.log(venuesListed)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesNextVenuesAsync
+#### getVenuesNextVenues
 
 > Returns venues that people often check in to after the current venue.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/nextvenues" target="_blank">https://developer.foursquare.com/docs/api/venues/nextvenues</a></cite>
 
-`getVenuesNextVenuesAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesNextVenues` is a function, it takes `GetVenuesNextVenuesProps` as props and return a promise `Promise<Error | NVenue.IVenue[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesNextVenuesAsync.request({
-    venueId: '49b6e8d2f964a52016531fe3',
-  })
+const onFetchData = async () => {
+  try {
+    const venues = await ts4S.getVenuesNextVenues({ venueId: '49b6e8d2f964a52016531fe3' })
+    console.log(venues)
+  }
+  catch (error: Error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesSearchAsync
+#### getVenuesSearch
 
 > Returns a list of venues near the current location, optionally matching a search term.
 >
@@ -231,108 +264,87 @@ const onFetchData = () => {
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/search" target="_blank">https://developer.foursquare.com/docs/api/venues/search</a></cite>
 
-`getVenuesSearchAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesSearch` is a function, it takes `GetVenuesSearchProps` as props and return `Promise<Error | NVenue.IVenue[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesSearchAsync.request({
-    query: 'peter steakhouse',
-  })
+const onFetchData = async () => {
+  try {
+    const venues = await ts4S.getVenuesSearch({ ll: '40.7099,-73.9622' })
+    console.log(venues)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesSimilarAsync
+#### getVenuesSimilar
 
 > Returns a list of venues similar to the specified venue.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/similar" target="_blank">https://developer.foursquare.com/docs/api/venues/similar</a></cite>
 
-`getVenuesSimilarAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesSimilar` is a function, it takes `GetVenuesSimilarProps` as props and return `Promise<Error | NVenue.IVenue[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesSimilarAsync.request({
-    venueId: '49b6e8d2f964a52016531fe3',
-  })
+const onFetchData = async () => {
+  try {
+    const venues = await ts4S.getVenuesSimilar({ venueId: '49b6e8d2f964a52016531fe3' })
+    console.log(venues)
+  }
+  catch (error: Error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesSuggestCompletionAsync
+#### getVenuesSuggestCompletion
 
 > Returns a list of mini-venues partially matching the search term, near the location.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/suggestcompletion" target="_blank">https://developer.foursquare.com/docs/api/venues/suggestcompletion</a></cite>
 
-`getVenuesSuggestCompletionAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesSuggestCompletion` is a function, it takes `GetVenuesSuggestCompletionProps` as props and return `Promise<Error | NMiniVenue.IMiniVenue[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesSuggestCompletionAsync.request({
-    ll: '40.7099,-73.9622',
-    query: 'burger',
-  })
+const onFetchData = async () => {
+  try {
+    const miniVenues = await ts4S.getVenuesSuggestCompletion({
+      ll: '40.7099,-73.9622',
+      query: 'Burger',
+    })
+    console.log(miniVenues)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
 
-#### getVenuesTrendingAsync
+#### getVenuesTrending
 
 > Returns a list of venues near the current location with the most people currently checked in. For more robust information about the venues themselves (photos/tips/etc.), please see our venue details endpoint.
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/trending" target="_blank">https://developer.foursquare.com/docs/api/venues/trending</a></cite>
 
-`getVenuesTrendingAsync` create an object containing four enhanced `action-creators` for handling async flows; `request`, `success`, `failure` and `cancel`.
+`getVenuesTrending` is a function, it takes `GetVenuesTrendingProps` as props and return `Promise<Error | NVenue.IVenue[]>`.
 
-##### Redux context
+##### Example
 
 ```js
-const onFetchData = () => {
-  getVenuesTrendingAsync.request({
-    ll: '40.7099,-73.9622',
-  })
+const onFetchData = async () => {
+  try {
+    const venues = await ts4S.getVenuesTrending({ ll: '40.7099,-73.9622' })
+    console.log(venues)
+  } catch (error) {
+    console.error(error)
+  }
 }
 ```
-
-## Helpers
-
-### Standalone Store
-
-// @to-do
-
-## Reducers
-
-### Life reducer
-
-// @to-do
-
-### Venues reducer
-
-// @to-do
-
-## Selectors
-
-### Life selectors
-
-// @to-do
-
-### Venues selectors
-
-// @to-do -->
-
-## Utils
-
-### Icon
-
-// @to-do
-
-### Test
-
-// @to-do
 
 ### Url
 
