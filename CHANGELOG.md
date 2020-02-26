@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.6](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.5...v1.0.0-nightly.6) (2020-02-26)
+
+
+### 🖋 Features
+
+* **actions:** fetch actions with client credentials ([#440](https://github.com/arnaud-zg/ts-foursquare/issues/440)) ([beb5b5f](https://github.com/arnaud-zg/ts-foursquare/commit/beb5b5f1667a8055333906292f605a24d3e46601))
+
 ## [1.0.0-nightly.5](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.4...v1.0.0-nightly.5) (2020-02-25)
 
 
