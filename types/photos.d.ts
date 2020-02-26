@@ -8,7 +8,7 @@ export declare namespace NPhotos {
     photo: IPhoto
   }
 
-  export interface IPhoto {
+  interface IPhoto {
     id: string
     createdAt: number
     source: ISource
@@ -21,12 +21,12 @@ export declare namespace NPhotos {
     venue: IVenue
   }
 
-  export interface ISource {
+  interface ISource {
     name: string
     url: string
   }
 
-  export interface IUser {
+  interface IUser {
     id: string
     firstName: string
     lastName: string
@@ -34,12 +34,12 @@ export declare namespace NPhotos {
     photo: IIconClass
   }
 
-  export interface IIconClass {
+  interface IIconClass {
     prefix: string
     suffix: string
   }
 
-  export interface IVenue {
+  interface IVenue {
     id: string
     name: string
     contact: IContact
@@ -47,7 +47,7 @@ export declare namespace NPhotos {
     categories: ICategory[]
   }
 
-  export interface ICategory {
+  interface ICategory {
     id: string
     name: string
     pluralName: string
@@ -56,9 +56,9 @@ export declare namespace NPhotos {
     primary: boolean
   }
 
-  export interface IContact {}
+  interface IContact {}
 
-  export interface ILocation {
+  interface ILocation {
     address: string
     crossStreet: string
     lat: number
