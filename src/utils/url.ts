@@ -2,13 +2,18 @@ interface ILocationSearchParam {
   [key: string]: string | number | boolean | undefined
 }
 
+export interface GetLocationSearchProps {
+  params: ILocationSearchParam
+}
+
 export const getLocationSearch = (
-  { param = {} }: { param: ILocationSearchParam } = { param: {} }
+  { params = {} }: GetLocationSearchProps = { params: {} }
 ) => {
-  const locationSearch = Object.keys(param)
-    .filter(key => param[key] !== undefined && param[key] !== '')
+  const locationSearch = Object.keys(params)
+    .filter(key => params[key] !== undefined && params[key] !== '')
     .map(
-      key => `${encodeURIComponent(key)}=${encodeURIComponent(`${param[key]}`)}`
+      key =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(`${params[key]}`)}`
     )
     .join('&')
 
@@ -18,9 +23,9 @@ export const getLocationSearch = (
 export const getLocationHref = ({
   origin,
   pathname,
-  param = {},
+  params = {},
 }: {
   origin: string
   pathname: string
-  param?: ILocationSearchParam
-}) => `${origin}${pathname}${getLocationSearch({ param })}`
+} & GetLocationSearchProps) =>
+  `${origin}${pathname}${getLocationSearch({ params })}`

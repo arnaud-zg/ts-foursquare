@@ -4,12 +4,12 @@ import { getLocationHref, getLocationSearch } from '../../src/utils/url'
 describe('utils/url/getLocationSearch', () => {
   it('should return nothing', () => {
     expect(getLocationSearch()).toEqual('')
-    expect(getLocationSearch({ param: {} })).toEqual('')
-    expect(getLocationSearch({ param: { name: undefined } })).toEqual('')
+    expect(getLocationSearch({ params: {} })).toEqual('')
+    expect(getLocationSearch({ params: { name: undefined } })).toEqual('')
   })
 
   test.each`
-    param                                            | locationSearch
+    params                                           | locationSearch
     ${{ search: '' }}                                | ${''}
     ${{ search: 'hello-world' }}                     | ${'?search=hello-world'}
     ${{ search: 'hello world' }}                     | ${'?search=hello%20world'}
@@ -22,16 +22,16 @@ describe('utils/url/getLocationSearch', () => {
     ${{ limit: 20, search: 'hello world !' }}        | ${'?limit=20&search=hello%20world%20!'}
     ${{ city: 'Séoul', search: '한국식 바베큐' }}    | ${'?city=S%C3%A9oul&search=%ED%95%9C%EA%B5%AD%EC%8B%9D%20%EB%B0%94%EB%B2%A0%ED%81%90'}
   `(
-    'should generate a location search string with $param',
-    ({ param, locationSearch }) => {
-      expect(getLocationSearch({ param })).toEqual(locationSearch)
+    'should generate a location search string with $params',
+    ({ params, locationSearch }) => {
+      expect(getLocationSearch({ params })).toEqual(locationSearch)
     }
   )
 })
 
 describe('utils/url/getLocationHref', () => {
   test.each`
-    param
+    params
     ${undefined}
     ${{ search: '' }}
     ${{ search: 'hello-world' }}
@@ -44,12 +44,12 @@ describe('utils/url/getLocationHref', () => {
     ${{ limit: 20, search: 'hello-world' }}
     ${{ page: 20, search: 'hello world !' }}
     ${{ city: 'Séoul', search: '한국식 바베큐' }}
-  `('should generate a location href url with $param', ({ param }) => {
+  `('should generate a location href url with $params', ({ params }) => {
     expect(
       getLocationHref({
         origin: EApiDefaultParameters.ORIGIN,
         pathname: EApiPathnames.VENUES_SEARCH,
-        param,
+        params,
       })
     ).toMatchSnapshot()
   })

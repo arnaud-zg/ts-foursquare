@@ -1,9 +1,8 @@
 import { NRequest } from '../../types'
 import { getObservableLists } from '../services/lists'
-import { IStandaloneConfig } from '../standalone'
+import { IConfigParams } from '../standalone'
 
-export interface GetListsProps {
-  config?: IStandaloneConfig
+export interface GetListsProps extends IConfigParams {
   payload: NRequest.IListsPayload
 }
 

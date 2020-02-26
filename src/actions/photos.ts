@@ -1,9 +1,8 @@
 import { NRequest } from '../../types'
 import { getObservablePhotosDetails } from '../services/photos'
-import { IStandaloneConfig } from '../standalone'
+import { IConfigParams } from '../standalone'
 
-export interface GetPhotosDetailsProps {
-  config?: IStandaloneConfig
+export interface GetPhotosDetailsProps extends IConfigParams {
   payload: NRequest.IPhotosDetailsPayload
 }
 

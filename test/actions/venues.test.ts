@@ -47,9 +47,13 @@ describe('epics/venues', () => {
       payloadResponse: any
     }) => {
       mockingFetch({ response: { ...payloadResponse } })
-
+      const config = {
+        clientId: '123',
+        clientSecret: '456',
+      }
       const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
       const response = await ts4Sq.actions[actionName]({
+        config,
         payload: payloadRequest,
       })
 

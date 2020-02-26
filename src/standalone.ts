@@ -5,6 +5,10 @@ export enum EReturnType {
   PROMISE = 'PROMISE',
 }
 
+export interface IConfigParams {
+  config: IStandaloneConfig
+}
+
 export interface IStandaloneConfig {
   clientId: string
   clientSecret: string

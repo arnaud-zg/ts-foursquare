@@ -1,7 +1,9 @@
 import { Observable } from 'rxjs/internal/Observable'
 import { throwError } from 'rxjs/internal/observable/throwError'
 import { EApiDefaultParameters } from '../constants/api'
-import { IStandaloneConfig } from '../standalone'
+import { IConfigParams } from '../standalone'
+import { fromFetch } from 'rxjs/fetch'
+import { getLocationHref, GetLocationSearchProps } from '../utils/url'
 
 export const processFetchResponse = <TResponse = any>(
   response: Response
@@ -16,7 +18,7 @@ export const processFetchResponse = <TResponse = any>(
 export const processFetchError = (err: Error): Observable<Error> =>
   throwError(new Error(err.message))
 
-export const getDefaultRequestParameters = (config: IStandaloneConfig) => {
+export const getDefaultRequestParameters = ({ config }: IConfigParams) => {
   const { clientId, clientSecret, accessToken } = config
 
   return accessToken
@@ -30,3 +32,24 @@ export const getDefaultRequestParameters = (config: IStandaloneConfig) => {
         v: EApiDefaultParameters.VERSION,
       }
 }
+
+type EnhancedFetchProps = { pathname: string } & Partial<
+  GetLocationSearchProps
+> &
+  IConfigParams
+
+export const enhancedFetch = ({
+  config,
+  params = {},
+  pathname,
+}: EnhancedFetchProps) =>
+  fromFetch(
+    getLocationHref({
+      origin: EApiDefaultParameters.ORIGIN,
+      pathname,
+      params: {
+        ...getDefaultRequestParameters({ config }),
+        ...params,
+      },
+    })
+  )

@@ -1,28 +1,17 @@
-import { fromFetch } from 'rxjs/fetch'
 import { catchError, switchMap, map } from 'rxjs/operators'
-import { NRequest } from '../../types'
-import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
+import { EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
-import { getLocationHref } from '../utils/url'
-import { processFetchError, processFetchResponse } from './fetch'
+import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
 import { adaptGetLists } from '../adapter'
-import { IStandaloneConfig } from '../standalone'
+import { GetListsProps } from 'actions/lists'
 
-export const getObservableLists = ({
-  payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.IListsPayload
-}) => {
+export const getObservableLists = ({ config, payload }: GetListsProps) => {
   const { listId } = payload
 
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: generatePath(EApiPathnames.LISTS, { listId }),
-      param: {},
-    })
-  ).pipe(
+  return enhancedFetch({
+    config,
+    pathname: generatePath(EApiPathnames.LISTS, { listId }),
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetLists),
     catchError(processFetchError)

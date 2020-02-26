@@ -10,54 +10,44 @@ import {
   getObservableVenuesSuggestCompletion,
   getObservableVenuesTrending,
 } from '../services/venues'
-import { IStandaloneConfig } from '../standalone'
+import { IConfigParams } from '../standalone'
 
-export interface GetVenuesCategoriesProps {
-  config?: IStandaloneConfig
-}
+export interface GetVenuesCategoriesProps extends IConfigParams {}
 
-export interface GetVenuesExploreProps {
-  config?: IStandaloneConfig
+export interface GetVenuesExploreProps extends IConfigParams {
   payload: NRequest.TVenuesExplorePayload
 }
 
-export interface GetVenuesLikesProps {
-  config?: IStandaloneConfig
+export interface GetVenuesLikesProps extends IConfigParams {
   payload: NRequest.IVenuesLikesPayload
 }
 
-export interface GetVenuesListedProps {
-  config?: IStandaloneConfig
+export interface GetVenuesListedProps extends IConfigParams {
   payload: NRequest.IVenuesListedPayload
 }
 
-export interface GetVenuesNextVenuesProps {
-  config?: IStandaloneConfig
+export interface GetVenuesNextVenuesProps extends IConfigParams {
   payload: NRequest.IVenuesNextVenuesPayload
 }
 
-export interface GetVenuesSearchProps {
-  config?: IStandaloneConfig
+export interface GetVenuesSearchProps extends IConfigParams {
   payload: NRequest.TVenuesSearchPayload
 }
 
-export interface GetVenuesSimilarProps {
-  config?: IStandaloneConfig
+export interface GetVenuesSimilarProps extends IConfigParams {
   payload: NRequest.IVenuesSimilarPayload
 }
 
-export interface GetVenuesSuggestCompletionProps {
-  config?: IStandaloneConfig
+export interface GetVenuesSuggestCompletionProps extends IConfigParams {
   payload: NRequest.TVenuesSuggestCompletionPayload
 }
 
-export interface GetVenuesTrendingProps {
-  config?: IStandaloneConfig
+export interface GetVenuesTrendingProps extends IConfigParams {
   payload: NRequest.TVenuesTrendingPayload
 }
 
-export const getVenuesCategories = () =>
-  getObservableVenuesCategories().toPromise()
+export const getVenuesCategories = ({ config }: GetVenuesCategoriesProps) =>
+  getObservableVenuesCategories({ config }).toPromise()
 
 export const getVenuesExplore = ({ config, payload }: GetVenuesExploreProps) =>
   getObservableVenuesExplore({ config, payload }).toPromise()
