@@ -13,8 +13,15 @@ describe('actions/lists', () => {
   `('$scenario', async ({ payloadRequest, payloadResponse }) => {
     mockingFetch({ response: { ...payloadResponse } })
 
+    const config = {
+      clientId: '123',
+      clientSecret: '456',
+    }
     const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
-    const response = await ts4Sq.actions.getLists({ payload: payloadRequest })
+    const response = await ts4Sq.actions.getLists({
+      config,
+      payload: payloadRequest,
+    })
 
     expect(response).toMatchSnapshot()
   })
@@ -28,9 +35,13 @@ describe('actions/lists', () => {
       scenario                   | payloadRequest
       ${'should gives an error'} | ${{ listId: '5580721e498e7c48540bf83f' }}
     `('$scenario', async ({ payloadRequest }) => {
+      const config = {
+        clientId: '123',
+        clientSecret: '456',
+      }
       const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
       try {
-        await ts4Sq.actions.getLists({ payload: payloadRequest })
+        await ts4Sq.actions.getLists({ config, payload: payloadRequest })
       } catch (error) {
         expect(error).toMatchSnapshot()
       }
@@ -46,9 +57,13 @@ describe('actions/lists', () => {
       scenario                   | payloadRequest
       ${'should gives an error'} | ${{ listId: '5580721e498e7c48540bf83f' }}
     `('$scenario', async ({ payloadRequest }) => {
+      const config = {
+        clientId: '123',
+        clientSecret: '456',
+      }
       const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
       try {
-        await ts4Sq.actions.getLists({ payload: payloadRequest })
+        await ts4Sq.actions.getLists({ config, payload: payloadRequest })
       } catch (error) {
         expect(error).toMatchSnapshot()
       }

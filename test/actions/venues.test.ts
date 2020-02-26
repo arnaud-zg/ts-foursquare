@@ -47,9 +47,13 @@ describe('epics/venues', () => {
       payloadResponse: any
     }) => {
       mockingFetch({ response: { ...payloadResponse } })
-
+      const config = {
+        clientId: '123',
+        clientSecret: '456',
+      }
       const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
       const response = await ts4Sq.actions[actionName]({
+        config,
         payload: payloadRequest,
       })
 
@@ -76,9 +80,13 @@ describe('epics/venues | error case: no network', () => {
     ${'should get venues next venues'}                           | ${{ venueId: '49b6e8d2f964a52016531fe3' }}
     ${'should get a list that this venue appears on'}            | ${{ venueId: '49b6e8d2f964a52016531fe3' }}
   `('$scenario', async ({ payloadRequest }) => {
+    const config = {
+      clientId: '123',
+      clientSecret: '456',
+    }
     const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
     try {
-      await ts4Sq.actions.getPhotosDetails({ payload: payloadRequest })
+      await ts4Sq.actions.getPhotosDetails({ config, payload: payloadRequest })
     } catch (error) {
       expect(error).toMatchSnapshot()
     }
@@ -103,9 +111,13 @@ describe('epics/venues | error case: not valid response', () => {
     ${'should get venues next venues'}                           | ${{ venueId: '49b6e8d2f964a52016531fe3' }}
     ${'should get a list that this venue appears on'}            | ${{ venueId: '49b6e8d2f964a52016531fe3' }}
   `('$scenario', async ({ payloadRequest }) => {
+    const config = {
+      clientId: '123',
+      clientSecret: '456',
+    }
     const ts4Sq = new tsFoursquare({ clientId: '', clientSecret: '' })
     try {
-      await ts4Sq.actions.getPhotosDetails({ payload: payloadRequest })
+      await ts4Sq.actions.getPhotosDetails({ config, payload: payloadRequest })
     } catch (error) {
       expect(error).toMatchSnapshot()
     }

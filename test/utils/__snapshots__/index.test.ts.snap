@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils should have a list of method 1`] = `
+Object {
+  "getIconUrlList": [Function],
+  "getLocationHref": [Function],
+  "getLocationSearch": [Function],
+}
+`;

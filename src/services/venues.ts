@@ -1,6 +1,15 @@
-import { fromFetch } from 'rxjs/fetch'
 import { catchError, map, switchMap } from 'rxjs/operators'
-import { NRequest } from '../../types'
+import {
+  GetVenuesCategoriesProps,
+  GetVenuesExploreProps,
+  GetVenuesLikesProps,
+  GetVenuesListedProps,
+  GetVenuesNextVenuesProps,
+  GetVenuesSearchProps,
+  GetVenuesSimilarProps,
+  GetVenuesSuggestCompletionProps,
+  GetVenuesTrendingProps,
+} from '../actions/venues'
 import {
   adaptGetVenuesCategories,
   adaptGetVenuesExplore,
@@ -12,62 +21,46 @@ import {
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../adapter'
-import { EApiDefaultParameters, EApiPathnames } from '../constants/api'
-import { IStandaloneConfig } from '../standalone'
+import { EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
-import { getLocationHref } from '../utils/url'
-import { processFetchError, processFetchResponse } from './fetch'
+import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
 
-export const getObservableVenuesCategories = () => {
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: EApiPathnames.VENUES_CATEGORIES,
-      param: {},
-    })
-  ).pipe(
+export const getObservableVenuesCategories = ({
+  config,
+}: GetVenuesCategoriesProps) =>
+  enhancedFetch({
+    config,
+    pathname: EApiPathnames.VENUES_CATEGORIES,
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesCategories),
     catchError(processFetchError)
   )
-}
 
 export const getObservableVenuesExplore = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.TVenuesExplorePayload
-}) => {
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: EApiPathnames.VENUES_EXPLORE,
-      param: {
-        ...payload,
-      },
-    })
-  ).pipe(
+}: GetVenuesExploreProps) =>
+  enhancedFetch({
+    config,
+    pathname: EApiPathnames.VENUES_EXPLORE,
+    params: { ...payload },
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesExplore),
     catchError(processFetchError)
   )
-}
 
 export const getObservableVenuesLikes = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.IVenuesLikesPayload
-}) => {
+}: GetVenuesLikesProps) => {
   const { venueId } = payload
 
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: generatePath(EApiPathnames.VENUES_LIKES, { venueId }),
-      param: {},
-    })
-  ).pipe(
+  return enhancedFetch({
+    config,
+    pathname: generatePath(EApiPathnames.VENUES_LIKES, { venueId }),
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesLikes),
     catchError(processFetchError)
@@ -75,20 +68,15 @@ export const getObservableVenuesLikes = ({
 }
 
 export const getObservableVenuesListed = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.IVenuesListedPayload
-}) => {
+}: GetVenuesListedProps) => {
   const { venueId } = payload
 
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: generatePath(EApiPathnames.VENUES_LISTED, { venueId }),
-      param: {},
-    })
-  ).pipe(
+  return enhancedFetch({
+    config,
+    pathname: generatePath(EApiPathnames.VENUES_LISTED, { venueId }),
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesListed),
     catchError(processFetchError)
@@ -96,20 +84,15 @@ export const getObservableVenuesListed = ({
 }
 
 export const getObservableVenuesNextVenues = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.IVenuesNextVenuesPayload
-}) => {
+}: GetVenuesNextVenuesProps) => {
   const { venueId } = payload
 
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: generatePath(EApiPathnames.VENUES_NEXT_VENUES, { venueId }),
-      param: {},
-    })
-  ).pipe(
+  return enhancedFetch({
+    config,
+    pathname: generatePath(EApiPathnames.VENUES_NEXT_VENUES, { venueId }),
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesNextVenues),
     catchError(processFetchError)
@@ -117,42 +100,32 @@ export const getObservableVenuesNextVenues = ({
 }
 
 export const getObservableVenuesSearch = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.TVenuesSearchPayload
-}) => {
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: EApiPathnames.VENUES_SEARCH,
-      // @ts-ignore
-      param: {
-        ...payload,
-      },
-    })
-  ).pipe(
+}: GetVenuesSearchProps) =>
+  enhancedFetch({
+    config,
+    pathname: EApiPathnames.VENUES_SEARCH,
+    // @ts-ignore
+    params: {
+      ...payload,
+    },
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesSearch),
     catchError(processFetchError)
   )
-}
 
 export const getObservableVenuesSimilar = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.IVenuesSimilarPayload
-}) => {
+}: GetVenuesSimilarProps) => {
   const { venueId } = payload
 
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: generatePath(EApiPathnames.VENUES_SIMILAR, { venueId }),
-      param: {},
-    })
-  ).pipe(
+  return enhancedFetch({
+    config,
+    pathname: generatePath(EApiPathnames.VENUES_SIMILAR, { venueId }),
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesSimilar),
     catchError(processFetchError)
@@ -160,43 +133,33 @@ export const getObservableVenuesSimilar = ({
 }
 
 export const getObservableVenuesSuggestCompletion = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.TVenuesSuggestCompletionPayload
-}) => {
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: EApiPathnames.VENUES_SUGGEST_COMPLETION,
-      param: {
-        ...payload,
-      },
-    })
-  ).pipe(
+}: GetVenuesSuggestCompletionProps) =>
+  enhancedFetch({
+    config,
+    pathname: EApiPathnames.VENUES_SUGGEST_COMPLETION,
+    params: {
+      ...payload,
+    },
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesSuggestCompletion),
     catchError(processFetchError)
   )
-}
 
 export const getObservableVenuesTrending = ({
+  config,
   payload,
-}: {
-  config?: IStandaloneConfig
-  payload: NRequest.TVenuesTrendingPayload
-}) => {
-  return fromFetch(
-    getLocationHref({
-      origin: EApiDefaultParameters.ORIGIN,
-      pathname: EApiPathnames.VENUES_TRENDING,
-      param: {
-        ...payload,
-      },
-    })
-  ).pipe(
+}: GetVenuesTrendingProps) =>
+  enhancedFetch({
+    config,
+    pathname: EApiPathnames.VENUES_TRENDING,
+    params: {
+      ...payload,
+    },
+  }).pipe(
     switchMap(processFetchResponse),
     map(adaptGetVenuesTrending),
     catchError(processFetchError)
   )
-}

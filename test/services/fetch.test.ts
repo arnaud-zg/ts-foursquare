@@ -7,7 +7,7 @@ describe('utils/fetch/getDefaultRequestParameters', () => {
       clientSecret: '456',
     }
 
-    expect(getDefaultRequestParameters(config)).toMatchSnapshot()
+    expect(getDefaultRequestParameters({ config })).toMatchSnapshot()
   })
   it('should get default logged request parameters', () => {
     const config = {
@@ -16,6 +16,6 @@ describe('utils/fetch/getDefaultRequestParameters', () => {
       clientSecret: '456',
     }
 
-    expect(getDefaultRequestParameters(config)).toMatchSnapshot()
+    expect(getDefaultRequestParameters({ config })).toMatchSnapshot()
   })
 })

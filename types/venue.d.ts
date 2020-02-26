@@ -27,18 +27,18 @@ export declare namespace NVenue {
     shortName: string
   }
 
-  export interface IDelivery {
+  interface IDelivery {
     id: string
     url: string
     provider: IProvider
   }
 
-  export interface IProvider {
+  interface IProvider {
     name: string
     icon: NIcon.IIcon
   }
 
-  export interface IEvents {
+  interface IEvents {
     count: number
     summary: string
   }

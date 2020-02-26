@@ -6,9 +6,6 @@ Object {
     "OBSERVABLE": "OBSERVABLE",
     "PROMISE": "PROMISE",
   },
-  "getIconUrlList": [Function],
-  "getLocationHref": [Function],
-  "getLocationSearch": [Function],
   "tsFoursquare": [Function],
 }
 `;
