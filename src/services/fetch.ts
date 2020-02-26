@@ -5,6 +5,11 @@ import { IConfigParams } from '../standalone'
 import { fromFetch } from 'rxjs/fetch'
 import { getLocationHref, GetLocationSearchProps } from '../utils/url'
 
+type EnhancedFetchProps = { pathname: string } & Partial<
+  GetLocationSearchProps
+> &
+  IConfigParams
+
 export const processFetchResponse = <TResponse = any>(
   response: Response
 ): Promise<TResponse> | Observable<Error> => {
@@ -32,11 +37,6 @@ export const getDefaultRequestParameters = ({ config }: IConfigParams) => {
         v: EApiDefaultParameters.VERSION,
       }
 }
-
-type EnhancedFetchProps = { pathname: string } & Partial<
-  GetLocationSearchProps
-> &
-  IConfigParams
 
 export const enhancedFetch = ({
   config,
