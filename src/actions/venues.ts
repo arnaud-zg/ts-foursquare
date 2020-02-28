@@ -12,72 +12,81 @@ import {
 } from '../services/venues'
 import { IConfigParams } from '../standalone'
 
-export interface GetVenuesCategoriesProps extends IConfigParams {}
+export interface GetVenuesCategoriesProps {}
 
-export interface GetVenuesExploreProps extends IConfigParams {
+export interface GetVenuesExploreProps {
   payload: NRequest.TVenuesExplorePayload
 }
 
-export interface GetVenuesLikesProps extends IConfigParams {
+export interface GetVenuesLikesProps {
   payload: NRequest.IVenuesLikesPayload
 }
 
-export interface GetVenuesListedProps extends IConfigParams {
+export interface GetVenuesListedProps {
   payload: NRequest.IVenuesListedPayload
 }
 
-export interface GetVenuesNextVenuesProps extends IConfigParams {
+export interface GetVenuesNextVenuesProps {
   payload: NRequest.IVenuesNextVenuesPayload
 }
 
-export interface GetVenuesSearchProps extends IConfigParams {
+export interface GetVenuesSearchProps {
   payload: NRequest.TVenuesSearchPayload
 }
 
-export interface GetVenuesSimilarProps extends IConfigParams {
+export interface GetVenuesSimilarProps {
   payload: NRequest.IVenuesSimilarPayload
 }
 
-export interface GetVenuesSuggestCompletionProps extends IConfigParams {
+export interface GetVenuesSuggestCompletionProps {
   payload: NRequest.TVenuesSuggestCompletionPayload
 }
 
-export interface GetVenuesTrendingProps extends IConfigParams {
+export interface GetVenuesTrendingProps {
   payload: NRequest.TVenuesTrendingPayload
 }
 
-export const getVenuesCategories = ({ config }: GetVenuesCategoriesProps) =>
+export const getVenuesCategories = ({
+  config,
+}: IConfigParams) => ({}: GetVenuesCategoriesProps) =>
   getObservableVenuesCategories({ config }).toPromise()
 
-export const getVenuesExplore = ({ config, payload }: GetVenuesExploreProps) =>
+export const getVenuesExplore = ({ config }: IConfigParams) => ({
+  payload,
+}: GetVenuesExploreProps) =>
   getObservableVenuesExplore({ config, payload }).toPromise()
 
-export const getVenuesLikes = ({ config, payload }: GetVenuesLikesProps) =>
+export const getVenuesLikes = ({ config }: IConfigParams) => ({
+  payload,
+}: GetVenuesLikesProps) =>
   getObservableVenuesLikes({ config, payload }).toPromise()
 
-export const getVenuesListed = ({ config, payload }: GetVenuesListedProps) =>
+export const getVenuesListed = ({ config }: IConfigParams) => ({
+  payload,
+}: GetVenuesListedProps) =>
   getObservableVenuesListed({ config, payload }).toPromise()
 
-export const getVenuesNextVenues = ({
-  config,
+export const getVenuesNextVenues = ({ config }: IConfigParams) => ({
   payload,
 }: GetVenuesNextVenuesProps) =>
   getObservableVenuesNextVenues({ config, payload }).toPromise()
 
-export const getVenuesSearch = ({ config, payload }: GetVenuesSearchProps) =>
+export const getVenuesSearch = ({ config }: IConfigParams) => ({
+  payload,
+}: GetVenuesSearchProps) =>
   getObservableVenuesSearch({ config, payload }).toPromise()
 
-export const getVenuesSimilar = ({ config, payload }: GetVenuesSimilarProps) =>
+export const getVenuesSimilar = ({ config }: IConfigParams) => ({
+  payload,
+}: GetVenuesSimilarProps) =>
   getObservableVenuesSimilar({ config, payload }).toPromise()
 
-export const getVenuesSuggestCompletion = ({
-  config,
+export const getVenuesSuggestCompletion = ({ config }: IConfigParams) => ({
   payload,
 }: GetVenuesSuggestCompletionProps) =>
   getObservableVenuesSuggestCompletion({ config, payload }).toPromise()
 
-export const getVenuesTrending = ({
-  config,
+export const getVenuesTrending = ({ config }: IConfigParams) => ({
   payload,
 }: GetVenuesTrendingProps) =>
   getObservableVenuesTrending({ config, payload }).toPromise()

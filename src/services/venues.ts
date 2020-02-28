@@ -1,6 +1,5 @@
 import { catchError, map, switchMap } from 'rxjs/operators'
 import {
-  GetVenuesCategoriesProps,
   GetVenuesExploreProps,
   GetVenuesLikesProps,
   GetVenuesListedProps,
@@ -9,6 +8,7 @@ import {
   GetVenuesSimilarProps,
   GetVenuesSuggestCompletionProps,
   GetVenuesTrendingProps,
+  GetVenuesCategoriesProps,
 } from '../actions/venues'
 import {
   adaptGetVenuesCategories,
@@ -24,10 +24,11 @@ import {
 import { EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
+import { IConfigParams } from 'standalone'
 
 export const getObservableVenuesCategories = ({
   config,
-}: GetVenuesCategoriesProps) =>
+}: GetVenuesCategoriesProps & IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_CATEGORIES,
@@ -40,7 +41,7 @@ export const getObservableVenuesCategories = ({
 export const getObservableVenuesExplore = ({
   config,
   payload,
-}: GetVenuesExploreProps) =>
+}: GetVenuesExploreProps & IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_EXPLORE,
@@ -54,7 +55,7 @@ export const getObservableVenuesExplore = ({
 export const getObservableVenuesLikes = ({
   config,
   payload,
-}: GetVenuesLikesProps) => {
+}: GetVenuesLikesProps & IConfigParams) => {
   const { venueId } = payload
 
   return enhancedFetch({
@@ -70,7 +71,7 @@ export const getObservableVenuesLikes = ({
 export const getObservableVenuesListed = ({
   config,
   payload,
-}: GetVenuesListedProps) => {
+}: GetVenuesListedProps & IConfigParams) => {
   const { venueId } = payload
 
   return enhancedFetch({
@@ -86,7 +87,7 @@ export const getObservableVenuesListed = ({
 export const getObservableVenuesNextVenues = ({
   config,
   payload,
-}: GetVenuesNextVenuesProps) => {
+}: GetVenuesNextVenuesProps & IConfigParams) => {
   const { venueId } = payload
 
   return enhancedFetch({
@@ -102,7 +103,7 @@ export const getObservableVenuesNextVenues = ({
 export const getObservableVenuesSearch = ({
   config,
   payload,
-}: GetVenuesSearchProps) =>
+}: GetVenuesSearchProps & IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_SEARCH,
@@ -119,7 +120,7 @@ export const getObservableVenuesSearch = ({
 export const getObservableVenuesSimilar = ({
   config,
   payload,
-}: GetVenuesSimilarProps) => {
+}: GetVenuesSimilarProps & IConfigParams) => {
   const { venueId } = payload
 
   return enhancedFetch({
@@ -135,7 +136,7 @@ export const getObservableVenuesSimilar = ({
 export const getObservableVenuesSuggestCompletion = ({
   config,
   payload,
-}: GetVenuesSuggestCompletionProps) =>
+}: GetVenuesSuggestCompletionProps & IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_SUGGEST_COMPLETION,
@@ -151,7 +152,7 @@ export const getObservableVenuesSuggestCompletion = ({
 export const getObservableVenuesTrending = ({
   config,
   payload,
-}: GetVenuesTrendingProps) =>
+}: GetVenuesTrendingProps & IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_TRENDING,
