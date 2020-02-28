@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta.0](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-alpha.0...v1.0.0-beta.0) (2020-02-28)
+
 ## [1.0.0-alpha.0](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.7...v1.0.0-alpha.0) (2020-02-28)
 
 ## [1.0.0-nightly.7](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.6...v1.0.0-nightly.7) (2020-02-28)
