@@ -1,4 +1,4 @@
-import { actions, TActions, TActionsValue } from './actions'
+import { actions } from './actions'
 
 export enum EReturnType {
   OBSERVABLE = 'OBSERVABLE',
@@ -17,36 +17,43 @@ export interface IStandaloneConfig {
 }
 
 export class tsFoursquare {
-  actions: TActions
-  clientId: string
-  clientSecret: string
-  returnType: EReturnType
+  getLists: ReturnType<typeof actions.getLists>
+  getPhotosDetails: ReturnType<typeof actions.getPhotosDetails>
+  getVenuesCategories: ReturnType<typeof actions.getVenuesCategories>
+  getVenuesExplore: ReturnType<typeof actions.getVenuesExplore>
+  getVenuesLikes: ReturnType<typeof actions.getVenuesLikes>
+  getVenuesListed: ReturnType<typeof actions.getVenuesListed>
+  getVenuesNextVenues: ReturnType<typeof actions.getVenuesNextVenues>
+  getVenuesSearch: ReturnType<typeof actions.getVenuesSearch>
+  getVenuesSimilar: ReturnType<typeof actions.getVenuesSimilar>
+  getVenuesSuggestCompletion: ReturnType<
+    typeof actions.getVenuesSuggestCompletion
+  >
+  getVenuesTrending: ReturnType<typeof actions.getVenuesTrending>
 
-  constructor({ clientId, clientSecret, returnType }: IStandaloneConfig) {
-    this.actions = Object.entries(actions).reduce(
-      (acc, actionEntry) => ({
-        ...acc,
-        [actionEntry[0]]: this.injectContextInAction({
-          action: actionEntry[1],
-        }),
-      }),
-      {} as TActions
-    )
+  constructor({
+    clientId,
+    clientSecret,
+    returnType = EReturnType.PROMISE,
+  }: IStandaloneConfig) {
+    const config = {
+      clientId,
+      clientSecret,
+      returnType,
+    }
 
-    this.clientId = clientId
-    this.clientSecret = clientSecret
-    this.returnType = returnType || EReturnType.PROMISE
-  }
-
-  private injectContextInAction = ({ action }: { action: TActionsValue }) => (
-    props: any
-  ) =>
-    action({
-      ...props,
-      config: {
-        clientId: this.clientId,
-        clientSecret: this.clientSecret,
-        returnType: this.returnType,
-      },
+    this.getLists = actions.getLists({ config })
+    this.getPhotosDetails = actions.getPhotosDetails({ config })
+    this.getVenuesCategories = actions.getVenuesCategories({ config })
+    this.getVenuesExplore = actions.getVenuesExplore({ config })
+    this.getVenuesLikes = actions.getVenuesLikes({ config })
+    this.getVenuesListed = actions.getVenuesListed({ config })
+    this.getVenuesNextVenues = actions.getVenuesNextVenues({ config })
+    this.getVenuesSearch = actions.getVenuesSearch({ config })
+    this.getVenuesSimilar = actions.getVenuesSimilar({ config })
+    this.getVenuesSuggestCompletion = actions.getVenuesSuggestCompletion({
+      config,
     })
+    this.getVenuesTrending = actions.getVenuesTrending({ config })
+  }
 }

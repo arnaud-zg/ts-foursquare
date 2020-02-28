@@ -2,22 +2,16 @@
 
 exports[`tsFoursquare should get a snapshot of tsFoursquare instance 1`] = `
 tsFoursquare {
-  "actions": Object {
-    "getLists": [Function],
-    "getPhotosDetails": [Function],
-    "getVenuesCategories": [Function],
-    "getVenuesExplore": [Function],
-    "getVenuesLikes": [Function],
-    "getVenuesListed": [Function],
-    "getVenuesNextVenues": [Function],
-    "getVenuesSearch": [Function],
-    "getVenuesSimilar": [Function],
-    "getVenuesSuggestCompletion": [Function],
-    "getVenuesTrending": [Function],
-  },
-  "clientId": "",
-  "clientSecret": "",
-  "injectContextInAction": [Function],
-  "returnType": "PROMISE",
+  "getLists": [Function],
+  "getPhotosDetails": [Function],
+  "getVenuesCategories": [Function],
+  "getVenuesExplore": [Function],
+  "getVenuesLikes": [Function],
+  "getVenuesListed": [Function],
+  "getVenuesNextVenues": [Function],
+  "getVenuesSearch": [Function],
+  "getVenuesSimilar": [Function],
+  "getVenuesSuggestCompletion": [Function],
+  "getVenuesTrending": [Function],
 }
 `;
