@@ -3,9 +3,13 @@ import { EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
 import { adaptGetLists } from '../adapter'
-import { GetListsProps } from 'actions/lists'
+import { GetListsProps } from '../actions/lists'
+import { IConfigParams } from '../standalone'
 
-export const getObservableLists = ({ config, payload }: GetListsProps) => {
+export const getObservableLists = ({
+  config,
+  payload,
+}: IConfigParams & GetListsProps) => {
   const { listId } = payload
 
   return enhancedFetch({

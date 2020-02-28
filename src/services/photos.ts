@@ -4,11 +4,12 @@ import { EApiPathnames } from '../constants/api'
 import { generatePath } from '../utils/generatePath'
 import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
 import { GetPhotosDetailsProps } from 'actions/photos'
+import { IConfigParams } from 'standalone'
 
 export const getObservablePhotosDetails = ({
   config,
   payload,
-}: GetPhotosDetailsProps) => {
+}: GetPhotosDetailsProps & IConfigParams) => {
   const { photoId } = payload
 
   return enhancedFetch({
