@@ -5,15 +5,18 @@ export enum EReturnType {
   PROMISE = 'PROMISE',
 }
 
-export interface IConfigParams {
-  config: IStandaloneConfig
+export interface IReturnType {
+  returnType: EReturnType
 }
 
-export interface IStandaloneConfig {
+export interface IConfigParams {
+  config: IStandaloneConfig & IReturnType
+}
+
+export interface IStandaloneConfig extends Partial<IReturnType> {
   clientId: string
   clientSecret: string
   accessToken?: string
-  returnType?: EReturnType
 }
 
 export class tsFoursquare {
