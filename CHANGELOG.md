@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-nightly.7](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.6...v1.0.0-nightly.7) (2020-02-28)
+
+
+### 🖋 Features
+
+* **sdk:** exposing api methods ([#442](https://github.com/arnaud-zg/ts-foursquare/issues/442)) ([4501ce0](https://github.com/arnaud-zg/ts-foursquare/commit/4501ce08dd059a5a9cb05645377324cee0fed960))
+
+
+### 🔧 Chore
+
+* **deps:** update dependency tslib to v1.11.1 ([#441](https://github.com/arnaud-zg/ts-foursquare/issues/441)) ([248c77a](https://github.com/arnaud-zg/ts-foursquare/commit/248c77a9b70fcc05121edc37b45c48439c50abc9))
+
 ## [1.0.0-nightly.6](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0-nightly.5...v1.0.0-nightly.6) (2020-02-26)
 
 
