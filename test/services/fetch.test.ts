@@ -1,10 +1,12 @@
 import { getDefaultRequestParameters } from '../../src/services/fetch'
+import { EReturnType } from '../../src/standalone'
 
 describe('utils/fetch/getDefaultRequestParameters', () => {
   it('should get default request parameters', () => {
     const config = {
       clientId: '123',
       clientSecret: '456',
+      returnType: EReturnType.PROMISE,
     }
 
     expect(getDefaultRequestParameters({ config })).toMatchSnapshot()
@@ -14,6 +16,7 @@ describe('utils/fetch/getDefaultRequestParameters', () => {
       accessToken: '789',
       clientId: '123',
       clientSecret: '456',
+      returnType: EReturnType.PROMISE,
     }
 
     expect(getDefaultRequestParameters({ config })).toMatchSnapshot()
