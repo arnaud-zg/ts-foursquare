@@ -17,9 +17,7 @@ export const adaptGetVenuesCategories = (
 ): NVenuesCategories.ICategory[] => {
   const response = adaptPayload<NVenuesCategories.IResponse>(payload)
 
-  return response && !!response.categories && !!response.categories.length
-    ? response.categories
-    : []
+  return response?.categories || []
 }
 
 export const adaptGetVenuesExplore = (
@@ -27,13 +25,7 @@ export const adaptGetVenuesExplore = (
 ): NRecommendedPlaces.IGroupItem[] => {
   const response = adaptPayload<NRecommendedPlaces.IResponse>(payload)
 
-  return response &&
-    !!response.groups &&
-    !!response.groups.length &&
-    !!response.groups[0].items &&
-    !!response.groups[0].items.length
-    ? response.groups[0].items
-    : []
+  return response?.groups[0]?.items || []
 }
 
 export const adaptGetVenuesLikes = (
@@ -41,13 +33,13 @@ export const adaptGetVenuesLikes = (
 ): NEntity.IEntityGroup<NLikes.IItem> => {
   const response = adaptPayload<NLikes.IResponse>(payload)
 
-  return response && response.likes
-    ? response.likes
-    : {
-        count: 0,
-        items: [],
-        summary: '0 Likes',
-      }
+  return (
+    response?.likes || {
+      count: 0,
+      items: [],
+      summary: '0 Likes',
+    }
+  )
 }
 
 export const adaptGetVenuesListed = (
@@ -55,12 +47,12 @@ export const adaptGetVenuesListed = (
 ): NVenueListed.ILists => {
   const response = adaptPayload<NVenueListed.IResponse>(payload)
 
-  return response && response.lists
-    ? response.lists
-    : {
-        count: 0,
-        groups: [],
-      }
+  return (
+    response?.lists || {
+      count: 0,
+      groups: [],
+    }
+  )
 }
 
 export const adaptGetVenuesNextVenues = (
@@ -68,12 +60,7 @@ export const adaptGetVenuesNextVenues = (
 ): NVenue.IVenue[] => {
   const response = adaptPayload<NNextVenues.IResponse>(payload)
 
-  return !!response &&
-    !!response.nextVenues &&
-    !!response.nextVenues.items &&
-    !!response.nextVenues.items.length
-    ? response.nextVenues.items
-    : []
+  return response?.nextVenues.items || []
 }
 
 export const adaptGetVenuesSearch = (
@@ -81,9 +68,7 @@ export const adaptGetVenuesSearch = (
 ): NVenue.IVenue[] => {
   const response = adaptPayload<NVenue.IResponse>(payload)
 
-  return !!response && !!response.venues && !!response.venues.length
-    ? response.venues
-    : []
+  return response?.venues || []
 }
 
 export const adaptGetVenuesSimilar = (
@@ -91,12 +76,7 @@ export const adaptGetVenuesSimilar = (
 ): NVenue.IVenue[] => {
   const response = adaptPayload<NSimilarVenues.IResponse>(payload)
 
-  return !!response &&
-    !!response.similarVenues &&
-    !!response.similarVenues.items &&
-    !!response.similarVenues.items.length
-    ? response.similarVenues.items
-    : []
+  return response?.similarVenues.items || []
 }
 
 export const adaptGetVenuesSuggestCompletion = (
@@ -104,9 +84,7 @@ export const adaptGetVenuesSuggestCompletion = (
 ): NMiniVenue.IMiniVenue[] => {
   const response = adaptPayload(payload)
 
-  return response && response.minivenues && response.minivenues.length
-    ? response.minivenues
-    : []
+  return response?.minivenues || []
 }
 
 export const adaptGetVenuesTrending = (

@@ -8,5 +8,6 @@ export const adaptPayload = <TResponse>(
   payload: NPayload.IPayload<TResponse>
 ) =>
   !!payload.meta &&
-  getHttpStatusCategory(payload.meta.code) === HTTP_STATUS_SUCCESS &&
-  payload.response
+  getHttpStatusCategory(payload.meta.code) === HTTP_STATUS_SUCCESS
+    ? payload.response
+    : undefined
