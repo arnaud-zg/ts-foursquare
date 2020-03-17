@@ -147,7 +147,7 @@ const onFetchData = async () => {
 >
 > -- <cite>Foursquare API - <a href="https://developer.foursquare.com/docs/api/venues/categories" target="_blank">https://developer.foursquare.com/docs/api/venues/categories</a></cite>
 
-`getVenuesCategories` is a function, it takes `GetVenuesCategoriesProps` as props and return a promise `Promise<Error | NVenuesCategories.ICategory[]>`.
+`getVenuesCategories` is a function, it returns a promise `Promise<Error | NVenuesCategories.ICategory[]>`.
 
 ##### Example
 

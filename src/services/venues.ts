@@ -8,7 +8,6 @@ import {
   GetVenuesSimilarProps,
   GetVenuesSuggestCompletionProps,
   GetVenuesTrendingProps,
-  GetVenuesCategoriesProps,
 } from '../actions/venues'
 import {
   adaptGetVenuesCategories,
@@ -26,9 +25,7 @@ import { generatePath } from '../utils/generatePath'
 import { processFetchError, processFetchResponse, enhancedFetch } from './fetch'
 import { IConfigParams } from 'standalone'
 
-export const getObservableVenuesCategories = ({
-  config,
-}: GetVenuesCategoriesProps & IConfigParams) =>
+export const getObservableVenuesCategories = ({ config }: IConfigParams) =>
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_CATEGORIES,
@@ -107,7 +104,6 @@ export const getObservableVenuesSearch = ({
   enhancedFetch({
     config,
     pathname: EApiPathnames.VENUES_SEARCH,
-    // @ts-ignore
     params: {
       ...payload,
     },

@@ -64,7 +64,6 @@ export declare namespace NRequest {
   interface IVenuesSearchPayload {
     alt?: number
     altAcc?: number
-    categoryId?: string[]
     intent?: 'checkin' | 'global' | 'browse' | 'match'
     limit?: number
     linkedId?: number

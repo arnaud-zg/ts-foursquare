@@ -12,8 +12,6 @@ import {
 } from '../services/venues'
 import { IConfigParams } from '../standalone'
 
-export interface GetVenuesCategoriesProps {}
-
 export interface GetVenuesExploreProps {
   payload: NRequest.TVenuesExplorePayload
 }
@@ -46,9 +44,7 @@ export interface GetVenuesTrendingProps {
   payload: NRequest.TVenuesTrendingPayload
 }
 
-export const getVenuesCategories = ({
-  config,
-}: IConfigParams) => ({}: GetVenuesCategoriesProps) =>
+export const getVenuesCategories = ({ config }: IConfigParams) => () =>
   getObservableVenuesCategories({ config }).toPromise()
 
 export const getVenuesExplore = ({ config }: IConfigParams) => ({
