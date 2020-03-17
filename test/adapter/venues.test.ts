@@ -60,13 +60,23 @@ describe('adapter/venues/adaptGetVenuesSuggestCompletion', () => {
 })
 
 describe('adapter/venues/adaptGetVenuesExplore', () => {
-  it('should return null', () => {
+  it('should get an empty list', () => {
     expect(
       adaptGetVenuesExplore({
         ...payloadGetVenuesExplore,
         meta: {
           code: 400,
           requestId: payloadGetVenuesSearch.meta.requestId,
+        },
+      })
+    ).toEqual([])
+
+    expect(
+      adaptGetVenuesExplore({
+        ...payloadGetVenuesExplore,
+        response: {
+          ...payloadGetVenuesExplore.response,
+          groups: [],
         },
       })
     ).toEqual([])
