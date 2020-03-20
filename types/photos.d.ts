@@ -1,8 +1,3 @@
-import { NEntity } from './entity.d'
-import { NIcon } from './icon'
-import { NUser } from './user'
-import { NVenue } from './venue'
-
 export declare namespace NPhotos {
   interface IResponse {
     photo: IPhoto
