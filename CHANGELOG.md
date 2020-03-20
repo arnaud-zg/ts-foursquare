@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.0...v1.0.1) (2020-03-20)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v25.1.4 ([#447](https://github.com/arnaud-zg/ts-foursquare/issues/447)) ([65a70f1](https://github.com/arnaud-zg/ts-foursquare/commit/65a70f1ea63925075febfd210ba8f8b81a76f257))
+* **deps:** update dependency @types/node to v12.12.29 ([#443](https://github.com/arnaud-zg/ts-foursquare/issues/443)) ([85c7443](https://github.com/arnaud-zg/ts-foursquare/commit/85c7443f4095422d15c22460d9d819d0db8a44d5))
+* **deps:** update dependency @types/node to v12.12.30 ([#448](https://github.com/arnaud-zg/ts-foursquare/issues/448)) ([698de1d](https://github.com/arnaud-zg/ts-foursquare/commit/698de1da4c29fda88e84365fc237c3062a408953))
+* **deps:** update dependency typescript to v3.8.3 ([#445](https://github.com/arnaud-zg/ts-foursquare/issues/445)) ([0d60acb](https://github.com/arnaud-zg/ts-foursquare/commit/0d60acb0900a91e97f000954cf2663591423a661))
+* remove useless stuff on venues ([#452](https://github.com/arnaud-zg/ts-foursquare/issues/452)) ([0cc3364](https://github.com/arnaud-zg/ts-foursquare/commit/0cc3364d7a21fa9abd050cfa293bf2e9d2760dde))
+* use optional chaining ([#451](https://github.com/arnaud-zg/ts-foursquare/issues/451)) ([3d31a7b](https://github.com/arnaud-zg/ts-foursquare/commit/3d31a7bc4b178720f2a2a82235255eb9b8c6db0b))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v1.0.7 ([#446](https://github.com/arnaud-zg/ts-foursquare/issues/446)) ([b490827](https://github.com/arnaud-zg/ts-foursquare/commit/b4908273a7a225730f407e220c439d044c8826a7))
+* **deps:** update dependency http-response-status to v1.0.8 ([#450](https://github.com/arnaud-zg/ts-foursquare/issues/450)) ([ebc082d](https://github.com/arnaud-zg/ts-foursquare/commit/ebc082d44af394040594e93171adc03b83bbcf62))
+
+
+### 📦 Build System
+
+* **deps:** bump acorn from 5.7.3 to 5.7.4 ([#449](https://github.com/arnaud-zg/ts-foursquare/issues/449)) ([edc9a13](https://github.com/arnaud-zg/ts-foursquare/commit/edc9a1378fe510ca280ae252d731c00597d9ddad))
+
 ## [1.0.0](https://github.com/arnaud-zg/ts-foursquare/compare/v0.7.1...v1.0.0) (2020-02-28)
 
 
