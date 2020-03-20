@@ -24,7 +24,7 @@
   ],
   "scripts": {
     "build": "tsdx build",
-    "lint": "tsdx lint",
+    "lint": "tsdx lint src test types",
     "release": "standard-version",
     "start": "tsdx watch",
     "test:coverage:report": "yarn run test:coverage && codecov -f coverage/*.json",
