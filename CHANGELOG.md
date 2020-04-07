@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.2...v1.0.3) (2020-04-07)
+
+
+### 🔧 Chore
+
+* use rebase on release script ([#460](https://github.com/arnaud-zg/ts-foursquare/issues/460)) ([7b13222](https://github.com/arnaud-zg/ts-foursquare/commit/7b132224fe68a38dfe154060a6a43b796cb7f8d8))
+
 ### [1.0.2](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.1...v1.0.2) (2020-04-07)
 
 
