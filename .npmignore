@@ -1,9 +1,4 @@
-.rts2_cache_cjs
-.rts2_cache_es
-.rts2_cache_umd
-node_modules
-src
-test
+__mocks__
 .editorconfig
 .gitignore
 .huskyrc.json
@@ -11,5 +6,11 @@ test
 .nvmrc
 .prettierignore
 .prettierrc
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
 .travis.yml
+node_modules
+src
+test
 tsconfig.json

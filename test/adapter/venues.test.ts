@@ -9,15 +9,15 @@ import {
   adaptGetVenuesSuggestCompletion,
   adaptGetVenuesTrending,
 } from '../../src/adapter/venues'
-import { payload as payloadGetVenuesCategories } from '../actions/__mocks__/getVenuesCategories.resolve'
-import { payload as payloadGetVenuesExplore } from '../actions/__mocks__/getVenuesExplore.resolve'
-import { payload as payloadGetVenuesLikes } from '../actions/__mocks__/getVenuesLikes.resolve'
-import { payload as payloadGetVenuesListed } from '../actions/__mocks__/getVenuesListed.resolve'
-import { payload as payloadGetVenuesNextVenues } from '../actions/__mocks__/getVenuesNextVenues.resolve'
-import { payload as payloadGetVenuesSearch } from '../actions/__mocks__/getVenuesSearch.resolve'
-import { payload as payloadGetVenuesSimilar } from '../actions/__mocks__/getVenuesSimilar.resolve'
-import { payload as payloadGetSuggestCompletion } from '../actions/__mocks__/getVenuesSuggestCompletion.resolve'
-import { payload as payloadGetVenuesTrending } from '../actions/__mocks__/getVenuesTrending.resolve'
+import { payload as payloadGetVenuesCategories } from '../../src/actions/__mocks__/getVenuesCategories.resolve'
+import { payload as payloadGetVenuesExplore } from '../../src/actions/__mocks__/getVenuesExplore.resolve'
+import { payload as payloadGetVenuesLikes } from '../../src/actions/__mocks__/getVenuesLikes.resolve'
+import { payload as payloadGetVenuesListed } from '../../src/actions/__mocks__/getVenuesListed.resolve'
+import { payload as payloadGetVenuesNextVenues } from '../../src/actions/__mocks__/getVenuesNextVenues.resolve'
+import { payload as payloadGetVenuesSearch } from '../../src/actions/__mocks__/getVenuesSearch.resolve'
+import { payload as payloadGetVenuesSimilar } from '../../src/actions/__mocks__/getVenuesSimilar.resolve'
+import { payload as payloadGetSuggestCompletion } from '../../src/actions/__mocks__/getVenuesSuggestCompletion.resolve'
+import { payload as payloadGetVenuesTrending } from '../../src/actions/__mocks__/getVenuesTrending.resolve'
 
 describe('adapter/venues/adaptGetVenuesCategories', () => {
   it('should get an empty list', () => {

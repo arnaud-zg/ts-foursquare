@@ -1,6 +1,6 @@
 import { tsFoursquare, EReturnType } from '../src/standalone'
 import { mockingFetch } from '../src/utils/test'
-import { payload as payloadGetLists } from './actions/__mocks__/getLists.resolve'
+import { payload as payloadGetLists } from '../src/actions/__mocks__/getLists.resolve'
 
 describe('tsFoursquare', () => {
   it('should get a snapshot of tsFoursquare instance', () => {

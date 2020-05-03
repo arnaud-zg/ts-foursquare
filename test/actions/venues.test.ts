@@ -4,15 +4,15 @@ import {
   mockingFailingNotValidFetch,
   mockingFetch,
 } from '../../src/utils/test'
-import { payload as payloadGetVenuesCategories } from './__mocks__/getVenuesCategories.resolve'
-import { payload as payloadGetVenuesExplore } from './__mocks__/getVenuesExplore.resolve'
-import { payload as payloadGetVenuesLikes } from './__mocks__/getVenuesLikes.resolve'
-import { payload as payloadGetVenuesListed } from './__mocks__/getVenuesListed.resolve'
-import { payload as payloadGetVenuesNextVenues } from './__mocks__/getVenuesNextVenues.resolve'
-import { payload as payloadGetVenuesSearch } from './__mocks__/getVenuesSearch.resolve'
-import { payload as payloadGetVenuesSimilar } from './__mocks__/getVenuesSimilar.resolve'
-import { payload as payloadGetVenuesSuggestCompletion } from './__mocks__/getVenuesSuggestCompletion.resolve'
-import { payload as payloadGetVenuesTrending } from './__mocks__/getVenuesTrending.resolve'
+import { payload as payloadGetVenuesCategories } from '../../src/actions/__mocks__/getVenuesCategories.resolve'
+import { payload as payloadGetVenuesExplore } from '../../src/actions/__mocks__/getVenuesExplore.resolve'
+import { payload as payloadGetVenuesLikes } from '../../src/actions/__mocks__/getVenuesLikes.resolve'
+import { payload as payloadGetVenuesListed } from '../../src/actions/__mocks__/getVenuesListed.resolve'
+import { payload as payloadGetVenuesNextVenues } from '../../src/actions/__mocks__/getVenuesNextVenues.resolve'
+import { payload as payloadGetVenuesSearch } from '../../src/actions/__mocks__/getVenuesSearch.resolve'
+import { payload as payloadGetVenuesSimilar } from '../../src/actions/__mocks__/getVenuesSimilar.resolve'
+import { payload as payloadGetVenuesSuggestCompletion } from '../../src/actions/__mocks__/getVenuesSuggestCompletion.resolve'
+import { payload as payloadGetVenuesTrending } from '../../src/actions/__mocks__/getVenuesTrending.resolve'
 import { TActionsKey } from '../../src/actions'
 
 describe('epics/venues', () => {

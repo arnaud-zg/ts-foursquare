@@ -1,5 +1,5 @@
 import { adaptGetPhotosDetails } from '../../src/adapter/photos'
-import { payload as payloadGetPhotosDetails } from '../actions/__mocks__/getPhotosDetails.revolve'
+import { payload as payloadGetPhotosDetails } from '../../src/actions/__mocks__/getPhotosDetails.revolve'
 
 describe('adapter/lists/adaptGetPhotosDetails', () => {
   it('should get an empty list', () => {
