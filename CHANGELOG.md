@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.3...v1.0.4) (2020-05-03)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/node to v12.12.35 ([#463](https://github.com/arnaud-zg/ts-foursquare/issues/463)) ([213cc14](https://github.com/arnaud-zg/ts-foursquare/commit/213cc14f461b9037d4796c95dccd63d5736c0404))
+* **deps:** update dependency @types/node to v12.12.37 ([#465](https://github.com/arnaud-zg/ts-foursquare/issues/465)) ([0f25be7](https://github.com/arnaud-zg/ts-foursquare/commit/0f25be7a061101fb5ca484b607cd565c65b5d966))
+* **deps:** update dependency husky to v4.2.5 ([#464](https://github.com/arnaud-zg/ts-foursquare/issues/464)) ([c140a6f](https://github.com/arnaud-zg/ts-foursquare/commit/c140a6f979d295dea4d9404826f6d567ae73516b))
+* **deps:** update dependency tsdx to v0.13.2 ([#453](https://github.com/arnaud-zg/ts-foursquare/issues/453)) ([865c535](https://github.com/arnaud-zg/ts-foursquare/commit/865c53570034bbe0463bcbf4ee76da17e21fbfa0))
+* **deps:** update node.js to v10.20.1 ([#462](https://github.com/arnaud-zg/ts-foursquare/issues/462)) ([c492852](https://github.com/arnaud-zg/ts-foursquare/commit/c4928523147ba8cdc331c95013f6b0af71e84b0a))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v1.0.12 ([#461](https://github.com/arnaud-zg/ts-foursquare/issues/461)) ([55b1f2d](https://github.com/arnaud-zg/ts-foursquare/commit/55b1f2d839b9b2709ae3c770219cf4f869059853))
+
 ### [1.0.3](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.2...v1.0.3) (2020-04-07)
 
 
