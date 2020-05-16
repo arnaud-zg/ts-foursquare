@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.7](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.6...v1.0.7) (2020-05-16)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v25.2.2 ([#472](https://github.com/arnaud-zg/ts-foursquare/issues/472)) ([bc7b214](https://github.com/arnaud-zg/ts-foursquare/commit/bc7b21445942c05e35d2cc7b59fbf72c7509f7f0))
+* **deps:** update dependency @types/node to v12.12.39 ([#468](https://github.com/arnaud-zg/ts-foursquare/issues/468)) ([6dbbd84](https://github.com/arnaud-zg/ts-foursquare/commit/6dbbd84fc20c03270c951bf7d84108e7121d20ec))
+* **deps:** update dependency standard-version to v8 ([#470](https://github.com/arnaud-zg/ts-foursquare/issues/470)) ([9663da7](https://github.com/arnaud-zg/ts-foursquare/commit/9663da74c79362999ed17111edbe14cfa9b884e2))
+* **deps:** update dependency tslib to v2 ([#473](https://github.com/arnaud-zg/ts-foursquare/issues/473)) ([2757a1d](https://github.com/arnaud-zg/ts-foursquare/commit/2757a1d14b7d4e2314852c80824fc80e57c68681))
+* **deps:** update dependency typescript to v3.9.2 ([#471](https://github.com/arnaud-zg/ts-foursquare/issues/471)) ([06a710e](https://github.com/arnaud-zg/ts-foursquare/commit/06a710e8dafeb338f1b335476a99ab5ac67f6abf))
+
 ### [1.0.6](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.5...v1.0.6) (2020-05-03)
 
 
