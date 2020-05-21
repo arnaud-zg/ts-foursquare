@@ -34,7 +34,7 @@
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "25.2.2",
-    "@types/node": "12.12.39",
+    "@types/node": "12.12.42",
     "codecov": "3.6.5",
     "husky": "4.2.5",
     "standard-version": "8.0.0",
