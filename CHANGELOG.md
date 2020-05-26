@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.8](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.7...v1.0.8) (2020-05-26)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v25.2.3 ([#476](https://github.com/arnaud-zg/ts-foursquare/issues/476)) ([7ab6403](https://github.com/arnaud-zg/ts-foursquare/commit/7ab6403559a0cc85fddfa1f1e8ede076ddf95a66))
+* **deps:** update dependency @types/node to v12.12.42 ([#477](https://github.com/arnaud-zg/ts-foursquare/issues/477)) ([6003804](https://github.com/arnaud-zg/ts-foursquare/commit/60038043f50cacbe9cb999dcdb20d34114cb7b25))
+* **deps:** update dependency codecov to v3.7.0 ([#475](https://github.com/arnaud-zg/ts-foursquare/issues/475)) ([635e168](https://github.com/arnaud-zg/ts-foursquare/commit/635e168b0e514010c04053a01b9f580423a31839))
+* **deps:** update dependency typescript to v3.9.3 ([#478](https://github.com/arnaud-zg/ts-foursquare/issues/478)) ([f3a3547](https://github.com/arnaud-zg/ts-foursquare/commit/f3a3547c9e9002a66f3611216e8f85da5609baa7))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency http-response-status to v1.0.14 ([#474](https://github.com/arnaud-zg/ts-foursquare/issues/474)) ([f21e8f8](https://github.com/arnaud-zg/ts-foursquare/commit/f21e8f807f29712101d53e3e0d24f31ef529e926))
+
 ### [1.0.7](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.6...v1.0.7) (2020-05-16)
 
 
