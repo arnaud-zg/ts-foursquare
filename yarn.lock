@@ -3045,10 +3045,10 @@ http-proxy-agent@^4.0.0:
     agent-base "6"
     debug "4"
 
-http-response-status@1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.14.tgz#3436077a60610ea4b7213249699ae09d0417b267"
-  integrity sha512-wbL6e/52SO2ly8INnHwJAqGyP+I0IkIbPzkgWAzHckeqRQ5sFrCBJuEOtsquSH3R488Xkoe8fW0Y/CbRPUxO4Q==
+http-response-status@1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/http-response-status/-/http-response-status-1.0.15.tgz#92e44a1538683441bf8cf9e3dd32f79abf42e096"
+  integrity sha512-Lm0CmzMUtfMzzh5QdJxEWmMd4XpIMKuJ0T8h02FBnswlhGP7ZEA7Zxa6ryCt9Rtyb+4reWDHfP5l6bYI7D9d8g==
 
 http-signature@~1.2.0:
   version "1.2.0"
