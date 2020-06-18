@@ -1,6 +1,5 @@
 {
   "extends": [
-    "config:base",
     "@airmelon-studio/renovate-config"
   ]
 }
