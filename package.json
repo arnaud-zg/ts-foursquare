@@ -33,7 +33,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@types/jest": "26.0.0",
+    "@types/jest": "26.0.3",
     "@types/node": "12.12.47",
     "codecov": "3.7.0",
     "husky": "4.2.5",
