@@ -37,7 +37,7 @@
     "@types/node": "12.12.48",
     "codecov": "3.7.1",
     "husky": "4.2.5",
-    "standard-version": "8.0.1",
+    "standard-version": "8.0.2",
     "tsdx": "0.13.2",
     "tslib": "2.0.0",
     "typescript": "3.9.6"
