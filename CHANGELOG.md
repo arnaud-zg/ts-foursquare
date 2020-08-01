@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.12](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.11...v1.0.12) (2020-08-01)
+
+
+### 🔧 Chore
+
+* **deps:** update dependency @types/jest to v26.0.7 ([#500](https://github.com/arnaud-zg/ts-foursquare/issues/500)) ([aa5a923](https://github.com/arnaud-zg/ts-foursquare/commit/aa5a923199ea53d81ad10850d977a37ffd3a1358))
+* **deps:** update dependency @types/jest to v26.0.8 ([#506](https://github.com/arnaud-zg/ts-foursquare/issues/506)) ([ae1be0c](https://github.com/arnaud-zg/ts-foursquare/commit/ae1be0cfff41c27cc6af9e9bfaccc864e69de240))
+* **deps:** update dependency @types/node to v12.12.48 ([#490](https://github.com/arnaud-zg/ts-foursquare/issues/490)) ([dccdfd7](https://github.com/arnaud-zg/ts-foursquare/commit/dccdfd7029d19d3443a506f161c94494460cc87d))
+* **deps:** update dependency @types/node to v12.12.53 ([#492](https://github.com/arnaud-zg/ts-foursquare/issues/492)) ([637579a](https://github.com/arnaud-zg/ts-foursquare/commit/637579ad8594c35ecda1e68d5537936ac0b4089b))
+* **deps:** update dependency codecov to v3.7.2 ([#504](https://github.com/arnaud-zg/ts-foursquare/issues/504)) ([3aea2d5](https://github.com/arnaud-zg/ts-foursquare/commit/3aea2d5fe735b7b18121b69d97b55e55d3582104))
+* **deps:** update dependency standard-version to v8.0.2 ([#496](https://github.com/arnaud-zg/ts-foursquare/issues/496)) ([a6e73af](https://github.com/arnaud-zg/ts-foursquare/commit/a6e73af32629bcad673ba78d28f2b23101f0bd79))
+* **deps:** update dependency typescript to v3.9.7 ([#497](https://github.com/arnaud-zg/ts-foursquare/issues/497)) ([e4975cd](https://github.com/arnaud-zg/ts-foursquare/commit/e4975cd9d0da357b7d27c6f500098627a832ccb1))
+* **deps:** update node.js to v10.22.0 ([#503](https://github.com/arnaud-zg/ts-foursquare/issues/503)) ([6818f84](https://github.com/arnaud-zg/ts-foursquare/commit/6818f84d1a11cdc8a315f32d3a6503fafc1190de))
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency rxjs to v6.6.2 ([#505](https://github.com/arnaud-zg/ts-foursquare/issues/505)) ([6a9b9ec](https://github.com/arnaud-zg/ts-foursquare/commit/6a9b9ec1c0bf32a248bcd6d7b84fec244910b894))
+
+
+### 📦 Build System
+
+* **deps:** bump lodash from 4.17.15 to 4.17.19 ([#498](https://github.com/arnaud-zg/ts-foursquare/issues/498)) ([b9047f1](https://github.com/arnaud-zg/ts-foursquare/commit/b9047f121c54fc397fd8ab39e65759db3837cf7d))
+* **deps-dev:** bump codecov from 3.7.0 to 3.7.1 ([#502](https://github.com/arnaud-zg/ts-foursquare/issues/502)) ([22b6d99](https://github.com/arnaud-zg/ts-foursquare/commit/22b6d994103257235f937452579fb08e2369693b))
+* **deps-dev:** bump standard-version from 8.0.0 to 8.0.1 ([#494](https://github.com/arnaud-zg/ts-foursquare/issues/494)) ([d457e8a](https://github.com/arnaud-zg/ts-foursquare/commit/d457e8a10b1555180237d2a5b1f39323228acdfc))
+
 ### [1.0.11](https://github.com/arnaud-zg/ts-foursquare/compare/v1.0.10...v1.0.11) (2020-07-07)
 
 
