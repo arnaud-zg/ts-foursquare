@@ -43,7 +43,7 @@
     "typescript": "4.0.2"
   },
   "dependencies": {
-    "http-response-status": "1.0.17",
+    "http-response-status": "1.0.20",
     "isomorphic-fetch": "2.2.1",
     "path-to-regexp": "^6.0.0",
     "rxjs": "6.6.2"
